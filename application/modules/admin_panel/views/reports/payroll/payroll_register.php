@@ -1,0 +1,1031 @@
+<?php
+$mont = $data['mont'];
+$month = $data['month'];
+$result = $data['result'];
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title><?=$data['segment']?> | <?=WEBSITE_NAME?></title>
+
+        	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Normalize or reset CSS with your favorite library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+	<!-- Load paper.css for happy printing -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
+	<link href="https://fonts.googleapis.com/css?family=Chivo|Signika" rel="stylesheet">
+	<!-- Set page size here: A5, A4 or A3 -->
+	<!-- Set also "landscape" if you need -->
+	<style>
+		body{
+		                font-family: 'Signika', sans-serif;
+		                /*font-size: 12.5px;*/
+		                font-family: Calibri;
+		            }
+		            p {
+		                margin: 0 0 5px;
+		            }
+		            .padding-5mm{padding: 5mm;}
+		            table{ border: 1px solid #777; }
+		            .table{
+		                margin-bottom: 3px;
+		            }
+		            .head_font{
+		                font-family: 'Signika', sans-serif;
+		                font-family: Calibri;
+		            }
+		            .container{width: 100%}
+		            .border_all{
+		                border: 1px solid #000;
+		            }
+		            .border_bottom{
+		                border-bottom: 1px solid #000;
+		            }
+		            .mar_0{
+		                margin: 0
+		            }
+		            .mar_bot_3{
+		                margin-bottom: 3px
+		            }
+		
+		            .header_left, .header_right{
+		                height: 75px
+		            }
+		
+		            .width-100{width: 100%}
+		
+		            .height_60{ height: 60px }
+		            .height_42{ height: 42px }
+		            .height_135{height: 150px}
+		            .height_90{height: 90px}
+		            .height_100{height: 100px}
+		            .height_110{height: 110px}
+		            .height_41{ height: 41px }
+		            .height_23{ height: 23px }
+		            .height_63{ height: 63px }
+		            .height_21{ height: 21px }
+		
+		            .table-bordered, .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th { border: 1px solid #000!important;  text-align: center;}
+		            .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {padding: 5px; text-align: left; font-size: 13px}
+		
+		            .border-bottom{border-bottom:  1px solid #000}.text-center{text-align: center!important;}.text-right{text-align: right!important;}
+		        
+		            /*@page { size: A4 }*/
+		
+		            @media print{
+		                .table-bordered, .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th { border: 1px solid black!important;}
+		                .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {padding: 5px; text-align: left; font-size: 13px}
+		                .col-sm-6{ width: 50%!important;float:left; }.col-sm-5 { width: 41.66666667%;float:left; }.col-sm-7 { width: 58.33333333%;float:left; }
+		                .text-center{text-align: center!important;}.text-right{text-align: right!important;}
+		                .print-text-center{text-align:center!important}
+		            }
+		table.order-summary th {position: relative;}		            
+		table.order-summary span{left: 0;background: #d4ecea;position: absolute;bottom: 0;width: 100%;text-align: right;border-top: 1px solid;color: #000;font-size: 10px;}
+	</style>
+      
+        
+      <?php if(isset($result)) {
+        if(count($result) > 0) {
+        $depts_id = $result[0][0]->d_id;
+        if($depts_id == 4 || $depts_id == 10) {
+        ?>
+        
+        <style>
+        @media print{@page {size: A4;}}
+        body.A4.portrait .sheet {
+        width: 500mm;
+        }
+        .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+        padding: 3px;
+        text-align: left;
+        font-size: 11px;
+        }
+        </style>
+        
+        <body class="legal" style="overflow-x: auto; padding-top: 20px">
+        <div id="page-content">
+        <section class="sheet padding-5mm" style="height: auto">
+        <div>
+        <!--<header class="pull-right">-->
+        <!--    <small>Page No. </small>-->
+        <!--</header>-->
+        <div class="clearfix"></div>
+        <div class="container">
+        <div class="row border_all text-center text-uppercase mar_bot_3">
+        <h3 class="mar_0 head_font">PAYROLL REGISTER</h3>
+        </div>
+        <div class="row mar_bot_3 text-center">
+        <div class="col-sm-6 border_all header_left" style="height: 68px;">
+        	<h4 class="" style="margin-top: 2px; margin-bottom: 0px;"><strong>SHILPA OVERSEAS PVT. LTD. </strong></h4>
+        	<p class="mar_0">KAIKHALI, CHIRIAMORE,P.O. : R.GOPALPUR, KOLKATA - 700 136</p>
+        </div>
+        <div class="col-sm-6 border_all header_left" style="height: 68px; text-align: left;">
+        	<b>Month: <?=$mont ?><br />Date: <?=date('d-m-Y') ?><br /></b>
+        </div>
+        </div>
+        <!--table data-->
+        <div class="row">
+        <div class="container">
+        	<div class="row">
+        		<div class="table-responsive">
+        			<!--<h5>Retrieve Table</h5>-->
+                    <?php 
+                    if($mont == 'January' or $mont == 'February' or $mont == 'March'){
+                        $show_year = YEAR_END;
+                    }else{
+                        $show_year = YEAR_START;
+                    }
+                    ?>
+        			<table id="all_det" class="table table-bordered">
+        				<thead>
+                            <tr>
+                                <th class="text-center" align="center" colspan="26">PAYMENT FOR THE MONTH OF <?= $mont . ' ' . $show_year  ?> </th>
+                            </tr>
+                    <tr>
+                        <th style="text-align: center;">SN</th>
+                        <th style="text-align: center; width: 300px;">EMPLOYEE <br/> NAME</th>
+                        <th style="text-align: center;">LEAVE <br/> TAKEN <br/> IN <br/> <?= $mont ?> - <?=$show_year?></th>
+                        <th style="text-align: center;">ABSENT <br/> IN <br/> <?= $mont ?> - <?=$show_year?></th>
+                        <th style="text-align: center;">TOTAL <br/> ABSENT <br/> SO FAR</th>
+                        <th style="text-align: center;">GROSS <br/> AMOUNT</th>
+                        <th style="text-align: center;">LOAN <br/> AMOUNT</th>
+                        <th style="text-align: center;">PTAX</th>
+                        <th style="text-align: center;">ESI <br> AMOUNT</th>
+                        <th style="text-align: center;">NET AMOUNT <br/> PAYABLE</th>
+                        <th style="text-align: center; width: 180px;">SIGNATURE</th>
+                    </tr>
+        </thead>
+        <tbody>
+                <?php
+        $new_iter = 10;
+        $total_count = 0;
+        $total_BASIC_neww = 0;
+        $total_GROSS_neww = 0;
+        $total_LOAN_neww = 0;
+        $total_TAX_neww = 0;
+        $total_ESI_neww = 0;
+        $new_iter1 = 9;
+        $iter = 1;
+        $total_BASIC1 = 0;
+        $total_DA1 = 0;
+        $total_HRA11 = 0;
+        $total_CONV11 = 0;
+        $total_OA11 = 0;
+        $total_HRA12 = 0;
+        $total_CONV12 = 0;
+        $total_OA12 = 0;
+        $total_TOTAL1 = 0;
+        $total_BASIC2 = 0;
+        $total_TOTAL2 = 0;
+        $total_DA2 = 0;
+        $total_TOTAL22 = 0;
+        $total_HRA = 0;
+        $total_CONV = 0;
+        $total_MED = 0;
+        $total_OA = 0;
+        $total_GROSS = 0;
+        $total_PFAMT = 0;
+        $total_ESIAMT = 0;
+        $total_TAX = 0;
+        $total_INS = 0;
+        $total_LOAN = 0;
+        $total_DEDUC = 0;
+        $total_NET = 0;
+        $total_BASIC11 = 0;
+        $total_DA11 = 0;
+        $total_HRA111 = 0;
+        $total_CONV111 = 0;
+        $total_OA111 = 0;
+        $total_HRA121 = 0;
+        $total_CONV121 = 0;
+        $total_OA121 = 0;
+        $total_TOTAL11 = 0;
+        $total_BASIC21 = 0;
+        $total_TOTAL21 = 0;
+        $total_DA21 = 0;
+        $total_TOTAL221 = 0;
+        $total_HRA1 = 0;
+        $total_CONV1 = 0;
+        $total_MED1 = 0;
+        $total_OA1 = 0;
+        $total_GROSS1 = 0;
+        $total_PFAMT1 = 0;
+        $total_ESIAMT1 = 0;
+        $total_TAX1 = 0;
+        $total_INS1 = 0;
+        $total_LOAN1 = 0;
+        $total_cl = 0;
+        $total_DEDUC1 = 0;
+        $total_NET1 = 0;
+        
+        foreach ($result as $res)
+        {
+        foreach ($res as $r)
+        {
+        if ($res != '')
+        {
+        $total_count = count($result);
+        }
+        if ($iter == 10 or $iter == $new_iter)
+        {
+        $new_iter += 9;
+        ?>
+        
+                        </tbody>
+                        </table>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        
+                        </div>
+                        </div>
+                        </div>
+                        </section>
+                        </div>
+                        </body>
+                        
+        <body class="legal" style="overflow-x: auto; padding-top: 20px">
+        <div id="page-content">
+        <section class="sheet padding-5mm" style="height: auto">
+        <div>
+        <!--<header class="pull-right">-->
+        <!--    <small>Page No. </small>-->
+        <!--</header>-->
+        <div class="clearfix"></div>
+        <div class="container">
+        <div class="row border_all text-center text-uppercase mar_bot_3">
+        <h3 class="mar_0 head_font">PAYROLL REGISTER</h3>
+        </div>
+        <div class="row mar_bot_3 text-center">
+        <div class="col-sm-6 border_all header_left" style="height: 68px;">
+        	<h4 class="" style="margin-top: 2px; margin-bottom: 0px;"><strong>SHILPA OVERSEAS PVT. LTD. </strong></h4>
+        	<p class="mar_0">KAIKHALI, CHIRIAMORE,P.O. : R.GOPALPUR, KOLKATA - 700 136</p>
+        </div>
+        <div class="col-sm-6 border_all header_left" style="height: 68px; text-align: left;">
+        	<b>Month: <?=$mont ?><br />
+                            Date: <?=date('d-m-Y') ?><br /></b>
+        </div>
+        </div>
+        <div class="row">
+        <div class="container">
+        	<div class="row">
+        		<div class="table-responsive">
+        			<!--<h5>Retrieve Table</h5>-->
+        			<table id="all_det" class="table table-bordered">
+        				<thead>
+        <tr>
+                        <!--<th class="text-center" align="center" colspan="26">REGISTER OF WAGES <br /> [Prescribed under Rule 23(1) of the West Bengal Minimum Wages Rules 1951] <br /> [Prescribed under Rule 26(1) of the Central Minimum Wages Rules 1951]</th>-->
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">SN</th>
+                        <th style="text-align: center; width: 300px;">EMPLOYEE <br/> NAME</th>
+                        <th style="text-align: center;">LEAVE <br/> TAKEN <br/> IN <br/> <?= $mont ?>-22</th>
+                        <th style="text-align: center;">ABSENT <br/> IN <br/> <?= $mont ?>-22</th>
+                        <th style="text-align: center;">TOTAL <br/> ABSENT <br/> SO FAR</th>
+                        <th style="text-align: center;">GROSS <br/> AMOUNT</th>
+                        <th style="text-align: center;">LOAN <br/> AMOUNT</th>
+                        <th style="text-align: center;">PTAX</th>
+                        <th style="text-align: center;">ESI <br> AMOUNT</th>
+                        <th style="text-align: center;">NET AMOUNT <br/> PAYABLE</th>
+                        <th style="text-align: center; width: 180px;">SIGNATURE</th>
+                    </tr>
+        </thead>
+        <tbody>
+                        
+                        <?php
+        } ?>
+                        
+                        <tr>
+                            <td><?=$iter
+        ?></td>
+                            <td class="text-left"><?=$r->name
+        ?></td>
+        
+                            <td style="text-align: center;"><?=$r->T
+        ?></td>
+        
+        <td style="text-align: center;"><?=$r->T7
+        ?></td>
+        
+        <?php 
+        $sql1="SELECT SUM(salary.T4+salary.T5+salary.T6) AS T_val
+        FROM salary
+        WHERE salary.EMPCODE = '".$r->e_id."'";
+        $rest_valus = $this->db->query($sql1)->row();
+        ?>
+        
+        
+        <?php 
+        $month_new = $month;
+        $wordArray = explode('~', $month);
+        ?>
+        
+        
+        <?php $dates = array();
+        $total_cl = 0;
+        $total_el = 0;
+        $total_esil = 0;
+        $month_new = $month;
+        $wordArray = explode('~', $month);
+        if($wordArray[2] == 12) {
+        $wordArray1 = 1;    
+        } else {
+        $wordArray1 = (1 + $wordArray[2]);
+        }
+        $mn = str_pad($wordArray1, 2, '0', STR_PAD_LEFT);
+        if($wordArray[2] == 1) {
+        $wordArray_prev = 12;
+        } else {
+        $wordArray_prev = ($wordArray[2] - 1);   
+        }
+        $mn_prev = str_pad($wordArray_prev, 2, '0', STR_PAD_LEFT);
+        $current = strtotime('2022-04-01');
+        //   $date2 = strtotime('2023-03-01');
+        if($wordArray[2] < 4 || $wordArray[2] == 12) {
+        $date2 = strtotime('2023-' . '01' . '-01'); 
+        } else {
+        $date2 = strtotime('2022-' . $mn . '-01');  
+        }
+        $stepVal = '+1 month';
+        while ($current < $date2)
+        {
+        $dates[] = date('M', $current);
+        $dates1[] = date('m', $current);
+        $current = strtotime($stepVal, $current);
+        }
+        ?>
+                        <?php foreach ($dates as $d)
+        {
+        $sql = "SELECT employees.name,e_code,employees.pf_acc_no,employees.esi_acc_no,salary.T4,salary.T5,salary.T6,salary.T7,CAST((salary.BASIC+salary.DA+salary.CONV) AS DECIMAL(11,2)) AS TOTAL2,salary.GROSS
+        FROM salary
+        INNER JOIN(employees)
+        ON(salary.EMPCODE=employees.e_id)
+        WHERE salary.MON LIKE '" . $d . "%' AND employees.e_id='" . $r->e_id . "'
+        ORDER BY employees.e_code";
+        $salary_details = $this
+            ->db
+            ->query($sql)->row();
+        if (count($salary_details) > 0)
+        {
+            $total_cl += $salary_details->T4 + $salary_details->T5+$salary_details->T6+$salary_details->T7;
+        }
+        else
+        {
+            $total_cl += 0;
+        }
+        }
+        ?>
+        
+        
+        
+        
+        <td style="text-align: center;"><?=$total_cl
+        ?></td>
+        
+        
+        <td style="text-align: center;"><?php 
+        $gross_amount = $r->BASIC1 + $r->DA1;
+        echo number_format((float)$gross_amount, 2);
+        $total_GROSS_neww += $gross_amount;
+        ?></td>
+        
+        <td style="text-align: center;"><?php 
+        echo number_format((float)$r->LOAN, 2);
+        $total_LOAN_neww += $r->LOAN;
+        ?></td>
+        
+        <td style="text-align: center;"><?php 
+        echo number_format((float)$r->TAX, 2);
+        $total_TAX_neww += $r->TAX;
+        ?></td>
+        <td><?php 
+        echo number_format((float)$r->ESIAMT, 2);
+        $total_ESI_neww += $r->ESIAMT;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->NET, 2);
+        $total_BASIC_neww += $r->NET;
+        ?></td>
+                            <td style="text-align: right; height: 80px; width: 100px;"></td>
+                        </tr>
+                        
+                        <?php if ($iter == $total_count)
+        { ?>
+                        
+                        <tr>
+                        <th colspan="5">Total</th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_GROSS_neww, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_LOAN_neww, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_TAX_neww, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_ESI_neww, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_BASIC_neww, 2);
+        ?></th>
+                            <th style="text-align: right;"></th>
+                        </tr>
+                        
+                        <?php
+        }
+        $iter++; ?>
+                        
+                        <?php
+        }
+        }
+        ?>
+            </tbody>
+        </table>
+        		</div>
+        	</div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+        </div>
+        </body>
+        
+        <?php 
+        } else {
+        ?>
+        
+        
+        <style>
+        @media print{@page {size: A3 landscape;}}
+        body.A3.landscape .sheet {
+        width: 500mm;
+        }
+        .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+        padding: 5px;
+        text-align: left;
+        font-size: 16px;
+        }
+        </style>
+        
+        
+        
+        <body class="A3 landscape" style="overflow-x: auto; padding-top: 20px">
+            <!--<input id='btnExport' type="button" value="Export to Excel" class="btn btn-success print-me" >-->
+        <div id="page-content">
+        <section class="sheet padding-5mm" style="height: auto">
+        <div>
+        <!--<header class="pull-right">-->
+        <!--    <small>Page No. </small>-->
+        <!--</header>-->
+        <div class="clearfix"></div>
+        <div class="container">
+        <div class="row border_all text-center text-uppercase mar_bot_3">
+        <h3 class="mar_0 head_font">PAYROLL REGISTER</h3>
+        </div>
+        <div class="row mar_bot_3 text-center">
+        <div class="col-sm-6 border_all header_left" style="height: 44px;">
+        	<h4 class="" style="margin-top: 2px; margin-bottom: 0px;"><strong>SHILPA OVERSEAS PVT. LTD. </strong></h4>
+        	<p class="mar_0">KAIKHALI, CHIRIAMORE,P.O. : R.GOPALPUR, KOLKATA - 700 136</p>
+        </div>
+        <div class="col-sm-6 border_all header_left" style="height: 44px; text-align: left;">
+        	<b>Month: <?=$mont ?><br />
+                            Date: <?=date('d-m-Y') ?><br /></b>
+        </div>
+        </div>
+        <!--table data-->
+        <div class="row">
+        <div class="container">
+        	<div class="row">
+        		<div class="table-responsive">
+        			<!--<h5>Retrieve Table</h5>-->
+        			<table border="1" id="all_det" class="table table-bordered">
+        				<thead>
+        <tr>
+                        <th class="text-center" align="center" colspan="26">REGISTER OF WAGES (<?= $mont . ', ' . YEAR  ?>) <br /> [Prescribed under Rule 23(1) of the West Bengal Minimum Wages Rules 1951] <br /> [Prescribed under Rule 26(1) of the Central Minimum Wages Rules 1951]</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2" style="text-align: center;">Sr. #</th>
+                        <th rowspan="2" style="text-align: center; width: 120px;">Name</th>
+                        <th rowspan="2" style="text-align: center; font-size: 10px;">Wrkg. Days</th>
+                        <th rowspan="2" style="text-align: center; font-size: 10px;">Days Wrkd</th>
+                        <th rowspan="2" style="text-align: center; font-size: 10px;">Hldays</th>
+                        <th rowspan="2" style="text-align: center; font-size: 10px;">Lv.</th>
+                        <th rowspan="2" style="text-align: center; font-size: 10px;">Ab.</th>
+                        <th class="text-center" rowspan="1" colspan="6">Salary / Wages Scale</th>
+                        <th class="text-center" rowspan="1" colspan="6">Salary / Wages Paid</th>
+                        <th class="text-center" rowspan="1" colspan="6" style="text-align: right;">Deductions</th>
+                        <th rowspan="2" style="text-align: right;">Salary <br/> / Wages Paid</th>
+                        <th rowspan="2" style="text-align: right;">Sign. / Thumb Impression</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="1" style="text-align: right;">Basic</th>
+                        <th rowspan="1" style="text-align: right;">D.A.</th>
+                        <th rowspan="1" style="text-align: right;">HRA</th>
+                        <th rowspan="1" style="text-align: right;">Conv. <br/> Alwnc</th>
+                        <th rowspan="1" style="text-align: right;">Edu. <br/> Alwnc</th>
+                        <th rowspan="1" style="text-align: right;">Total</th>
+                        <th rowspan="1" style="text-align: right;">Basic</th>
+                        <th rowspan="1" style="text-align: right;">D.A.</th>
+                        <th rowspan="1" style="text-align: right;">HRA</th>
+                        <th rowspan="1" style="text-align: right;">Conv.<br/> Alwnc</th>
+                        <th rowspan="1" style="text-align: right;">Edu.<br/> Alwnc</th>
+                        <th rowspan="1" style="text-align: right;">Total</th>
+                        <th rowspan="1" style="text-align: right;">P.F.</th>
+                        <th rowspan="1" style="text-align: right;">E.S.I.</th>
+                        <th rowspan="1" style="text-align: right;">WB. <br/> PR TAX</th>
+                        <th rowspan="1" style="text-align: right;">L.I.C. <br/> /T.D.S.</th>
+                        <th rowspan="1" style="text-align: right;">Loan <br/> /Advance</th>
+                        <th rowspan="1" style="text-align: right;">Total</th>
+                    </tr>
+        </thead>
+        <tbody>
+                <?php
+        $new_iter = 10;
+        $total_count = 0;
+        $new_iter1 = 9;
+        $iter = 1;
+        $total_BASIC1 = 0;
+        $total_DA1 = 0;
+        $total_HRA11 = 0;
+        $total_CONV11 = 0;
+        $total_OA11 = 0;
+        $total_HRA12 = 0;
+        $total_CONV12 = 0;
+        $total_OA12 = 0;
+        $total_TOTAL1 = 0;
+        $total_BASIC2 = 0;
+        $total_TOTAL2 = 0;
+        $total_DA2 = 0;
+        $total_TOTAL22 = 0;
+        $total_HRA = 0;
+        $total_CONV = 0;
+        $total_MED = 0;
+        $total_OA = 0;
+        $total_GROSS = 0;
+        $total_PFAMT = 0;
+        $total_ESIAMT = 0;
+        $total_TAX = 0;
+        $total_INS = 0;
+        $total_LOAN = 0;
+        $total_DEDUC = 0;
+        $total_NET = 0;
+        $total_BASIC11 = 0;
+        $total_DA11 = 0;
+        $total_HRA111 = 0;
+        $total_CONV111 = 0;
+        $total_OA111 = 0;
+        $total_HRA121 = 0;
+        $total_CONV121 = 0;
+        $total_OA121 = 0;
+        $total_TOTAL11 = 0;
+        $total_BASIC21 = 0;
+        $total_TOTAL21 = 0;
+        $total_DA21 = 0;
+        $total_TOTAL221 = 0;
+        $total_HRA1 = 0;
+        $total_CONV1 = 0;
+        $total_MED1 = 0;
+        $total_OA1 = 0;
+        $total_GROSS1 = 0;
+        $total_PFAMT1 = 0;
+        $total_ESIAMT1 = 0;
+        $total_TAX1 = 0;
+        $total_INS1 = 0;
+        $total_LOAN1 = 0;
+        $total_DEDUC1 = 0;
+        $total_NET1 = 0;
+        
+        foreach ($result as $res)
+        {
+        foreach ($res as $r)
+        {
+        if ($res != '')
+        {
+        $total_count = count($result);
+        }
+        if ($iter == 10 or $iter == $new_iter)
+        {
+        $new_iter += 9;
+        ?>
+                        
+                        <tr>
+                        <th colspan="7">Total</th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_BASIC11, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_DA11, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_HRA111, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_CONV111, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_OA111, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_TOTAL11, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_BASIC21, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_DA21, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_HRA121, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_CONV121, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_OA121, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_TOTAL221, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_PFAMT1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_ESIAMT1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_TAX1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_INS1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_LOAN1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_DEDUC1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_NET1, 2);
+        ?></th>
+                            <th style="text-align: right;"></th>
+                        </tr>
+                        
+                        </tbody>
+                        </table>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        
+                        </div>
+                        </div>
+                        </div>
+                        </section>
+                        </div>
+                        </body>
+                        
+        <body class="A3 landscape" style="overflow-x: auto; padding-top: 20px">
+        <div id="page-content">
+        <section class="sheet padding-5mm" style="height: auto">
+        <div>
+        <!--<header class="pull-right">-->
+        <!--    <small>Page No. </small>-->
+        <!--</header>-->
+        <div class="clearfix"></div>
+        <div class="container">
+        <div class="row border_all text-center text-uppercase mar_bot_3">
+        <h3 class="mar_0 head_font">PAYROLL REGISTER</h3>
+        </div>
+        <div class="row mar_bot_3 text-center">
+        <div class="col-sm-6 border_all header_left" style="height: 44px;">
+        	<h4 class="" style="margin-top: 2px; margin-bottom: 0px;"><strong>SHILPA OVERSEAS PVT. LTD. </strong></h4>
+        	<p class="mar_0">KAIKHALI, CHIRIAMORE,P.O. : R.GOPALPUR, KOLKATA - 700 136</p>
+        </div>
+        <div class="col-sm-6 border_all header_left" style="height: 44px; text-align: left;">
+        	<b>Month: <?=$mont ?><br />
+                            Date: <?=date('d-m-Y') ?><br /></b>
+        </div>
+        </div>
+        <div class="row">
+        <div class="container">
+        	<div class="row">
+        		<div class="table-responsive">
+        			<!--<h5>Retrieve Table</h5>-->
+        			<table id="all_det1" class="table table-bordered">
+        				<thead>
+        <tr>
+                        <th class="text-center" align="center" colspan="26">REGISTER OF WAGES (<?= $mont . ', ' . YEAR  ?>) <br /> [Prescribed under Rule 23(1) of the West Bengal Minimum Wages Rules 1951] <br /> [Prescribed under Rule 26(1) of the Central Minimum Wages Rules 1951]</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2" style="text-align: center;">Sr. #</th>
+                        <th rowspan="2" style="text-align: center;">Name</th>
+                        <th rowspan="2" style="text-align: center; font-size: 10px;">Wrkg. Days</th>
+                        <th rowspan="2" style="text-align: center; font-size: 10px;">Days Wrkd</th>
+                        <th rowspan="2" style="text-align: center; font-size: 10px;">Hldays</th>
+                        <th rowspan="2" style="text-align: center; font-size: 10px;">Lv.</th>
+                        <th rowspan="2" style="text-align: center; font-size: 10px;">Ab.</th>
+                        <th class="text-center" rowspan="1" colspan="6">Salary / Wages Scale</th>
+                        <th class="text-center" rowspan="1" colspan="6">Salary / Wages Paid</th>
+                        <th class="text-center" rowspan="1" colspan="6" style="text-align: right;">Deductions</th>
+                        <th rowspan="2" style="text-align: right;">Salary <br/> / Wages Paid</th>
+                        <th rowspan="2" style="text-align: right;">Sign. / Thumb Impression</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="1" style="text-align: right;">Basic</th>
+                        <th rowspan="1" style="text-align: right;">D.A.</th>
+                        <th rowspan="1" style="text-align: right;">HRA</th>
+                        <th rowspan="1" style="text-align: right;">Conv. Alwnc</th>
+                        <th rowspan="1" style="text-align: right;">Edu. Alwnc</th>
+                        <th rowspan="1" style="text-align: right;">Total</th>
+                        <th rowspan="1" style="text-align: right;">Basic</th>
+                        <th rowspan="1" style="text-align: right;">D.A.</th>
+                        <th rowspan="1" style="text-align: right;">HRA</th>
+                        <th rowspan="1" style="text-align: right;">Conv. Alwnc</th>
+                        <th rowspan="1" style="text-align: right;">Edu. Alwnc</th>
+                        <th rowspan="1" style="text-align: right;">Total</th>
+                        <th rowspan="1" style="text-align: right;">P.F.</th>
+                        <th rowspan="1" style="text-align: right;">E.S.I.</th>
+                        <th rowspan="1" style="text-align: right;">WB. PR TAX</th>
+                        <th rowspan="1" style="text-align: right;">L.I.C. <br/> /T.D.S.</th>
+                        <th rowspan="1" style="text-align: right;">Loan <br/> /Advance</th>
+                        <th rowspan="1" style="text-align: right;">Total</th>
+                    </tr>
+        </thead>
+        <tbody>
+        
+        <tr>
+                        <th colspan="7">Total B/F</th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_BASIC11, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_DA11, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_HRA111, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_CONV111, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_OA111, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_TOTAL11, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_BASIC21, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_DA21, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_HRA121, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_CONV121, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_OA121, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_TOTAL221, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_PFAMT1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_ESIAMT1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_TAX1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_INS1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_LOAN1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_DEDUC1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_NET1, 2);
+        ?></th>
+                            <th style="text-align: right;"></th>
+                        </tr>
+                        
+                        <?php
+        } ?>
+                        
+                        <tr>
+                            <td><?=$iter
+        ?></td>
+                            <td class="text-left"><?=$r->name
+        ?></td>
+                            <td style="text-align: center;"><?=$r->T1
+        ?></td>
+                            <td style="text-align: center;"><?=$r->T2
+        ?></td>
+                            <td style="text-align: center;"><?=$r->T3
+        ?></td>
+                            <td style="text-align: center;"><?=$r->T
+        ?></td>
+                            <td style="text-align: center;"><?=$r->T7
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->BASIC1, 2);
+        $total_BASIC1 += $r->BASIC1;
+        $total_BASIC11 += $r->BASIC1;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->DA1, 2);
+        $total_DA1 += $r->DA1;
+        $total_DA11 += $r->DA1;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->HRA1, 2);
+        $total_HRA11 += $r->HRA1;
+        $total_HRA111 += $r->HRA1;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->CONV1, 2);
+        $total_CONV11 += $r->CONV1;
+        $total_CONV111 += $r->CONV1;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->OA1, 2);
+        $total_OA11 += $r->OA1;
+        $total_OA111 += $r->OA1;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->TOTAL1, 2);
+        $total_TOTAL1 += $r->TOTAL1;
+        $total_TOTAL11 += $r->TOTAL1;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->BASIC2, 2);
+        $total_BASIC2 += $r->BASIC2;
+        $total_BASIC21 += $r->BASIC2;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->DA2, 2);
+        $total_DA2 += $r->DA2;
+        $total_DA21 += $r->DA2;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->HRA, 2);
+        $total_HRA12 += $r->HRA;
+        $total_HRA121 += $r->HRA;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->CONV, 2);
+        $total_CONV12 += $r->CONV;
+        $total_CONV121 += $r->CONV;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->OA, 2);
+        $total_OA12 += $r->OA;
+        $total_OA121 += $r->OA;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->GROSS, 2);
+        $total_TOTAL22 += $r->GROSS;
+        $total_TOTAL221 += $r->GROSS;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->PFAMT, 2);
+        $total_PFAMT += $r->PFAMT;
+        $total_PFAMT1 += $r->PFAMT;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->ESIAMT, 2);
+        $total_ESIAMT += $r->ESIAMT;
+        $total_ESIAMT1 += $r->ESIAMT;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->TAX, 2);
+        $total_TAX += $r->TAX;
+        $total_TAX1 += $r->TAX;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->INS, 2);
+        $total_INS += $r->INS;
+        $total_INS1 += $r->INS;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->LOAN, 2);
+        $total_LOAN += $r->LOAN;
+        $total_LOAN1 += $r->LOAN;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->DEDUC, 2);
+        $total_DEDUC += $r->DEDUC;
+        $total_DEDUC1 += $r->DEDUC;
+        ?></td>
+                            <td style="text-align: right;"><?php echo number_format((float)$r->NET, 2);
+        $total_NET += $r->NET;
+        $total_NET1 += $r->NET;
+        ?></td>
+                            <td style="text-align: right; height: 100px; width: 100px;"></td>
+                        </tr>
+                        
+                        <?php if ($iter == $total_count)
+        { ?>
+                        
+                        <tr>
+                        <th colspan="7">Total</th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_BASIC11, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_DA11, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_HRA111, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_CONV111, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_OA111, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_TOTAL11, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_BASIC21, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_DA21, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_HRA121, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_CONV121, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_OA121, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_TOTAL221, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_PFAMT1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_ESIAMT1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_TAX1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_INS1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_LOAN1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_DEDUC1, 2);
+        ?></th>
+                            <th style="text-align: right;"><?php echo number_format((float)$total_NET1, 2);
+        ?></th>
+                            <th style="text-align: right;"></th>
+                        </tr>
+                        
+                        <?php
+        }
+        $iter++; ?>
+                        
+                        <?php
+        }
+        }
+        ?>
+            </tbody>
+        </table>
+        		</div>
+        	</div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btnExport").click(
+                    function () {
+                        tableToExcel('all_det','Sheet1','SOPL-export');
+                        tableToExcel('all_det1','Sheet1','SOPL-export');
+                    }            
+                );
+            })
+            
+            function getIEVersion(){
+                var rv = -1; // Return value assumes failure.
+                if (navigator.appName == 'Microsoft Internet Explorer') {
+                    var ua = navigator.userAgent;
+                    var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+                    if (re.exec(ua) != null)
+                        rv = parseFloat(RegExp.$1);
+                }
+                return rv;
+            }
+
+            function tableToExcel(table, sheetName, fileName) {
+    
+
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer
+    {
+        return fnExcelReport(table, fileName);
+    }
+
+    var uri = 'data:application/vnd.ms-excel;base64,',
+        templateData = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--><meta http-equiv="content-type" content="text/plain; charset=UTF-8"/></head><body><table>{table}</table></body></html>',
+        base64Conversion = function (s) { return window.btoa(unescape(encodeURIComponent(s))) },
+        formatExcelData = function (s, c) { return s.replace(/{(\w+)}/g, function (m, p) { return c[p]; }) }
+
+    $("tbody > tr[data-level='0']").show();
+
+    if (!table.nodeType)
+        table = document.getElementById(table)
+
+    var ctx = { worksheet: sheetName || 'Worksheet', table: table.innerHTML }
+
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:application/vnd.ms-excel;base64,' + base64Conversion(formatExcelData(templateData, ctx)));
+    element.setAttribute('download', fileName);
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+
+    $("tbody > tr[data-level='0']").hide();
+}
+
+            function fnExcelReport(table, fileName) {
+    
+    var tab_text = "<table border='2px'>";
+    var textRange;
+
+    if (!table.nodeType)
+        table = document.getElementById(table)
+
+    $("tbody > tr[data-level='0']").show();
+    tab_text =  tab_text + table.innerHTML;
+
+    tab_text = tab_text + "</table>";
+    tab_text = tab_text.replace(/<A[^>]*>|<\/A>/g, "");//remove if u want links in your table
+    tab_text = tab_text.replace(/<img[^>]*>/gi, ""); // remove if u want images in your table
+    tab_text = tab_text.replace(/<input[^>]*>|<\/input>/gi, ""); // reomves input params
+
+    txtArea1.document.open("txt/html", "replace");
+    txtArea1.document.write(tab_text);
+    txtArea1.document.close();
+    txtArea1.focus();
+    sa = txtArea1.document.execCommand("SaveAs", false, fileName + ".xls");
+    $("tbody > tr[data-level='0']").hide();
+    return (sa);
+}
+        </script>
+        </body>
+        <?php
+        }
+        }
+        } 
+        ?>
+        
+        
+</html>

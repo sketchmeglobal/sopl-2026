@@ -1,0 +1,87 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>W3C Example Table</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>
+									<thead>
+                        <tr>
+                            <th style="display: none;"></th>
+                            <th rowspan="2" style="text-align:center">Item</th>
+                            <th colspan="2" style="text-align:center">Opening Information</th>
+                            <th colspan="2" style="text-align:center">Purchase Information</th>
+                            <th colspan="2" style="text-align:center">Issue Information</th>
+                            <th colspan="2" style="text-align:center">Plating Information</th>
+                            <th colspan="2" style="text-align:center">Stock In Information</th>
+                            <th colspan="2" style="text-align:center">Balance Information</th>
+                            <th rowspan="2">Closing Rate</th>
+                        </tr>
+                        <tr>
+                            <th style="display: none;"></th>
+                            <th style="text-align:center">Opn Qnty</th>
+                            <th style="text-align:center">Opn Val</th>
+                            <th style="text-align:center">Pur Qnty</th>
+                            <th style="text-align:center">Pur Val</th>
+                            <th style="text-align:center">Issue Qnty</th>
+                            <th style="text-align:center">Issue Val</th>
+                            <th style="text-align:center">Plating Qnty</th>
+                            <th style="text-align:center">Plating Val</th>
+                            <th style="text-align:center">Stock In Qnty</th>
+                            <th style="text-align:center">Stock In Val</th>
+                            <th style="text-align:center">Bal Qnty</th>
+                            <th style="text-align:center">Bal Val</th>
+                        </tr>
+                        </thead>
+									<tbody>
+										                            <tr>
+                                <th style="display: none;">146</th>
+                                <th>HEAVY PULL-UP BUFF (111) SIDE LEATHER(BLACK)</th>
+                                <td style="text-align:right">2,858.00</td>
+                                <td style="text-align:right">414,410.00</td>
+                                <td style="text-align:right">0.00</td>
+                                <td style="text-align:right">0.00</td>
+                                <td style="text-align:right">2,110.50</td>
+                                <td style="text-align:right">306,022.50</td>
+                                <td style="text-align:right">0.00</td>
+                                <td style="text-align:right">0.00</td>
+                                <td style="text-align:right">0.00</td>
+                                <td style="text-align:right">0.00</td>
+                                <td style="text-align:right">747.50</td>
+                                <td style="text-align:right">108,387.50</td>
+                                                                <td style="text-align:right">145.00</td>
+                                                        </tr>
+                                                        <tr>
+                                <th style="display: none;">147</th>
+                                <th>HEAVY PULL-UP BUFF (111) SIDE LEATHER(CAMEL)</th>
+                                <td style="text-align:right">2,666.00</td>
+                                <td style="text-align:right">431,012.22</td>
+                                <td style="text-align:right">0.00</td>
+                                <td style="text-align:right">0.00</td>
+                                <td style="text-align:right">2,194.00</td>
+                                <td style="text-align:right">354,703.98</td>
+                                <td style="text-align:right">0.00</td>
+                                <td style="text-align:right">0.00</td>
+                                <td style="text-align:right">0.00</td>
+                                <td style="text-align:right">0.00</td>
+                                <td style="text-align:right">472.00</td>
+                                <td style="text-align:right">76,308.24</td>
+                                                                <td style="text-align:right">161.67</td>
+                                                        </tr>
+                                                    <tr>
+                            
+                            
+                            <th style="display: none;"></th>
+                            
+                            
+                        	<th>Total</th>
+                        	<td style="text-align:right">5,524.00</td>
+                        	<td style="text-align:right">845,422.22</td>
+                        	<td style="text-align:right">0.00</td>
+                        	<td style="text-align:right">0.00</td>
+                        	<td style="text-align:right">4,304.50</td>
+                        	<td style="text-align:right">660,726.48</td>
+                        	<td style="text-align:right">0.00</td>
+                        	<td style="text-align:right">0.00</td>
+                        	<td style="text-align:right">0.00</td>
+                        	<td style="text-align:right">0.00</td>
+                        	<td style="text-align:right">1,219.50</td>
+                        	<td style="text-align:right">184,695.74</td>
+                        	<td style="text-align:right">306.67</td>
+                        </tr>
+									</tbody>
+								</table></body></html>

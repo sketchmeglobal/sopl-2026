@@ -1,0 +1,2105 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Sheet1</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>
+                                    <thead>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th rowspan="2" style="text-align:right">#</th>
+                                            <th rowspan="2" style="text-align:center">Item</th>
+                                            <th colspan="2" style="text-align:center">Opening Information</th>
+                                            <th colspan="2" style="text-align:center">Purchase Information</th>
+                                            <th colspan="2" style="text-align:center">Issue Information</th>
+                                            <th colspan="2" style="text-align:center">Plating Information</th>
+                                            <th colspan="2" style="text-align:center">Stock In Information</th>
+                                            <th colspan="2" style="text-align:center">Balance Information</th>
+                                            <th rowspan="2">Closing<br>Rate</th>
+                                            <th rowspan="2" style="text-align:center">Unit</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th style="text-align:center">Opn Qnty</th>
+                                            <th style="text-align:center">Opn Val</th>
+                                            <th style="text-align:center">Pur Qnty</th>
+                                            <th style="text-align:center">Pur Val</th>
+                                            <th style="text-align:center">Issue Qnty</th>
+                                            <th style="text-align:center">Issue Val</th>
+                                            <th style="text-align:center">Plating Qnty</th>
+                                            <th style="text-align:center">Plating Val</th>
+                                            <th style="text-align:center">Stock In Qnty</th>
+                                            <th style="text-align:center">Stock In Val</th>
+                                            <th style="text-align:center">Bal Qnty</th>
+                                            <th style="text-align:center">Bal Val</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                                                <tr>
+                                            <th style="display: none;">1425</th>
+                                            <th style="text-align:right">1</th>
+                                            <th>000 NB916 TKT-30 MASTER-(BLACK)</th>
+                                            <td style="text-align:right">18.00</td>
+                                            <td style="text-align:right">9,597.06</td>
+                                            <td style="text-align:right">30.00</td>
+                                            <td style="text-align:right">15,995.10</td>
+                                            <td style="text-align:right">37.00</td>
+                                            <td style="text-align:right">19,727.29</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">9.00</td>
+                                            <td style="text-align:right">4,798.53</td>
+                                            <td style="background: #afedb1;text-align:right">20.00</td>
+                                            <td style="text-align:right">10,663.40</td>
+                                                                                        <td style="text-align:right">533.17</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1606</th>
+                                            <th style="text-align:right">2</th>
+                                            <th>000 NB916 TKT-30 MASTER-(WHITE)</th>
+                                            <td style="text-align:right">16.00</td>
+                                            <td style="text-align:right">8,124.48</td>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">2,665.85</td>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">6,093.36</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">9.00</td>
+                                            <td style="text-align:right">4,696.97</td>
+                                                                                        <td style="text-align:right">521.89</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1314</th>
+                                            <th style="text-align:right">3</th>
+                                            <th>00715 TKT-20 1000 MTR.-SHADE NO. 111(CHESTNUT)</th>
+                                            <td style="text-align:right">9.00</td>
+                                            <td style="text-align:right">1,822.14</td>
+                                            <td style="text-align:right">260.00</td>
+                                            <td style="text-align:right">52,639.60</td>
+                                            <td style="text-align:right">214.00</td>
+                                            <td style="text-align:right">43,326.44</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">1,012.30</td>
+                                            <td style="background: #afedb1;text-align:right">60.00</td>
+                                            <td style="text-align:right">12,147.60</td>
+                                                                                        <td style="text-align:right">202.46</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1301</th>
+                                            <th style="text-align:right">4</th>
+                                            <th>00715 TKT-20 1000 MTR.-SHADE NO. 255(NAVY)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">2,024.60</td>
+                                            <td style="text-align:right">13.00</td>
+                                            <td style="text-align:right">2,631.98</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">9.00</td>
+                                            <td style="text-align:right">1,822.14</td>
+                                            <td style="background: #afedb1;text-align:right">6.00</td>
+                                            <td style="text-align:right">1,214.76</td>
+                                                                                        <td style="text-align:right">202.46</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1315</th>
+                                            <th style="text-align:right">5</th>
+                                            <th>00715 TKT-20 1000 MTR.-SHADE NO. 665(TANGO RED)</th>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">3,933.60</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">983.40</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">25.00</td>
+                                            <td style="text-align:right">4,917.60</td>
+                                            <td style="background: #afedb1;text-align:right">40.00</td>
+                                            <td style="text-align:right">7,867.80</td>
+                                                                                        <td style="text-align:right">196.70</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1302</th>
+                                            <th style="text-align:right">6</th>
+                                            <th>00715 TKT-20 1000 MTR.-SHADE NO. 666(CAMEL)</th>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">1,214.76</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">8.00</td>
+                                            <td style="text-align:right">1,619.68</td>
+                                            <td style="background: #afedb1;text-align:right">14.00</td>
+                                            <td style="text-align:right">2,834.44</td>
+                                                                                        <td style="text-align:right">202.46</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2216</th>
+                                            <th style="text-align:right">7</th>
+                                            <th>00715 TKT-20 1000 MTR.-SHADE NO. 727(PINK)</th>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">2,429.52</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1.00</td>
+                                            <td style="text-align:right">202.46</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3.00</td>
+                                            <td style="text-align:right">607.38</td>
+                                            <td style="background: #afedb1;text-align:right">14.00</td>
+                                            <td style="text-align:right">2,834.44</td>
+                                                                                        <td style="text-align:right">202.46</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1307</th>
+                                            <th style="text-align:right">8</th>
+                                            <th>00715 TKT-20 1000 MTR.-SHADE NO. 731(CHESTNUT)</th>
+                                            <td style="text-align:right">26.00</td>
+                                            <td style="text-align:right">5,263.96</td>
+                                            <td style="text-align:right">30.00</td>
+                                            <td style="text-align:right">6,073.80</td>
+                                            <td style="text-align:right">35.00</td>
+                                            <td style="text-align:right">7,086.10</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3.00</td>
+                                            <td style="text-align:right">607.38</td>
+                                            <td style="background: #afedb1;text-align:right">24.00</td>
+                                            <td style="text-align:right">4,859.04</td>
+                                                                                        <td style="text-align:right">202.46</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1310</th>
+                                            <th style="text-align:right">9</th>
+                                            <th>00715 TKT-20 1000 MTR.-SHADE NO. 771(TEAL)</th>
+                                            <td style="text-align:right">13.00</td>
+                                            <td style="text-align:right">2,631.98</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">1,012.30</td>
+                                            <td style="background: #afedb1;text-align:right">18.00</td>
+                                            <td style="text-align:right">3,644.28</td>
+                                                                                        <td style="text-align:right">202.46</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1300</th>
+                                            <th style="text-align:right">10</th>
+                                            <th>00715 TKT-20 1000 MTR.-SHADE NO. 9009(BROWN)</th>
+                                            <td style="text-align:right">4.00</td>
+                                            <td style="text-align:right">756.16</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">2,268.48</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">8.00</td>
+                                            <td style="text-align:right">1,512.32</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">-0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2379</th>
+                                            <th style="text-align:right">11</th>
+                                            <th>00715 TKT-20 1000 MTR.-SHADE NO. 9011(ZIRKON)</th>
+                                            <td style="text-align:right">27.00</td>
+                                            <td style="text-align:right">5,466.42</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">28.00</td>
+                                            <td style="text-align:right">5,668.88</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1.00</td>
+                                            <td style="text-align:right">202.46</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">-0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1308</th>
+                                            <th style="text-align:right">12</th>
+                                            <th>00715 TKT-20 1000 MTR.-SHADE NO. 904(MORO)</th>
+                                            <td style="text-align:right">3.00</td>
+                                            <td style="text-align:right">607.38</td>
+                                            <td style="text-align:right">70.00</td>
+                                            <td style="text-align:right">14,172.40</td>
+                                            <td style="text-align:right">44.00</td>
+                                            <td style="text-align:right">8,908.44</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">29.00</td>
+                                            <td style="text-align:right">5,871.34</td>
+                                                                                        <td style="text-align:right">202.46</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1309</th>
+                                            <th style="text-align:right">13</th>
+                                            <th>00715 TKT-20 1000 MTR.-SHADE NO. 9041(RED)</th>
+                                            <td style="text-align:right">23.00</td>
+                                            <td style="text-align:right">4,656.58</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">24.00</td>
+                                            <td style="text-align:right">4,859.04</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">31.00</td>
+                                            <td style="text-align:right">6,276.26</td>
+                                            <td style="background: #afedb1;text-align:right">30.00</td>
+                                            <td style="text-align:right">6,073.80</td>
+                                                                                        <td style="text-align:right">202.46</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2059</th>
+                                            <th style="text-align:right">14</th>
+                                            <th>00715 TKT-20 1000 MTR.-SHADE NO. 9191(AQUA)</th>
+                                            <td style="text-align:right">15.00</td>
+                                            <td style="text-align:right">3,036.90</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1.00</td>
+                                            <td style="text-align:right">202.46</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">14.00</td>
+                                            <td style="text-align:right">2,834.44</td>
+                                                                                        <td style="text-align:right">202.46</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2879</th>
+                                            <th style="text-align:right">15</th>
+                                            <th>00715 TKT-20 1000 MTR.-SHADE NO. 9268(COGNAC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">40.00</td>
+                                            <td style="text-align:right">8,098.40</td>
+                                            <td style="text-align:right">27.00</td>
+                                            <td style="text-align:right">5,466.42</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">13.00</td>
+                                            <td style="text-align:right">2,631.98</td>
+                                                                                        <td style="text-align:right">202.46</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1316</th>
+                                            <th style="text-align:right">16</th>
+                                            <th>00715 TKT-20 1000 MTR.-SHADE NO. 9624(TEAK)</th>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">2,429.52</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">4,049.20</td>
+                                            <td style="text-align:right">30.00</td>
+                                            <td style="text-align:right">6,073.80</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">23.00</td>
+                                            <td style="text-align:right">4,656.58</td>
+                                            <td style="background: #afedb1;text-align:right">25.00</td>
+                                            <td style="text-align:right">5,061.50</td>
+                                                                                        <td style="text-align:right">202.46</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1313</th>
+                                            <th style="text-align:right">17</th>
+                                            <th>00715 TKT-20 1000 MTR.-SHADE NO. G9467(MORO)</th>
+                                            <td style="text-align:right">4.00</td>
+                                            <td style="text-align:right">1,136.92</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">1,339.38</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">23.00</td>
+                                            <td style="text-align:right">4,656.58</td>
+                                            <td style="background: #afedb1;text-align:right">22.00</td>
+                                            <td style="text-align:right">4,454.12</td>
+                                                                                        <td style="text-align:right">202.46</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1299</th>
+                                            <th style="text-align:right">18</th>
+                                            <th>00715-2 TKT-20  1000 MTR.(BLACK)</th>
+                                            <td style="text-align:right">40.00</td>
+                                            <td style="text-align:right">8,098.40</td>
+                                            <td style="text-align:right">180.00</td>
+                                            <td style="text-align:right">36,442.80</td>
+                                            <td style="text-align:right">205.00</td>
+                                            <td style="text-align:right">41,504.30</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">30.00</td>
+                                            <td style="text-align:right">6,073.80</td>
+                                            <td style="background: #afedb1;text-align:right">45.00</td>
+                                            <td style="text-align:right">9,110.70</td>
+                                                                                        <td style="text-align:right">202.46</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1343</th>
+                                            <th style="text-align:right">19</th>
+                                            <th>04007-2 TKT-50-SHADE NO.0000(BLACK)</th>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">1,500.00</td>
+                                            <td style="text-align:right">260.00</td>
+                                            <td style="text-align:right">34,444.00</td>
+                                            <td style="text-align:right">252.00</td>
+                                            <td style="text-align:right">33,201.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">7.00</td>
+                                            <td style="text-align:right">960.05</td>
+                                            <td style="background: #afedb1;text-align:right">27.00</td>
+                                            <td style="text-align:right">3,703.05</td>
+                                                                                        <td style="text-align:right">137.15</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1800</th>
+                                            <th style="text-align:right">20</th>
+                                            <th>04007-2 TKT-50-SHADE NO.0000(NATURAL WHITE)</th>
+                                            <td style="text-align:right">14.00</td>
+                                            <td style="text-align:right">1,828.68</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">15.00</td>
+                                            <td style="text-align:right">1,959.30</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1.00</td>
+                                            <td style="text-align:right">522.48</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">391.86</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1266</th>
+                                            <th style="text-align:right">21</th>
+                                            <th>11373 MASTER TKT-80(RED)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">60.00</td>
+                                            <td style="text-align:right">5,093.40</td>
+                                            <td style="text-align:right">60.00</td>
+                                            <td style="text-align:right">5,093.40</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">18.00</td>
+                                            <td style="text-align:right">1,528.02</td>
+                                            <td style="background: #afedb1;text-align:right">18.00</td>
+                                            <td style="text-align:right">1,528.02</td>
+                                                                                        <td style="text-align:right">84.89</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2604</th>
+                                            <th style="text-align:right">22</th>
+                                            <th>2516 TKT-50 THREAD-WHITE(WHITE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">6,250.00</td>
+                                            <td style="text-align:right">34.00</td>
+                                            <td style="text-align:right">4,250.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">16.00</td>
+                                            <td style="text-align:right">2,000.00</td>
+                                            <td style="background: #afedb1;text-align:right">32.00</td>
+                                            <td style="text-align:right">4,000.00</td>
+                                                                                        <td style="text-align:right">125.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2029</th>
+                                            <th style="text-align:right">23</th>
+                                            <th>2516050 TERKO SATIN T60  1000m(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">6,250.00</td>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">6,250.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1272</th>
+                                            <th style="text-align:right">24</th>
+                                            <th>2516075 TERKO SATIN TKT-75-SHADE NO. 00024(LIGHT BROWN)</th>
+                                            <td style="text-align:right">4.00</td>
+                                            <td style="text-align:right">449.40</td>
+                                            <td style="text-align:right">220.00</td>
+                                            <td style="text-align:right">25,790.50</td>
+                                            <td style="text-align:right">207.00</td>
+                                            <td style="text-align:right">24,233.90</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">15.00</td>
+                                            <td style="text-align:right">1,770.00</td>
+                                            <td style="background: #afedb1;text-align:right">32.00</td>
+                                            <td style="text-align:right">3,776.00</td>
+                                                                                        <td style="text-align:right">118.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1275</th>
+                                            <th style="text-align:right">25</th>
+                                            <th>2516075 TERKO SATIN TKT-75-SHADE NO. 00028(RED)</th>
+                                            <td style="text-align:right">34.00</td>
+                                            <td style="text-align:right">3,819.90</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">13.00</td>
+                                            <td style="text-align:right">1,460.55</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">24.00</td>
+                                            <td style="text-align:right">2,696.40</td>
+                                            <td style="background: #afedb1;text-align:right">45.00</td>
+                                            <td style="text-align:right">5,055.75</td>
+                                                                                        <td style="text-align:right">112.35</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2517</th>
+                                            <th style="text-align:right">26</th>
+                                            <th>2516075 TERKO SATIN TKT-75-SHADE NO. 00052(TEAL)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">15.00</td>
+                                            <td style="text-align:right">1,685.25</td>
+                                            <td style="text-align:right">7.00</td>
+                                            <td style="text-align:right">786.45</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1.00</td>
+                                            <td style="text-align:right">112.35</td>
+                                            <td style="background: #afedb1;text-align:right">9.00</td>
+                                            <td style="text-align:right">1,011.15</td>
+                                                                                        <td style="text-align:right">112.35</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1270</th>
+                                            <th style="text-align:right">27</th>
+                                            <th>2516075 TERKO SATIN TKT-75-SHADE NO. 00184(DARK BROWN)</th>
+                                            <td style="text-align:right">7.00</td>
+                                            <td style="text-align:right">786.45</td>
+                                            <td style="text-align:right">60.00</td>
+                                            <td style="text-align:right">7,080.00</td>
+                                            <td style="text-align:right">29.00</td>
+                                            <td style="text-align:right">3,382.45</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">38.00</td>
+                                            <td style="text-align:right">4,484.00</td>
+                                                                                        <td style="text-align:right">118.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1284</th>
+                                            <th style="text-align:right">28</th>
+                                            <th>2516075 TERKO SATIN TKT-75-SHADE NO. 01055(BEIGE)</th>
+                                            <td style="text-align:right">29.00</td>
+                                            <td style="text-align:right">3,258.15</td>
+                                            <td style="text-align:right">90.00</td>
+                                            <td style="text-align:right">10,450.50</td>
+                                            <td style="text-align:right">64.00</td>
+                                            <td style="text-align:right">7,258.20</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">13.00</td>
+                                            <td style="text-align:right">1,534.00</td>
+                                            <td style="background: #afedb1;text-align:right">68.00</td>
+                                            <td style="text-align:right">7,984.45</td>
+                                                                                        <td style="text-align:right">117.42</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1775</th>
+                                            <th style="text-align:right">29</th>
+                                            <th>2516075 TERKO SATIN TKT-75-SHADE NO. 02243(CAMEL)</th>
+                                            <td style="text-align:right">3.00</td>
+                                            <td style="text-align:right">337.05</td>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">1,180.00</td>
+                                            <td style="text-align:right">3.00</td>
+                                            <td style="text-align:right">337.05</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">10.00</td>
+                                            <td style="text-align:right">1,180.00</td>
+                                                                                        <td style="text-align:right">118.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1252</th>
+                                            <th style="text-align:right">30</th>
+                                            <th>2516075 TERKO SATIN TKT-75-SHADE NO. 03709(BROWN)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">270.00</td>
+                                            <td style="text-align:right">31,408.00</td>
+                                            <td style="text-align:right">282.00</td>
+                                            <td style="text-align:right">32,824.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">27.00</td>
+                                            <td style="text-align:right">3,186.00</td>
+                                            <td style="background: #afedb1;text-align:right">15.00</td>
+                                            <td style="text-align:right">1,770.00</td>
+                                                                                        <td style="text-align:right">118.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1776</th>
+                                            <th style="text-align:right">31</th>
+                                            <th>2516075 TERKO SATIN TKT-75-SHADE NO. 03780(BLUE)</th>
+                                            <td style="text-align:right">19.00</td>
+                                            <td style="text-align:right">2,134.65</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">19.00</td>
+                                            <td style="text-align:right">2,134.65</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1278</th>
+                                            <th style="text-align:right">32</th>
+                                            <th>2516075 TERKO SATIN TKT-75-SHADE NO. 15RSN(GREEN)</th>
+                                            <td style="text-align:right">11.00</td>
+                                            <td style="text-align:right">1,235.85</td>
+                                            <td style="text-align:right">45.00</td>
+                                            <td style="text-align:right">5,197.00</td>
+                                            <td style="text-align:right">49.00</td>
+                                            <td style="text-align:right">5,606.85</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">1,180.00</td>
+                                            <td style="background: #afedb1;text-align:right">17.00</td>
+                                            <td style="text-align:right">2,006.00</td>
+                                                                                        <td style="text-align:right">118.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2012</th>
+                                            <th style="text-align:right">33</th>
+                                            <th>2516075 TERKO SATIN TKT-75-SHADE NO. WHITE(BLEECH WHITE)</th>
+                                            <td style="text-align:right">30.00</td>
+                                            <td style="text-align:right">2,686.20</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">895.40</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">20.00</td>
+                                            <td style="text-align:right">1,790.80</td>
+                                                                                        <td style="text-align:right">89.54</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1280</th>
+                                            <th style="text-align:right">34</th>
+                                            <th>2516075 TERKO SATIN TKT-75-SHADE NO. WHITE(WHITE)</th>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">674.10</td>
+                                            <td style="text-align:right">30.00</td>
+                                            <td style="text-align:right">3,540.00</td>
+                                            <td style="text-align:right">36.00</td>
+                                            <td style="text-align:right">4,214.10</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1782</th>
+                                            <th style="text-align:right">35</th>
+                                            <th>255 NB916 TKT-30 MASTER(NAVY)</th>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">2,489.20</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">3,248.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">7.00</td>
+                                            <td style="text-align:right">758.80</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">-0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1460</th>
+                                            <th style="text-align:right">36</th>
+                                            <th>665 NB916 TKT-30 MASTER(BROWN)</th>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">1,066.34</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">3,199.02</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">8.00</td>
+                                            <td style="text-align:right">4,265.36</td>
+                                            <td style="background: #afedb1;text-align:right">4.00</td>
+                                            <td style="text-align:right">2,132.68</td>
+                                                                                        <td style="text-align:right">533.17</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2694</th>
+                                            <th style="text-align:right">37</th>
+                                            <th>731 NB916 TKT-30 MASTER(BROWN)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">5,331.70</td>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">5,331.70</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1781</th>
+                                            <th style="text-align:right">38</th>
+                                            <th>904 NB916 TKT-30 MASTER(BROWN)</th>
+                                            <td style="text-align:right">21.00</td>
+                                            <td style="text-align:right">11,161.29</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">1,062.98</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">15.00</td>
+                                            <td style="text-align:right">7,972.35</td>
+                                            <td style="background: #afedb1;text-align:right">34.00</td>
+                                            <td style="text-align:right">18,070.66</td>
+                                                                                        <td style="text-align:right">531.49</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1798</th>
+                                            <th style="text-align:right">39</th>
+                                            <th>9104 NB916 TKT-30 MASTER(BEIGE)</th>
+                                            <td style="text-align:right">27.00</td>
+                                            <td style="text-align:right">14,217.93</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1.00</td>
+                                            <td style="text-align:right">526.59</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">11.00</td>
+                                            <td style="text-align:right">5,792.49</td>
+                                            <td style="background: #afedb1;text-align:right">37.00</td>
+                                            <td style="text-align:right">19,483.83</td>
+                                                                                        <td style="text-align:right">526.59</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1986</th>
+                                            <th style="text-align:right">40</th>
+                                            <th>9305 NB916 TKT-30 MASTER(ASSORTED)</th>
+                                            <td style="text-align:right">30.00</td>
+                                            <td style="text-align:right">15,995.10</td>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">5,331.70</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">10,663.40</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">3,199.02</td>
+                                            <td style="background: #afedb1;text-align:right">26.00</td>
+                                            <td style="text-align:right">13,862.42</td>
+                                                                                        <td style="text-align:right">533.17</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1262</th>
+                                            <th style="text-align:right">41</th>
+                                            <th>B10569 TKT-80 MASTER(BROWN)</th>
+                                            <td style="text-align:right">19.00</td>
+                                            <td style="text-align:right">1,612.91</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3.00</td>
+                                            <td style="text-align:right">254.67</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">169.78</td>
+                                            <td style="background: #afedb1;text-align:right">18.00</td>
+                                            <td style="text-align:right">1,528.02</td>
+                                                                                        <td style="text-align:right">84.89</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1260</th>
+                                            <th style="text-align:right">42</th>
+                                            <th>B22253 TKT-80 MASTER-BONDEX-1000 MTR.(ORANGE)</th>
+                                            <td style="text-align:right">16.00</td>
+                                            <td style="text-align:right">1,360.00</td>
+                                            <td style="text-align:right">30.00</td>
+                                            <td style="text-align:right">2,546.70</td>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">4,246.26</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">13.00</td>
+                                            <td style="text-align:right">1,103.57</td>
+                                            <td style="background: #afedb1;text-align:right">9.00</td>
+                                            <td style="text-align:right">764.01</td>
+                                                                                        <td style="text-align:right">84.89</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1259</th>
+                                            <th style="text-align:right">43</th>
+                                            <th>B23711 TKT-80 MASTER(DARK RED)</th>
+                                            <td style="text-align:right">11.00</td>
+                                            <td style="text-align:right">933.79</td>
+                                            <td style="text-align:right">60.00</td>
+                                            <td style="text-align:right">5,093.40</td>
+                                            <td style="text-align:right">57.00</td>
+                                            <td style="text-align:right">4,838.73</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">424.45</td>
+                                            <td style="background: #afedb1;text-align:right">19.00</td>
+                                            <td style="text-align:right">1,612.91</td>
+                                                                                        <td style="text-align:right">84.89</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">963</th>
+                                            <th style="text-align:right">44</th>
+                                            <th>BONDEX TKT-80 THREAD(BLACK)</th>
+                                            <td style="text-align:right">73.00</td>
+                                            <td style="text-align:right">16,507.49</td>
+                                            <td style="text-align:right">750.00</td>
+                                            <td style="text-align:right">169,597.50</td>
+                                            <td style="text-align:right">798.00</td>
+                                            <td style="text-align:right">180,451.74</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">25.00</td>
+                                            <td style="text-align:right">5,653.25</td>
+                                                                                        <td style="text-align:right">226.13</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">965</th>
+                                            <th style="text-align:right">45</th>
+                                            <th>BONDEX TKT-80 THREAD(WHITE)</th>
+                                            <td style="text-align:right">11.00</td>
+                                            <td style="text-align:right">1,754.28</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">4.00</td>
+                                            <td style="text-align:right">637.92</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">956.88</td>
+                                            <td style="background: #afedb1;text-align:right">13.00</td>
+                                            <td style="text-align:right">2,073.24</td>
+                                                                                        <td style="text-align:right">159.48</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2244</th>
+                                            <th style="text-align:right">46</th>
+                                            <th>MISC THREADS (ASSORTED)</th>
+                                            <td style="text-align:right">7.00</td>
+                                            <td style="text-align:right">798.42</td>
+                                            <td style="text-align:right">8.00</td>
+                                            <td style="text-align:right">577.30</td>
+                                            <td style="text-align:right">15.00</td>
+                                            <td style="text-align:right">2,418.10</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">-1,042.38</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2692</th>
+                                            <th style="text-align:right">47</th>
+                                            <th>NB916 TKT-30 MASTER-NATURAL WHITE(NATURAL WHITE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">10,155.60</td>
+                                            <td style="text-align:right">11.00</td>
+                                            <td style="text-align:right">5,585.58</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">9.00</td>
+                                            <td style="text-align:right">4,570.02</td>
+                                            <td style="background: #afedb1;text-align:right">18.00</td>
+                                            <td style="text-align:right">9,140.04</td>
+                                                                                        <td style="text-align:right">507.78</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1407</th>
+                                            <th style="text-align:right">48</th>
+                                            <th>S648080 NYLBOND TKT-80-SHADE NO. 035(WHITE)</th>
+                                            <td style="text-align:right">14.00</td>
+                                            <td style="text-align:right">2,044.28</td>
+                                            <td style="text-align:right">15.00</td>
+                                            <td style="text-align:right">2,392.20</td>
+                                            <td style="text-align:right">11.00</td>
+                                            <td style="text-align:right">1,606.22</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">18.00</td>
+                                            <td style="text-align:right">2,830.26</td>
+                                                                                        <td style="text-align:right">157.24</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2390</th>
+                                            <th style="text-align:right">49</th>
+                                            <th>Sponge Net 210 GSM(BLACK)</th>
+                                            <td style="text-align:right">40.00</td>
+                                            <td style="text-align:right">7,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">40.00</td>
+                                            <td style="text-align:right">7,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2211</th>
+                                            <th style="text-align:right">50</th>
+                                            <th>TK-20 THREADS 3/20  1000 MTR.-SHADE NO. 679(BROWN)</th>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">2,429.52</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">404.92</td>
+                                            <td style="background: #afedb1;text-align:right">14.00</td>
+                                            <td style="text-align:right">2,834.44</td>
+                                                                                        <td style="text-align:right">202.46</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2765</th>
+                                            <th style="text-align:right">51</th>
+                                            <th>TKT-10 THREAD-SHADE NO. 111(COGNAC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">46.00</td>
+                                            <td style="text-align:right">8,947.92</td>
+                                            <td style="text-align:right">30.00</td>
+                                            <td style="text-align:right">5,835.60</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">1,945.20</td>
+                                            <td style="background: #afedb1;text-align:right">26.00</td>
+                                            <td style="text-align:right">5,057.52</td>
+                                                                                        <td style="text-align:right">194.52</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2764</th>
+                                            <th style="text-align:right">52</th>
+                                            <th>TKT-10 THREAD-SHADE NO. 904(CHESTNUT)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">46.00</td>
+                                            <td style="text-align:right">8,947.92</td>
+                                            <td style="text-align:right">24.00</td>
+                                            <td style="text-align:right">4,668.48</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">389.04</td>
+                                            <td style="background: #afedb1;text-align:right">24.00</td>
+                                            <td style="text-align:right">4,668.48</td>
+                                                                                        <td style="text-align:right">194.52</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2814</th>
+                                            <th style="text-align:right">53</th>
+                                            <th>TKT-10 THREAD-SHADE NO. 9041(RED)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">1,945.20</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">10.00</td>
+                                            <td style="text-align:right">1,945.20</td>
+                                                                                        <td style="text-align:right">194.52</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2381</th>
+                                            <th style="text-align:right">54</th>
+                                            <th>TKT-20 NATURAL WHITE(NATURAL WHITE)</th>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">1,032.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">1,032.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2382</th>
+                                            <th style="text-align:right">55</th>
+                                            <th>TKT-40 NATURAL WHITE(NATURAL WHITE)</th>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">542.00</td>
+                                            <td style="text-align:right">30.00</td>
+                                            <td style="text-align:right">2,764.80</td>
+                                            <td style="text-align:right">25.00</td>
+                                            <td style="text-align:right">2,385.20</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">10.00</td>
+                                            <td style="text-align:right">921.60</td>
+                                                                                        <td style="text-align:right">92.16</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1902</th>
+                                            <th style="text-align:right">56</th>
+                                            <th>TKT-40 THREAD-SHADE NO. 111(CHESTNUT)</th>
+                                            <td style="text-align:right">22.00</td>
+                                            <td style="text-align:right">2,384.80</td>
+                                            <td style="text-align:right">186.00</td>
+                                            <td style="text-align:right">20,162.40</td>
+                                            <td style="text-align:right">126.00</td>
+                                            <td style="text-align:right">13,658.40</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">8.00</td>
+                                            <td style="text-align:right">867.20</td>
+                                            <td style="background: #afedb1;text-align:right">90.00</td>
+                                            <td style="text-align:right">9,756.00</td>
+                                                                                        <td style="text-align:right">108.40</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2395</th>
+                                            <th style="text-align:right">57</th>
+                                            <th>TKT-40 THREAD-SHADE NO. 255(NAVY)</th>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">2,168.00</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">2,859.70</td>
+                                            <td style="text-align:right">36.00</td>
+                                            <td style="text-align:right">4,594.10</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3.00</td>
+                                            <td style="text-align:right">325.20</td>
+                                            <td style="background: #afedb1;text-align:right">7.00</td>
+                                            <td style="text-align:right">758.80</td>
+                                                                                        <td style="text-align:right">108.40</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2703</th>
+                                            <th style="text-align:right">58</th>
+                                            <th>TKT-40 THREAD-SHADE NO. 3010(CHESTNUT)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">1,990.00</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">1,990.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1893</th>
+                                            <th style="text-align:right">59</th>
+                                            <th>TKT-40 THREAD-SHADE NO. 646(BROWN)</th>
+                                            <td style="text-align:right">16.00</td>
+                                            <td style="text-align:right">1,734.40</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">16.00</td>
+                                            <td style="text-align:right">1,734.40</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2383</th>
+                                            <th style="text-align:right">60</th>
+                                            <th>TKT-40 THREAD-SHADE NO. 646(OLIVE)</th>
+                                            <td style="text-align:right">14.00</td>
+                                            <td style="text-align:right">1,517.60</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">1,300.80</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">8.00</td>
+                                            <td style="text-align:right">867.20</td>
+                                            <td style="background: #afedb1;text-align:right">10.00</td>
+                                            <td style="text-align:right">1,084.00</td>
+                                                                                        <td style="text-align:right">108.40</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1901</th>
+                                            <th style="text-align:right">61</th>
+                                            <th>TKT-40 THREAD-SHADE NO. 665(RED)</th>
+                                            <td style="text-align:right">22.00</td>
+                                            <td style="text-align:right">2,384.80</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">18.00</td>
+                                            <td style="text-align:right">1,951.20</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">8.00</td>
+                                            <td style="text-align:right">867.20</td>
+                                            <td style="background: #afedb1;text-align:right">12.00</td>
+                                            <td style="text-align:right">1,300.80</td>
+                                                                                        <td style="text-align:right">108.40</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1911</th>
+                                            <th style="text-align:right">62</th>
+                                            <th>TKT-40 THREAD-SHADE NO. 666(CAMEL)</th>
+                                            <td style="text-align:right">25.00</td>
+                                            <td style="text-align:right">2,710.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">8.00</td>
+                                            <td style="text-align:right">867.20</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1.00</td>
+                                            <td style="text-align:right">108.40</td>
+                                            <td style="background: #afedb1;text-align:right">18.00</td>
+                                            <td style="text-align:right">1,951.20</td>
+                                                                                        <td style="text-align:right">108.40</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1910</th>
+                                            <th style="text-align:right">63</th>
+                                            <th>TKT-40 THREAD-SHADE NO. 731(BEIGE)</th>
+                                            <td style="text-align:right">18.00</td>
+                                            <td style="text-align:right">1,951.20</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">2,168.00</td>
+                                            <td style="text-align:right">27.00</td>
+                                            <td style="text-align:right">2,926.80</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">8.00</td>
+                                            <td style="text-align:right">867.20</td>
+                                            <td style="background: #afedb1;text-align:right">19.00</td>
+                                            <td style="text-align:right">2,059.60</td>
+                                                                                        <td style="text-align:right">108.40</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1908</th>
+                                            <th style="text-align:right">64</th>
+                                            <th>TKT-40 THREAD-SHADE NO. 771(TEAL)</th>
+                                            <td style="text-align:right">31.00</td>
+                                            <td style="text-align:right">3,303.67</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">639.42</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1.00</td>
+                                            <td style="text-align:right">106.57</td>
+                                            <td style="background: #afedb1;text-align:right">26.00</td>
+                                            <td style="text-align:right">2,770.82</td>
+                                                                                        <td style="text-align:right">106.57</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2380</th>
+                                            <th style="text-align:right">65</th>
+                                            <th>TKT-40 THREAD-SHADE NO. 9011(ZIRKON)</th>
+                                            <td style="text-align:right">37.00</td>
+                                            <td style="text-align:right">4,010.80</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">37.00</td>
+                                            <td style="text-align:right">4,010.80</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1894</th>
+                                            <th style="text-align:right">66</th>
+                                            <th>TKT-40 THREAD-SHADE NO. 9018(CHESTNUT)</th>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">206.48</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">206.48</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1895</th>
+                                            <th style="text-align:right">67</th>
+                                            <th>TKT-40 THREAD-SHADE NO. 9103(LIGHT BLUE)</th>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">206.48</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">206.48</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2601</th>
+                                            <th style="text-align:right">68</th>
+                                            <th>TKT-40 THREAD-SHADE NO. 9104(BEIGE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">1,775.70</td>
+                                            <td style="text-align:right">7.00</td>
+                                            <td style="text-align:right">1,242.99</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">3.00</td>
+                                            <td style="text-align:right">532.71</td>
+                                                                                        <td style="text-align:right">177.57</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1904</th>
+                                            <th style="text-align:right">69</th>
+                                            <th>TKT-40 THREAD-SHADE NO. 9161(BROWN)</th>
+                                            <td style="text-align:right">14.00</td>
+                                            <td style="text-align:right">1,517.60</td>
+                                            <td style="text-align:right">120.00</td>
+                                            <td style="text-align:right">13,008.00</td>
+                                            <td style="text-align:right">78.00</td>
+                                            <td style="text-align:right">8,455.20</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3.00</td>
+                                            <td style="text-align:right">325.20</td>
+                                            <td style="background: #afedb1;text-align:right">59.00</td>
+                                            <td style="text-align:right">6,395.60</td>
+                                                                                        <td style="text-align:right">108.40</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2880</th>
+                                            <th style="text-align:right">70</th>
+                                            <th>TKT-40 THREAD-SHADE NO. 9268(COGNAC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">26.00</td>
+                                            <td style="text-align:right">2,818.40</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">2,168.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">6.00</td>
+                                            <td style="text-align:right">650.40</td>
+                                                                                        <td style="text-align:right">108.40</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1907</th>
+                                            <th style="text-align:right">71</th>
+                                            <th>TKT-40 THREAD-SHADE NO. 9318(RED)</th>
+                                            <td style="text-align:right">18.00</td>
+                                            <td style="text-align:right">1,951.20</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">11.00</td>
+                                            <td style="text-align:right">1,192.40</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">650.40</td>
+                                            <td style="background: #afedb1;text-align:right">13.00</td>
+                                            <td style="text-align:right">1,409.20</td>
+                                                                                        <td style="text-align:right">108.40</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1892</th>
+                                            <th style="text-align:right">72</th>
+                                            <th>TKT-40 THREAD-SHADE NO. BLACK(BLACK)</th>
+                                            <td style="text-align:right">47.00</td>
+                                            <td style="text-align:right">5,598.17</td>
+                                            <td style="text-align:right">130.00</td>
+                                            <td style="text-align:right">14,092.00</td>
+                                            <td style="text-align:right">149.00</td>
+                                            <td style="text-align:right">16,654.97</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">1,300.80</td>
+                                            <td style="background: #afedb1;text-align:right">40.00</td>
+                                            <td style="text-align:right">4,336.00</td>
+                                                                                        <td style="text-align:right">108.40</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2222</th>
+                                            <th style="text-align:right">73</th>
+                                            <th>TKT-40 THREADS 3/40  1500 MTR.-SHADE NO. 679(PURPLE)</th>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">650.40</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1.00</td>
+                                            <td style="text-align:right">108.40</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">5.00</td>
+                                            <td style="text-align:right">542.00</td>
+                                                                                        <td style="text-align:right">108.40</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2207</th>
+                                            <th style="text-align:right">74</th>
+                                            <th>TKT-40 THREADS 3/40-SHADE NO. 9191(AQUA)</th>
+                                            <td style="text-align:right">13.00</td>
+                                            <td style="text-align:right">1,409.20</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">13.00</td>
+                                            <td style="text-align:right">1,409.20</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1815</th>
+                                            <th style="text-align:right">75</th>
+                                            <th>TKT-50 CS-4007-SHADE NO. 03035(CHESTNUT)</th>
+                                            <td style="text-align:right">26.00</td>
+                                            <td style="text-align:right">3,396.12</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">26.00</td>
+                                            <td style="text-align:right">3,396.12</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1825</th>
+                                            <th style="text-align:right">76</th>
+                                            <th>TKT-50 CS-4007-SHADE NO. 3010(CHESTNUT)</th>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">1,371.50</td>
+                                            <td style="text-align:right">145.00</td>
+                                            <td style="text-align:right">19,886.75</td>
+                                            <td style="text-align:right">129.00</td>
+                                            <td style="text-align:right">17,692.35</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">4.00</td>
+                                            <td style="text-align:right">548.60</td>
+                                            <td style="background: #afedb1;text-align:right">30.00</td>
+                                            <td style="text-align:right">4,114.50</td>
+                                                                                        <td style="text-align:right">137.15</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1402</th>
+                                            <th style="text-align:right">77</th>
+                                            <th>TKT-50 CS-4007-SHADE NO. 3016(BEIGE)</th>
+                                            <td style="text-align:right">14.00</td>
+                                            <td style="text-align:right">1,920.10</td>
+                                            <td style="text-align:right">120.00</td>
+                                            <td style="text-align:right">16,458.00</td>
+                                            <td style="text-align:right">109.00</td>
+                                            <td style="text-align:right">14,949.35</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">2,743.00</td>
+                                            <td style="background: #afedb1;text-align:right">45.00</td>
+                                            <td style="text-align:right">6,171.75</td>
+                                                                                        <td style="text-align:right">137.15</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1356</th>
+                                            <th style="text-align:right">78</th>
+                                            <th>TKT-50 CS-4007-SHADE NO. 3021(BROWN)</th>
+                                            <td style="text-align:right">13.00</td>
+                                            <td style="text-align:right">1,782.95</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">274.30</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3.00</td>
+                                            <td style="text-align:right">411.45</td>
+                                            <td style="background: #afedb1;text-align:right">14.00</td>
+                                            <td style="text-align:right">1,920.10</td>
+                                                                                        <td style="text-align:right">137.15</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1269</th>
+                                            <th style="text-align:right">79</th>
+                                            <th>TKT-50 CS-4007-SHADE NO. 3023(COGNAC)</th>
+                                            <td style="text-align:right">11.00</td>
+                                            <td style="text-align:right">1,508.65</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">22.00</td>
+                                            <td style="text-align:right">3,017.30</td>
+                                            <td style="background: #afedb1;text-align:right">33.00</td>
+                                            <td style="text-align:right">4,525.95</td>
+                                                                                        <td style="text-align:right">137.15</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1358</th>
+                                            <th style="text-align:right">80</th>
+                                            <th>TKT-50 CS-4007-SHADE NO. 3025(TEAL)</th>
+                                            <td style="text-align:right">24.00</td>
+                                            <td style="text-align:right">3,164.40</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3.00</td>
+                                            <td style="text-align:right">395.55</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3.00</td>
+                                            <td style="text-align:right">395.55</td>
+                                            <td style="background: #afedb1;text-align:right">24.00</td>
+                                            <td style="text-align:right">3,164.40</td>
+                                                                                        <td style="text-align:right">131.85</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2559</th>
+                                            <th style="text-align:right">81</th>
+                                            <th>TKT-50 CS-4007-SHADE NO. 3040(YELLOW)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">6,857.50</td>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">6,857.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1406</th>
+                                            <th style="text-align:right">82</th>
+                                            <th>TKT-50 CS-4007-SHADE NO. 3052(CAMEL)</th>
+                                            <td style="text-align:right">1.00</td>
+                                            <td style="text-align:right">137.15</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">4.00</td>
+                                            <td style="text-align:right">439.43</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">24.00</td>
+                                            <td style="text-align:right">2,418.24</td>
+                                            <td style="background: #afedb1;text-align:right">21.00</td>
+                                            <td style="text-align:right">2,115.96</td>
+                                                                                        <td style="text-align:right">100.76</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1463</th>
+                                            <th style="text-align:right">83</th>
+                                            <th>TKT-50 CS-4007-SHADE NO. 3054(BROWN)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">2,743.00</td>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">1,645.80</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">8.00</td>
+                                            <td style="text-align:right">1,097.20</td>
+                                                                                        <td style="text-align:right">137.15</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1401</th>
+                                            <th style="text-align:right">84</th>
+                                            <th>TKT-50 CS-4007-SHADE NO. 3057(BEIGE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1.00</td>
+                                            <td style="text-align:right">137.15</td>
+                                            <td style="text-align:right">7.00</td>
+                                            <td style="text-align:right">734.15</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">597.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1462</th>
+                                            <th style="text-align:right">85</th>
+                                            <th>TKT-50 CS-4007-SHADE NO. 3075(RED)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">30.00</td>
+                                            <td style="text-align:right">4,114.50</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">2,743.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">10.00</td>
+                                            <td style="text-align:right">1,371.50</td>
+                                                                                        <td style="text-align:right">137.15</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1464</th>
+                                            <th style="text-align:right">86</th>
+                                            <th>TKT-50 CS-4007-SHADE NO. 3115(TEAK)</th>
+                                            <td style="text-align:right">4.00</td>
+                                            <td style="text-align:right">548.60</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">4.00</td>
+                                            <td style="text-align:right">1,920.10</td>
+                                            <td style="background: #afedb1;text-align:right">8.00</td>
+                                            <td style="text-align:right">2,468.70</td>
+                                                                                        <td style="text-align:right">308.59</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1405</th>
+                                            <th style="text-align:right">87</th>
+                                            <th>TKT-50 CS-4007-SHADE NO. 3118(NAVY)</th>
+                                            <td style="text-align:right">17.00</td>
+                                            <td style="text-align:right">2,331.55</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">685.75</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">7.00</td>
+                                            <td style="text-align:right">960.05</td>
+                                            <td style="background: #afedb1;text-align:right">19.00</td>
+                                            <td style="text-align:right">2,605.85</td>
+                                                                                        <td style="text-align:right">137.15</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2075</th>
+                                            <th style="text-align:right">88</th>
+                                            <th>TKT-50 CS-4007-SHADE NO. 3166(TAUPE)</th>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">2,743.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">4.00</td>
+                                            <td style="text-align:right">548.60</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">685.75</td>
+                                            <td style="background: #afedb1;text-align:right">21.00</td>
+                                            <td style="text-align:right">2,880.15</td>
+                                                                                        <td style="text-align:right">137.15</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2061</th>
+                                            <th style="text-align:right">89</th>
+                                            <th>TKT-75 CS-4006-SHADE NO. 3003(PURPLE)</th>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">597.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">6.00</td>
+                                            <td style="text-align:right">597.00</td>
+                                                                                        <td style="text-align:right">99.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2062</th>
+                                            <th style="text-align:right">90</th>
+                                            <th>TKT-75 CS-4006-SHADE NO. 3005(PINK)</th>
+                                            <td style="text-align:right">7.00</td>
+                                            <td style="text-align:right">696.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">11.00</td>
+                                            <td style="text-align:right">1,094.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">4.00</td>
+                                            <td style="text-align:right">398.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1287</th>
+                                            <th style="text-align:right">91</th>
+                                            <th>TKT-75 CS-4006-SHADE NO. 3010(CHESTNUT)</th>
+                                            <td style="text-align:right">21.00</td>
+                                            <td style="text-align:right">2,089.50</td>
+                                            <td style="text-align:right">360.00</td>
+                                            <td style="text-align:right">35,820.00</td>
+                                            <td style="text-align:right">327.00</td>
+                                            <td style="text-align:right">32,536.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">199.00</td>
+                                            <td style="background: #afedb1;text-align:right">56.00</td>
+                                            <td style="text-align:right">5,572.00</td>
+                                                                                        <td style="text-align:right">99.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2309</th>
+                                            <th style="text-align:right">92</th>
+                                            <th>TKT-75 CS-4006-SHADE NO. 3033(YELLOW)</th>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">497.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1.00</td>
+                                            <td style="text-align:right">99.50</td>
+                                            <td style="background: #afedb1;text-align:right">6.00</td>
+                                            <td style="text-align:right">597.00</td>
+                                                                                        <td style="text-align:right">99.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1928</th>
+                                            <th style="text-align:right">93</th>
+                                            <th>TKT-75 CS-4006-SHADE NO. 3038(GREEN)</th>
+                                            <td style="text-align:right">13.00</td>
+                                            <td style="text-align:right">1,285.05</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">18.00</td>
+                                            <td style="text-align:right">1,779.30</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">18.00</td>
+                                            <td style="text-align:right">1,779.30</td>
+                                            <td style="background: #afedb1;text-align:right">13.00</td>
+                                            <td style="text-align:right">1,285.05</td>
+                                                                                        <td style="text-align:right">98.85</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2310</th>
+                                            <th style="text-align:right">94</th>
+                                            <th>TKT-75 CS-4006-SHADE NO. 3042(ASSORTED)</th>
+                                            <td style="text-align:right">3.00</td>
+                                            <td style="text-align:right">298.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3.00</td>
+                                            <td style="text-align:right">298.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1912</th>
+                                            <th style="text-align:right">95</th>
+                                            <th>TKT-75 CS-4006-SHADE NO. 3052(CAMEL)</th>
+                                            <td style="text-align:right">38.00</td>
+                                            <td style="text-align:right">3,781.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">21.00</td>
+                                            <td style="text-align:right">2,089.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">236.00</td>
+                                            <td style="background: #afedb1;text-align:right">19.00</td>
+                                            <td style="text-align:right">1,927.50</td>
+                                                                                        <td style="text-align:right">101.45</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1839</th>
+                                            <th style="text-align:right">96</th>
+                                            <th>TKT-75 CS-4006-SHADE NO. 3057(BEIGE)</th>
+                                            <td style="text-align:right">41.00</td>
+                                            <td style="text-align:right">4,079.50</td>
+                                            <td style="text-align:right">60.00</td>
+                                            <td style="text-align:right">5,970.00</td>
+                                            <td style="text-align:right">84.00</td>
+                                            <td style="text-align:right">8,358.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">17.00</td>
+                                            <td style="text-align:right">1,691.50</td>
+                                                                                        <td style="text-align:right">99.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2108</th>
+                                            <th style="text-align:right">97</th>
+                                            <th>TKT-75 CS-4006-SHADE NO. 3071(ICE-BERG GREEN)</th>
+                                            <td style="text-align:right">7.00</td>
+                                            <td style="text-align:right">696.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">597.00</td>
+                                            <td style="background: #afedb1;text-align:right">13.00</td>
+                                            <td style="text-align:right">1,293.50</td>
+                                                                                        <td style="text-align:right">99.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2107</th>
+                                            <th style="text-align:right">98</th>
+                                            <th>TKT-75 CS-4006-SHADE NO. 3115(OLIVE)</th>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">995.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">995.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1837</th>
+                                            <th style="text-align:right">99</th>
+                                            <th>TKT-75 CS-4006-SHADE NO. 3115(TEAK)</th>
+                                            <td style="text-align:right">24.00</td>
+                                            <td style="text-align:right">2,388.00</td>
+                                            <td style="text-align:right">15.00</td>
+                                            <td style="text-align:right">1,492.50</td>
+                                            <td style="text-align:right">39.00</td>
+                                            <td style="text-align:right">3,880.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1276</th>
+                                            <th style="text-align:right">100</th>
+                                            <th>TKT-75 CS-4006-SHADE NO. 3118(NAVY)</th>
+                                            <td style="text-align:right">17.00</td>
+                                            <td style="text-align:right">1,691.50</td>
+                                            <td style="text-align:right">60.00</td>
+                                            <td style="text-align:right">5,970.00</td>
+                                            <td style="text-align:right">54.00</td>
+                                            <td style="text-align:right">5,373.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">18.00</td>
+                                            <td style="text-align:right">1,791.00</td>
+                                            <td style="background: #afedb1;text-align:right">41.00</td>
+                                            <td style="text-align:right">4,079.50</td>
+                                                                                        <td style="text-align:right">99.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2106</th>
+                                            <th style="text-align:right">101</th>
+                                            <th>TKT-75 CS-4006-SHADE NO. 3200(PINK)</th>
+                                            <td style="text-align:right">8.00</td>
+                                            <td style="text-align:right">796.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">8.00</td>
+                                            <td style="text-align:right">796.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1279</th>
+                                            <th style="text-align:right">102</th>
+                                            <th>TKT-75 CS-4006-SHADE NO. B11508(SKY BLUE)</th>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">820.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">820.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2226</th>
+                                            <th style="text-align:right">103</th>
+                                            <th>TKT-75 CS4006  1000 MTR.-SHADE NO. 3201(ASSORTED)</th>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">597.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">597.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2632</th>
+                                            <th style="text-align:right">104</th>
+                                            <th>TKT-75 CS4006-SHADE NO. 3166(TAUPE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">995.00</td>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">995.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr style="background:thistle">
+                                            <th style="display: none;"></th>
+                                            <th colspan="2">Total</th>
+                                            <td style="text-align:right">1,379.00</td>
+                                            <td style="text-align:right">234,778.13</td>
+                                            <td style="text-align:right">4,243.00</td>
+                                            <td style="text-align:right">663,480.94</td>
+                                            <td style="text-align:right">4,509.00</td>
+                                            <td style="text-align:right">710,513.66</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">618.00</td>
+                                            <td style="text-align:right">112,298.70</td>
+                                            <td style="text-align:right">1,731.00</td>
+                                            <td style="text-align:right">300,044.11</td>
+                                            <td style="text-align:right">13,472.56</td>
+                                            <td></td>  
+                                        </tr>
+                                    </tbody>
+                                </table><table>
+                            <thead>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th rowspan="2" style="text-align:right">#</th>
+                                    <th rowspan="2" style="text-align:center">Item</th>
+                                    <th colspan="2" style="text-align:center">Opening Information</th>
+                                    <th colspan="2" style="text-align:center">Purchase Information</th>
+                                    <th colspan="2" style="text-align:center">Issue Information</th>
+                                    <th colspan="2" style="text-align:center">Plating Information</th>
+                                    <th colspan="2" style="text-align:center">Stock In Information</th>
+                                    <th colspan="2" style="text-align:center">Balance Information</th>
+                                    <th rowspan="2">Closing<br>Rate</th>
+                                    <th rowspan="2" style="text-align:center">Unit</th>
+                                </tr>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th style="text-align:center">Opn Qnty</th>
+                                    <th style="text-align:center">Opn Val</th>
+                                    
+                                    <th style="text-align:center">Pur Qnty</th>
+                                    <th style="text-align:center">Pur Val</th>
+                                    
+                                    <th style="text-align:center">Issue Qnty</th>
+                                    <th style="text-align:center">Issue Val</th>
+                                    
+                                    <th style="text-align:center">Plating Qnty</th>
+                                    <th style="text-align:center">Plating Val</th>
+                                    
+                                    <th style="text-align:center">Stock In Qnty</th>
+                                    <th style="text-align:center">Stock In Val</th>
+                                    
+                                    <th style="text-align:center">Bal Qnty</th>
+                                    <th style="text-align:center">Bal Val</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                <tr style="background:thistle">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Total</th>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background:#faeda6">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Grand Total</th>
+                                    <td style="text-align:right">1,379.00</td>
+                                    <td style="text-align:right">234,778.13</td>
+                                    <td style="text-align:right">4,243.00</td>
+                                    <td style="text-align:right">663,480.94</td>
+                                    <td style="text-align:right">4,509.00</td>
+                                    <td style="text-align:right">710,513.66</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">618.00</td>
+                                    <td style="text-align:right">112,298.70</td>
+                                    <td style="text-align:right">1,731.00</td>
+                                    <td style="text-align:right">300,044.11</td>
+                                    <td style="text-align:right">13,472.56</td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table></body></html>

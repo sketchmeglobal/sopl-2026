@@ -1,0 +1,224 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Sheet1</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>
+                                    <thead>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th rowspan="2" style="text-align:right">#</th>
+                                            <th rowspan="2" style="text-align:center">Item</th>
+                                            <th colspan="2" style="text-align:center">Opening Information</th>
+                                            <th colspan="2" style="text-align:center">Purchase Information</th>
+                                            <th colspan="2" style="text-align:center">Issue Information</th>
+                                            <th colspan="2" style="text-align:center">Plating Information</th>
+                                            <th colspan="2" style="text-align:center">Stock In Information</th>
+                                            <th colspan="2" style="text-align:center">Balance Information</th>
+                                            <th rowspan="2">Closing<br>Rate</th>
+                                            <th rowspan="2" style="text-align:center">Unit</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th style="text-align:center">Opn Qnty</th>
+                                            <th style="text-align:center">Opn Val</th>
+                                            <th style="text-align:center">Pur Qnty</th>
+                                            <th style="text-align:center">Pur Val</th>
+                                            <th style="text-align:center">Issue Qnty</th>
+                                            <th style="text-align:center">Issue Val</th>
+                                            <th style="text-align:center">Plating Qnty</th>
+                                            <th style="text-align:center">Plating Val</th>
+                                            <th style="text-align:center">Stock In Qnty</th>
+                                            <th style="text-align:center">Stock In Val</th>
+                                            <th style="text-align:center">Bal Qnty</th>
+                                            <th style="text-align:center">Bal Val</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                                                <tr>
+                                            <th style="display: none;">2644</th>
+                                            <th style="text-align:right">1</th>
+                                            <th>MINT (110) LEATHER(ALMOND)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,818.25</td>
+                                            <td style="text-align:right">222,240.75</td>
+                                            <td style="text-align:right">1,525.00</td>
+                                            <td style="text-align:right">120,074.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1293.25</td>
+                                            <td style="text-align:right">102,166.75</td>
+                                                                                        <td style="text-align:right">79.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">144</th>
+                                            <th style="text-align:right">2</th>
+                                            <th>MINT (110) LEATHER(CABERNET)</th>
+                                            <td style="text-align:right">369.25</td>
+                                            <td style="text-align:right">23,787.09</td>
+                                            <td style="text-align:right">2,587.50</td>
+                                            <td style="text-align:right">204,412.50</td>
+                                            <td style="text-align:right">2,051.25</td>
+                                            <td style="text-align:right">156,665.09</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">905.50</td>
+                                            <td style="text-align:right">71,534.50</td>
+                                                                                        <td style="text-align:right">79.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2647</th>
+                                            <th style="text-align:right">3</th>
+                                            <th>MINT (110) LEATHER(RED)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3,732.75</td>
+                                            <td style="text-align:right">295,698.50</td>
+                                            <td style="text-align:right">3,119.50</td>
+                                            <td style="text-align:right">247,251.75</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">613.25</td>
+                                            <td style="text-align:right">48,446.75</td>
+                                                                                        <td style="text-align:right">79.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2645</th>
+                                            <th style="text-align:right">4</th>
+                                            <th>MINT (110) LEATHER(TOFFEE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,663.75</td>
+                                            <td style="text-align:right">210,012.00</td>
+                                            <td style="text-align:right">1,507.25</td>
+                                            <td style="text-align:right">118,648.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1156.50</td>
+                                            <td style="text-align:right">91,363.50</td>
+                                                                                        <td style="text-align:right">79.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1456</th>
+                                            <th style="text-align:right">5</th>
+                                            <th>THICK COW CRUNCH (83) LEATHER(COGNAC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">51,297.75</td>
+                                            <td style="text-align:right">4,874,321.25</td>
+                                            <td style="text-align:right">42,227.00</td>
+                                            <td style="text-align:right">4,012,600.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">9070.75</td>
+                                            <td style="text-align:right">861,721.25</td>
+                                                                                        <td style="text-align:right">95.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr style="background:thistle">
+                                            <th style="display: none;"></th>
+                                            <th colspan="2">Total</th>
+                                            <td style="text-align:right">369.25</td>
+                                            <td style="text-align:right">23,787.09</td>
+                                            <td style="text-align:right">63,100.00</td>
+                                            <td style="text-align:right">5,806,685.00</td>
+                                            <td style="text-align:right">50,430.00</td>
+                                            <td style="text-align:right">4,655,239.34</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">13,039.25</td>
+                                            <td style="text-align:right">1,175,232.75</td>
+                                            <td style="text-align:right">411.00</td>
+                                            <td></td>  
+                                        </tr>
+                                    </tbody>
+                                </table><table>
+                            <thead>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th rowspan="2" style="text-align:right">#</th>
+                                    <th rowspan="2" style="text-align:center">Item</th>
+                                    <th colspan="2" style="text-align:center">Opening Information</th>
+                                    <th colspan="2" style="text-align:center">Purchase Information</th>
+                                    <th colspan="2" style="text-align:center">Issue Information</th>
+                                    <th colspan="2" style="text-align:center">Plating Information</th>
+                                    <th colspan="2" style="text-align:center">Stock In Information</th>
+                                    <th colspan="2" style="text-align:center">Balance Information</th>
+                                    <th rowspan="2">Closing<br>Rate</th>
+                                    <th rowspan="2" style="text-align:center">Unit</th>
+                                </tr>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th style="text-align:center">Opn Qnty</th>
+                                    <th style="text-align:center">Opn Val</th>
+                                    
+                                    <th style="text-align:center">Pur Qnty</th>
+                                    <th style="text-align:center">Pur Val</th>
+                                    
+                                    <th style="text-align:center">Issue Qnty</th>
+                                    <th style="text-align:center">Issue Val</th>
+                                    
+                                    <th style="text-align:center">Plating Qnty</th>
+                                    <th style="text-align:center">Plating Val</th>
+                                    
+                                    <th style="text-align:center">Stock In Qnty</th>
+                                    <th style="text-align:center">Stock In Val</th>
+                                    
+                                    <th style="text-align:center">Bal Qnty</th>
+                                    <th style="text-align:center">Bal Val</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                <tr style="background:thistle">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Total</th>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background:#faeda6">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Grand Total</th>
+                                    <td style="text-align:right">369.25</td>
+                                    <td style="text-align:right">23,787.09</td>
+                                    <td style="text-align:right">63,100.00</td>
+                                    <td style="text-align:right">5,806,685.00</td>
+                                    <td style="text-align:right">50,430.00</td>
+                                    <td style="text-align:right">4,655,239.34</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">13,039.25</td>
+                                    <td style="text-align:right">1,175,232.75</td>
+                                    <td style="text-align:right">411.00</td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table></body></html>

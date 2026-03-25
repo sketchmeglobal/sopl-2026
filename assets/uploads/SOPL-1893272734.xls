@@ -1,0 +1,1953 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Sheet1</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>
+                                    <thead>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th rowspan="2" style="text-align:right">#</th>
+                                            <th rowspan="2" style="text-align:center">Item</th>
+                                            <th colspan="2" style="text-align:center">Opening Information</th>
+                                            <th colspan="2" style="text-align:center">Purchase Information</th>
+                                            <th colspan="2" style="text-align:center">Issue Information</th>
+                                            <th colspan="2" style="text-align:center">Plating Information</th>
+                                            <th colspan="2" style="text-align:center">Stock In Information</th>
+                                            <th colspan="2" style="text-align:center">Balance Information</th>
+                                            <th rowspan="2">Closing<br>Rate</th>
+                                            <th rowspan="2" style="text-align:center">Unit</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th style="text-align:center">Opn Qnty</th>
+                                            <th style="text-align:center">Opn Val</th>
+                                            <th style="text-align:center">Pur Qnty</th>
+                                            <th style="text-align:center">Pur Val</th>
+                                            <th style="text-align:center">Issue Qnty</th>
+                                            <th style="text-align:center">Issue Val</th>
+                                            <th style="text-align:center">Plating Qnty</th>
+                                            <th style="text-align:center">Plating Val</th>
+                                            <th style="text-align:center">Stock In Qnty</th>
+                                            <th style="text-align:center">Stock In Val</th>
+                                            <th style="text-align:center">Bal Qnty</th>
+                                            <th style="text-align:center">Bal Val</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                                                <tr>
+                                            <th style="display: none;">111</th>
+                                            <th style="text-align:right">1</th>
+                                            <th>ASSORTED (84) LEATHER(ASSORTED)</th>
+                                            <td style="text-align:right">760.00</td>
+                                            <td style="text-align:right">38,000.00</td>
+                                            <td style="text-align:right">3,979.25</td>
+                                            <td style="text-align:right">171,150.87</td>
+                                            <td style="text-align:right">4,560.25</td>
+                                            <td style="text-align:right">201,095.87</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">179.00</td>
+                                            <td style="text-align:right">8,055.00</td>
+                                                                                        <td style="text-align:right">45.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">27</th>
+                                            <th style="text-align:right">2</th>
+                                            <th>BUFF HEAVY PULL UP (25) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">444.50</td>
+                                            <td style="text-align:right">39,080.44</td>
+                                            <td style="text-align:right">5,332.75</td>
+                                            <td style="text-align:right">495,945.75</td>
+                                            <td style="text-align:right">5,711.25</td>
+                                            <td style="text-align:right">528,888.19</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">66.00</td>
+                                            <td style="text-align:right">6,138.00</td>
+                                                                                        <td style="text-align:right">93.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2172</th>
+                                            <th style="text-align:right">3</th>
+                                            <th>BUFF SPLIT BELT LEATHER -FOR HEMA(BLACK)</th>
+                                            <td style="text-align:right">1,616.75</td>
+                                            <td style="text-align:right">220,767.21</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1616.75</td>
+                                            <td style="text-align:right">220,767.21</td>
+                                                                                        <td style="text-align:right">136.55</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2176</th>
+                                            <th style="text-align:right">4</th>
+                                            <th>COW D.D.D.M CRUST (92) LEATHER(DARK GREEN)</th>
+                                            <td style="text-align:right">98.50</td>
+                                            <td style="text-align:right">7,880.00</td>
+                                            <td style="text-align:right">240.50</td>
+                                            <td style="text-align:right">19,240.00</td>
+                                            <td style="text-align:right">321.50</td>
+                                            <td style="text-align:right">25,720.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">17.50</td>
+                                            <td style="text-align:right">1,400.00</td>
+                                                                                        <td style="text-align:right">80.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1992</th>
+                                            <th style="text-align:right">5</th>
+                                            <th>COW D.D.D.M CRUST (92) LEATHER(ORANGE)</th>
+                                            <td style="text-align:right">330.50</td>
+                                            <td style="text-align:right">26,440.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">170.00</td>
+                                            <td style="text-align:right">13,600.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">160.50</td>
+                                            <td style="text-align:right">12,840.00</td>
+                                                                                        <td style="text-align:right">80.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1898</th>
+                                            <th style="text-align:right">6</th>
+                                            <th>COW D.D.D.M CRUST (92) LEATHER(TOBACO)</th>
+                                            <td style="text-align:right">106.00</td>
+                                            <td style="text-align:right">9,540.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">106.00</td>
+                                            <td style="text-align:right">9,540.00</td>
+                                                                                        <td style="text-align:right">90.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1442</th>
+                                            <th style="text-align:right">7</th>
+                                            <th>COW D.D.D.M CRUST (93) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">3,226.25</td>
+                                            <td style="text-align:right">246,485.50</td>
+                                            <td style="text-align:right">36,250.75</td>
+                                            <td style="text-align:right">3,355,122.50</td>
+                                            <td style="text-align:right">39,414.00</td>
+                                            <td style="text-align:right">3,596,254.25</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">63.00</td>
+                                            <td style="text-align:right">5,353.75</td>
+                                                                                        <td style="text-align:right">84.98</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2053</th>
+                                            <th style="text-align:right">8</th>
+                                            <th>COW D.D.D.M CRUST (93) LEATHER(BURRO)</th>
+                                            <td style="text-align:right">1,687.25</td>
+                                            <td style="text-align:right">141,374.68</td>
+                                            <td style="text-align:right">21,303.00</td>
+                                            <td style="text-align:right">1,704,240.00</td>
+                                            <td style="text-align:right">22,642.50</td>
+                                            <td style="text-align:right">1,817,794.68</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">347.75</td>
+                                            <td style="text-align:right">27,820.00</td>
+                                                                                        <td style="text-align:right">80.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1445</th>
+                                            <th style="text-align:right">9</th>
+                                            <th>COW D.D.D.M CRUST (93) LEATHER(CAMEL)</th>
+                                            <td style="text-align:right">5,138.00</td>
+                                            <td style="text-align:right">411,040.00</td>
+                                            <td style="text-align:right">32,790.75</td>
+                                            <td style="text-align:right">2,619,032.25</td>
+                                            <td style="text-align:right">37,458.50</td>
+                                            <td style="text-align:right">2,992,451.73</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">470.25</td>
+                                            <td style="text-align:right">37,620.52</td>
+                                                                                        <td style="text-align:right">80.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1448</th>
+                                            <th style="text-align:right">10</th>
+                                            <th>COW D.D.D.M CRUST (93) LEATHER(YELLOW)</th>
+                                            <td style="text-align:right">3,125.00</td>
+                                            <td style="text-align:right">250,000.00</td>
+                                            <td style="text-align:right">7,698.75</td>
+                                            <td style="text-align:right">615,900.00</td>
+                                            <td style="text-align:right">10,414.75</td>
+                                            <td style="text-align:right">833,180.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">409.00</td>
+                                            <td style="text-align:right">32,720.00</td>
+                                                                                        <td style="text-align:right">80.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1841</th>
+                                            <th style="text-align:right">11</th>
+                                            <th>COW NAPPA (89) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">180.00</td>
+                                            <td style="text-align:right">14,400.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">170.00</td>
+                                            <td style="text-align:right">13,600.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">800.00</td>
+                                                                                        <td style="text-align:right">80.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">18</th>
+                                            <th style="text-align:right">12</th>
+                                            <th>COW RAINBOW D.D (21) LEATHER(BEIGE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">119.25</td>
+                                            <td style="text-align:right">11,090.25</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">119.25</td>
+                                            <td style="text-align:right">11,090.25</td>
+                                                                                        <td style="text-align:right">93.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">21</th>
+                                            <th style="text-align:right">13</th>
+                                            <th>COW RAINBOW D.D (21) LEATHER(TURQUOISE)</th>
+                                            <td style="text-align:right">41.75</td>
+                                            <td style="text-align:right">4,509.00</td>
+                                            <td style="text-align:right">349.75</td>
+                                            <td style="text-align:right">32,526.75</td>
+                                            <td style="text-align:right">261.00</td>
+                                            <td style="text-align:right">25,908.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">130.50</td>
+                                            <td style="text-align:right">11,127.75</td>
+                                                                                        <td style="text-align:right">85.27</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">19</th>
+                                            <th style="text-align:right">14</th>
+                                            <th>COW RAINBOW D.D (21) LEATHER(YELLOW)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">255.00</td>
+                                            <td style="text-align:right">23,715.00</td>
+                                            <td style="text-align:right">158.00</td>
+                                            <td style="text-align:right">16,509.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">97.00</td>
+                                            <td style="text-align:right">7,206.00</td>
+                                                                                        <td style="text-align:right">74.29</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2500</th>
+                                            <th style="text-align:right">15</th>
+                                            <th>COW V.T (101) FLAT(COGNAC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">119.50</td>
+                                            <td style="text-align:right">13,145.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">119.50</td>
+                                            <td style="text-align:right">13,145.00</td>
+                                                                                        <td style="text-align:right">110.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2501</th>
+                                            <th style="text-align:right">16</th>
+                                            <th>COW V.T (101) FLAT(OLD ROSE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">117.00</td>
+                                            <td style="text-align:right">12,870.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">117.00</td>
+                                            <td style="text-align:right">12,870.00</td>
+                                                                                        <td style="text-align:right">110.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2076</th>
+                                            <th style="text-align:right">17</th>
+                                            <th>COW VEG (03) LEATHER-(BLACK)</th>
+                                            <td style="text-align:right">288.00</td>
+                                            <td style="text-align:right">25,920.00</td>
+                                            <td style="text-align:right">519.25</td>
+                                            <td style="text-align:right">46,732.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">807.25</td>
+                                            <td style="text-align:right">72,652.50</td>
+                                                                                        <td style="text-align:right">90.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2192</th>
+                                            <th style="text-align:right">18</th>
+                                            <th>COW VEG (03) LEATHER-(BROWN)</th>
+                                            <td style="text-align:right">275.00</td>
+                                            <td style="text-align:right">24,750.00</td>
+                                            <td style="text-align:right">488.50</td>
+                                            <td style="text-align:right">43,965.00</td>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">4,500.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">713.50</td>
+                                            <td style="text-align:right">64,215.00</td>
+                                                                                        <td style="text-align:right">90.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2193</th>
+                                            <th style="text-align:right">19</th>
+                                            <th>COW VEG (03) LEATHER-(CHESTNUT)</th>
+                                            <td style="text-align:right">195.75</td>
+                                            <td style="text-align:right">17,617.50</td>
+                                            <td style="text-align:right">460.00</td>
+                                            <td style="text-align:right">41,400.00</td>
+                                            <td style="text-align:right">157.75</td>
+                                            <td style="text-align:right">14,197.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">498.00</td>
+                                            <td style="text-align:right">44,820.00</td>
+                                                                                        <td style="text-align:right">90.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2166</th>
+                                            <th style="text-align:right">20</th>
+                                            <th>COW WASHED PRINTED (27) LEATHER(CHESTNUT)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,350.00</td>
+                                            <td style="text-align:right">176,250.00</td>
+                                            <td style="text-align:right">2,059.00</td>
+                                            <td style="text-align:right">154,425.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">291.00</td>
+                                            <td style="text-align:right">21,825.00</td>
+                                                                                        <td style="text-align:right">75.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2167</th>
+                                            <th style="text-align:right">21</th>
+                                            <th>COW WASHED PRINTED (27) LEATHER(COGNAC)</th>
+                                            <td style="text-align:right">410.25</td>
+                                            <td style="text-align:right">30,768.75</td>
+                                            <td style="text-align:right">8,148.25</td>
+                                            <td style="text-align:right">611,118.75</td>
+                                            <td style="text-align:right">8,432.75</td>
+                                            <td style="text-align:right">632,456.25</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">258.00</td>
+                                            <td style="text-align:right">19,350.00</td>
+                                            <td style="text-align:right">383.75</td>
+                                            <td style="text-align:right">28,781.25</td>
+                                                                                        <td style="text-align:right">75.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1</th>
+                                            <th style="text-align:right">22</th>
+                                            <th>D.D. (15) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">11,938.50</td>
+                                            <td style="text-align:right">1,250,697.75</td>
+                                            <td style="text-align:right">12,016.50</td>
+                                            <td style="text-align:right">1,258,757.25</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">180.00</td>
+                                            <td style="text-align:right">19,980.00</td>
+                                            <td style="text-align:right">102.00</td>
+                                            <td style="text-align:right">11,920.50</td>
+                                                                                        <td style="text-align:right">116.87</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2</th>
+                                            <th style="text-align:right">23</th>
+                                            <th>D.D. (15) LEATHER(MORO)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,261.50</td>
+                                            <td style="text-align:right">244,242.00</td>
+                                            <td style="text-align:right">2,070.50</td>
+                                            <td style="text-align:right">223,614.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">191.00</td>
+                                            <td style="text-align:right">20,628.00</td>
+                                                                                        <td style="text-align:right">108.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">80</th>
+                                            <th style="text-align:right">24</th>
+                                            <th>FOIL (74) LEATHER(COPPER)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">39.00</td>
+                                            <td style="text-align:right">4,290.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">39.00</td>
+                                            <td style="text-align:right">4,290.00</td>
+                                                                                        <td style="text-align:right">110.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2318</th>
+                                            <th style="text-align:right">25</th>
+                                            <th>FOIL (74) LEATHER(GOLD)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,400.00</td>
+                                            <td style="text-align:right">154,000.00</td>
+                                            <td style="text-align:right">974.75</td>
+                                            <td style="text-align:right">107,222.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">425.25</td>
+                                            <td style="text-align:right">46,777.50</td>
+                                                                                        <td style="text-align:right">110.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">43</th>
+                                            <th style="text-align:right">26</th>
+                                            <th>FOIL SNAKE (47) PRINT LEATHER(BLACK)</th>
+                                            <td style="text-align:right">170.75</td>
+                                            <td style="text-align:right">14,513.75</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">170.75</td>
+                                            <td style="text-align:right">14,513.75</td>
+                                                                                        <td style="text-align:right">85.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2202</th>
+                                            <th style="text-align:right">27</th>
+                                            <th>GOAT NAPPA (61) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">37.25</td>
+                                            <td style="text-align:right">1,639.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">37.25</td>
+                                            <td style="text-align:right">1,639.00</td>
+                                                                                        <td style="text-align:right">44.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">146</th>
+                                            <th style="text-align:right">28</th>
+                                            <th>HEAVY PULL-UP BUFF (111) SIDE LEATHER(BLACK)</th>
+                                            <td style="text-align:right">747.50</td>
+                                            <td style="text-align:right">108,387.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">76.50</td>
+                                            <td style="text-align:right">11,092.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">671.00</td>
+                                            <td style="text-align:right">97,295.00</td>
+                                                                                        <td style="text-align:right">145.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">147</th>
+                                            <th style="text-align:right">29</th>
+                                            <th>HEAVY PULL-UP BUFF (111) SIDE LEATHER(CAMEL)</th>
+                                            <td style="text-align:right">674.00</td>
+                                            <td style="text-align:right">108,965.58</td>
+                                            <td style="text-align:right">2,605.92</td>
+                                            <td style="text-align:right">390,888.00</td>
+                                            <td style="text-align:right">674.00</td>
+                                            <td style="text-align:right">108,965.58</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2605.92</td>
+                                            <td style="text-align:right">390,888.00</td>
+                                                                                        <td style="text-align:right">150.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">54</th>
+                                            <th style="text-align:right">30</th>
+                                            <th>HUNTER KATTA PULL UP (52) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">371.00</td>
+                                            <td style="text-align:right">23,154.11</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">371.00</td>
+                                            <td style="text-align:right">23,154.11</td>
+                                                                                        <td style="text-align:right">62.41</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">124</th>
+                                            <th style="text-align:right">31</th>
+                                            <th>KATTA SHRUNKEN (91J/96) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">701.50</td>
+                                            <td style="text-align:right">75,762.00</td>
+                                            <td style="text-align:right">6,717.75</td>
+                                            <td style="text-align:right">725,517.00</td>
+                                            <td style="text-align:right">6,909.25</td>
+                                            <td style="text-align:right">746,199.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">510.00</td>
+                                            <td style="text-align:right">55,080.00</td>
+                                                                                        <td style="text-align:right">108.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">125</th>
+                                            <th style="text-align:right">32</th>
+                                            <th>KATTA SHRUNKEN (91J/96) LEATHER(BROWN)</th>
+                                            <td style="text-align:right">579.75</td>
+                                            <td style="text-align:right">62,613.00</td>
+                                            <td style="text-align:right">4,432.00</td>
+                                            <td style="text-align:right">478,656.00</td>
+                                            <td style="text-align:right">4,168.00</td>
+                                            <td style="text-align:right">450,144.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">843.75</td>
+                                            <td style="text-align:right">91,125.00</td>
+                                                                                        <td style="text-align:right">108.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">126</th>
+                                            <th style="text-align:right">33</th>
+                                            <th>KATTA SHRUNKEN (91J/96) LEATHER(NAVY)</th>
+                                            <td style="text-align:right">645.75</td>
+                                            <td style="text-align:right">69,741.00</td>
+                                            <td style="text-align:right">4,165.75</td>
+                                            <td style="text-align:right">449,901.00</td>
+                                            <td style="text-align:right">4,054.25</td>
+                                            <td style="text-align:right">437,859.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">757.25</td>
+                                            <td style="text-align:right">81,783.00</td>
+                                                                                        <td style="text-align:right">108.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">119</th>
+                                            <th style="text-align:right">34</th>
+                                            <th>KATTA SHRUNKEN PULL-UP (91) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">281.25</td>
+                                            <td style="text-align:right">28,968.75</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">240.00</td>
+                                            <td style="text-align:right">24,720.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">41.25</td>
+                                            <td style="text-align:right">4,248.75</td>
+                                                                                        <td style="text-align:right">103.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2055</th>
+                                            <th style="text-align:right">35</th>
+                                            <th>LAUREL NAPPA (45) LEATHER(MAROON)</th>
+                                            <td style="text-align:right">1,784.75</td>
+                                            <td style="text-align:right">198,660.52</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,706.00</td>
+                                            <td style="text-align:right">189,894.86</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">78.75</td>
+                                            <td style="text-align:right">8,765.66</td>
+                                                                                        <td style="text-align:right">111.31</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">112</th>
+                                            <th style="text-align:right">36</th>
+                                            <th>LIGHT COW (85) LEATHER (NEW-88)(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">17,337.50</td>
+                                            <td style="text-align:right">953,327.00</td>
+                                            <td style="text-align:right">16,951.00</td>
+                                            <td style="text-align:right">932,069.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">386.50</td>
+                                            <td style="text-align:right">21,257.50</td>
+                                                                                        <td style="text-align:right">55.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2210</th>
+                                            <th style="text-align:right">37</th>
+                                            <th>LIGHT COW (85) LEATHER (NEW-88)(NAVY)</th>
+                                            <td style="text-align:right">-0.50</td>
+                                            <td style="text-align:right">-27.50</td>
+                                            <td style="text-align:right">809.25</td>
+                                            <td style="text-align:right">44,508.75</td>
+                                            <td style="text-align:right">534.50</td>
+                                            <td style="text-align:right">29,397.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">274.25</td>
+                                            <td style="text-align:right">15,083.75</td>
+                                                                                        <td style="text-align:right">55.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2086</th>
+                                            <th style="text-align:right">38</th>
+                                            <th>LIGHT COW WASHED (97) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">462.25</td>
+                                            <td style="text-align:right">34,668.75</td>
+                                            <td style="text-align:right">2,610.00</td>
+                                            <td style="text-align:right">195,750.00</td>
+                                            <td style="text-align:right">2,998.50</td>
+                                            <td style="text-align:right">224,887.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">73.75</td>
+                                            <td style="text-align:right">5,531.25</td>
+                                                                                        <td style="text-align:right">75.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2096</th>
+                                            <th style="text-align:right">39</th>
+                                            <th>LIGHT COW WASHED (97) LEATHER(CAMEL)</th>
+                                            <td style="text-align:right">381.75</td>
+                                            <td style="text-align:right">28,631.25</td>
+                                            <td style="text-align:right">9,413.25</td>
+                                            <td style="text-align:right">707,493.75</td>
+                                            <td style="text-align:right">9,369.00</td>
+                                            <td style="text-align:right">702,897.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">426.00</td>
+                                            <td style="text-align:right">33,228.00</td>
+                                                                                        <td style="text-align:right">78.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2147</th>
+                                            <th style="text-align:right">40</th>
+                                            <th>LIGHT COW WASHED (97) LEATHER(CHOCOLATE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">5,428.00</td>
+                                            <td style="text-align:right">407,100.00</td>
+                                            <td style="text-align:right">5,263.75</td>
+                                            <td style="text-align:right">394,781.25</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">164.25</td>
+                                            <td style="text-align:right">12,318.75</td>
+                                                                                        <td style="text-align:right">75.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">29</th>
+                                            <th style="text-align:right">41</th>
+                                            <th>MILAN VEG (28) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">22.00</td>
+                                            <td style="text-align:right">3,080.00</td>
+                                            <td style="text-align:right">7,275.75</td>
+                                            <td style="text-align:right">1,018,605.00</td>
+                                            <td style="text-align:right">6,656.25</td>
+                                            <td style="text-align:right">931,875.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">641.50</td>
+                                            <td style="text-align:right">89,810.00</td>
+                                                                                        <td style="text-align:right">140.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2174</th>
+                                            <th style="text-align:right">42</th>
+                                            <th>MILAN VEG (28) LEATHER(BROWN)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">7,047.00</td>
+                                            <td style="text-align:right">986,580.00</td>
+                                            <td style="text-align:right">6,928.25</td>
+                                            <td style="text-align:right">969,955.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">118.75</td>
+                                            <td style="text-align:right">16,625.00</td>
+                                                                                        <td style="text-align:right">140.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2173</th>
+                                            <th style="text-align:right">43</th>
+                                            <th>MILAN VEG (28) LEATHER(COGNAC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">7,559.50</td>
+                                            <td style="text-align:right">1,058,330.00</td>
+                                            <td style="text-align:right">7,104.75</td>
+                                            <td style="text-align:right">994,665.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">454.75</td>
+                                            <td style="text-align:right">63,665.00</td>
+                                                                                        <td style="text-align:right">140.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2408</th>
+                                            <th style="text-align:right">44</th>
+                                            <th>MILAN VEG (28) LEATHER(GREEN)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,364.25</td>
+                                            <td style="text-align:right">190,995.00</td>
+                                            <td style="text-align:right">1,132.25</td>
+                                            <td style="text-align:right">158,515.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">232.00</td>
+                                            <td style="text-align:right">32,480.00</td>
+                                                                                        <td style="text-align:right">140.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">136</th>
+                                            <th style="text-align:right">45</th>
+                                            <th>MINT (110) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">3,419.50</td>
+                                            <td style="text-align:right">285,049.52</td>
+                                            <td style="text-align:right">17,107.75</td>
+                                            <td style="text-align:right">1,331,480.00</td>
+                                            <td style="text-align:right">20,301.75</td>
+                                            <td style="text-align:right">1,611,622.52</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,218.00</td>
+                                            <td style="text-align:right">180,354.00</td>
+                                            <td style="text-align:right">2443.50</td>
+                                            <td style="text-align:right">185,261.00</td>
+                                                                                        <td style="text-align:right">75.82</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2052</th>
+                                            <th style="text-align:right">46</th>
+                                            <th>MINT (110) LEATHER(BURRO)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">10,069.50</td>
+                                            <td style="text-align:right">841,473.50</td>
+                                            <td style="text-align:right">9,797.50</td>
+                                            <td style="text-align:right">815,131.75</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">123.00</td>
+                                            <td style="text-align:right">10,455.00</td>
+                                            <td style="text-align:right">395.00</td>
+                                            <td style="text-align:right">36,796.75</td>
+                                                                                        <td style="text-align:right">93.16</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">144</th>
+                                            <th style="text-align:right">47</th>
+                                            <th>MINT (110) LEATHER(CABERNET)</th>
+                                            <td style="text-align:right">468.75</td>
+                                            <td style="text-align:right">39,843.75</td>
+                                            <td style="text-align:right">3,328.25</td>
+                                            <td style="text-align:right">272,691.75</td>
+                                            <td style="text-align:right">3,790.25</td>
+                                            <td style="text-align:right">319,560.25</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">362.50</td>
+                                            <td style="text-align:right">30,812.50</td>
+                                            <td style="text-align:right">369.25</td>
+                                            <td style="text-align:right">23,787.75</td>
+                                                                                        <td style="text-align:right">64.42</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">432</th>
+                                            <th style="text-align:right">48</th>
+                                            <th>MINT (110) LEATHER(CAMEL)</th>
+                                            <td style="text-align:right">663.75</td>
+                                            <td style="text-align:right">51,772.50</td>
+                                            <td style="text-align:right">3,339.00</td>
+                                            <td style="text-align:right">262,795.75</td>
+                                            <td style="text-align:right">3,546.25</td>
+                                            <td style="text-align:right">284,305.75</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">456.50</td>
+                                            <td style="text-align:right">30,262.50</td>
+                                                                                        <td style="text-align:right">66.29</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2271</th>
+                                            <th style="text-align:right">49</th>
+                                            <th>MINT (110) LEATHER(GOLDEN OAK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">4,133.75</td>
+                                            <td style="text-align:right">340,116.25</td>
+                                            <td style="text-align:right">3,667.00</td>
+                                            <td style="text-align:right">300,642.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">466.75</td>
+                                            <td style="text-align:right">39,473.75</td>
+                                                                                        <td style="text-align:right">84.57</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2098</th>
+                                            <th style="text-align:right">50</th>
+                                            <th>MINT (110) LEATHER(GREEN)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">4,434.50</td>
+                                            <td style="text-align:right">378,432.50</td>
+                                            <td style="text-align:right">4,034.50</td>
+                                            <td style="text-align:right">343,232.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">400.00</td>
+                                            <td style="text-align:right">35,200.00</td>
+                                                                                        <td style="text-align:right">88.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2272</th>
+                                            <th style="text-align:right">51</th>
+                                            <th>MINT (110) LEATHER(MOCHA)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">6,849.50</td>
+                                            <td style="text-align:right">582,207.50</td>
+                                            <td style="text-align:right">6,416.25</td>
+                                            <td style="text-align:right">545,381.25</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">433.25</td>
+                                            <td style="text-align:right">36,826.25</td>
+                                                                                        <td style="text-align:right">85.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">140</th>
+                                            <th style="text-align:right">52</th>
+                                            <th>MINT (110) LEATHER(MUSTARD)</th>
+                                            <td style="text-align:right">42.00</td>
+                                            <td style="text-align:right">3,570.00</td>
+                                            <td style="text-align:right">2,746.50</td>
+                                            <td style="text-align:right">225,082.25</td>
+                                            <td style="text-align:right">2,435.75</td>
+                                            <td style="text-align:right">198,668.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">352.75</td>
+                                            <td style="text-align:right">29,983.75</td>
+                                                                                        <td style="text-align:right">85.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1999</th>
+                                            <th style="text-align:right">53</th>
+                                            <th>MINT (110) LEATHER(NUDE)</th>
+                                            <td style="text-align:right">307.25</td>
+                                            <td style="text-align:right">23,965.50</td>
+                                            <td style="text-align:right">9,410.75</td>
+                                            <td style="text-align:right">780,259.25</td>
+                                            <td style="text-align:right">9,218.00</td>
+                                            <td style="text-align:right">761,624.75</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">500.00</td>
+                                            <td style="text-align:right">42,600.00</td>
+                                                                                        <td style="text-align:right">85.20</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">141</th>
+                                            <th style="text-align:right">54</th>
+                                            <th>MINT (110) LEATHER(TEAK)</th>
+                                            <td style="text-align:right">59.50</td>
+                                            <td style="text-align:right">5,057.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">59.50</td>
+                                            <td style="text-align:right">5,057.50</td>
+                                                                                        <td style="text-align:right">85.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">143</th>
+                                            <th style="text-align:right">55</th>
+                                            <th>MINT (110) LEATHER(YELLOW)</th>
+                                            <td style="text-align:right">471.00</td>
+                                            <td style="text-align:right">40,035.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">265.00</td>
+                                            <td style="text-align:right">22,525.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">206.00</td>
+                                            <td style="text-align:right">17,510.00</td>
+                                                                                        <td style="text-align:right">85.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2157</th>
+                                            <th style="text-align:right">56</th>
+                                            <th>MINT SOFT (110M) LEATHER(AQUA)</th>
+                                            <td style="text-align:right">99.75</td>
+                                            <td style="text-align:right">7,481.25</td>
+                                            <td style="text-align:right">474.50</td>
+                                            <td style="text-align:right">35,587.50</td>
+                                            <td style="text-align:right">513.00</td>
+                                            <td style="text-align:right">38,475.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">61.25</td>
+                                            <td style="text-align:right">4,593.75</td>
+                                                                                        <td style="text-align:right">75.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">348</th>
+                                            <th style="text-align:right">57</th>
+                                            <th>MINT SOFT (110M) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">170.25</td>
+                                            <td style="text-align:right">12,768.75</td>
+                                            <td style="text-align:right">27,426.00</td>
+                                            <td style="text-align:right">2,056,950.00</td>
+                                            <td style="text-align:right">27,548.50</td>
+                                            <td style="text-align:right">2,066,137.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">47.75</td>
+                                            <td style="text-align:right">3,581.25</td>
+                                                                                        <td style="text-align:right">75.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2357</th>
+                                            <th style="text-align:right">58</th>
+                                            <th>MINT SOFT (110M) LEATHER(FUSHIA)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">426.00</td>
+                                            <td style="text-align:right">31,950.00</td>
+                                            <td style="text-align:right">283.00</td>
+                                            <td style="text-align:right">21,225.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">143.00</td>
+                                            <td style="text-align:right">10,725.00</td>
+                                                                                        <td style="text-align:right">75.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2178</th>
+                                            <th style="text-align:right">59</th>
+                                            <th>MINT SOFT (110M) LEATHER(GRAPE LEAF)</th>
+                                            <td style="text-align:right">40.25</td>
+                                            <td style="text-align:right">3,018.75</td>
+                                            <td style="text-align:right">2,618.25</td>
+                                            <td style="text-align:right">196,368.75</td>
+                                            <td style="text-align:right">2,487.75</td>
+                                            <td style="text-align:right">191,880.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">170.75</td>
+                                            <td style="text-align:right">7,507.50</td>
+                                                                                        <td style="text-align:right">43.97</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">349</th>
+                                            <th style="text-align:right">60</th>
+                                            <th>MINT SOFT (110M) LEATHER(NAVY)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,763.75</td>
+                                            <td style="text-align:right">207,281.25</td>
+                                            <td style="text-align:right">2,024.25</td>
+                                            <td style="text-align:right">151,818.75</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">739.50</td>
+                                            <td style="text-align:right">55,462.50</td>
+                                                                                        <td style="text-align:right">75.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2159</th>
+                                            <th style="text-align:right">61</th>
+                                            <th>MINT SOFT (110M) LEATHER(PURPLE)</th>
+                                            <td style="text-align:right">804.00</td>
+                                            <td style="text-align:right">60,300.00</td>
+                                            <td style="text-align:right">444.00</td>
+                                            <td style="text-align:right">33,300.00</td>
+                                            <td style="text-align:right">1,143.75</td>
+                                            <td style="text-align:right">85,781.25</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">104.25</td>
+                                            <td style="text-align:right">7,818.75</td>
+                                                                                        <td style="text-align:right">75.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">351</th>
+                                            <th style="text-align:right">62</th>
+                                            <th>MINT SOFT (110M) LEATHER(RED)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,486.25</td>
+                                            <td style="text-align:right">186,468.75</td>
+                                            <td style="text-align:right">2,472.50</td>
+                                            <td style="text-align:right">185,437.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">13.75</td>
+                                            <td style="text-align:right">1,031.25</td>
+                                                                                        <td style="text-align:right">75.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">37</th>
+                                            <th style="text-align:right">63</th>
+                                            <th>NAPPA SOFTY (33) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">12,915.25</td>
+                                            <td style="text-align:right">968,643.75</td>
+                                            <td style="text-align:right">12,592.25</td>
+                                            <td style="text-align:right">944,418.75</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">323.00</td>
+                                            <td style="text-align:right">24,225.00</td>
+                                                                                        <td style="text-align:right">75.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">62</th>
+                                            <th style="text-align:right">64</th>
+                                            <th>NDM FINE MILLED NAPPA (67) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">2,219.75</td>
+                                            <td style="text-align:right">166,481.25</td>
+                                            <td style="text-align:right">21,162.75</td>
+                                            <td style="text-align:right">1,587,695.25</td>
+                                            <td style="text-align:right">22,683.00</td>
+                                            <td style="text-align:right">1,699,574.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">699.50</td>
+                                            <td style="text-align:right">54,602.00</td>
+                                                                                        <td style="text-align:right">78.06</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">51</th>
+                                            <th style="text-align:right">65</th>
+                                            <th>POMPIA BUFF (48) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">8,176.75</td>
+                                            <td style="text-align:right">760,437.75</td>
+                                            <td style="text-align:right">7,840.25</td>
+                                            <td style="text-align:right">729,143.25</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">336.50</td>
+                                            <td style="text-align:right">31,294.50</td>
+                                                                                        <td style="text-align:right">93.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">52</th>
+                                            <th style="text-align:right">66</th>
+                                            <th>POMPIA BUFF (48) LEATHER(RED)</th>
+                                            <td style="text-align:right">30.00</td>
+                                            <td style="text-align:right">2,910.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">30.00</td>
+                                            <td style="text-align:right">2,910.00</td>
+                                                                                        <td style="text-align:right">97.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">149</th>
+                                            <th style="text-align:right">67</th>
+                                            <th>SPLIT BELT (IP NOVA-113) LEATHER(BROWN)</th>
+                                            <td style="text-align:right">973.00</td>
+                                            <td style="text-align:right">155,680.00</td>
+                                            <td style="text-align:right">2,421.41</td>
+                                            <td style="text-align:right">386,523.10</td>
+                                            <td style="text-align:right">1,390.00</td>
+                                            <td style="text-align:right">222,400.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2004.41</td>
+                                            <td style="text-align:right">319,803.10</td>
+                                                                                        <td style="text-align:right">159.55</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1182</th>
+                                            <th style="text-align:right">68</th>
+                                            <th>SPLIT BELT (IP NOVA-113) LEATHER(COGNAC)</th>
+                                            <td style="text-align:right">1,520.00</td>
+                                            <td style="text-align:right">220,400.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1520.00</td>
+                                            <td style="text-align:right">220,400.00</td>
+                                                                                        <td style="text-align:right">145.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">375</th>
+                                            <th style="text-align:right">69</th>
+                                            <th>SPONGY THICK NAPPA (90) LEATHER(BEIGE)</th>
+                                            <td style="text-align:right">502.50</td>
+                                            <td style="text-align:right">54,270.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">495.50</td>
+                                            <td style="text-align:right">53,514.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">7.00</td>
+                                            <td style="text-align:right">756.00</td>
+                                                                                        <td style="text-align:right">108.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">116</th>
+                                            <th style="text-align:right">70</th>
+                                            <th>SPONGY THICK NAPPA (90) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">9,132.00</td>
+                                            <td style="text-align:right">939,208.75</td>
+                                            <td style="text-align:right">8,611.25</td>
+                                            <td style="text-align:right">887,133.75</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">520.75</td>
+                                            <td style="text-align:right">52,075.00</td>
+                                                                                        <td style="text-align:right">100.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1157</th>
+                                            <th style="text-align:right">71</th>
+                                            <th>SPONGY THICK NAPPA (90) LEATHER(CAMEL)</th>
+                                            <td style="text-align:right">1,095.00</td>
+                                            <td style="text-align:right">118,260.00</td>
+                                            <td style="text-align:right">3,818.75</td>
+                                            <td style="text-align:right">412,425.00</td>
+                                            <td style="text-align:right">3,821.25</td>
+                                            <td style="text-align:right">412,695.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1092.50</td>
+                                            <td style="text-align:right">117,990.00</td>
+                                                                                        <td style="text-align:right">108.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">377</th>
+                                            <th style="text-align:right">72</th>
+                                            <th>SPONGY THICK NAPPA (90) LEATHER(CHILLI PEPER RED)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">7,010.25</td>
+                                            <td style="text-align:right">742,805.00</td>
+                                            <td style="text-align:right">6,052.75</td>
+                                            <td style="text-align:right">647,055.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">957.50</td>
+                                            <td style="text-align:right">95,750.00</td>
+                                                                                        <td style="text-align:right">100.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">117</th>
+                                            <th style="text-align:right">73</th>
+                                            <th>SPONGY THICK NAPPA (90) LEATHER(MORO)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,061.50</td>
+                                            <td style="text-align:right">222,642.00</td>
+                                            <td style="text-align:right">1,904.75</td>
+                                            <td style="text-align:right">205,713.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">156.75</td>
+                                            <td style="text-align:right">16,929.00</td>
+                                                                                        <td style="text-align:right">108.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1159</th>
+                                            <th style="text-align:right">74</th>
+                                            <th>SPONGY THICK NAPPA (90) LEATHER(TEAK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">550.00</td>
+                                            <td style="text-align:right">52,250.00</td>
+                                            <td style="text-align:right">453.00</td>
+                                            <td style="text-align:right">43,035.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">97.00</td>
+                                            <td style="text-align:right">9,215.00</td>
+                                                                                        <td style="text-align:right">95.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1160</th>
+                                            <th style="text-align:right">75</th>
+                                            <th>SPONGY THICK NAPPA (90) LEATHER(YELLOW)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,032.25</td>
+                                            <td style="text-align:right">111,483.00</td>
+                                            <td style="text-align:right">914.00</td>
+                                            <td style="text-align:right">98,712.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">118.25</td>
+                                            <td style="text-align:right">12,771.00</td>
+                                                                                        <td style="text-align:right">108.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2331</th>
+                                            <th style="text-align:right">76</th>
+                                            <th>SPONGY THICK NAPPA (94) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,700.25</td>
+                                            <td style="text-align:right">202,518.75</td>
+                                            <td style="text-align:right">2,700.00</td>
+                                            <td style="text-align:right">202,500.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.25</td>
+                                            <td style="text-align:right">18.75</td>
+                                                                                        <td style="text-align:right">75.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2347</th>
+                                            <th style="text-align:right">77</th>
+                                            <th>SPONGY THICK NAPPA (94) LEATHER(CASIA ROSE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">4,709.00</td>
+                                            <td style="text-align:right">353,175.00</td>
+                                            <td style="text-align:right">4,311.50</td>
+                                            <td style="text-align:right">323,362.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">397.50</td>
+                                            <td style="text-align:right">29,812.50</td>
+                                                                                        <td style="text-align:right">75.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2346</th>
+                                            <th style="text-align:right">78</th>
+                                            <th>SPONGY THICK NAPPA (94) LEATHER(CEMENT)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,180.00</td>
+                                            <td style="text-align:right">163,500.00</td>
+                                            <td style="text-align:right">2,173.25</td>
+                                            <td style="text-align:right">162,993.75</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">6.75</td>
+                                            <td style="text-align:right">506.25</td>
+                                                                                        <td style="text-align:right">75.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2349</th>
+                                            <th style="text-align:right">79</th>
+                                            <th>SPONGY THICK NAPPA (94) LEATHER(ZIRKON)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">5,150.25</td>
+                                            <td style="text-align:right">386,268.75</td>
+                                            <td style="text-align:right">4,776.50</td>
+                                            <td style="text-align:right">358,237.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">373.75</td>
+                                            <td style="text-align:right">28,031.25</td>
+                                                                                        <td style="text-align:right">75.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">74</th>
+                                            <th style="text-align:right">80</th>
+                                            <th>SUED COW (71) LEATHER(BROWN)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,100.50</td>
+                                            <td style="text-align:right">94,522.50</td>
+                                            <td style="text-align:right">1,387.50</td>
+                                            <td style="text-align:right">62,437.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">713.00</td>
+                                            <td style="text-align:right">32,085.00</td>
+                                                                                        <td style="text-align:right">45.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2296</th>
+                                            <th style="text-align:right">81</th>
+                                            <th>SUED COW (71) LEATHER(BURRO)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">985.50</td>
+                                            <td style="text-align:right">44,347.50</td>
+                                            <td style="text-align:right">783.50</td>
+                                            <td style="text-align:right">35,257.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">202.00</td>
+                                            <td style="text-align:right">9,090.00</td>
+                                                                                        <td style="text-align:right">45.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2354</th>
+                                            <th style="text-align:right">82</th>
+                                            <th>SUED COW (71) LEATHER(CASIA ROSE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">119.50</td>
+                                            <td style="text-align:right">4,780.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">119.50</td>
+                                            <td style="text-align:right">4,780.00</td>
+                                                                                        <td style="text-align:right">40.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2065</th>
+                                            <th style="text-align:right">83</th>
+                                            <th>SUED COW (71) LEATHER(COGNAC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">723.00</td>
+                                            <td style="text-align:right">31,876.25</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">723.00</td>
+                                            <td style="text-align:right">31,876.25</td>
+                                                                                        <td style="text-align:right">44.09</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">76</th>
+                                            <th style="text-align:right">84</th>
+                                            <th>SUED COW (71) LEATHER(OLIVE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">43.25</td>
+                                            <td style="text-align:right">1,730.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">43.25</td>
+                                            <td style="text-align:right">1,730.00</td>
+                                                                                        <td style="text-align:right">40.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2356</th>
+                                            <th style="text-align:right">85</th>
+                                            <th>SUED COW (71) LEATHER(TEAL)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">87.25</td>
+                                            <td style="text-align:right">3,490.00</td>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">2,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">37.25</td>
+                                            <td style="text-align:right">1,490.00</td>
+                                                                                        <td style="text-align:right">40.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2352</th>
+                                            <th style="text-align:right">86</th>
+                                            <th>SUED COW (71) LEATHER(ZIRKON)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">109.25</td>
+                                            <td style="text-align:right">4,370.00</td>
+                                            <td style="text-align:right">40.00</td>
+                                            <td style="text-align:right">1,600.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">69.25</td>
+                                            <td style="text-align:right">2,770.00</td>
+                                                                                        <td style="text-align:right">40.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">101</th>
+                                            <th style="text-align:right">87</th>
+                                            <th>THICK COW CRUNCH (83) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">770.00</td>
+                                            <td style="text-align:right">73,150.00</td>
+                                            <td style="text-align:right">4,691.50</td>
+                                            <td style="text-align:right">445,692.50</td>
+                                            <td style="text-align:right">4,098.00</td>
+                                            <td style="text-align:right">389,310.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1363.50</td>
+                                            <td style="text-align:right">129,532.50</td>
+                                                                                        <td style="text-align:right">95.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1878</th>
+                                            <th style="text-align:right">88</th>
+                                            <th>THICK COW CRUNCH (83) LEATHER(CHERRY)</th>
+                                            <td style="text-align:right">870.00</td>
+                                            <td style="text-align:right">81,780.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">520.00</td>
+                                            <td style="text-align:right">48,880.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">350.00</td>
+                                            <td style="text-align:right">32,900.00</td>
+                                                                                        <td style="text-align:right">94.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1239</th>
+                                            <th style="text-align:right">89</th>
+                                            <th>THICK COW CRUNCH (83) LEATHER(CHOCOLATE)</th>
+                                            <td style="text-align:right">1,393.75</td>
+                                            <td style="text-align:right">132,406.25</td>
+                                            <td style="text-align:right">4,323.00</td>
+                                            <td style="text-align:right">410,685.00</td>
+                                            <td style="text-align:right">5,238.25</td>
+                                            <td style="text-align:right">497,633.75</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">478.50</td>
+                                            <td style="text-align:right">45,457.50</td>
+                                                                                        <td style="text-align:right">95.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">105</th>
+                                            <th style="text-align:right">90</th>
+                                            <th>THICK COW CRUNCH (83) LEATHER(MIDNIGHT NAVY)</th>
+                                            <td style="text-align:right">643.25</td>
+                                            <td style="text-align:right">61,108.75</td>
+                                            <td style="text-align:right">710.25</td>
+                                            <td style="text-align:right">67,473.75</td>
+                                            <td style="text-align:right">1,307.75</td>
+                                            <td style="text-align:right">124,236.25</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">45.75</td>
+                                            <td style="text-align:right">4,346.25</td>
+                                                                                        <td style="text-align:right">95.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">83</th>
+                                            <th style="text-align:right">91</th>
+                                            <th>WAXY-COW OILY (77) LEATHER(INDIGO)</th>
+                                            <td style="text-align:right">637.50</td>
+                                            <td style="text-align:right">57,661.88</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">637.50</td>
+                                            <td style="text-align:right">57,661.88</td>
+                                                                                        <td style="text-align:right">90.45</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">86</th>
+                                            <th style="text-align:right">92</th>
+                                            <th>WAXY-COW OILY (77) LEATHER(NAVY)</th>
+                                            <td style="text-align:right">398.25</td>
+                                            <td style="text-align:right">35,551.78</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">398.25</td>
+                                            <td style="text-align:right">35,551.78</td>
+                                                                                        <td style="text-align:right">89.27</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">89</th>
+                                            <th style="text-align:right">93</th>
+                                            <th>WAXY-KATTA OILY CRUMPLE V.T. (78/79) LEATHER(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3,809.25</td>
+                                            <td style="text-align:right">342,832.50</td>
+                                            <td style="text-align:right">3,109.25</td>
+                                            <td style="text-align:right">279,832.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">700.00</td>
+                                            <td style="text-align:right">63,000.00</td>
+                                                                                        <td style="text-align:right">90.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1441</th>
+                                            <th style="text-align:right">94</th>
+                                            <th>WAXY-KATTA OILY CRUMPLE V.T. (78/79) LEATHER(BROWN)</th>
+                                            <td style="text-align:right">205.50</td>
+                                            <td style="text-align:right">18,495.00</td>
+                                            <td style="text-align:right">2,819.50</td>
+                                            <td style="text-align:right">253,755.00</td>
+                                            <td style="text-align:right">2,925.00</td>
+                                            <td style="text-align:right">263,250.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">9,000.00</td>
+                                                                                        <td style="text-align:right">90.00</td>
+                                                                                        <td style="text-align:center">SQR.FT.</td>
+                                        </tr>
+                                                                                <tr style="background:thistle">
+                                            <th style="display: none;"></th>
+                                            <th colspan="2">Total</th>
+                                            <td style="text-align:right">42,549.75</td>
+                                            <td style="text-align:right">3,976,709.22</td>
+                                            <td style="text-align:right">414,564.83</td>
+                                            <td style="text-align:right">36,013,540.97</td>
+                                            <td style="text-align:right">421,932.75</td>
+                                            <td style="text-align:right">36,406,467.18</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3,141.50</td>
+                                            <td style="text-align:right">260,951.50</td>
+                                            <td style="text-align:right">38,323.33</td>
+                                            <td style="text-align:right">3,844,734.51</td>
+                                            <td style="text-align:right">8,288.52</td>
+                                            <td></td>  
+                                        </tr>
+                                    </tbody>
+                                </table><table>
+                            <thead>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th rowspan="2" style="text-align:right">#</th>
+                                    <th rowspan="2" style="text-align:center">Item</th>
+                                    <th colspan="2" style="text-align:center">Opening Information</th>
+                                    <th colspan="2" style="text-align:center">Purchase Information</th>
+                                    <th colspan="2" style="text-align:center">Issue Information</th>
+                                    <th colspan="2" style="text-align:center">Plating Information</th>
+                                    <th colspan="2" style="text-align:center">Stock In Information</th>
+                                    <th colspan="2" style="text-align:center">Balance Information</th>
+                                    <th rowspan="2">Closing<br>Rate</th>
+                                    <th rowspan="2" style="text-align:center">Unit</th>
+                                </tr>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th style="text-align:center">Opn Qnty</th>
+                                    <th style="text-align:center">Opn Val</th>
+                                    
+                                    <th style="text-align:center">Pur Qnty</th>
+                                    <th style="text-align:center">Pur Val</th>
+                                    
+                                    <th style="text-align:center">Issue Qnty</th>
+                                    <th style="text-align:center">Issue Val</th>
+                                    
+                                    <th style="text-align:center">Plating Qnty</th>
+                                    <th style="text-align:center">Plating Val</th>
+                                    
+                                    <th style="text-align:center">Stock In Qnty</th>
+                                    <th style="text-align:center">Stock In Val</th>
+                                    
+                                    <th style="text-align:center">Bal Qnty</th>
+                                    <th style="text-align:center">Bal Val</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                <tr>
+                                    <th style="display: none;">33</th>
+                                    <th style="text-align:right">1</th>
+                                    <th>CANYON (29) LEATHER(CHESTNUT)</th>
+                                    <td style="text-align:right">126.10</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">126.10</td>
+                                    <td style="text-align:right">0.00</td>
+                                                                        <td style="text-align:right">0.00</td>
+                                                                        <td style="text-align:center">SQR.MTR.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">1346</th>
+                                    <th style="text-align:right">2</th>
+                                    <th>CROCO (24) LEATHER-(dR CUSTODIAN)(BLACK)</th>
+                                    <td style="text-align:right">708.62</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">329.59</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">379.03</td>
+                                    <td style="text-align:right">0.00</td>
+                                                                        <td style="text-align:right">0.00</td>
+                                                                        <td style="text-align:center">SQR.FT.</td>
+                                </tr>
+                                                                <tr style="background:thistle">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Total</th>
+                                    <td style="text-align:right">834.72</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">329.59</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">505.13</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background:#faeda6">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Grand Total</th>
+                                    <td style="text-align:right">43,384.47</td>
+                                    <td style="text-align:right">3,976,709.22</td>
+                                    <td style="text-align:right">414,564.83</td>
+                                    <td style="text-align:right">36,013,540.97</td>
+                                    <td style="text-align:right">422,262.34</td>
+                                    <td style="text-align:right">36,406,467.18</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">3,141.50</td>
+                                    <td style="text-align:right">260,951.50</td>
+                                    <td style="text-align:right">38,828.46</td>
+                                    <td style="text-align:right">3,844,734.51</td>
+                                    <td style="text-align:right">8,288.52</td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table></body></html>

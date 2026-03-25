@@ -1,0 +1,2086 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Sheet1</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>
+                                    <thead>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th rowspan="2" style="text-align:right">#</th>
+                                            <th rowspan="2" style="text-align:center">Item</th>
+                                            <th colspan="2" style="text-align:center">Opening Information</th>
+                                            <th colspan="2" style="text-align:center">Purchase Information</th>
+                                            <th colspan="2" style="text-align:center">Issue Information</th>
+                                            <th colspan="2" style="text-align:center">Plating Information</th>
+                                            <th colspan="2" style="text-align:center">Stock In Information</th>
+                                            <th colspan="2" style="text-align:center">Balance Information</th>
+                                            <th rowspan="2">Closing<br>Rate</th>
+                                            <th rowspan="2" style="text-align:center">Unit</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th style="text-align:center">Opn Qnty</th>
+                                            <th style="text-align:center">Opn Val</th>
+                                            <th style="text-align:center">Pur Qnty</th>
+                                            <th style="text-align:center">Pur Val</th>
+                                            <th style="text-align:center">Issue Qnty</th>
+                                            <th style="text-align:center">Issue Val</th>
+                                            <th style="text-align:center">Plating Qnty</th>
+                                            <th style="text-align:center">Plating Val</th>
+                                            <th style="text-align:center">Stock In Qnty</th>
+                                            <th style="text-align:center">Stock In Val</th>
+                                            <th style="text-align:center">Bal Qnty</th>
+                                            <th style="text-align:center">Bal Val</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                                                <tr>
+                                            <th style="display: none;">935</th>
+                                            <th style="text-align:right">1</th>
+                                            <th> 1.0" ANDA DOG HOOK - 1" ANDA DOG HOOK [DHK009-008](ANTIC)</th>
+                                            <td style="text-align:right">70.00</td>
+                                            <td style="text-align:right">1,974.70</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">70.00</td>
+                                            <td style="text-align:right">1,974.70</td>
+                                                                                        <td style="text-align:right">28.21</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">937</th>
+                                            <th style="text-align:right">2</th>
+                                            <th> 1.0" ANDA DOG HOOK - 1" ANDA DOG HOOK [DHK009-008](ANTIC SILVER)</th>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">3,200.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">100.00</td>
+                                            <td style="text-align:right">3,200.00</td>
+                                                                                        <td style="text-align:right">32.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1531</th>
+                                            <th style="text-align:right">3</th>
+                                            <th> 1.0" ANDA DOG HOOK - 1" ANDA DOG HOOK [DHK009-008](BRUSHED NICKLE)</th>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">560.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">20.00</td>
+                                            <td style="text-align:right">560.00</td>
+                                                                                        <td style="text-align:right">28.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">934</th>
+                                            <th style="text-align:right">4</th>
+                                            <th> 1.0" ANDA DOG HOOK - 1" ANDA DOG HOOK [DHK009-008](BUFF ANTIC)</th>
+                                            <td style="text-align:right">327.00</td>
+                                            <td style="text-align:right">10,137.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">327.00</td>
+                                            <td style="text-align:right">10,137.00</td>
+                                                                                        <td style="text-align:right">31.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1060</th>
+                                            <th style="text-align:right">5</th>
+                                            <th> 1.0" ANDA DOG HOOK - 1" ANDA DOG HOOK [DHK009-008](BUFF BLACK)</th>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">6,200.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">200.00</td>
+                                            <td style="text-align:right">6,200.00</td>
+                                                                                        <td style="text-align:right">31.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">938</th>
+                                            <th style="text-align:right">6</th>
+                                            <th> 1.0" ANDA DOG HOOK - 1" ANDA DOG HOOK [DHK009-008](GOLDEN)</th>
+                                            <td style="text-align:right">70.00</td>
+                                            <td style="text-align:right">2,380.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">70.00</td>
+                                            <td style="text-align:right">2,380.00</td>
+                                                                                        <td style="text-align:right">34.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2756</th>
+                                            <th style="text-align:right">7</th>
+                                            <th> 1.0" ANDA DOG HOOK - 1" ANDA DOG HOOK [DHK009-008](GUN METAL)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">53.00</td>
+                                            <td style="text-align:right">1,060.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">53.00</td>
+                                            <td style="text-align:right">1,060.00</td>
+                                                                                        <td style="text-align:right">20.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">933</th>
+                                            <th style="text-align:right">8</th>
+                                            <th> 1.0" ANDA DOG HOOK - 1" ANDA DOG HOOK [DHK009-008](MATT NICKLE)</th>
+                                            <td style="text-align:right">220.00</td>
+                                            <td style="text-align:right">6,600.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">220.00</td>
+                                            <td style="text-align:right">6,600.00</td>
+                                                                                        <td style="text-align:right">30.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1424</th>
+                                            <th style="text-align:right">9</th>
+                                            <th> 1.0" ANDA DOG HOOK - 1" ANDA DOG HOOK [DHK009-008](SHINY NICKLE)</th>
+                                            <td style="text-align:right">240.00</td>
+                                            <td style="text-align:right">6,240.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">240.00</td>
+                                            <td style="text-align:right">6,240.00</td>
+                                                                                        <td style="text-align:right">26.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2772</th>
+                                            <th style="text-align:right">10</th>
+                                            <th>1 INCH (25mm)-PATTI DOG HOOK (L)(ANTIC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">60.00</td>
+                                            <td style="text-align:right">1,440.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">4,800.00</td>
+                                            <td style="background: #afedb1;text-align:right">140.00</td>
+                                            <td style="text-align:right">3,360.00</td>
+                                                                                        <td style="text-align:right">24.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1184</th>
+                                            <th style="text-align:right">11</th>
+                                            <th>1 INCH (25mm)-PATTI DOG HOOK (L)(BUFF ANTIC)</th>
+                                            <td style="text-align:right">860.00</td>
+                                            <td style="text-align:right">18,920.00</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">400.00</td>
+                                            <td style="text-align:right">70.00</td>
+                                            <td style="text-align:right">1,540.00</td>
+                                            <td style="text-align:right">399.00</td>
+                                            <td style="text-align:right">7,980.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">411.00</td>
+                                            <td style="text-align:right">9,800.00</td>
+                                                                                        <td style="text-align:right">23.84</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2141</th>
+                                            <th style="text-align:right">12</th>
+                                            <th>1 INCH (25mm)-PATTI DOG HOOK (L)(DIRTY SILVER)</th>
+                                            <td style="text-align:right">1,246.00</td>
+                                            <td style="text-align:right">32,533.06</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">340.00</td>
+                                            <td style="text-align:right">8,877.40</td>
+                                            <td style="text-align:right">400.00</td>
+                                            <td style="text-align:right">9,600.00</td>
+                                            <td style="text-align:right">399.00</td>
+                                            <td style="text-align:right">7,980.00</td>
+                                            <td style="background: #afedb1;text-align:right">905.00</td>
+                                            <td style="text-align:right">22,035.66</td>
+                                                                                        <td style="text-align:right">24.35</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">956</th>
+                                            <th style="text-align:right">13</th>
+                                            <th>1 INCH (25mm)-PATTI DOG HOOK (L)(GOLDEN)</th>
+                                            <td style="text-align:right">194.00</td>
+                                            <td style="text-align:right">6,838.50</td>
+                                            <td style="text-align:right">1,653.00</td>
+                                            <td style="text-align:right">56,202.00</td>
+                                            <td style="text-align:right">1,630.00</td>
+                                            <td style="text-align:right">55,657.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">217.00</td>
+                                            <td style="text-align:right">7,383.00</td>
+                                                                                        <td style="text-align:right">34.02</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2733</th>
+                                            <th style="text-align:right">14</th>
+                                            <th>1 INCH (25mm)-PATTI DOG HOOK (L)(GUN METAL)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">40.00</td>
+                                            <td style="text-align:right">880.00</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">440.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">20.00</td>
+                                            <td style="text-align:right">440.00</td>
+                                                                                        <td style="text-align:right">22.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1168</th>
+                                            <th style="text-align:right">15</th>
+                                            <th>1 INCH (25mm)-PATTI DOG HOOK (L)(MATT BLACK)</th>
+                                            <td style="text-align:right">3,206.00</td>
+                                            <td style="text-align:right">92,974.00</td>
+                                            <td style="text-align:right">1,047.00</td>
+                                            <td style="text-align:right">30,363.00</td>
+                                            <td style="text-align:right">4,064.00</td>
+                                            <td style="text-align:right">117,856.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">189.00</td>
+                                            <td style="text-align:right">5,481.00</td>
+                                                                                        <td style="text-align:right">29.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1705</th>
+                                            <th style="text-align:right">16</th>
+                                            <th>1 INCH (25mm)-PATTI DOG HOOK (L)(NICKLE)</th>
+                                            <td style="text-align:right">570.00</td>
+                                            <td style="text-align:right">11,400.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">570.00</td>
+                                            <td style="text-align:right">11,400.00</td>
+                                                                                        <td style="text-align:right">20.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2763</th>
+                                            <th style="text-align:right">17</th>
+                                            <th>1 INCH (25mm)-PATTI DOG HOOK(S)(DIRTY SILVER)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">130.00</td>
+                                            <td style="text-align:right">2,925.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">130.00</td>
+                                            <td style="text-align:right">2,925.00</td>
+                                                                                        <td style="text-align:right">22.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2611</th>
+                                            <th style="text-align:right">18</th>
+                                            <th>1.25 INCH (30mm)- HOOK ULTRA (FF-134)(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">74.76</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">12.00</td>
+                                            <td style="text-align:right">74.76</td>
+                                                                                        <td style="text-align:right">6.23</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1805</th>
+                                            <th style="text-align:right">19</th>
+                                            <th>1.25 INCH (30mm)-PATTI-DOG HOOK(BUFF ANTIC)</th>
+                                            <td style="text-align:right">140.00</td>
+                                            <td style="text-align:right">3,640.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">140.00</td>
+                                            <td style="text-align:right">3,640.00</td>
+                                                                                        <td style="text-align:right">26.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2585</th>
+                                            <th style="text-align:right">20</th>
+                                            <th>1.25 INCH (30mm)-PATTI-DOG HOOK(MATT BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">201.00</td>
+                                            <td style="text-align:right">4,824.00</td>
+                                            <td style="text-align:right">180.00</td>
+                                            <td style="text-align:right">4,320.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">21.00</td>
+                                            <td style="text-align:right">504.00</td>
+                                                                                        <td style="text-align:right">24.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">939</th>
+                                            <th style="text-align:right">21</th>
+                                            <th>1.25" ANDA DOG HOOK (ANTIC)</th>
+                                            <td style="text-align:right">303.00</td>
+                                            <td style="text-align:right">9,999.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">303.00</td>
+                                            <td style="text-align:right">9,999.00</td>
+                                                                                        <td style="text-align:right">33.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">940</th>
+                                            <th style="text-align:right">22</th>
+                                            <th>1.25" ANDA DOG HOOK (BUFF ANTIC)</th>
+                                            <td style="text-align:right">128.00</td>
+                                            <td style="text-align:right">3,604.48</td>
+                                            <td style="text-align:right">310.00</td>
+                                            <td style="text-align:right">8,370.00</td>
+                                            <td style="text-align:right">414.00</td>
+                                            <td style="text-align:right">11,294.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">24.00</td>
+                                            <td style="text-align:right">680.48</td>
+                                                                                        <td style="text-align:right">28.35</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2432</th>
+                                            <th style="text-align:right">23</th>
+                                            <th>1.25" ANDA DOG HOOK (GOLDEN)</th>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">396.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">12.00</td>
+                                            <td style="text-align:right">396.00</td>
+                                                                                        <td style="text-align:right">33.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2727</th>
+                                            <th style="text-align:right">24</th>
+                                            <th>1.25" ANDA DOG HOOK (GUN METAL)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">21.00</td>
+                                            <td style="text-align:right">567.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">21.00</td>
+                                            <td style="text-align:right">567.00</td>
+                                                                                        <td style="text-align:right">27.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1702</th>
+                                            <th style="text-align:right">25</th>
+                                            <th>1.25" ANDA DOG HOOK (MATT BLACK)</th>
+                                            <td style="text-align:right">91.00</td>
+                                            <td style="text-align:right">2,548.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">560.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">71.00</td>
+                                            <td style="text-align:right">1,988.00</td>
+                                                                                        <td style="text-align:right">28.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">941</th>
+                                            <th style="text-align:right">26</th>
+                                            <th>1.25" ANDA DOG HOOK (MATT NICKLE)</th>
+                                            <td style="text-align:right">388.00</td>
+                                            <td style="text-align:right">11,640.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">388.00</td>
+                                            <td style="text-align:right">11,640.00</td>
+                                                                                        <td style="text-align:right">30.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2717</th>
+                                            <th style="text-align:right">27</th>
+                                            <th>1.50 INCH (40mm)-PATTI DOG HOOK(ANTIC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">22.00</td>
+                                            <td style="text-align:right">638.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">22.00</td>
+                                            <td style="text-align:right">638.00</td>
+                                                                                        <td style="text-align:right">29.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2548</th>
+                                            <th style="text-align:right">28</th>
+                                            <th>1.50 INCH (40mm)-PATTI DOG HOOK(DIRTY SILVER)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">248.00</td>
+                                            <td style="text-align:right">7,476.00</td>
+                                            <td style="text-align:right">240.00</td>
+                                            <td style="text-align:right">7,228.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">8.00</td>
+                                            <td style="text-align:right">248.00</td>
+                                                                                        <td style="text-align:right">31.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2274</th>
+                                            <th style="text-align:right">29</th>
+                                            <th>1.50 INCH (40mm)-PATTI DOG HOOK(NICKLE)</th>
+                                            <td style="text-align:right">151.00</td>
+                                            <td style="text-align:right">4,983.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">151.00</td>
+                                            <td style="text-align:right">4,983.00</td>
+                                                                                        <td style="text-align:right">33.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2796</th>
+                                            <th style="text-align:right">30</th>
+                                            <th>1.50 INCH (40mm)-patti dog hook (H)(BUFF ANTIC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">21.00</td>
+                                            <td style="text-align:right">609.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">21.00</td>
+                                            <td style="text-align:right">609.00</td>
+                                                                                        <td style="text-align:right">29.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2531</th>
+                                            <th style="text-align:right">31</th>
+                                            <th>1.50 INCH (40mm)-patti dog hook light (L)(BUFF ANTIC)</th>
+                                            <td style="text-align:right">7.00</td>
+                                            <td style="text-align:right">31.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">7.00</td>
+                                            <td style="text-align:right">31.50</td>
+                                                                                        <td style="text-align:right">4.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2822</th>
+                                            <th style="text-align:right">32</th>
+                                            <th>1.50 INCH (40mm)-patti dog hook light (L)(DIRTY SILVER)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">586.00</td>
+                                            <td style="text-align:right">15,822.00</td>
+                                            <td style="text-align:right">240.00</td>
+                                            <td style="text-align:right">6,480.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">346.00</td>
+                                            <td style="text-align:right">9,342.00</td>
+                                                                                        <td style="text-align:right">27.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2566</th>
+                                            <th style="text-align:right">33</th>
+                                            <th>1.50 INCH (40mm)-patti dog hook light (L)(MATT BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">83.00</td>
+                                            <td style="text-align:right">2,324.00</td>
+                                            <td style="text-align:right">40.00</td>
+                                            <td style="text-align:right">1,120.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">43.00</td>
+                                            <td style="text-align:right">1,204.00</td>
+                                                                                        <td style="text-align:right">28.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">946</th>
+                                            <th style="text-align:right">34</th>
+                                            <th>1.50 INCH-ANDA DOG HOOK(ANTIC)</th>
+                                            <td style="text-align:right">550.00</td>
+                                            <td style="text-align:right">15,400.00</td>
+                                            <td style="text-align:right">1,460.00</td>
+                                            <td style="text-align:right">39,420.00</td>
+                                            <td style="text-align:right">1,530.00</td>
+                                            <td style="text-align:right">41,860.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">480.00</td>
+                                            <td style="text-align:right">12,960.00</td>
+                                                                                        <td style="text-align:right">27.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">945</th>
+                                            <th style="text-align:right">35</th>
+                                            <th>1.50 INCH-ANDA DOG HOOK(ANTIC SILVER)</th>
+                                            <td style="text-align:right">165.00</td>
+                                            <td style="text-align:right">5,445.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">80.00</td>
+                                            <td style="text-align:right">2,640.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">85.00</td>
+                                            <td style="text-align:right">2,805.00</td>
+                                                                                        <td style="text-align:right">33.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">949</th>
+                                            <th style="text-align:right">36</th>
+                                            <th>1.50 INCH-ANDA DOG HOOK(BUFF ANTIC)</th>
+                                            <td style="text-align:right">543.00</td>
+                                            <td style="text-align:right">16,968.75</td>
+                                            <td style="text-align:right">2,743.00</td>
+                                            <td style="text-align:right">76,304.00</td>
+                                            <td style="text-align:right">1,994.00</td>
+                                            <td style="text-align:right">57,230.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1292.00</td>
+                                            <td style="text-align:right">36,042.75</td>
+                                                                                        <td style="text-align:right">27.90</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2414</th>
+                                            <th style="text-align:right">37</th>
+                                            <th>1.50 INCH-ANDA DOG HOOK(GOLDEN)</th>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">408.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">12.00</td>
+                                            <td style="text-align:right">408.00</td>
+                                                                                        <td style="text-align:right">34.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2724</th>
+                                            <th style="text-align:right">38</th>
+                                            <th>1.50 INCH-ANDA DOG HOOK(GUN METAL)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">86.00</td>
+                                            <td style="text-align:right">2,368.00</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">560.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">66.00</td>
+                                            <td style="text-align:right">1,808.00</td>
+                                                                                        <td style="text-align:right">27.39</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2183</th>
+                                            <th style="text-align:right">39</th>
+                                            <th>1.50 INCH-ANDA DOG HOOK(MATT BLACK)</th>
+                                            <td style="text-align:right">169.00</td>
+                                            <td style="text-align:right">5,294.77</td>
+                                            <td style="text-align:right">949.00</td>
+                                            <td style="text-align:right">27,521.00</td>
+                                            <td style="text-align:right">818.00</td>
+                                            <td style="text-align:right">24,345.28</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">6,000.00</td>
+                                            <td style="background: #afedb1;text-align:right">500.00</td>
+                                            <td style="text-align:right">14,470.49</td>
+                                                                                        <td style="text-align:right">28.94</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">947</th>
+                                            <th style="text-align:right">40</th>
+                                            <th>1.50 INCH-ANDA DOG HOOK(MATT NICKLE)</th>
+                                            <td style="text-align:right">19.00</td>
+                                            <td style="text-align:right">532.00</td>
+                                            <td style="text-align:right">2,429.00</td>
+                                            <td style="text-align:right">78,495.00</td>
+                                            <td style="text-align:right">2,264.00</td>
+                                            <td style="text-align:right">71,851.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">184.00</td>
+                                            <td style="text-align:right">7,176.00</td>
+                                                                                        <td style="text-align:right">39.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">948</th>
+                                            <th style="text-align:right">41</th>
+                                            <th>1.50 INCH-ANDA DOG HOOK(NICKLE)</th>
+                                            <td style="text-align:right">264.00</td>
+                                            <td style="text-align:right">7,656.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">5,600.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">64.00</td>
+                                            <td style="text-align:right">2,056.00</td>
+                                                                                        <td style="text-align:right">32.13</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">915</th>
+                                            <th style="text-align:right">42</th>
+                                            <th>10mm-KAICHI DOG HOOK(ANTIC)</th>
+                                            <td style="text-align:right">317.00</td>
+                                            <td style="text-align:right">4,121.00</td>
+                                            <td style="text-align:right">806.00</td>
+                                            <td style="text-align:right">9,269.00</td>
+                                            <td style="text-align:right">120.00</td>
+                                            <td style="text-align:right">1,560.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1003.00</td>
+                                            <td style="text-align:right">11,830.00</td>
+                                                                                        <td style="text-align:right">11.79</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">913</th>
+                                            <th style="text-align:right">43</th>
+                                            <th>10mm-KAICHI DOG HOOK(BUFF ANTIC)</th>
+                                            <td style="text-align:right">1,450.00</td>
+                                            <td style="text-align:right">17,574.00</td>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">593.75</td>
+                                            <td style="text-align:right">795.00</td>
+                                            <td style="text-align:right">9,635.40</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">705.00</td>
+                                            <td style="text-align:right">8,532.35</td>
+                                                                                        <td style="text-align:right">12.10</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1545</th>
+                                            <th style="text-align:right">44</th>
+                                            <th>10mm-KAICHI DOG HOOK(BUFF BLACK)</th>
+                                            <td style="text-align:right">90.00</td>
+                                            <td style="text-align:right">1,170.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">90.00</td>
+                                            <td style="text-align:right">1,170.00</td>
+                                                                                        <td style="text-align:right">13.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">917</th>
+                                            <th style="text-align:right">45</th>
+                                            <th>10mm-KAICHI DOG HOOK(GOLDEN)</th>
+                                            <td style="text-align:right">40.00</td>
+                                            <td style="text-align:right">840.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">40.00</td>
+                                            <td style="text-align:right">840.00</td>
+                                                                                        <td style="text-align:right">21.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">914</th>
+                                            <th style="text-align:right">46</th>
+                                            <th>10mm-KAICHI DOG HOOK(MATT NICKLE)</th>
+                                            <td style="text-align:right">190.00</td>
+                                            <td style="text-align:right">2,660.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">190.00</td>
+                                            <td style="text-align:right">2,660.00</td>
+                                                                                        <td style="text-align:right">14.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">916</th>
+                                            <th style="text-align:right">47</th>
+                                            <th>10mm-KAICHI DOG HOOK(NICKLE)</th>
+                                            <td style="text-align:right">330.00</td>
+                                            <td style="text-align:right">4,372.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">330.00</td>
+                                            <td style="text-align:right">4,372.50</td>
+                                                                                        <td style="text-align:right">13.25</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1690</th>
+                                            <th style="text-align:right">48</th>
+                                            <th>12 INCH CHAIN WITH DOUBLE DOG HOOK(MATT BLACK)</th>
+                                            <td style="text-align:right">10.00</td>
+                                            <td style="text-align:right">450.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">10.00</td>
+                                            <td style="text-align:right">450.00</td>
+                                                                                        <td style="text-align:right">45.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1879</th>
+                                            <th style="text-align:right">49</th>
+                                            <th>12mm-ANDA DOG HOOK(NICKLE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">20.00</td>
+                                            <td style="text-align:right">200.00</td>
+                                                                                        <td style="text-align:right">10.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2776</th>
+                                            <th style="text-align:right">50</th>
+                                            <th>12mm-GUN-DOG HOOK(ANTIC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,915.00</td>
+                                            <td style="text-align:right">38,888.00</td>
+                                            <td style="text-align:right">580.00</td>
+                                            <td style="text-align:right">7,540.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">2335.00</td>
+                                            <td style="text-align:right">31,348.00</td>
+                                                                                        <td style="text-align:right">13.43</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2375</th>
+                                            <th style="text-align:right">51</th>
+                                            <th>12mm-GUN-DOG HOOK(BUFF ANTIC)</th>
+                                            <td style="text-align:right">125.00</td>
+                                            <td style="text-align:right">1,687.50</td>
+                                            <td style="text-align:right">2,792.00</td>
+                                            <td style="text-align:right">37,692.00</td>
+                                            <td style="text-align:right">900.00</td>
+                                            <td style="text-align:right">12,150.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">2017.00</td>
+                                            <td style="text-align:right">27,229.50</td>
+                                                                                        <td style="text-align:right">13.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2144</th>
+                                            <th style="text-align:right">52</th>
+                                            <th>12mm-GUN-DOG HOOK(DIRTY SILVER)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,200.00</td>
+                                            <td style="text-align:right">16,800.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1200.00</td>
+                                            <td style="text-align:right">16,800.00</td>
+                                                                                        <td style="text-align:right">14.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2434</th>
+                                            <th style="text-align:right">53</th>
+                                            <th>12mm-GUN-DOG HOOK(GOLDEN)</th>
+                                            <td style="text-align:right">2,284.00</td>
+                                            <td style="text-align:right">45,680.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">2284.00</td>
+                                            <td style="text-align:right">45,680.00</td>
+                                                                                        <td style="text-align:right">20.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1662</th>
+                                            <th style="text-align:right">54</th>
+                                            <th>12mm-GUN-DOG HOOK(MATT BLACK)</th>
+                                            <td style="text-align:right">810.00</td>
+                                            <td style="text-align:right">12,393.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">770.00</td>
+                                            <td style="text-align:right">11,781.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">40.00</td>
+                                            <td style="text-align:right">612.00</td>
+                                                                                        <td style="text-align:right">15.30</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1835</th>
+                                            <th style="text-align:right">55</th>
+                                            <th>16 “ Chain with 3/4  Ring and Dog hook(RAW)</th>
+                                            <td style="text-align:right">1.00</td>
+                                            <td style="text-align:right">35.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1.00</td>
+                                            <td style="text-align:right">35.00</td>
+                                                                                        <td style="text-align:right">35.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2617</th>
+                                            <th style="text-align:right">56</th>
+                                            <th>18481 NEW PATTY DOG HOOK`(HI-NICKLE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">284.00</td>
+                                            <td style="text-align:right">8,740.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">284.00</td>
+                                            <td style="text-align:right">8,740.00</td>
+                                                                                        <td style="text-align:right">30.77</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2526</th>
+                                            <th style="text-align:right">57</th>
+                                            <th>20mm-patti dog hook (L)(GOLDEN)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">600.00</td>
+                                            <td style="text-align:right">19,200.00</td>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">3,200.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">500.00</td>
+                                            <td style="text-align:right">16,000.00</td>
+                                                                                        <td style="text-align:right">32.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2669</th>
+                                            <th style="text-align:right">58</th>
+                                            <th>25MM PLASTIC HOOK NEW (2534)(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">15,000.00</td>
+                                            <td style="text-align:right">34,500.00</td>
+                                            <td style="text-align:right">15,000.00</td>
+                                            <td style="text-align:right">34,500.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2635</th>
+                                            <th style="text-align:right">59</th>
+                                            <th>3/4 (20mm)- HOOK PLASTIC(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">33.60</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">12.00</td>
+                                            <td style="text-align:right">33.60</td>
+                                                                                        <td style="text-align:right">2.80</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">920</th>
+                                            <th style="text-align:right">60</th>
+                                            <th>3/4 (20mm)-PATTI DOG HOOK(ANTIC)</th>
+                                            <td style="text-align:right">389.00</td>
+                                            <td style="text-align:right">7,974.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">60.00</td>
+                                            <td style="text-align:right">1,230.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">329.00</td>
+                                            <td style="text-align:right">6,744.50</td>
+                                                                                        <td style="text-align:right">20.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">919</th>
+                                            <th style="text-align:right">61</th>
+                                            <th>3/4 (20mm)-PATTI DOG HOOK(BUFF ANTIC)</th>
+                                            <td style="text-align:right">573.00</td>
+                                            <td style="text-align:right">11,746.50</td>
+                                            <td style="text-align:right">510.00</td>
+                                            <td style="text-align:right">8,670.00</td>
+                                            <td style="text-align:right">480.00</td>
+                                            <td style="text-align:right">9,840.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">603.00</td>
+                                            <td style="text-align:right">10,576.50</td>
+                                                                                        <td style="text-align:right">17.54</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">922</th>
+                                            <th style="text-align:right">62</th>
+                                            <th>3/4 (20mm)-PATTI DOG HOOK(DIRTY SILVER)</th>
+                                            <td style="text-align:right">258.00</td>
+                                            <td style="text-align:right">5,601.18</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">240.00</td>
+                                            <td style="text-align:right">5,210.40</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">18.00</td>
+                                            <td style="text-align:right">390.78</td>
+                                                                                        <td style="text-align:right">21.71</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">924</th>
+                                            <th style="text-align:right">63</th>
+                                            <th>3/4 (20mm)-PATTI DOG HOOK(GOLDEN)</th>
+                                            <td style="text-align:right">1,884.00</td>
+                                            <td style="text-align:right">61,682.16</td>
+                                            <td style="text-align:right">11,043.00</td>
+                                            <td style="text-align:right">325,768.50</td>
+                                            <td style="text-align:right">10,692.00</td>
+                                            <td style="text-align:right">323,760.24</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">2235.00</td>
+                                            <td style="text-align:right">63,690.42</td>
+                                                                                        <td style="text-align:right">28.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2767</th>
+                                            <th style="text-align:right">64</th>
+                                            <th>3/4 (20mm)-PATTI DOG HOOK(GUN METAL)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">108.00</td>
+                                            <td style="text-align:right">2,268.00</td>
+                                            <td style="text-align:right">30.00</td>
+                                            <td style="text-align:right">630.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">78.00</td>
+                                            <td style="text-align:right">1,638.00</td>
+                                                                                        <td style="text-align:right">21.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1167</th>
+                                            <th style="text-align:right">65</th>
+                                            <th>3/4 (20mm)-PATTI DOG HOOK(MATT BLACK)</th>
+                                            <td style="text-align:right">1,246.00</td>
+                                            <td style="text-align:right">38,302.04</td>
+                                            <td style="text-align:right">6,547.00</td>
+                                            <td style="text-align:right">176,769.00</td>
+                                            <td style="text-align:right">6,249.00</td>
+                                            <td style="text-align:right">174,097.38</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1544.00</td>
+                                            <td style="text-align:right">40,973.66</td>
+                                                                                        <td style="text-align:right">26.54</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1539</th>
+                                            <th style="text-align:right">66</th>
+                                            <th>3/4 (20mm)-PATTI DOG HOOK(MATT NICKLE)</th>
+                                            <td style="text-align:right">64.00</td>
+                                            <td style="text-align:right">1,408.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">64.00</td>
+                                            <td style="text-align:right">1,408.00</td>
+                                                                                        <td style="text-align:right">22.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">921</th>
+                                            <th style="text-align:right">67</th>
+                                            <th>3/4 (20mm)-PATTI DOG HOOK(NICKLE)</th>
+                                            <td style="text-align:right">76.00</td>
+                                            <td style="text-align:right">1,292.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">76.00</td>
+                                            <td style="text-align:right">1,292.00</td>
+                                                                                        <td style="text-align:right">17.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2277</th>
+                                            <th style="text-align:right">68</th>
+                                            <th>3/4 (20mm)-PATTI DOG HOOK-LIGHT (S)(BUFF ANTIC)</th>
+                                            <td style="text-align:right">350.00</td>
+                                            <td style="text-align:right">7,175.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">350.00</td>
+                                            <td style="text-align:right">7,175.00</td>
+                                                                                        <td style="text-align:right">20.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2761</th>
+                                            <th style="text-align:right">69</th>
+                                            <th>3/4 (20mm)-PATTI DOG HOOK-LIGHT (S)(DIRTY SILVER)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,022.00</td>
+                                            <td style="text-align:right">41,552.00</td>
+                                            <td style="text-align:right">1,560.00</td>
+                                            <td style="text-align:right">31,850.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">462.00</td>
+                                            <td style="text-align:right">9,702.00</td>
+                                                                                        <td style="text-align:right">21.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2110</th>
+                                            <th style="text-align:right">70</th>
+                                            <th>3/4 (20mm)-PATTI DOG HOOK-LIGHT (S)(MATT BLACK)</th>
+                                            <td style="text-align:right">1,995.00</td>
+                                            <td style="text-align:right">39,900.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">90.00</td>
+                                            <td style="text-align:right">1,800.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1905.00</td>
+                                            <td style="text-align:right">38,100.00</td>
+                                                                                        <td style="text-align:right">20.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">927</th>
+                                            <th style="text-align:right">71</th>
+                                            <th>3/4-ANDA DOG HOOK(ANTIC)</th>
+                                            <td style="text-align:right">105.00</td>
+                                            <td style="text-align:right">2,520.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">105.00</td>
+                                            <td style="text-align:right">2,520.00</td>
+                                                                                        <td style="text-align:right">24.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1534</th>
+                                            <th style="text-align:right">72</th>
+                                            <th>3/4-ANDA DOG HOOK(ANTIC SILVER)</th>
+                                            <td style="text-align:right">64.00</td>
+                                            <td style="text-align:right">1,728.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">64.00</td>
+                                            <td style="text-align:right">1,728.00</td>
+                                                                                        <td style="text-align:right">27.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">926</th>
+                                            <th style="text-align:right">73</th>
+                                            <th>3/4-ANDA DOG HOOK(BUFF ANTIC)</th>
+                                            <td style="text-align:right">202.00</td>
+                                            <td style="text-align:right">5,252.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">202.00</td>
+                                            <td style="text-align:right">5,252.00</td>
+                                                                                        <td style="text-align:right">26.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">931</th>
+                                            <th style="text-align:right">74</th>
+                                            <th>3/4-ANDA DOG HOOK(BUFF BLACK)</th>
+                                            <td style="text-align:right">89.00</td>
+                                            <td style="text-align:right">2,314.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">89.00</td>
+                                            <td style="text-align:right">2,314.00</td>
+                                                                                        <td style="text-align:right">26.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">932</th>
+                                            <th style="text-align:right">75</th>
+                                            <th>3/4-ANDA DOG HOOK(GOLDEN)</th>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">6,400.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">200.00</td>
+                                            <td style="text-align:right">6,400.00</td>
+                                                                                        <td style="text-align:right">32.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1620</th>
+                                            <th style="text-align:right">76</th>
+                                            <th>3/4-ANDA DOG HOOK(MATT BLACK)</th>
+                                            <td style="text-align:right">24.00</td>
+                                            <td style="text-align:right">1,320.96</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">24.00</td>
+                                            <td style="text-align:right">1,320.96</td>
+                                                                                        <td style="text-align:right">55.04</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">928</th>
+                                            <th style="text-align:right">77</th>
+                                            <th>3/4-ANDA DOG HOOK(MATT NICKLE)</th>
+                                            <td style="text-align:right">432.00</td>
+                                            <td style="text-align:right">11,664.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">432.00</td>
+                                            <td style="text-align:right">11,664.00</td>
+                                                                                        <td style="text-align:right">27.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">929</th>
+                                            <th style="text-align:right">78</th>
+                                            <th>3/4-ANDA DOG HOOK(NICKLE)</th>
+                                            <td style="text-align:right">17.00</td>
+                                            <td style="text-align:right">408.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">17.00</td>
+                                            <td style="text-align:right">408.00</td>
+                                                                                        <td style="text-align:right">24.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2623</th>
+                                            <th style="text-align:right">79</th>
+                                            <th>38MM HOOK DECENT(GREY)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">31.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">6.00</td>
+                                            <td style="text-align:right">31.50</td>
+                                                                                        <td style="text-align:right">5.25</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2612</th>
+                                            <th style="text-align:right">80</th>
+                                            <th>38MM HOOK ULTRA (FF-134)(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">80.40</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">12.00</td>
+                                            <td style="text-align:right">80.40</td>
+                                                                                        <td style="text-align:right">6.70</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2584</th>
+                                            <th style="text-align:right">81</th>
+                                            <th>38MM PLASTIC DOG HOOK(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">24.00</td>
+                                            <td style="text-align:right">97.68</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">24.00</td>
+                                            <td style="text-align:right">97.68</td>
+                                                                                        <td style="text-align:right">4.07</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">907</th>
+                                            <th style="text-align:right">82</th>
+                                            <th>5/8 (15mm)-PATTI DOG HOOK(ANTIC)</th>
+                                            <td style="text-align:right">569.00</td>
+                                            <td style="text-align:right">9,673.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">569.00</td>
+                                            <td style="text-align:right">9,673.00</td>
+                                                                                        <td style="text-align:right">17.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">906</th>
+                                            <th style="text-align:right">83</th>
+                                            <th>5/8 (15mm)-PATTI DOG HOOK(BUFF ANTIC)</th>
+                                            <td style="text-align:right">237.00</td>
+                                            <td style="text-align:right">4,029.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">90.00</td>
+                                            <td style="text-align:right">1,530.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">147.00</td>
+                                            <td style="text-align:right">2,499.00</td>
+                                                                                        <td style="text-align:right">17.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">910</th>
+                                            <th style="text-align:right">84</th>
+                                            <th>5/8 (15mm)-PATTI DOG HOOK(BUFF BLACK)</th>
+                                            <td style="text-align:right">66.00</td>
+                                            <td style="text-align:right">1,188.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">66.00</td>
+                                            <td style="text-align:right">1,188.00</td>
+                                                                                        <td style="text-align:right">18.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">908</th>
+                                            <th style="text-align:right">85</th>
+                                            <th>5/8 (15mm)-PATTI DOG HOOK(DIRTY SILVER)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">26.00</td>
+                                            <td style="text-align:right">383.50</td>
+                                            <td style="text-align:right">130.00</td>
+                                            <td style="text-align:right">1,917.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">174.00</td>
+                                            <td style="text-align:right">2,566.50</td>
+                                            <td style="background: #afedb1;text-align:right">70.00</td>
+                                            <td style="text-align:right">1,032.50</td>
+                                                                                        <td style="text-align:right">14.75</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">909</th>
+                                            <th style="text-align:right">86</th>
+                                            <th>5/8 (15mm)-PATTI DOG HOOK(GOLDEN)</th>
+                                            <td style="text-align:right">678.00</td>
+                                            <td style="text-align:right">18,984.00</td>
+                                            <td style="text-align:right">1,266.00</td>
+                                            <td style="text-align:right">35,681.00</td>
+                                            <td style="text-align:right">1,044.00</td>
+                                            <td style="text-align:right">29,232.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">900.00</td>
+                                            <td style="text-align:right">25,433.00</td>
+                                                                                        <td style="text-align:right">28.26</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1536</th>
+                                            <th style="text-align:right">87</th>
+                                            <th>5/8 (15mm)-PATTI DOG HOOK(LIGHT GOLD)</th>
+                                            <td style="text-align:right">320.00</td>
+                                            <td style="text-align:right">6,400.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">146.00</td>
+                                            <td style="text-align:right">2,920.00</td>
+                                            <td style="text-align:right">174.00</td>
+                                            <td style="text-align:right">3,480.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1193</th>
+                                            <th style="text-align:right">88</th>
+                                            <th>5/8 (15mm)-PATTI DOG HOOK(MATT BLACK)</th>
+                                            <td style="text-align:right">649.00</td>
+                                            <td style="text-align:right">10,319.10</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">360.00</td>
+                                            <td style="text-align:right">5,724.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">289.00</td>
+                                            <td style="text-align:right">4,595.10</td>
+                                                                                        <td style="text-align:right">15.90</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1066</th>
+                                            <th style="text-align:right">89</th>
+                                            <th>5/8 (15mm)-PATTI DOG HOOK(NICKLE)</th>
+                                            <td style="text-align:right">17.00</td>
+                                            <td style="text-align:right">255.00</td>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">825.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">67.00</td>
+                                            <td style="text-align:right">1,080.00</td>
+                                                                                        <td style="text-align:right">16.12</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">959</th>
+                                            <th style="text-align:right">90</th>
+                                            <th>5/8 (15mm)-ROUND-PATTI DOG HOOK-(BUFF ANTIC)</th>
+                                            <td style="text-align:right">214.00</td>
+                                            <td style="text-align:right">4,280.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">214.00</td>
+                                            <td style="text-align:right">4,280.00</td>
+                                                                                        <td style="text-align:right">20.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">957</th>
+                                            <th style="text-align:right">91</th>
+                                            <th>5/8 (15mm)-ROUND-PATTI DOG HOOK-(GOLDEN)</th>
+                                            <td style="text-align:right">657.00</td>
+                                            <td style="text-align:right">18,396.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">410.00</td>
+                                            <td style="text-align:right">12,990.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">247.00</td>
+                                            <td style="text-align:right">5,406.00</td>
+                                                                                        <td style="text-align:right">21.89</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">890</th>
+                                            <th style="text-align:right">92</th>
+                                            <th>5/8 GUN DOG HOOK(ANTIC)</th>
+                                            <td style="text-align:right">223.00</td>
+                                            <td style="text-align:right">2,899.00</td>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">150.00</td>
+                                            <td style="text-align:right">120.00</td>
+                                            <td style="text-align:right">1,560.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">115.00</td>
+                                            <td style="text-align:right">1,489.00</td>
+                                                                                        <td style="text-align:right">12.95</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1541</th>
+                                            <th style="text-align:right">93</th>
+                                            <th>5/8 GUN DOG HOOK(ANTIC SILVER)</th>
+                                            <td style="text-align:right">262.00</td>
+                                            <td style="text-align:right">3,799.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">152.00</td>
+                                            <td style="text-align:right">2,204.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">110.00</td>
+                                            <td style="text-align:right">1,595.00</td>
+                                                                                        <td style="text-align:right">14.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">888</th>
+                                            <th style="text-align:right">94</th>
+                                            <th>5/8 GUN DOG HOOK(BUFF ANTIC)</th>
+                                            <td style="text-align:right">1,234.00</td>
+                                            <td style="text-align:right">16,091.36</td>
+                                            <td style="text-align:right">1,748.00</td>
+                                            <td style="text-align:right">22,847.00</td>
+                                            <td style="text-align:right">2,600.00</td>
+                                            <td style="text-align:right">33,848.36</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">382.00</td>
+                                            <td style="text-align:right">5,090.00</td>
+                                                                                        <td style="text-align:right">13.32</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1542</th>
+                                            <th style="text-align:right">95</th>
+                                            <th>5/8 GUN DOG HOOK(BUFF BLACK)</th>
+                                            <td style="text-align:right">256.00</td>
+                                            <td style="text-align:right">3,456.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">256.00</td>
+                                            <td style="text-align:right">3,456.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2752</th>
+                                            <th style="text-align:right">96</th>
+                                            <th>5/8 GUN DOG HOOK(DIRTY SILVER)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,085.00</td>
+                                            <td style="text-align:right">31,232.50</td>
+                                            <td style="text-align:right">1,390.00</td>
+                                            <td style="text-align:right">20,800.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">695.00</td>
+                                            <td style="text-align:right">10,432.50</td>
+                                                                                        <td style="text-align:right">15.01</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">892</th>
+                                            <th style="text-align:right">97</th>
+                                            <th>5/8 GUN DOG HOOK(GOLDEN)</th>
+                                            <td style="text-align:right">1,162.00</td>
+                                            <td style="text-align:right">25,703.44</td>
+                                            <td style="text-align:right">6,688.00</td>
+                                            <td style="text-align:right">150,480.00</td>
+                                            <td style="text-align:right">6,750.00</td>
+                                            <td style="text-align:right">151,376.06</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1100.00</td>
+                                            <td style="text-align:right">24,807.38</td>
+                                                                                        <td style="text-align:right">22.55</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1192</th>
+                                            <th style="text-align:right">98</th>
+                                            <th>5/8 GUN DOG HOOK(MATT BLACK)</th>
+                                            <td style="text-align:right">570.00</td>
+                                            <td style="text-align:right">8,869.20</td>
+                                            <td style="text-align:right">6,378.00</td>
+                                            <td style="text-align:right">95,670.00</td>
+                                            <td style="text-align:right">5,016.00</td>
+                                            <td style="text-align:right">75,558.64</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1932.00</td>
+                                            <td style="text-align:right">28,980.56</td>
+                                                                                        <td style="text-align:right">15.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">889</th>
+                                            <th style="text-align:right">99</th>
+                                            <th>5/8 GUN DOG HOOK(MATT NICKLE)</th>
+                                            <td style="text-align:right">334.00</td>
+                                            <td style="text-align:right">4,843.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">334.00</td>
+                                            <td style="text-align:right">4,843.00</td>
+                                                                                        <td style="text-align:right">14.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">891</th>
+                                            <th style="text-align:right">100</th>
+                                            <th>5/8 GUN DOG HOOK(NICKLE)</th>
+                                            <td style="text-align:right">300.00</td>
+                                            <td style="text-align:right">3,900.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">1,300.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">200.00</td>
+                                            <td style="text-align:right">2,600.00</td>
+                                                                                        <td style="text-align:right">13.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">887</th>
+                                            <th style="text-align:right">101</th>
+                                            <th>6 HOOK KEY FITTINGS(BUFF ANTIC)</th>
+                                            <td style="text-align:right">361.00</td>
+                                            <td style="text-align:right">11,866.07</td>
+                                            <td style="text-align:right">70.00</td>
+                                            <td style="text-align:right">3,150.00</td>
+                                            <td style="text-align:right">431.00</td>
+                                            <td style="text-align:right">15,016.07</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">886</th>
+                                            <th style="text-align:right">102</th>
+                                            <th>6 HOOK KEY FITTINGS(NICKLE)</th>
+                                            <td style="text-align:right">130.00</td>
+                                            <td style="text-align:right">5,200.00</td>
+                                            <td style="text-align:right">80.00</td>
+                                            <td style="text-align:right">3,200.00</td>
+                                            <td style="text-align:right">210.00</td>
+                                            <td style="text-align:right">8,400.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">951</th>
+                                            <th style="text-align:right">103</th>
+                                            <th>DOG HOOK AKG 006 9mm (JAPAN)(NICKLE)</th>
+                                            <td style="text-align:right">350.00</td>
+                                            <td style="text-align:right">4,375.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">350.00</td>
+                                            <td style="text-align:right">4,375.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr style="background:thistle">
+                                            <th style="display: none;"></th>
+                                            <th colspan="2">Total</th>
+                                            <td style="text-align:right">32,469.00</td>
+                                            <td style="text-align:right">750,701.27</td>
+                                            <td style="text-align:right">74,468.00</td>
+                                            <td style="text-align:right">1,421,415.19</td>
+                                            <td style="text-align:right">71,245.00</td>
+                                            <td style="text-align:right">1,416,291.23</td>
+                                            <td style="text-align:right">1,173.00</td>
+                                            <td style="text-align:right">26,660.00</td>
+                                            <td style="text-align:right">973.00</td>
+                                            <td style="text-align:right">21,346.50</td>
+                                            <td style="text-align:right">35,492.00</td>
+                                            <td style="text-align:right">750,511.73</td>
+                                            <td style="text-align:right">2,226.41</td>
+                                            <td></td>  
+                                        </tr>
+                                    </tbody>
+                                </table><table>
+                            <thead>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th rowspan="2" style="text-align:right">#</th>
+                                    <th rowspan="2" style="text-align:center">Item</th>
+                                    <th colspan="2" style="text-align:center">Opening Information</th>
+                                    <th colspan="2" style="text-align:center">Purchase Information</th>
+                                    <th colspan="2" style="text-align:center">Issue Information</th>
+                                    <th colspan="2" style="text-align:center">Plating Information</th>
+                                    <th colspan="2" style="text-align:center">Stock In Information</th>
+                                    <th colspan="2" style="text-align:center">Balance Information</th>
+                                    <th rowspan="2">Closing<br>Rate</th>
+                                    <th rowspan="2" style="text-align:center">Unit</th>
+                                </tr>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th style="text-align:center">Opn Qnty</th>
+                                    <th style="text-align:center">Opn Val</th>
+                                    
+                                    <th style="text-align:center">Pur Qnty</th>
+                                    <th style="text-align:center">Pur Val</th>
+                                    
+                                    <th style="text-align:center">Issue Qnty</th>
+                                    <th style="text-align:center">Issue Val</th>
+                                    
+                                    <th style="text-align:center">Plating Qnty</th>
+                                    <th style="text-align:center">Plating Val</th>
+                                    
+                                    <th style="text-align:center">Stock In Qnty</th>
+                                    <th style="text-align:center">Stock In Val</th>
+                                    
+                                    <th style="text-align:center">Bal Qnty</th>
+                                    <th style="text-align:center">Bal Val</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                <tr style="background:thistle">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Total</th>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background:#faeda6">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Grand Total</th>
+                                    <td style="text-align:right">32,469.00</td>
+                                    <td style="text-align:right">750,701.27</td>
+                                    <td style="text-align:right">74,468.00</td>
+                                    <td style="text-align:right">1,421,415.19</td>
+                                    <td style="text-align:right">71,245.00</td>
+                                    <td style="text-align:right">1,416,291.23</td>
+                                    <td style="text-align:right">1,173.00</td>
+                                    <td style="text-align:right">26,660.00</td>
+                                    <td style="text-align:right">973.00</td>
+                                    <td style="text-align:right">21,346.50</td>
+                                    <td style="text-align:right">35,492.00</td>
+                                    <td style="text-align:right">750,511.73</td>
+                                    <td style="text-align:right">2,226.41</td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table></body></html>

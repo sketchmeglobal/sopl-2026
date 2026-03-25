@@ -1,0 +1,1554 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Sheet1</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>
+                                    <thead>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th rowspan="2" style="text-align:right">#</th>
+                                            <th rowspan="2" style="text-align:center">Item</th>
+                                            <th colspan="2" style="text-align:center">Opening Information</th>
+                                            <th colspan="2" style="text-align:center">Purchase Information</th>
+                                            <th colspan="2" style="text-align:center">Issue Information</th>
+                                            <th colspan="2" style="text-align:center">Plating Information</th>
+                                            <th colspan="2" style="text-align:center">Stock In Information</th>
+                                            <th colspan="2" style="text-align:center">Balance Information</th>
+                                            <th rowspan="2">Closing<br>Rate</th>
+                                            <th rowspan="2" style="text-align:center">Unit</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th style="text-align:center">Opn Qnty</th>
+                                            <th style="text-align:center">Opn Val</th>
+                                            <th style="text-align:center">Pur Qnty</th>
+                                            <th style="text-align:center">Pur Val</th>
+                                            <th style="text-align:center">Issue Qnty</th>
+                                            <th style="text-align:center">Issue Val</th>
+                                            <th style="text-align:center">Plating Qnty</th>
+                                            <th style="text-align:center">Plating Val</th>
+                                            <th style="text-align:center">Stock In Qnty</th>
+                                            <th style="text-align:center">Stock In Val</th>
+                                            <th style="text-align:center">Bal Qnty</th>
+                                            <th style="text-align:center">Bal Val</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                                                <tr>
+                                            <th style="display: none;">2778</th>
+                                            <th style="text-align:right">1</th>
+                                            <th>03 M DFNT2 METAL BODY(ANTIC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">1,100.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,300.00</td>
+                                            <td style="text-align:right">7,150.00</td>
+                                            <td style="background: #afedb1;text-align:right">1500.00</td>
+                                            <td style="text-align:right">8,250.00</td>
+                                                                                        <td style="text-align:right">5.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1769</th>
+                                            <th style="text-align:right">2</th>
+                                            <th>03 M DFNT2 METAL BODY(GOLDEN)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,272.00</td>
+                                            <td style="text-align:right">13,722.00</td>
+                                            <td style="text-align:right">772.00</td>
+                                            <td style="text-align:right">8,222.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">500.00</td>
+                                            <td style="text-align:right">5,500.00</td>
+                                                                                        <td style="text-align:right">11.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1426</th>
+                                            <th style="text-align:right">3</th>
+                                            <th>03 M DFNT2 METAL BODY(NICKLE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,000.00</td>
+                                            <td style="text-align:right">3,380.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1000.00</td>
+                                            <td style="text-align:right">3,380.00</td>
+                                                                                        <td style="text-align:right">3.38</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1866</th>
+                                            <th style="text-align:right">4</th>
+                                            <th>3 NO. FANCY PULLER-WITH BODY(ANTIC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,046.00</td>
+                                            <td style="text-align:right">8,891.00</td>
+                                            <td style="text-align:right">546.00</td>
+                                            <td style="text-align:right">4,641.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">500.00</td>
+                                            <td style="text-align:right">4,250.00</td>
+                                                                                        <td style="text-align:right">8.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1756</th>
+                                            <th style="text-align:right">5</th>
+                                            <th>3 NO. FANCY PULLER-WITH BODY(BUFF ANTIC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">5,034.00</td>
+                                            <td style="text-align:right">42,789.00</td>
+                                            <td style="text-align:right">5,034.00</td>
+                                            <td style="text-align:right">42,789.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1860</th>
+                                            <th style="text-align:right">6</th>
+                                            <th>3 NO. FANCY PULLER-WITH BODY(FROSTED)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,600.00</td>
+                                            <td style="text-align:right">20,100.00</td>
+                                            <td style="text-align:right">2,000.00</td>
+                                            <td style="text-align:right">15,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">600.00</td>
+                                            <td style="text-align:right">5,100.00</td>
+                                                                                        <td style="text-align:right">8.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">245</th>
+                                            <th style="text-align:right">7</th>
+                                            <th>3 NO.-AUTO LOCK PULLER(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">15,000.00</td>
+                                            <td style="text-align:right">42,000.00</td>
+                                            <td style="text-align:right">8,000.00</td>
+                                            <td style="text-align:right">22,400.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">7000.00</td>
+                                            <td style="text-align:right">19,600.00</td>
+                                                                                        <td style="text-align:right">2.80</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2462</th>
+                                            <th style="text-align:right">8</th>
+                                            <th>3 NO.-AUTO LOCK PULLER(BLUE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,000.00</td>
+                                            <td style="text-align:right">3,000.00</td>
+                                            <td style="text-align:right">1,000.00</td>
+                                            <td style="text-align:right">3,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2056</th>
+                                            <th style="text-align:right">9</th>
+                                            <th>3 NO.-AUTO LOCK PULLER(TAN)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,000.00</td>
+                                            <td style="text-align:right">6,000.00</td>
+                                            <td style="text-align:right">2,000.00</td>
+                                            <td style="text-align:right">6,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">311</th>
+                                            <th style="text-align:right">10</th>
+                                            <th>3 NO.-CHINA METAL BODY(SHINY GOLD)</th>
+                                            <td style="text-align:right">410.00</td>
+                                            <td style="text-align:right">3,485.00</td>
+                                            <td style="text-align:right">510.00</td>
+                                            <td style="text-align:right">4,335.00</td>
+                                            <td style="text-align:right">920.00</td>
+                                            <td style="text-align:right">7,820.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2730</th>
+                                            <th style="text-align:right">11</th>
+                                            <th>3 NO.-CHINA METAL BODY(SHINY NICKLE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">210.00</td>
+                                            <td style="text-align:right">1,470.00</td>
+                                            <td style="text-align:right">210.00</td>
+                                            <td style="text-align:right">1,470.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">312</th>
+                                            <th style="text-align:right">12</th>
+                                            <th>3 NO.-END STOPPER(NICKLE)</th>
+                                            <td style="text-align:right">0.50</td>
+                                            <td style="text-align:right">850.00</td>
+                                            <td style="text-align:right">0.50</td>
+                                            <td style="text-align:right">850.00</td>
+                                            <td style="text-align:right">1.00</td>
+                                            <td style="text-align:right">1,700.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">KGS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1306</th>
+                                            <th style="text-align:right">13</th>
+                                            <th>3 NO.-FANCY PULLER(BUFF ANTIC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">19,040.00</td>
+                                            <td style="text-align:right">90,200.00</td>
+                                            <td style="text-align:right">19,238.00</td>
+                                            <td style="text-align:right">91,190.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">198.00</td>
+                                            <td style="text-align:right">990.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1975</th>
+                                            <th style="text-align:right">14</th>
+                                            <th>3 NO.-FANCY PULLER(FROSTED)</th>
+                                            <td style="text-align:right">380.00</td>
+                                            <td style="text-align:right">1,710.00</td>
+                                            <td style="text-align:right">2,470.00</td>
+                                            <td style="text-align:right">11,505.00</td>
+                                            <td style="text-align:right">2,850.00</td>
+                                            <td style="text-align:right">12,825.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">390.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">250</th>
+                                            <th style="text-align:right">15</th>
+                                            <th>3 NO.-FANCY PULLER(MATT NICKLE)</th>
+                                            <td style="text-align:right">53.00</td>
+                                            <td style="text-align:right">185.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">53.00</td>
+                                            <td style="text-align:right">185.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">248</th>
+                                            <th style="text-align:right">16</th>
+                                            <th>3 NO.-FANCY PULLER(NICKLE)</th>
+                                            <td style="text-align:right">7,024.00</td>
+                                            <td style="text-align:right">31,608.00</td>
+                                            <td style="text-align:right">164,391.00</td>
+                                            <td style="text-align:right">771,379.50</td>
+                                            <td style="text-align:right">168,777.00</td>
+                                            <td style="text-align:right">783,334.00</td>
+                                            <td style="text-align:right">198.00</td>
+                                            <td style="text-align:right">990.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">2440.00</td>
+                                            <td style="text-align:right">18,663.50</td>
+                                                                                        <td style="text-align:right">7.65</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1051</th>
+                                            <th style="text-align:right">17</th>
+                                            <th>3 NO.-FISH-PULLER(NICKLE)</th>
+                                            <td style="text-align:right">3,200.00</td>
+                                            <td style="text-align:right">4,448.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,700.00</td>
+                                            <td style="text-align:right">3,753.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">500.00</td>
+                                            <td style="text-align:right">695.00</td>
+                                                                                        <td style="text-align:right">1.39</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">255</th>
+                                            <th style="text-align:right">18</th>
+                                            <th>3 NO.-FLAT PULLER(BUFF ANTIC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,940.00</td>
+                                            <td style="text-align:right">11,760.00</td>
+                                            <td style="text-align:right">40.00</td>
+                                            <td style="text-align:right">160.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">2900.00</td>
+                                            <td style="text-align:right">11,600.00</td>
+                                                                                        <td style="text-align:right">4.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">260</th>
+                                            <th style="text-align:right">19</th>
+                                            <th>3 NO.-LONG PULLER(BLACK)</th>
+                                            <td style="text-align:right">4,000.00</td>
+                                            <td style="text-align:right">7,800.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">800.00</td>
+                                            <td style="text-align:right">1,560.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,500.00</td>
+                                            <td style="text-align:right">8,750.00</td>
+                                            <td style="background: #afedb1;text-align:right">5700.00</td>
+                                            <td style="text-align:right">14,990.00</td>
+                                                                                        <td style="text-align:right">2.63</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2676</th>
+                                            <th style="text-align:right">20</th>
+                                            <th>3 NO.-NYLON BODY(BUFF ANTIC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">16,863.00</td>
+                                            <td style="text-align:right">59,020.50</td>
+                                            <td style="text-align:right">12,363.00</td>
+                                            <td style="text-align:right">43,270.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">4500.00</td>
+                                            <td style="text-align:right">15,750.00</td>
+                                                                                        <td style="text-align:right">3.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2707</th>
+                                            <th style="text-align:right">21</th>
+                                            <th>3 NO.-NYLON BODY(FROSTED)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,000.00</td>
+                                            <td style="text-align:right">7,000.00</td>
+                                            <td style="text-align:right">2,000.00</td>
+                                            <td style="text-align:right">7,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2089</th>
+                                            <th style="text-align:right">22</th>
+                                            <th>3 NO.-NYLON BODY(NICKLE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">44,340.00</td>
+                                            <td style="text-align:right">133,020.00</td>
+                                            <td style="text-align:right">44,340.00</td>
+                                            <td style="text-align:right">133,020.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">283</th>
+                                            <th style="text-align:right">23</th>
+                                            <th>3 NO.-YKK 03 CF DFNT2 (YKK BODY - NYLON ZIP)(MATT NICKLE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3,000.00</td>
+                                            <td style="text-align:right">7,800.00</td>
+                                            <td style="text-align:right">3,000.00</td>
+                                            <td style="text-align:right">7,800.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">282</th>
+                                            <th style="text-align:right">24</th>
+                                            <th>3 NO.-YKK 03 CF DFNT2 (YKK BODY - NYLON ZIP)(NICKLE)</th>
+                                            <td style="text-align:right">400.00</td>
+                                            <td style="text-align:right">920.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">400.00</td>
+                                            <td style="text-align:right">920.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">-0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">291</th>
+                                            <th style="text-align:right">25</th>
+                                            <th>3 NO.-YKK 03 Y DFNT2 (YKK BODY - METAL ZIP)(DIRTY SILVER)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,200.00</td>
+                                            <td style="text-align:right">9,600.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1200.00</td>
+                                            <td style="text-align:right">9,600.00</td>
+                                                                                        <td style="text-align:right">8.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">292</th>
+                                            <th style="text-align:right">26</th>
+                                            <th>3 NO.-YKK 03 Y DFNT2 (YKK BODY - METAL ZIP)(GOLDEN)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">850.00</td>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">850.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2836</th>
+                                            <th style="text-align:right">27</th>
+                                            <th>3 NO.-YKK 03 Y DFNT2 (YKK BODY - METAL ZIP)(MATT NICKLE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,000.00</td>
+                                            <td style="text-align:right">7,500.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1000.00</td>
+                                            <td style="text-align:right">7,500.00</td>
+                                                                                        <td style="text-align:right">7.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">286</th>
+                                            <th style="text-align:right">28</th>
+                                            <th>3 NO.-YKK 03 Y DFNT2 (YKK BODY - METAL ZIP)(NICKLE)</th>
+                                            <td style="text-align:right">740.00</td>
+                                            <td style="text-align:right">2,686.20</td>
+                                            <td style="text-align:right">1,050.00</td>
+                                            <td style="text-align:right">4,320.00</td>
+                                            <td style="text-align:right">790.00</td>
+                                            <td style="text-align:right">3,036.20</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1000.00</td>
+                                            <td style="text-align:right">3,970.00</td>
+                                                                                        <td style="text-align:right">3.97</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1668</th>
+                                            <th style="text-align:right">29</th>
+                                            <th>3CFDAEP AUTO LOCK PULLER(BLACK)</th>
+                                            <td style="text-align:right">1,500.00</td>
+                                            <td style="text-align:right">3,450.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,500.00</td>
+                                            <td style="text-align:right">3,450.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">-0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2747</th>
+                                            <th style="text-align:right">30</th>
+                                            <th>5 NO NEW FLAT PULLER BD DANDI(NICKLE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3,135.00</td>
+                                            <td style="text-align:right">21,945.00</td>
+                                            <td style="text-align:right">3,135.00</td>
+                                            <td style="text-align:right">21,945.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2538</th>
+                                            <th style="text-align:right">31</th>
+                                            <th>5 no nylon body with D KCCL (canvas)(BUFF ANTIC)</th>
+                                            <td style="text-align:right">110.00</td>
+                                            <td style="text-align:right">192.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">110.00</td>
+                                            <td style="text-align:right">192.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2583</th>
+                                            <th style="text-align:right">32</th>
+                                            <th>5 NO PLASTIC ZIP SLIDER (221)(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">36.00</td>
+                                            <td style="text-align:right">112.32</td>
+                                            <td style="text-align:right">36.00</td>
+                                            <td style="text-align:right">112.32</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2578</th>
+                                            <th style="text-align:right">33</th>
+                                            <th>5 NO PLASTIC ZIP SLIDER (441)(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">24.00</td>
+                                            <td style="text-align:right">83.52</td>
+                                            <td style="text-align:right">24.00</td>
+                                            <td style="text-align:right">83.52</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2631</th>
+                                            <th style="text-align:right">34</th>
+                                            <th>5 NO SLIDER  (404)(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">36.00</td>
+                                            <td style="text-align:right">131.76</td>
+                                            <td style="text-align:right">36.00</td>
+                                            <td style="text-align:right">131.76</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">273</th>
+                                            <th style="text-align:right">35</th>
+                                            <th>5 NO.-FISH PULLER(BUFF ANTIC)</th>
+                                            <td style="text-align:right">450.00</td>
+                                            <td style="text-align:right">2,925.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">325.00</td>
+                                            <td style="text-align:right">400.00</td>
+                                            <td style="text-align:right">2,600.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">272</th>
+                                            <th style="text-align:right">36</th>
+                                            <th>5 NO.-FISH PULLER(NICKLE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">150.00</td>
+                                            <td style="text-align:right">975.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">400.00</td>
+                                            <td style="text-align:right">2,600.00</td>
+                                            <td style="background: #afedb1;text-align:right">250.00</td>
+                                            <td style="text-align:right">1,625.00</td>
+                                                                                        <td style="text-align:right">6.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">268</th>
+                                            <th style="text-align:right">37</th>
+                                            <th>5 NO.-FLAT PULLER(BUFF ANTIC)</th>
+                                            <td style="text-align:right">500.00</td>
+                                            <td style="text-align:right">3,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">400.00</td>
+                                            <td style="text-align:right">2,400.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">100.00</td>
+                                            <td style="text-align:right">600.00</td>
+                                                                                        <td style="text-align:right">6.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1477</th>
+                                            <th style="text-align:right">38</th>
+                                            <th>5 NO.-FLAT PULLER(MATT BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,407.00</td>
+                                            <td style="text-align:right">7,738.50</td>
+                                            <td style="text-align:right">420.00</td>
+                                            <td style="text-align:right">2,310.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">987.00</td>
+                                            <td style="text-align:right">5,428.50</td>
+                                                                                        <td style="text-align:right">5.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1993</th>
+                                            <th style="text-align:right">39</th>
+                                            <th>5 NO.-LOCAL BODY(BUFF ANTIC)</th>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">500.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">500.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">274</th>
+                                            <th style="text-align:right">40</th>
+                                            <th>5 NO.-LOCAL BODY(NICKLE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">525.00</td>
+                                            <td style="text-align:right">1,312.50</td>
+                                            <td style="text-align:right">525.00</td>
+                                            <td style="text-align:right">1,312.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">295</th>
+                                            <th style="text-align:right">41</th>
+                                            <th>5 NO.-YKK 05 M DFNT2  YKK METAL BODY(ANTIC)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,000.00</td>
+                                            <td style="text-align:right">14,120.00</td>
+                                            <td style="text-align:right">2,000.00</td>
+                                            <td style="text-align:right">14,120.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">298</th>
+                                            <th style="text-align:right">42</th>
+                                            <th>5 NO.-YKK 05 M DFNT2  YKK METAL BODY(BUFF ANTIC)</th>
+                                            <td style="text-align:right">2,500.00</td>
+                                            <td style="text-align:right">21,275.00</td>
+                                            <td style="text-align:right">13,090.00</td>
+                                            <td style="text-align:right">116,310.00</td>
+                                            <td style="text-align:right">9,720.00</td>
+                                            <td style="text-align:right">81,799.10</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">5870.00</td>
+                                            <td style="text-align:right">55,785.90</td>
+                                                                                        <td style="text-align:right">9.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">301</th>
+                                            <th style="text-align:right">43</th>
+                                            <th>5 NO.-YKK 05 M DFNT2  YKK METAL BODY(DIRTY SILVER)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3,874.00</td>
+                                            <td style="text-align:right">32,360.00</td>
+                                            <td style="text-align:right">2,374.00</td>
+                                            <td style="text-align:right">19,551.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1500.00</td>
+                                            <td style="text-align:right">12,809.00</td>
+                                                                                        <td style="text-align:right">8.54</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">299</th>
+                                            <th style="text-align:right">44</th>
+                                            <th>5 NO.-YKK 05 M DFNT2  YKK METAL BODY(GOLDEN)</th>
+                                            <td style="text-align:right">4,000.00</td>
+                                            <td style="text-align:right">58,400.00</td>
+                                            <td style="text-align:right">11,811.00</td>
+                                            <td style="text-align:right">171,259.50</td>
+                                            <td style="text-align:right">2,794.00</td>
+                                            <td style="text-align:right">40,792.40</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">13017.00</td>
+                                            <td style="text-align:right">188,867.10</td>
+                                                                                        <td style="text-align:right">14.51</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1200</th>
+                                            <th style="text-align:right">45</th>
+                                            <th>5 NO.-YKK 05 M DFNT2  YKK METAL BODY(MATT BLACK)</th>
+                                            <td style="text-align:right">4,300.00</td>
+                                            <td style="text-align:right">44,290.00</td>
+                                            <td style="text-align:right">9,300.00</td>
+                                            <td style="text-align:right">77,590.00</td>
+                                            <td style="text-align:right">10,800.00</td>
+                                            <td style="text-align:right">98,760.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">2800.00</td>
+                                            <td style="text-align:right">23,120.00</td>
+                                                                                        <td style="text-align:right">8.26</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">294</th>
+                                            <th style="text-align:right">46</th>
+                                            <th>5 NO.-YKK 05 M DFNT2  YKK METAL BODY(NICKLE)</th>
+                                            <td style="text-align:right">3,081.00</td>
+                                            <td style="text-align:right">17,315.22</td>
+                                            <td style="text-align:right">4,100.00</td>
+                                            <td style="text-align:right">26,960.00</td>
+                                            <td style="text-align:right">6,381.00</td>
+                                            <td style="text-align:right">39,046.60</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">800.00</td>
+                                            <td style="text-align:right">5,228.62</td>
+                                                                                        <td style="text-align:right">6.54</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">305</th>
+                                            <th style="text-align:right">47</th>
+                                            <th>5 NO.-YKK 05 M DFNT2  YKK METAL BODY(RAW)</th>
+                                            <td style="text-align:right">450.00</td>
+                                            <td style="text-align:right">2,007.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">450.00</td>
+                                            <td style="text-align:right">2,007.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">307</th>
+                                            <th style="text-align:right">48</th>
+                                            <th>5 NO.-YKK 05 RC DFNT2 (YKK BODY - NYLON ZIP)(NICKLE)</th>
+                                            <td style="text-align:right">1,570.00</td>
+                                            <td style="text-align:right">5,353.70</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">570.00</td>
+                                            <td style="text-align:right">1,943.70</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1000.00</td>
+                                            <td style="text-align:right">3,410.00</td>
+                                                                                        <td style="text-align:right">3.41</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2630</th>
+                                            <th style="text-align:right">49</th>
+                                            <th>8 NO SLIDER (M.LINK)(GREY)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">24.00</td>
+                                            <td style="text-align:right">69.60</td>
+                                            <td style="text-align:right">24.00</td>
+                                            <td style="text-align:right">69.60</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2577</th>
+                                            <th style="text-align:right">50</th>
+                                            <th>8NO PLASTIC ZIP SLIDER (441)(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">84.00</td>
+                                            <td style="text-align:right">356.16</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">84.00</td>
+                                            <td style="text-align:right">356.16</td>
+                                                                                        <td style="text-align:right">4.24</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr style="background:thistle">
+                                            <th style="display: none;"></th>
+                                            <th colspan="2">Total</th>
+                                            <td style="text-align:right">34,868.50</td>
+                                            <td style="text-align:right">212,401.12</td>
+                                            <td style="text-align:right">337,712.50</td>
+                                            <td style="text-align:right">1,731,940.86</td>
+                                            <td style="text-align:right">319,633.00</td>
+                                            <td style="text-align:right">1,533,773.20</td>
+                                            <td style="text-align:right">598.00</td>
+                                            <td style="text-align:right">3,590.00</td>
+                                            <td style="text-align:right">4,398.00</td>
+                                            <td style="text-align:right">19,490.00</td>
+                                            <td style="text-align:right">56,748.00</td>
+                                            <td style="text-align:right">426,468.78</td>
+                                            <td style="text-align:right">151.31</td>
+                                            <td></td>  
+                                        </tr>
+                                    </tbody>
+                                </table><table>
+                            <thead>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th rowspan="2" style="text-align:right">#</th>
+                                    <th rowspan="2" style="text-align:center">Item</th>
+                                    <th colspan="2" style="text-align:center">Opening Information</th>
+                                    <th colspan="2" style="text-align:center">Purchase Information</th>
+                                    <th colspan="2" style="text-align:center">Issue Information</th>
+                                    <th colspan="2" style="text-align:center">Plating Information</th>
+                                    <th colspan="2" style="text-align:center">Stock In Information</th>
+                                    <th colspan="2" style="text-align:center">Balance Information</th>
+                                    <th rowspan="2">Closing<br>Rate</th>
+                                    <th rowspan="2" style="text-align:center">Unit</th>
+                                </tr>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th style="text-align:center">Opn Qnty</th>
+                                    <th style="text-align:center">Opn Val</th>
+                                    
+                                    <th style="text-align:center">Pur Qnty</th>
+                                    <th style="text-align:center">Pur Val</th>
+                                    
+                                    <th style="text-align:center">Issue Qnty</th>
+                                    <th style="text-align:center">Issue Val</th>
+                                    
+                                    <th style="text-align:center">Plating Qnty</th>
+                                    <th style="text-align:center">Plating Val</th>
+                                    
+                                    <th style="text-align:center">Stock In Qnty</th>
+                                    <th style="text-align:center">Stock In Val</th>
+                                    
+                                    <th style="text-align:center">Bal Qnty</th>
+                                    <th style="text-align:center">Bal Val</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                <tr>
+                                    <th style="display: none;">1354</th>
+                                    <th style="text-align:right">1</th>
+                                    <th>12204  dR PULLER(SHINY GOLD)</th>
+                                    <td style="text-align:right">2,800.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">2,000.00</td>
+                                    <td style="text-align:right">20.00</td>
+                                    <td style="text-align:right">2,750.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="background: #afedb1;text-align:right">2050.00</td>
+                                    <td style="text-align:right">20.00</td>
+                                                                        <td style="text-align:right">0.01</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">243</th>
+                                    <th style="text-align:right">2</th>
+                                    <th>12204  dR PULLER(SMOKE NICKLE)</th>
+                                    <td style="text-align:right">2,162.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">2,145.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="background: #afedb1;text-align:right">17.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                                                        <td style="text-align:right">0.00</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">1305</th>
+                                    <th style="text-align:right">3</th>
+                                    <th>3 NO.-BODY (ATICS)(BUFF ANTIC)</th>
+                                    <td style="text-align:right">5,000.00</td>
+                                    <td style="text-align:right">2,550.00</td>
+                                    <td style="text-align:right">10,000.00</td>
+                                    <td style="text-align:right">48,200.00</td>
+                                    <td style="text-align:right">18,200.00</td>
+                                    <td style="text-align:right">51,790.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">6,200.00</td>
+                                    <td style="text-align:right">15,500.00</td>
+                                    <td style="background: #afedb1;text-align:right">3000.00</td>
+                                    <td style="text-align:right">14,460.00</td>
+                                                                        <td style="text-align:right">4.82</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">1988</th>
+                                    <th style="text-align:right">4</th>
+                                    <th>3 NO.-BODY (ATICS)(GOLDEN)</th>
+                                    <td style="text-align:right">5,000.00</td>
+                                    <td style="text-align:right">5,400.00</td>
+                                    <td style="text-align:right">10,300.00</td>
+                                    <td style="text-align:right">83,636.00</td>
+                                    <td style="text-align:right">10,300.00</td>
+                                    <td style="text-align:right">48,436.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">3,000.00</td>
+                                    <td style="text-align:right">24,360.00</td>
+                                    <td style="background: #afedb1;text-align:right">8000.00</td>
+                                    <td style="text-align:right">64,960.00</td>
+                                                                        <td style="text-align:right">8.12</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">1246</th>
+                                    <th style="text-align:right">5</th>
+                                    <th>3 NO.-BODY (ATICS)(MATT BLACK)</th>
+                                    <td style="text-align:right">10,000.00</td>
+                                    <td style="text-align:right">52,800.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="background: #afedb1;text-align:right">10000.00</td>
+                                    <td style="text-align:right">52,800.00</td>
+                                                                        <td style="text-align:right">5.28</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">313</th>
+                                    <th style="text-align:right">6</th>
+                                    <th>3 NO.-BODY (ATICS)(NICKLE)</th>
+                                    <td style="text-align:right">21,551.00</td>
+                                    <td style="text-align:right">5,603.26</td>
+                                    <td style="text-align:right">101,200.00</td>
+                                    <td style="text-align:right">231,664.00</td>
+                                    <td style="text-align:right">115,951.00</td>
+                                    <td style="text-align:right">226,868.40</td>
+                                    <td style="text-align:right">36,800.00</td>
+                                    <td style="text-align:right">85,820.00</td>
+                                    <td style="text-align:right">35,000.00</td>
+                                    <td style="text-align:right">82,600.00</td>
+                                    <td style="background: #afedb1;text-align:right">5000.00</td>
+                                    <td style="text-align:right">7,178.86</td>
+                                                                        <td style="text-align:right">1.44</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">316</th>
+                                    <th style="text-align:right">7</th>
+                                    <th>3 NO.-BODY (ATICS)(RAW)</th>
+                                    <td style="text-align:right">7,000.00</td>
+                                    <td style="text-align:right">14,350.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">800.00</td>
+                                    <td style="text-align:right">1,640.00</td>
+                                    <td style="text-align:right">6,200.00</td>
+                                    <td style="text-align:right">15,500.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="background: #afedb1;text-align:right">0.00</td>
+                                    <td style="text-align:right">-2,790.00</td>
+                                                                        <td style="text-align:right">0</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">1767</th>
+                                    <th style="text-align:right">8</th>
+                                    <th>3 NO.-BODY (ATICS)(SHINY NICKLE)</th>
+                                    <td style="text-align:right">193.00</td>
+                                    <td style="text-align:right">482.50</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">193.00</td>
+                                    <td style="text-align:right">482.50</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="background: #afedb1;text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                                                        <td style="text-align:right">0</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">2468</th>
+                                    <th style="text-align:right">9</th>
+                                    <th>5 NO.-13373 SMOKE SILVER PULLER-13373 SMOKE SILVER PULLER(SMOKE SILVER)</th>
+                                    <td style="text-align:right">2,450.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">1,462.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">988.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="background: #afedb1;text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                                                        <td style="text-align:right">0</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">317</th>
+                                    <th style="text-align:right">10</th>
+                                    <th>5 NO.-BODY (ATICS)(ANTIC)</th>
+                                    <td style="text-align:right">22,500.00</td>
+                                    <td style="text-align:right">78,750.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">5,000.00</td>
+                                    <td style="text-align:right">17,500.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">28,284.00</td>
+                                    <td style="text-align:right">100,412.52</td>
+                                    <td style="background: #afedb1;text-align:right">45784.00</td>
+                                    <td style="text-align:right">161,662.52</td>
+                                                                        <td style="text-align:right">3.53</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">322</th>
+                                    <th style="text-align:right">11</th>
+                                    <th>5 NO.-BODY (ATICS)(BUFF ANTIC)</th>
+                                    <td style="text-align:right">15,000.00</td>
+                                    <td style="text-align:right">62,850.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">6,457.00</td>
+                                    <td style="text-align:right">27,054.83</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="background: #afedb1;text-align:right">8543.00</td>
+                                    <td style="text-align:right">35,795.17</td>
+                                                                        <td style="text-align:right">4.19</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">324</th>
+                                    <th style="text-align:right">12</th>
+                                    <th>5 NO.-BODY (ATICS)(DIRTY SILVER)</th>
+                                    <td style="text-align:right">25,000.00</td>
+                                    <td style="text-align:right">31,250.00</td>
+                                    <td style="text-align:right">10,280.00</td>
+                                    <td style="text-align:right">62,296.80</td>
+                                    <td style="text-align:right">10,000.00</td>
+                                    <td style="text-align:right">12,500.00</td>
+                                    <td style="text-align:right">5,000.00</td>
+                                    <td style="text-align:right">29,250.00</td>
+                                    <td style="text-align:right">7,720.00</td>
+                                    <td style="text-align:right">45,733.20</td>
+                                    <td style="background: #afedb1;text-align:right">28000.00</td>
+                                    <td style="text-align:right">97,530.00</td>
+                                                                        <td style="text-align:right">3.48</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">1019</th>
+                                    <th style="text-align:right">13</th>
+                                    <th>5 NO.-BODY (ATICS)(GOLDEN)</th>
+                                    <td style="text-align:right">8,098.00</td>
+                                    <td style="text-align:right">36,441.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">10,695.00</td>
+                                    <td style="text-align:right">54,100.60</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">2,597.00</td>
+                                    <td style="text-align:right">17,659.60</td>
+                                    <td style="background: #afedb1;text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                                                        <td style="text-align:right">0</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">1179</th>
+                                    <th style="text-align:right">14</th>
+                                    <th>5 NO.-BODY (ATICS)(MATT BLACK)</th>
+                                    <td style="text-align:right">5,000.00</td>
+                                    <td style="text-align:right">32,450.00</td>
+                                    <td style="text-align:right">51,400.00</td>
+                                    <td style="text-align:right">334,938.00</td>
+                                    <td style="text-align:right">16,980.00</td>
+                                    <td style="text-align:right">113,315.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">3,880.00</td>
+                                    <td style="text-align:right">24,676.80</td>
+                                    <td style="background: #afedb1;text-align:right">43300.00</td>
+                                    <td style="text-align:right">278,749.80</td>
+                                                                        <td style="text-align:right">6.44</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">319</th>
+                                    <th style="text-align:right">15</th>
+                                    <th>5 NO.-BODY (ATICS)(MATT NICKLE)</th>
+                                    <td style="text-align:right">40,000.00</td>
+                                    <td style="text-align:right">122,000.00</td>
+                                    <td style="text-align:right">30,900.00</td>
+                                    <td style="text-align:right">155,118.00</td>
+                                    <td style="text-align:right">2,500.00</td>
+                                    <td style="text-align:right">7,625.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">13,100.00</td>
+                                    <td style="text-align:right">65,762.00</td>
+                                    <td style="background: #afedb1;text-align:right">81500.00</td>
+                                    <td style="text-align:right">335,255.00</td>
+                                                                        <td style="text-align:right">4.11</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">320</th>
+                                    <th style="text-align:right">16</th>
+                                    <th>5 NO.-BODY (ATICS)(NICKLE)</th>
+                                    <td style="text-align:right">4,641.00</td>
+                                    <td style="text-align:right">5,569.20</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">141.00</td>
+                                    <td style="text-align:right">169.20</td>
+                                    <td style="text-align:right">3,000.00</td>
+                                    <td style="text-align:right">6,390.00</td>
+                                    <td style="text-align:right">27,038.00</td>
+                                    <td style="text-align:right">17,845.08</td>
+                                    <td style="background: #afedb1;text-align:right">28538.00</td>
+                                    <td style="text-align:right">16,855.08</td>
+                                                                        <td style="text-align:right">0.59</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">321</th>
+                                    <th style="text-align:right">17</th>
+                                    <th>5 NO.-BODY (ATICS)(RAW)</th>
+                                    <td style="text-align:right">5,000.00</td>
+                                    <td style="text-align:right">11,200.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">2,403.00</td>
+                                    <td style="text-align:right">5,382.72</td>
+                                    <td style="text-align:right">2,597.00</td>
+                                    <td style="text-align:right">5,973.10</td>
+                                    <td style="text-align:right">13,107.00</td>
+                                    <td style="text-align:right">50,461.95</td>
+                                    <td style="background: #afedb1;text-align:right">13107.00</td>
+                                    <td style="text-align:right">50,306.13</td>
+                                                                        <td style="text-align:right">3.84</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">2067</th>
+                                    <th style="text-align:right">18</th>
+                                    <th>N31 (A31) AUTO LOCK PULLER(BLACK)</th>
+                                    <td style="text-align:right">12,470.00</td>
+                                    <td style="text-align:right">45,764.90</td>
+                                    <td style="text-align:right">10,000.00</td>
+                                    <td style="text-align:right">35,200.00</td>
+                                    <td style="text-align:right">22,470.00</td>
+                                    <td style="text-align:right">80,964.90</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="background: #afedb1;text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                                                        <td style="text-align:right">0</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">2068</th>
+                                    <th style="text-align:right">19</th>
+                                    <th>N31 (A31) AUTO LOCK PULLER(BROWN)</th>
+                                    <td style="text-align:right">26,460.00</td>
+                                    <td style="text-align:right">89,699.40</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">6,460.00</td>
+                                    <td style="text-align:right">21,899.40</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="background: #afedb1;text-align:right">20000.00</td>
+                                    <td style="text-align:right">67,800.00</td>
+                                                                        <td style="text-align:right">3.39</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">330</th>
+                                    <th style="text-align:right">20</th>
+                                    <th>N35BW PULLER(NICKLE)</th>
+                                    <td style="text-align:right">2,500.00</td>
+                                    <td style="text-align:right">9,625.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">2,100.00</td>
+                                    <td style="text-align:right">8,085.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="background: #afedb1;text-align:right">400.00</td>
+                                    <td style="text-align:right">1,540.00</td>
+                                                                        <td style="text-align:right">3.85</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">328</th>
+                                    <th style="text-align:right">21</th>
+                                    <th>N35G(L) PULLER(BUFF ANTIC)</th>
+                                    <td style="text-align:right">17,500.00</td>
+                                    <td style="text-align:right">107,800.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">50.00</td>
+                                    <td style="text-align:right">308.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">2,500.00</td>
+                                    <td style="text-align:right">15,400.00</td>
+                                    <td style="background: #afedb1;text-align:right">19950.00</td>
+                                    <td style="text-align:right">122,892.00</td>
+                                                                        <td style="text-align:right">6.16</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">1008</th>
+                                    <th style="text-align:right">22</th>
+                                    <th>N35G(L) PULLER(GOLDEN)</th>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">10,300.00</td>
+                                    <td style="text-align:right">111,858.00</td>
+                                    <td style="text-align:right">8,200.00</td>
+                                    <td style="text-align:right">89,052.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">400.00</td>
+                                    <td style="text-align:right">4,344.00</td>
+                                    <td style="background: #afedb1;text-align:right">2500.00</td>
+                                    <td style="text-align:right">27,150.00</td>
+                                                                        <td style="text-align:right">10.86</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">1201</th>
+                                    <th style="text-align:right">23</th>
+                                    <th>N35G(L) PULLER(MATT BLACK)</th>
+                                    <td style="text-align:right">12,580.00</td>
+                                    <td style="text-align:right">64,912.80</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">5,320.00</td>
+                                    <td style="text-align:right">27,451.20</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="background: #afedb1;text-align:right">7260.00</td>
+                                    <td style="text-align:right">37,461.60</td>
+                                                                        <td style="text-align:right">5.16</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">1042</th>
+                                    <th style="text-align:right">24</th>
+                                    <th>N35G(L) PULLER(NICKLE)</th>
+                                    <td style="text-align:right">10,750.00</td>
+                                    <td style="text-align:right">12,792.50</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">9,750.00</td>
+                                    <td style="text-align:right">11,602.50</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">5,362.00</td>
+                                    <td style="text-align:right">6,380.78</td>
+                                    <td style="background: #afedb1;text-align:right">6362.00</td>
+                                    <td style="text-align:right">7,570.78</td>
+                                                                        <td style="text-align:right">1.19</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr>
+                                    <th style="display: none;">326</th>
+                                    <th style="text-align:right">25</th>
+                                    <th>N35G(L) PULLER(RAW)</th>
+                                    <td style="text-align:right">21,000.00</td>
+                                    <td style="text-align:right">28,560.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">11,930.00</td>
+                                    <td style="text-align:right">16,224.80</td>
+                                    <td style="text-align:right">2,970.00</td>
+                                    <td style="text-align:right">5,464.80</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="background: #afedb1;text-align:right">6100.00</td>
+                                    <td style="text-align:right">6,870.40</td>
+                                                                        <td style="text-align:right">1.13</td>
+                                                                        <td style="text-align:center">PCS.</td>
+                                </tr>
+                                                                <tr style="background:thistle">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Total</th>
+                                    <td style="text-align:right">284,655.00</td>
+                                    <td style="text-align:right">820,850.56</td>
+                                    <td style="text-align:right">236,380.00</td>
+                                    <td style="text-align:right">1,062,930.80</td>
+                                    <td style="text-align:right">272,257.00</td>
+                                    <td style="text-align:right">822,452.05</td>
+                                    <td style="text-align:right">57,555.00</td>
+                                    <td style="text-align:right">148,397.90</td>
+                                    <td style="text-align:right">148,188.00</td>
+                                    <td style="text-align:right">471,135.93</td>
+                                    <td style="text-align:right">339,411.00</td>
+                                    <td style="text-align:right">1,384,067.34</td>
+                                    <td style="text-align:right">77.59</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background:#faeda6">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Grand Total</th>
+                                    <td style="text-align:right">319,523.50</td>
+                                    <td style="text-align:right">1,033,251.68</td>
+                                    <td style="text-align:right">574,092.50</td>
+                                    <td style="text-align:right">2,794,871.66</td>
+                                    <td style="text-align:right">591,890.00</td>
+                                    <td style="text-align:right">2,356,225.25</td>
+                                    <td style="text-align:right">58,153.00</td>
+                                    <td style="text-align:right">151,987.90</td>
+                                    <td style="text-align:right">152,586.00</td>
+                                    <td style="text-align:right">490,625.93</td>
+                                    <td style="text-align:right">396,159.00</td>
+                                    <td style="text-align:right">1,810,536.12</td>
+                                    <td style="text-align:right">228.90</td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table></body></html>

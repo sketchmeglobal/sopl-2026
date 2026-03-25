@@ -1,0 +1,813 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Sheet1</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>
+                                    <thead>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th rowspan="2" style="text-align:right">#</th>
+                                            <th rowspan="2" style="text-align:center">Item</th>
+                                            <th colspan="2" style="text-align:center">Opening Information</th>
+                                            <th colspan="2" style="text-align:center">Purchase Information</th>
+                                            <th colspan="2" style="text-align:center">Issue Information</th>
+                                            <th colspan="2" style="text-align:center">Plating Information</th>
+                                            <th colspan="2" style="text-align:center">Stock In Information</th>
+                                            <th colspan="2" style="text-align:center">Balance Information</th>
+                                            <th rowspan="2">Closing<br>Rate</th>
+                                            <th rowspan="2" style="text-align:center">Unit</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th style="text-align:center">Opn Qnty</th>
+                                            <th style="text-align:center">Opn Val</th>
+                                            <th style="text-align:center">Pur Qnty</th>
+                                            <th style="text-align:center">Pur Val</th>
+                                            <th style="text-align:center">Issue Qnty</th>
+                                            <th style="text-align:center">Issue Val</th>
+                                            <th style="text-align:center">Plating Qnty</th>
+                                            <th style="text-align:center">Plating Val</th>
+                                            <th style="text-align:center">Stock In Qnty</th>
+                                            <th style="text-align:center">Stock In Val</th>
+                                            <th style="text-align:center">Bal Qnty</th>
+                                            <th style="text-align:center">Bal Val</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                                                <tr>
+                                            <th style="display: none;">1984</th>
+                                            <th style="text-align:right">1</th>
+                                            <th>1.5mm- CAPCELL SHEET(ASSORTED)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">250.00</td>
+                                            <td style="text-align:right">16,250.00</td>
+                                            <td style="text-align:right">250.00</td>
+                                            <td style="text-align:right">16,250.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1941</th>
+                                            <th style="text-align:right">2</th>
+                                            <th>3 PLY CFC INNER 10.0 X 8.5 X 6.00 INCH-(ASSORTED)</th>
+                                            <td style="text-align:right">820.00</td>
+                                            <td style="text-align:right">12,300.00</td>
+                                            <td style="text-align:right">2,080.00</td>
+                                            <td style="text-align:right">34,380.00</td>
+                                            <td style="text-align:right">2,700.00</td>
+                                            <td style="text-align:right">43,080.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">200.00</td>
+                                            <td style="text-align:right">3,600.00</td>
+                                                                                        <td style="text-align:right">18.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">677</th>
+                                            <th style="text-align:right">3</th>
+                                            <th>3 PLY CFC INNER 14.5 X 7 X 4.5 INCH(ASSORTED)</th>
+                                            <td style="text-align:right">300.00</td>
+                                            <td style="text-align:right">5,100.00</td>
+                                            <td style="text-align:right">7,257.00</td>
+                                            <td style="text-align:right">118,569.00</td>
+                                            <td style="text-align:right">7,257.00</td>
+                                            <td style="text-align:right">118,569.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">300.00</td>
+                                            <td style="text-align:right">5,100.00</td>
+                                                                                        <td style="text-align:right">17.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">678</th>
+                                            <th style="text-align:right">4</th>
+                                            <th>3 PLY CFC INNER 14.5 X 8 X 4.5 INCH(ASSORTED)</th>
+                                            <td style="text-align:right">207.00</td>
+                                            <td style="text-align:right">4,347.00</td>
+                                            <td style="text-align:right">842.00</td>
+                                            <td style="text-align:right">17,682.00</td>
+                                            <td style="text-align:right">409.00</td>
+                                            <td style="text-align:right">8,589.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">60.00</td>
+                                            <td style="text-align:right">1,260.00</td>
+                                            <td style="background: #afedb1;text-align:right">700.00</td>
+                                            <td style="text-align:right">14,700.00</td>
+                                                                                        <td style="text-align:right">21.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1982</th>
+                                            <th style="text-align:right">5</th>
+                                            <th>3 PLY CFC OUTER 10 X 8.5 X 6 INCH(ASSORTED)</th>
+                                            <td style="text-align:right">312.00</td>
+                                            <td style="text-align:right">4,680.00</td>
+                                            <td style="text-align:right">3,062.00</td>
+                                            <td style="text-align:right">51,942.00</td>
+                                            <td style="text-align:right">3,374.00</td>
+                                            <td style="text-align:right">56,622.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2027</th>
+                                            <th style="text-align:right">6</th>
+                                            <th>38CM-VELCRO(BLACK)</th>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">1,300.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">1,300.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">ROLL</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">679</th>
+                                            <th style="text-align:right">7</th>
+                                            <th>5 PLY CFC INNER 40cm X 35cm X 27cm(ASSORTED)</th>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">990.00</td>
+                                            <td style="text-align:right">1,338.00</td>
+                                            <td style="text-align:right">66,231.00</td>
+                                            <td style="text-align:right">1,208.00</td>
+                                            <td style="text-align:right">59,796.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">150.00</td>
+                                            <td style="text-align:right">7,425.00</td>
+                                                                                        <td style="text-align:right">49.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">680</th>
+                                            <th style="text-align:right">8</th>
+                                            <th>5 PLY CFC INNER 41cm X 36cm X 28.5cm(ASSORTED)</th>
+                                            <td style="text-align:right">30.00</td>
+                                            <td style="text-align:right">1,320.00</td>
+                                            <td style="text-align:right">1,335.00</td>
+                                            <td style="text-align:right">58,740.00</td>
+                                            <td style="text-align:right">1,275.00</td>
+                                            <td style="text-align:right">56,100.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">90.00</td>
+                                            <td style="text-align:right">3,960.00</td>
+                                                                                        <td style="text-align:right">44.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">682</th>
+                                            <th style="text-align:right">9</th>
+                                            <th>7 PLY CFC OUTER 40cm X 40cm X 50cm-PLAIN (WITHOUT PRINT)(ASSORTED)</th>
+                                            <td style="text-align:right">45.00</td>
+                                            <td style="text-align:right">2,889.90</td>
+                                            <td style="text-align:right">525.00</td>
+                                            <td style="text-align:right">42,170.00</td>
+                                            <td style="text-align:right">570.00</td>
+                                            <td style="text-align:right">45,059.90</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">683</th>
+                                            <th style="text-align:right">10</th>
+                                            <th>7 PLY CFC OUTER 40cm X 40cm X 50cm-WITH dR PRINT(ASSORTED)</th>
+                                            <td style="text-align:right">60.00</td>
+                                            <td style="text-align:right">4,920.00</td>
+                                            <td style="text-align:right">420.00</td>
+                                            <td style="text-align:right">33,560.00</td>
+                                            <td style="text-align:right">480.00</td>
+                                            <td style="text-align:right">38,480.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1981</th>
+                                            <th style="text-align:right">11</th>
+                                            <th>7 PLY CFC OUTER 54cm X 48cm X 50cm(ASSORTED)</th>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">12,000.00</td>
+                                            <td style="text-align:right">506.00</td>
+                                            <td style="text-align:right">60,720.00</td>
+                                            <td style="text-align:right">536.00</td>
+                                            <td style="text-align:right">64,320.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">70.00</td>
+                                            <td style="text-align:right">8,400.00</td>
+                                                                                        <td style="text-align:right">120.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">685</th>
+                                            <th style="text-align:right">12</th>
+                                            <th>7 PLY CFC OUTER 59cm X 39cm X 39cm-PLAIN (WITHOUT PRINT)(ASSORTED)</th>
+                                            <td style="text-align:right">279.00</td>
+                                            <td style="text-align:right">24,136.29</td>
+                                            <td style="text-align:right">2,151.00</td>
+                                            <td style="text-align:right">215,000.00</td>
+                                            <td style="text-align:right">2,275.00</td>
+                                            <td style="text-align:right">223,636.29</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">155.00</td>
+                                            <td style="text-align:right">15,500.00</td>
+                                                                                        <td style="text-align:right">100.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">686</th>
+                                            <th style="text-align:right">13</th>
+                                            <th>7 PLY CFC OUTER 59cm X 39cm X 39cm-WITH dR PRINT(ASSORTED)</th>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">20,506.00</td>
+                                            <td style="text-align:right">1,993.00</td>
+                                            <td style="text-align:right">199,300.00</td>
+                                            <td style="text-align:right">2,033.00</td>
+                                            <td style="text-align:right">203,806.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">160.00</td>
+                                            <td style="text-align:right">16,000.00</td>
+                                                                                        <td style="text-align:right">100.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1869</th>
+                                            <th style="text-align:right">14</th>
+                                            <th>7 PLY CFC OUTER 63cm X 43cm X 46cm-PLAIN (WITHOUT PRINT)(ASSORTED)</th>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">630.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">630.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1812</th>
+                                            <th style="text-align:right">15</th>
+                                            <th>ANTIFUNGAL DAVSORB 20(ASSORTED)</th>
+                                            <td style="text-align:right">2,500.00</td>
+                                            <td style="text-align:right">31,675.00</td>
+                                            <td style="text-align:right">26,200.00</td>
+                                            <td style="text-align:right">331,954.00</td>
+                                            <td style="text-align:right">26,700.00</td>
+                                            <td style="text-align:right">338,289.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">2000.00</td>
+                                            <td style="text-align:right">25,340.00</td>
+                                                                                        <td style="text-align:right">12.67</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">689</th>
+                                            <th style="text-align:right">16</th>
+                                            <th>BAR CODE LABELS [ 100x150 ](ASSORTED)</th>
+                                            <td style="text-align:right">8,000.00</td>
+                                            <td style="text-align:right">6,720.00</td>
+                                            <td style="text-align:right">15,000.00</td>
+                                            <td style="text-align:right">12,600.00</td>
+                                            <td style="text-align:right">16,000.00</td>
+                                            <td style="text-align:right">13,440.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">7000.00</td>
+                                            <td style="text-align:right">5,880.00</td>
+                                                                                        <td style="text-align:right">0.84</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">690</th>
+                                            <th style="text-align:right">17</th>
+                                            <th>BAR CODE LABELS [ 100x75 ](ASSORTED)</th>
+                                            <td style="text-align:right">6,000.00</td>
+                                            <td style="text-align:right">3,060.00</td>
+                                            <td style="text-align:right">15,000.00</td>
+                                            <td style="text-align:right">7,650.00</td>
+                                            <td style="text-align:right">16,000.00</td>
+                                            <td style="text-align:right">8,160.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">5000.00</td>
+                                            <td style="text-align:right">2,550.00</td>
+                                                                                        <td style="text-align:right">0.51</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">688</th>
+                                            <th style="text-align:right">18</th>
+                                            <th>BAR CODE LABELS [ 38x13 ](ASSORTED)</th>
+                                            <td style="text-align:right">10,000.00</td>
+                                            <td style="text-align:right">300.00</td>
+                                            <td style="text-align:right">40,000.00</td>
+                                            <td style="text-align:right">1,200.00</td>
+                                            <td style="text-align:right">45,000.00</td>
+                                            <td style="text-align:right">1,350.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">5000.00</td>
+                                            <td style="text-align:right">150.00</td>
+                                                                                        <td style="text-align:right">0.03</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">687</th>
+                                            <th style="text-align:right">19</th>
+                                            <th>BAR CODE LABELS [ 40x20 ](ASSORTED)</th>
+                                            <td style="text-align:right">65,000.00</td>
+                                            <td style="text-align:right">3,900.00</td>
+                                            <td style="text-align:right">400,000.00</td>
+                                            <td style="text-align:right">23,000.00</td>
+                                            <td style="text-align:right">430,000.00</td>
+                                            <td style="text-align:right">25,150.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">35000.00</td>
+                                            <td style="text-align:right">1,750.00</td>
+                                                                                        <td style="text-align:right">0.05</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">576</th>
+                                            <th style="text-align:right">20</th>
+                                            <th>BOX STRAPPING(ASSORTED)</th>
+                                            <td style="text-align:right">20.75</td>
+                                            <td style="text-align:right">3,133.25</td>
+                                            <td style="text-align:right">90.00</td>
+                                            <td style="text-align:right">13,590.00</td>
+                                            <td style="text-align:right">110.75</td>
+                                            <td style="text-align:right">16,723.25</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">KGS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1364</th>
+                                            <th style="text-align:right">21</th>
+                                            <th>COUNTRY OF ORIGIN LABELS(ASSORTED)</th>
+                                            <td style="text-align:right">10,500.00</td>
+                                            <td style="text-align:right">2,625.00</td>
+                                            <td style="text-align:right">210,000.00</td>
+                                            <td style="text-align:right">52,500.00</td>
+                                            <td style="text-align:right">177,000.00</td>
+                                            <td style="text-align:right">44,250.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">43500.00</td>
+                                            <td style="text-align:right">10,875.00</td>
+                                                                                        <td style="text-align:right">0.25</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1804</th>
+                                            <th style="text-align:right">22</th>
+                                            <th>dR LABLES (ASSORTED)</th>
+                                            <td style="text-align:right">3,950.00</td>
+                                            <td style="text-align:right">1,540.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">3950.00</td>
+                                            <td style="text-align:right">1,540.50</td>
+                                                                                        <td style="text-align:right">0.39</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">667</th>
+                                            <th style="text-align:right">23</th>
+                                            <th>FUNGOBAN ANTI MOLD STICKER(ASSORTED)</th>
+                                            <td style="text-align:right">10,000.00</td>
+                                            <td style="text-align:right">21,500.00</td>
+                                            <td style="text-align:right">173,000.00</td>
+                                            <td style="text-align:right">371,950.00</td>
+                                            <td style="text-align:right">163,000.00</td>
+                                            <td style="text-align:right">350,450.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">20000.00</td>
+                                            <td style="text-align:right">43,000.00</td>
+                                                                                        <td style="text-align:right">2.15</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1363</th>
+                                            <th style="text-align:right">24</th>
+                                            <th>GENUINE LEATHER-CREATED BY MILLENI LABELS(WHITE)</th>
+                                            <td style="text-align:right">7,200.00</td>
+                                            <td style="text-align:right">2,808.00</td>
+                                            <td style="text-align:right">39,000.00</td>
+                                            <td style="text-align:right">22,290.00</td>
+                                            <td style="text-align:right">31,200.00</td>
+                                            <td style="text-align:right">24,440.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">15000.00</td>
+                                            <td style="text-align:right">658.00</td>
+                                                                                        <td style="text-align:right">0.04</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">670</th>
+                                            <th style="text-align:right">25</th>
+                                            <th>LD POLY BAG DIFFERENT SIZES(ASSORTED)</th>
+                                            <td style="text-align:right">1,053.56</td>
+                                            <td style="text-align:right">155,947.95</td>
+                                            <td style="text-align:right">2,455.71</td>
+                                            <td style="text-align:right">357,067.78</td>
+                                            <td style="text-align:right">3,271.18</td>
+                                            <td style="text-align:right">484,259.40</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">238.09</td>
+                                            <td style="text-align:right">28,756.33</td>
+                                                                                        <td style="text-align:right">120.78</td>
+                                                                                        <td style="text-align:center">KGS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1362</th>
+                                            <th style="text-align:right">26</th>
+                                            <th>MADE IN INDIA LABELS(ASSORTED)</th>
+                                            <td style="text-align:right">12,400.00</td>
+                                            <td style="text-align:right">3,720.00</td>
+                                            <td style="text-align:right">143,700.00</td>
+                                            <td style="text-align:right">43,110.00</td>
+                                            <td style="text-align:right">105,000.00</td>
+                                            <td style="text-align:right">31,500.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">51100.00</td>
+                                            <td style="text-align:right">15,330.00</td>
+                                                                                        <td style="text-align:right">0.30</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1400</th>
+                                            <th style="text-align:right">27</th>
+                                            <th>MILLENI LABLES(ASSORTED)</th>
+                                            <td style="text-align:right">13,000.00</td>
+                                            <td style="text-align:right">4,290.00</td>
+                                            <td style="text-align:right">53,300.00</td>
+                                            <td style="text-align:right">18,927.00</td>
+                                            <td style="text-align:right">37,500.00</td>
+                                            <td style="text-align:right">13,845.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">28800.00</td>
+                                            <td style="text-align:right">9,372.00</td>
+                                                                                        <td style="text-align:right">0.33</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1472</th>
+                                            <th style="text-align:right">28</th>
+                                            <th>NYLON STRAP(YELLOW)</th>
+                                            <td style="text-align:right">38.00</td>
+                                            <td style="text-align:right">6,194.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">18.00</td>
+                                            <td style="text-align:right">2,934.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">20.00</td>
+                                            <td style="text-align:right">3,260.00</td>
+                                                                                        <td style="text-align:right">163.00</td>
+                                                                                        <td style="text-align:center">ROLL</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">671</th>
+                                            <th style="text-align:right">29</th>
+                                            <th>PACKING CLIP(ASSORTED)</th>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">500.00</td>
+                                            <td style="text-align:right">15.00</td>
+                                            <td style="text-align:right">1,500.00</td>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">2,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">KGS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">672</th>
+                                            <th style="text-align:right">30</th>
+                                            <th>PAPER(ASSORTED)</th>
+                                            <td style="text-align:right">13.00</td>
+                                            <td style="text-align:right">12,836.98</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">13.00</td>
+                                            <td style="text-align:right">12,836.98</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">GR</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1361</th>
+                                            <th style="text-align:right">31</th>
+                                            <th>PIERRE CARDIN LABELS(ASSORTED)</th>
+                                            <td style="text-align:right">33,000.00</td>
+                                            <td style="text-align:right">11,550.00</td>
+                                            <td style="text-align:right">165,200.00</td>
+                                            <td style="text-align:right">57,820.00</td>
+                                            <td style="text-align:right">144,700.00</td>
+                                            <td style="text-align:right">50,645.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">53500.00</td>
+                                            <td style="text-align:right">18,725.00</td>
+                                                                                        <td style="text-align:right">0.35</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">673</th>
+                                            <th style="text-align:right">32</th>
+                                            <th>POSTER PAPER DELUX (TISSUE PAPER)(ASSORTED)</th>
+                                            <td style="text-align:right">34.00</td>
+                                            <td style="text-align:right">18,366.12</td>
+                                            <td style="text-align:right">590.10</td>
+                                            <td style="text-align:right">313,490.13</td>
+                                            <td style="text-align:right">501.10</td>
+                                            <td style="text-align:right">262,359.59</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">123.00</td>
+                                            <td style="text-align:right">69,496.65</td>
+                                                                                        <td style="text-align:right">565.01</td>
+                                                                                        <td style="text-align:center">BNDL</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">674</th>
+                                            <th style="text-align:right">33</th>
+                                            <th>POWER DRY PD200-5(ASSORTED)</th>
+                                            <td style="text-align:right">12.00</td>
+                                            <td style="text-align:right">3,420.00</td>
+                                            <td style="text-align:right">114.00</td>
+                                            <td style="text-align:right">32,490.00</td>
+                                            <td style="text-align:right">114.00</td>
+                                            <td style="text-align:right">32,490.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">12.00</td>
+                                            <td style="text-align:right">3,420.00</td>
+                                                                                        <td style="text-align:right">285.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1882</th>
+                                            <th style="text-align:right">34</th>
+                                            <th>PRIME GEL 2 GRM(ASSORTED)</th>
+                                            <td style="text-align:right">10,000.00</td>
+                                            <td style="text-align:right">8,600.00</td>
+                                            <td style="text-align:right">345,000.00</td>
+                                            <td style="text-align:right">296,700.00</td>
+                                            <td style="text-align:right">335,000.00</td>
+                                            <td style="text-align:right">288,100.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">20000.00</td>
+                                            <td style="text-align:right">17,200.00</td>
+                                                                                        <td style="text-align:right">0.86</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">668</th>
+                                            <th style="text-align:right">35</th>
+                                            <th>RFID BASIC 600 MM X 20 MTR(ASSORTED)</th>
+                                            <td style="text-align:right">198.00</td>
+                                            <td style="text-align:right">23,760.00</td>
+                                            <td style="text-align:right">7,920.00</td>
+                                            <td style="text-align:right">950,400.00</td>
+                                            <td style="text-align:right">7,038.00</td>
+                                            <td style="text-align:right">844,560.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1080.00</td>
+                                            <td style="text-align:right">129,600.00</td>
+                                                                                        <td style="text-align:right">120.00</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2838</th>
+                                            <th style="text-align:right">36</th>
+                                            <th>WAX PREMIUM RIBBON-300 MTR.(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3.00</td>
+                                            <td style="text-align:right">1,050.00</td>
+                                            <td style="text-align:right">3.00</td>
+                                            <td style="text-align:right">1,050.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr style="background:thistle">
+                                            <th style="display: none;"></th>
+                                            <th colspan="2">Total</th>
+                                            <td style="text-align:right">195,304.31</td>
+                                            <td style="text-align:right">421,565.99</td>
+                                            <td style="text-align:right">1,658,346.81</td>
+                                            <td style="text-align:right">3,823,832.91</td>
+                                            <td style="text-align:right">1,560,563.03</td>
+                                            <td style="text-align:right">3,785,070.41</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">60.00</td>
+                                            <td style="text-align:right">1,260.00</td>
+                                            <td style="text-align:right">293,148.09</td>
+                                            <td style="text-align:right">461,588.48</td>
+                                            <td style="text-align:right">1,742.06</td>
+                                            <td></td>  
+                                        </tr>
+                                    </tbody>
+                                </table><table>
+                            <thead>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th rowspan="2" style="text-align:right">#</th>
+                                    <th rowspan="2" style="text-align:center">Item</th>
+                                    <th colspan="2" style="text-align:center">Opening Information</th>
+                                    <th colspan="2" style="text-align:center">Purchase Information</th>
+                                    <th colspan="2" style="text-align:center">Issue Information</th>
+                                    <th colspan="2" style="text-align:center">Plating Information</th>
+                                    <th colspan="2" style="text-align:center">Stock In Information</th>
+                                    <th colspan="2" style="text-align:center">Balance Information</th>
+                                    <th rowspan="2">Closing<br>Rate</th>
+                                    <th rowspan="2" style="text-align:center">Unit</th>
+                                </tr>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th style="text-align:center">Opn Qnty</th>
+                                    <th style="text-align:center">Opn Val</th>
+                                    
+                                    <th style="text-align:center">Pur Qnty</th>
+                                    <th style="text-align:center">Pur Val</th>
+                                    
+                                    <th style="text-align:center">Issue Qnty</th>
+                                    <th style="text-align:center">Issue Val</th>
+                                    
+                                    <th style="text-align:center">Plating Qnty</th>
+                                    <th style="text-align:center">Plating Val</th>
+                                    
+                                    <th style="text-align:center">Stock In Qnty</th>
+                                    <th style="text-align:center">Stock In Val</th>
+                                    
+                                    <th style="text-align:center">Bal Qnty</th>
+                                    <th style="text-align:center">Bal Val</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                <tr style="background:thistle">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Total</th>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background:#faeda6">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Grand Total</th>
+                                    <td style="text-align:right">195,304.31</td>
+                                    <td style="text-align:right">421,565.99</td>
+                                    <td style="text-align:right">1,658,346.81</td>
+                                    <td style="text-align:right">3,823,832.91</td>
+                                    <td style="text-align:right">1,560,563.03</td>
+                                    <td style="text-align:right">3,785,070.41</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">60.00</td>
+                                    <td style="text-align:right">1,260.00</td>
+                                    <td style="text-align:right">293,148.09</td>
+                                    <td style="text-align:right">461,588.48</td>
+                                    <td style="text-align:right">1,742.06</td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table></body></html>

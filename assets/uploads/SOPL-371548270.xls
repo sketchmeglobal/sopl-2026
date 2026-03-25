@@ -1,0 +1,547 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Sheet1</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>
+                                    <thead>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th rowspan="2" style="text-align:right">#</th>
+                                            <th rowspan="2" style="text-align:center">Item</th>
+                                            <th colspan="2" style="text-align:center">Opening Information</th>
+                                            <th colspan="2" style="text-align:center">Purchase Information</th>
+                                            <th colspan="2" style="text-align:center">Issue Information</th>
+                                            <th colspan="2" style="text-align:center">Plating Information</th>
+                                            <th colspan="2" style="text-align:center">Stock In Information</th>
+                                            <th colspan="2" style="text-align:center">Balance Information</th>
+                                            <th rowspan="2">Closing<br>Rate</th>
+                                            <th rowspan="2" style="text-align:center">Unit</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th style="text-align:center">Opn Qnty</th>
+                                            <th style="text-align:center">Opn Val</th>
+                                            <th style="text-align:center">Pur Qnty</th>
+                                            <th style="text-align:center">Pur Val</th>
+                                            <th style="text-align:center">Issue Qnty</th>
+                                            <th style="text-align:center">Issue Val</th>
+                                            <th style="text-align:center">Plating Qnty</th>
+                                            <th style="text-align:center">Plating Val</th>
+                                            <th style="text-align:center">Stock In Qnty</th>
+                                            <th style="text-align:center">Stock In Val</th>
+                                            <th style="text-align:center">Bal Qnty</th>
+                                            <th style="text-align:center">Bal Val</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                                                <tr>
+                                            <th style="display: none;">1657</th>
+                                            <th style="text-align:right">1</th>
+                                            <th>BLACK CREDIT CARD(BLACK)</th>
+                                            <td style="text-align:right">50,000.00</td>
+                                            <td style="text-align:right">21,500.00</td>
+                                            <td style="text-align:right">114,000.00</td>
+                                            <td style="text-align:right">49,020.00</td>
+                                            <td style="text-align:right">161,400.00</td>
+                                            <td style="text-align:right">69,402.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">2600.00</td>
+                                            <td style="text-align:right">1,118.00</td>
+                                                                                        <td style="text-align:right">0.43</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1811</th>
+                                            <th style="text-align:right">2</th>
+                                            <th>DR AMSTERDAM ROUND STICKER(ASSORTED)</th>
+                                            <td style="text-align:right">25,000.00</td>
+                                            <td style="text-align:right">12,500.00</td>
+                                            <td style="text-align:right">45,120.00</td>
+                                            <td style="text-align:right">22,560.00</td>
+                                            <td style="text-align:right">65,320.00</td>
+                                            <td style="text-align:right">32,660.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">4800.00</td>
+                                            <td style="text-align:right">2,400.00</td>
+                                                                                        <td style="text-align:right">0.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1392</th>
+                                            <th style="text-align:right">3</th>
+                                            <th>dR PAPER HANG TAG(GREY)</th>
+                                            <td style="text-align:right">4,000.00</td>
+                                            <td style="text-align:right">42,000.00</td>
+                                            <td style="text-align:right">15,750.00</td>
+                                            <td style="text-align:right">165,375.00</td>
+                                            <td style="text-align:right">19,750.00</td>
+                                            <td style="text-align:right">207,375.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1718</th>
+                                            <th style="text-align:right">4</th>
+                                            <th>dR RFID CARD(ORANGE)</th>
+                                            <td style="text-align:right">16,000.00</td>
+                                            <td style="text-align:right">20,000.00</td>
+                                            <td style="text-align:right">46,050.00</td>
+                                            <td style="text-align:right">57,562.50</td>
+                                            <td style="text-align:right">38,800.00</td>
+                                            <td style="text-align:right">48,500.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">23250.00</td>
+                                            <td style="text-align:right">29,062.50</td>
+                                                                                        <td style="text-align:right">1.25</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1885</th>
+                                            <th style="text-align:right">5</th>
+                                            <th>HEMA REAL LEATHER CARD(BLACK)</th>
+                                            <td style="text-align:right">15,000.00</td>
+                                            <td style="text-align:right">6,000.00</td>
+                                            <td style="text-align:right">147,100.00</td>
+                                            <td style="text-align:right">58,840.00</td>
+                                            <td style="text-align:right">162,100.00</td>
+                                            <td style="text-align:right">64,840.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1658</th>
+                                            <th style="text-align:right">6</th>
+                                            <th>LOVE &amp; CARE CARD-WITH dR(GREY)</th>
+                                            <td style="text-align:right">20,000.00</td>
+                                            <td style="text-align:right">58,000.00</td>
+                                            <td style="text-align:right">27,800.00</td>
+                                            <td style="text-align:right">80,620.00</td>
+                                            <td style="text-align:right">47,800.00</td>
+                                            <td style="text-align:right">138,620.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1344</th>
+                                            <th style="text-align:right">7</th>
+                                            <th>MILLENI RFID CREDIT CARD(BLACK)</th>
+                                            <td style="text-align:right">19,400.00</td>
+                                            <td style="text-align:right">6,208.00</td>
+                                            <td style="text-align:right">89,300.00</td>
+                                            <td style="text-align:right">28,576.00</td>
+                                            <td style="text-align:right">108,700.00</td>
+                                            <td style="text-align:right">34,784.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2250</th>
+                                            <th style="text-align:right">8</th>
+                                            <th>MILLENI RFID CREDIT CARD(ORANGE)</th>
+                                            <td style="text-align:right">7,650.00</td>
+                                            <td style="text-align:right">9,562.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">14,150.00</td>
+                                            <td style="text-align:right">17,687.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">6,500.00</td>
+                                            <td style="text-align:right">8,125.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2811</th>
+                                            <th style="text-align:right">9</th>
+                                            <th>MILLENI RFID LOOP CARD(ORANGE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">23,500.00</td>
+                                            <td style="text-align:right">29,375.00</td>
+                                            <td style="text-align:right">12,600.00</td>
+                                            <td style="text-align:right">15,750.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">10900.00</td>
+                                            <td style="text-align:right">13,625.00</td>
+                                                                                        <td style="text-align:right">1.25</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2120</th>
+                                            <th style="text-align:right">10</th>
+                                            <th>NAME ADDRESS COUNTRY CARD(ASSORTED)</th>
+                                            <td style="text-align:right">250.00</td>
+                                            <td style="text-align:right">175.00</td>
+                                            <td style="text-align:right">5,000.00</td>
+                                            <td style="text-align:right">3,500.00</td>
+                                            <td style="text-align:right">5,250.00</td>
+                                            <td style="text-align:right">3,675.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1326</th>
+                                            <th style="text-align:right">11</th>
+                                            <th>PIERRE CARDIN CREDIT CARD(BLACK)</th>
+                                            <td style="text-align:right">11,000.00</td>
+                                            <td style="text-align:right">4,400.00</td>
+                                            <td style="text-align:right">290,350.00</td>
+                                            <td style="text-align:right">116,140.00</td>
+                                            <td style="text-align:right">257,150.00</td>
+                                            <td style="text-align:right">102,860.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">44200.00</td>
+                                            <td style="text-align:right">17,680.00</td>
+                                                                                        <td style="text-align:right">0.40</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2640</th>
+                                            <th style="text-align:right">12</th>
+                                            <th>PIERRE CARDIN LOOP CARD(ASSORTED)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">22,600.00</td>
+                                            <td style="text-align:right">28,250.00</td>
+                                            <td style="text-align:right">22,600.00</td>
+                                            <td style="text-align:right">28,250.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2639</th>
+                                            <th style="text-align:right">13</th>
+                                            <th>PIERRE CARDIN LOOP CARD(ORANGE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">70,850.00</td>
+                                            <td style="text-align:right">79,810.00</td>
+                                            <td style="text-align:right">57,550.00</td>
+                                            <td style="text-align:right">63,185.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">250.00</td>
+                                            <td style="background: #afedb1;text-align:right">13500.00</td>
+                                            <td style="text-align:right">16,875.00</td>
+                                                                                        <td style="text-align:right">1.25</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1101</th>
+                                            <th style="text-align:right">14</th>
+                                            <th>PIERRE CARDIN PAPER HANG TAG(ASSORTED)</th>
+                                            <td style="text-align:right">2,000.00</td>
+                                            <td style="text-align:right">74,800.00</td>
+                                            <td style="text-align:right">23,000.00</td>
+                                            <td style="text-align:right">23,000.00</td>
+                                            <td style="text-align:right">21,000.00</td>
+                                            <td style="text-align:right">93,800.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">4000.00</td>
+                                            <td style="text-align:right">4,000.00</td>
+                                                                                        <td style="text-align:right">1.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2251</th>
+                                            <th style="text-align:right">15</th>
+                                            <th>PIERRE CARDIN RFID CARD(ORANGE)</th>
+                                            <td style="text-align:right">9,800.00</td>
+                                            <td style="text-align:right">7,840.00</td>
+                                            <td style="text-align:right">14,400.00</td>
+                                            <td style="text-align:right">11,520.00</td>
+                                            <td style="text-align:right">24,200.00</td>
+                                            <td style="text-align:right">19,360.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1368</th>
+                                            <th style="text-align:right">16</th>
+                                            <th>RFID SAFE FOLDING BAR CODE TAG-( FOR HEMA )(WHITE)</th>
+                                            <td style="text-align:right">12,589.00</td>
+                                            <td style="text-align:right">62,945.00</td>
+                                            <td style="text-align:right">121,500.00</td>
+                                            <td style="text-align:right">425,250.00</td>
+                                            <td style="text-align:right">134,089.00</td>
+                                            <td style="text-align:right">488,195.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2305</th>
+                                            <th style="text-align:right">17</th>
+                                            <th>SHILPA TAG 11cmX5cm(BLUE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">3,000.00</td>
+                                            <td style="text-align:right">2,500.00</td>
+                                            <td style="text-align:right">3,000.00</td>
+                                            <td style="text-align:right">2,500.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2304</th>
+                                            <th style="text-align:right">18</th>
+                                            <th>SHILPA VISITING CARD(ASSORTED)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">1,000.00</td>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">1,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2510</th>
+                                            <th style="text-align:right">19</th>
+                                            <th>TAG PERUGIA-WITH / WITHOUT RFID(ASSORTED)</th>
+                                            <td style="text-align:right">5,000.00</td>
+                                            <td style="text-align:right">14,500.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">9,000.00</td>
+                                            <td style="text-align:right">26,100.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">9,000.00</td>
+                                            <td style="text-align:right">26,100.00</td>
+                                            <td style="background: #afedb1;text-align:right">5000.00</td>
+                                            <td style="text-align:right">14,500.00</td>
+                                                                                        <td style="text-align:right">2.90</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2823</th>
+                                            <th style="text-align:right">20</th>
+                                            <th>TJX dR AMSTERDAM ESTD.1947 CREDIT CARD-(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">5,000.00</td>
+                                            <td style="text-align:right">14,500.00</td>
+                                            <td style="text-align:right">5,000.00</td>
+                                            <td style="text-align:right">14,500.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2824</th>
+                                            <th style="text-align:right">21</th>
+                                            <th>TJX RFID LOOP CARD(ORANGE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">5,950.00</td>
+                                            <td style="text-align:right">7,437.50</td>
+                                            <td style="text-align:right">5,000.00</td>
+                                            <td style="text-align:right">6,250.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">950.00</td>
+                                            <td style="text-align:right">1,187.50</td>
+                                                                                        <td style="text-align:right">1.25</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1325</th>
+                                            <th style="text-align:right">22</th>
+                                            <th>WHITE CREDIT CARD-BOTH SIDE PRINTING(WHITE)</th>
+                                            <td style="text-align:right">12,500.00</td>
+                                            <td style="text-align:right">16,250.00</td>
+                                            <td style="text-align:right">512,400.00</td>
+                                            <td style="text-align:right">92,232.00</td>
+                                            <td style="text-align:right">524,900.00</td>
+                                            <td style="text-align:right">108,482.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr style="background:thistle">
+                                            <th style="display: none;"></th>
+                                            <th colspan="2">Total</th>
+                                            <td style="text-align:right">210,189.00</td>
+                                            <td style="text-align:right">356,680.50</td>
+                                            <td style="text-align:right">1,582,870.00</td>
+                                            <td style="text-align:right">1,297,068.00</td>
+                                            <td style="text-align:right">1,699,559.00</td>
+                                            <td style="text-align:right">1,587,775.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">15,700.00</td>
+                                            <td style="text-align:right">34,475.00</td>
+                                            <td style="text-align:right">109,200.00</td>
+                                            <td style="text-align:right">100,448.00</td>
+                                            <td style="text-align:right">10.23</td>
+                                            <td></td>  
+                                        </tr>
+                                    </tbody>
+                                </table><table>
+                            <thead>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th rowspan="2" style="text-align:right">#</th>
+                                    <th rowspan="2" style="text-align:center">Item</th>
+                                    <th colspan="2" style="text-align:center">Opening Information</th>
+                                    <th colspan="2" style="text-align:center">Purchase Information</th>
+                                    <th colspan="2" style="text-align:center">Issue Information</th>
+                                    <th colspan="2" style="text-align:center">Plating Information</th>
+                                    <th colspan="2" style="text-align:center">Stock In Information</th>
+                                    <th colspan="2" style="text-align:center">Balance Information</th>
+                                    <th rowspan="2">Closing<br>Rate</th>
+                                    <th rowspan="2" style="text-align:center">Unit</th>
+                                </tr>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th style="text-align:center">Opn Qnty</th>
+                                    <th style="text-align:center">Opn Val</th>
+                                    
+                                    <th style="text-align:center">Pur Qnty</th>
+                                    <th style="text-align:center">Pur Val</th>
+                                    
+                                    <th style="text-align:center">Issue Qnty</th>
+                                    <th style="text-align:center">Issue Val</th>
+                                    
+                                    <th style="text-align:center">Plating Qnty</th>
+                                    <th style="text-align:center">Plating Val</th>
+                                    
+                                    <th style="text-align:center">Stock In Qnty</th>
+                                    <th style="text-align:center">Stock In Val</th>
+                                    
+                                    <th style="text-align:center">Bal Qnty</th>
+                                    <th style="text-align:center">Bal Val</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                <tr style="background:thistle">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Total</th>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background:#faeda6">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Grand Total</th>
+                                    <td style="text-align:right">210,189.00</td>
+                                    <td style="text-align:right">356,680.50</td>
+                                    <td style="text-align:right">1,582,870.00</td>
+                                    <td style="text-align:right">1,297,068.00</td>
+                                    <td style="text-align:right">1,699,559.00</td>
+                                    <td style="text-align:right">1,587,775.50</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">15,700.00</td>
+                                    <td style="text-align:right">34,475.00</td>
+                                    <td style="text-align:right">109,200.00</td>
+                                    <td style="text-align:right">100,448.00</td>
+                                    <td style="text-align:right">10.23</td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table></body></html>

@@ -1,0 +1,113 @@
+[
+    {
+        "Version": "1.1",
+        "TranDtls": {
+            "TaxSch": "GST",
+            "SupTyp": "EXPWOP",
+            "IgstOnIntra": "N",
+            "RegRev": "N",
+            "EcmGstin": null
+        },
+        "DocDtls": {
+            "Typ": "INV",
+            "No": "IN-101/02/2025",
+            "Dt": "28/02/2025"
+        },
+        "SellerDtls": {
+            "Gstin": "19AAECS6338L1ZT",
+            "LglNm": "SHILPA OVERSEAS PVT. LTD.",
+            "TrdNm": "SHILPA OVERSEAS PVT. LTD.",
+            "Addr1": "51, MAHANIRBAN ROAD",
+            "Addr2": "KOLKATA",
+            "Loc": "WEST BENGAL",
+            "Pin": 700029,
+            "Stcd": "19",
+            "Ph": "03340031411",
+            "Em": "deep.paul@shilpaoverseas.com"
+        },
+        "BuyerDtls": {
+            "Gstin": "URP",
+            "LglNm": "Marshalls Distribution Center #882",
+            "TrdNm": "Marshalls Distribution Center #882",
+            "Pos": "96",
+            "Addr1": "3000 SOUTH 55TH AVENUE , AZ 85043 PHOENIX",
+            "Addr2": null,
+            "Loc": "USA",
+            "Pin": 999999,
+            "Stcd": "96",
+            "Ph": null,
+            "Em": null
+        },
+        "DispDtls": null,
+        "ShipDtls": null,
+        "ValDtls": {
+            "AssVal": 124530,
+            "IgstVal": 0,
+            "CgstVal": 0,
+            "SgstVal": 0,
+            "CesVal": 0,
+            "StCesVal": 0,
+            "Discount": 16188.9,
+            "OthChrg": 0,
+            "RndOffAmt": 0,
+            "TotInvVal": 108341.1,
+            "TotInvValFc": 1218
+        },
+        "ExpDtls": {
+            "ShipBNo": null,
+            "ShipBdt": null,
+            "Port": null,
+            "RefClm": null,
+            "ForCur": "EUR",
+            "CntCode": null,
+            "ExpDuty": null
+        },
+        "EwbDtls": {
+            "TransId": null,
+            "TransName": "20CUBE",
+            "TransMode": "4",
+            "Distance": 100,
+            "TransDocNo": null,
+            "TransDocDt": null,
+            "VehNo": null,
+            "VehType": null
+        },
+        "PayDtls": null,
+        "RefDtls": null,
+        "AddlDocDtls": null,
+        "ItemList": [
+            {
+                "SlNo": "1",
+                "PrdDesc": "WALLET",
+                "IsServc": "N",
+                "HsnCd": "42023120",
+                "Barcde": null,
+                "Qty": 400,
+                "FreeQty": 0,
+                "Unit": "PCS",
+                "UnitPrice": 311.33,
+                "TotAmt": 124530,
+                "Discount": 0,
+                "PreTaxVal": 0,
+                "AssAmt": 124530,
+                "GstRt": 0,
+                "IgstAmt": 0,
+                "CgstAmt": 0,
+                "SgstAmt": 0,
+                "CesRt": 0,
+                "CesAmt": 0,
+                "CesNonAdvlAmt": 0,
+                "StateCesRt": 0,
+                "StateCesAmt": 0,
+                "StateCesNonAdvlAmt": 0,
+                "OthChrg": 0,
+                "TotItemVal": 124530,
+                "OrdLineRef": null,
+                "OrgCntry": null,
+                "PrdSlNo": null,
+                "BchDtls": null,
+                "AttribDtls": null
+            }
+        ]
+    }
+]

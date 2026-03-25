@@ -1,0 +1,623 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Sheet1</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>
+                                    <thead>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th rowspan="2" style="text-align:right">#</th>
+                                            <th rowspan="2" style="text-align:center">Item</th>
+                                            <th colspan="2" style="text-align:center">Opening Information</th>
+                                            <th colspan="2" style="text-align:center">Purchase Information</th>
+                                            <th colspan="2" style="text-align:center">Issue Information</th>
+                                            <th colspan="2" style="text-align:center">Plating Information</th>
+                                            <th colspan="2" style="text-align:center">Stock In Information</th>
+                                            <th colspan="2" style="text-align:center">Balance Information</th>
+                                            <th rowspan="2">Closing<br>Rate</th>
+                                            <th rowspan="2" style="text-align:center">Unit</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th style="text-align:center">Opn Qnty</th>
+                                            <th style="text-align:center">Opn Val</th>
+                                            <th style="text-align:center">Pur Qnty</th>
+                                            <th style="text-align:center">Pur Val</th>
+                                            <th style="text-align:center">Issue Qnty</th>
+                                            <th style="text-align:center">Issue Val</th>
+                                            <th style="text-align:center">Plating Qnty</th>
+                                            <th style="text-align:center">Plating Val</th>
+                                            <th style="text-align:center">Stock In Qnty</th>
+                                            <th style="text-align:center">Stock In Val</th>
+                                            <th style="text-align:center">Bal Qnty</th>
+                                            <th style="text-align:center">Bal Val</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                                                <tr>
+                                            <th style="display: none;">186</th>
+                                            <th style="text-align:right">1</th>
+                                            <th>1mm-MICRO CELLULAR POLY SHEET  (1200X2400)(ASSORTED)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">288.00</td>
+                                            <td style="text-align:right">12,268.80</td>
+                                            <td style="text-align:right">288.00</td>
+                                            <td style="text-align:right">12,268.80</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1419</th>
+                                            <th style="text-align:right">2</th>
+                                            <th>2mm-P.U FOAM SHEET(ASSORTED)</th>
+                                            <td style="text-align:right">300.00</td>
+                                            <td style="text-align:right">3,990.00</td>
+                                            <td style="text-align:right">1,454.88</td>
+                                            <td style="text-align:right">19,349.90</td>
+                                            <td style="text-align:right">1,004.88</td>
+                                            <td style="text-align:right">13,364.90</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">750.00</td>
+                                            <td style="text-align:right">9,975.00</td>
+                                                                                        <td style="text-align:right">13.30</td>
+                                                                                        <td style="text-align:center">SHEET</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1263</th>
+                                            <th style="text-align:right">3</th>
+                                            <th>30mm-PLAIN PVC(ASSORTED)</th>
+                                            <td style="text-align:right">176.50</td>
+                                            <td style="text-align:right">22,180.76</td>
+                                            <td style="text-align:right">500.00</td>
+                                            <td style="text-align:right">65,000.00</td>
+                                            <td style="text-align:right">676.50</td>
+                                            <td style="text-align:right">87,180.76</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1420</th>
+                                            <th style="text-align:right">4</th>
+                                            <th>3mm-P.U FOAM SHEET(ASSORTED)</th>
+                                            <td style="text-align:right">150.00</td>
+                                            <td style="text-align:right">2,803.50</td>
+                                            <td style="text-align:right">2,437.94</td>
+                                            <td style="text-align:right">46,874.14</td>
+                                            <td style="text-align:right">2,587.94</td>
+                                            <td style="text-align:right">49,555.55</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">122.09</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">SHEET</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1660</th>
+                                            <th style="text-align:right">5</th>
+                                            <th>4mm-P.U FOAM SHEET(WHITE)</th>
+                                            <td style="text-align:right">63.00</td>
+                                            <td style="text-align:right">2,875.32</td>
+                                            <td style="text-align:right">140.00</td>
+                                            <td style="text-align:right">4,800.60</td>
+                                            <td style="text-align:right">203.00</td>
+                                            <td style="text-align:right">7,675.92</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">SQR.MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2037</th>
+                                            <th style="text-align:right">6</th>
+                                            <th>Crosslink Polythylene sheets 1 m.m.(ASSORTED)</th>
+                                            <td style="text-align:right">32.00</td>
+                                            <td style="text-align:right">3,925.44</td>
+                                            <td style="text-align:right">576.00</td>
+                                            <td style="text-align:right">24,537.60</td>
+                                            <td style="text-align:right">608.00</td>
+                                            <td style="text-align:right">28,463.03</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.01</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">SHEET</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2629</th>
+                                            <th style="text-align:right">7</th>
+                                            <th>NARROW WOOVEN FABRICS(ASSORTED)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1.30</td>
+                                            <td style="text-align:right">325.00</td>
+                                            <td style="text-align:right">1.30</td>
+                                            <td style="text-align:right">325.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">KGS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">187</th>
+                                            <th style="text-align:right">8</th>
+                                            <th>NET ( REACH COMPLAINT )(WHITE)</th>
+                                            <td style="text-align:right">228.60</td>
+                                            <td style="text-align:right">41,148.00</td>
+                                            <td style="text-align:right">440.00</td>
+                                            <td style="text-align:right">79,200.00</td>
+                                            <td style="text-align:right">568.60</td>
+                                            <td style="text-align:right">102,348.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">100.00</td>
+                                            <td style="text-align:right">18,000.00</td>
+                                                                                        <td style="text-align:right">180.00</td>
+                                                                                        <td style="text-align:center">YDS</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2150</th>
+                                            <th style="text-align:right">9</th>
+                                            <th>NON WOVEN 120 GSM(BLACK)</th>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">3,100.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">3,100.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1942</th>
+                                            <th style="text-align:right">10</th>
+                                            <th>NON WOVEN FABRIC-160 GSM(ASSORTED)</th>
+                                            <td style="text-align:right">330.00</td>
+                                            <td style="text-align:right">10,424.70</td>
+                                            <td style="text-align:right">898.00</td>
+                                            <td style="text-align:right">34,879.00</td>
+                                            <td style="text-align:right">728.00</td>
+                                            <td style="text-align:right">26,255.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">500.00</td>
+                                            <td style="text-align:right">19,048.70</td>
+                                                                                        <td style="text-align:right">38.10</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1327</th>
+                                            <th style="text-align:right">11</th>
+                                            <th>NON WOVEN FABRIC-80 GSM-( Width..63”)(WHITE)</th>
+                                            <td style="text-align:right">300.00</td>
+                                            <td style="text-align:right">3,951.00</td>
+                                            <td style="text-align:right">5,421.00</td>
+                                            <td style="text-align:right">123,316.25</td>
+                                            <td style="text-align:right">5,221.00</td>
+                                            <td style="text-align:right">85,847.25</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">500.00</td>
+                                            <td style="text-align:right">41,420.00</td>
+                                                                                        <td style="text-align:right">82.84</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2385</th>
+                                            <th style="text-align:right">12</th>
+                                            <th>NON WOVEN GUMMING 80 GSM(BISCUIT)</th>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">3,950.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">3,950.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2384</th>
+                                            <th style="text-align:right">13</th>
+                                            <th>NON WOVEN GUMMING 80 GSM(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">950.00</td>
+                                            <td style="text-align:right">80,750.00</td>
+                                            <td style="text-align:right">1,000.00</td>
+                                            <td style="text-align:right">85,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">4,250.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1471</th>
+                                            <th style="text-align:right">14</th>
+                                            <th>NON WOVEN GUMMING 80 GSM(WHITE)</th>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">27,000.00</td>
+                                            <td style="text-align:right">1,100.00</td>
+                                            <td style="text-align:right">79,700.00</td>
+                                            <td style="text-align:right">1,000.00</td>
+                                            <td style="text-align:right">95,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">300.00</td>
+                                            <td style="text-align:right">11,700.00</td>
+                                                                                        <td style="text-align:right">39.00</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1397</th>
+                                            <th style="text-align:right">15</th>
+                                            <th>P.P NON WOVEN LINING(WHITE)</th>
+                                            <td style="text-align:right">250.00</td>
+                                            <td style="text-align:right">13,825.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">250.00</td>
+                                            <td style="text-align:right">13,825.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1372</th>
+                                            <th style="text-align:right">16</th>
+                                            <th>P.U LEATHER(BLACK)</th>
+                                            <td style="text-align:right">190.00</td>
+                                            <td style="text-align:right">50,350.00</td>
+                                            <td style="text-align:right">1,048.00</td>
+                                            <td style="text-align:right">265,680.00</td>
+                                            <td style="text-align:right">1,188.00</td>
+                                            <td style="text-align:right">304,280.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">50.00</td>
+                                            <td style="text-align:right">11,750.00</td>
+                                                                                        <td style="text-align:right">235.00</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2861</th>
+                                            <th style="text-align:right">17</th>
+                                            <th>P.U LEATHER(BROWN)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">23,500.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">100.00</td>
+                                            <td style="text-align:right">23,500.00</td>
+                                                                                        <td style="text-align:right">235.00</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1373</th>
+                                            <th style="text-align:right">18</th>
+                                            <th>P.U LEATHER(TAN)</th>
+                                            <td style="text-align:right">80.00</td>
+                                            <td style="text-align:right">21,200.00</td>
+                                            <td style="text-align:right">350.00</td>
+                                            <td style="text-align:right">87,750.00</td>
+                                            <td style="text-align:right">390.00</td>
+                                            <td style="text-align:right">101,550.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">40.00</td>
+                                            <td style="text-align:right">7,400.00</td>
+                                                                                        <td style="text-align:right">185.00</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2313</th>
+                                            <th style="text-align:right">19</th>
+                                            <th>POLYESTER NET FOR-BACKPACK (210)(BROWN)</th>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">340.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">340.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2314</th>
+                                            <th style="text-align:right">20</th>
+                                            <th>POLYESTER NET FOR-BACKPACK (240)(BLACK)</th>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">400.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">400.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2001</th>
+                                            <th style="text-align:right">21</th>
+                                            <th>PVC LEATHER CLOTH(BROWN)</th>
+                                            <td style="text-align:right">204.00</td>
+                                            <td style="text-align:right">39,780.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">204.00</td>
+                                            <td style="text-align:right">39,780.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2002</th>
+                                            <th style="text-align:right">22</th>
+                                            <th>PVC LEATHER CLOTH(NAVY)</th>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">18,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">9,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">50.00</td>
+                                            <td style="text-align:right">9,000.00</td>
+                                                                                        <td style="text-align:right">180.00</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">581</th>
+                                            <th style="text-align:right">23</th>
+                                            <th>PVC LEATHER CLOTH (RC) - 0.55 mm(BROWN)</th>
+                                            <td style="text-align:right">84.40</td>
+                                            <td style="text-align:right">18,240.53</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">10,806.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">64.00</td>
+                                            <td style="text-align:right">13,831.68</td>
+                                            <td style="background: #afedb1;text-align:right">98.40</td>
+                                            <td style="text-align:right">21,266.21</td>
+                                                                                        <td style="text-align:right">216.12</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">582</th>
+                                            <th style="text-align:right">24</th>
+                                            <th>PVC LEATHER CLOTH (RC) - 0.8 mm(BROWN)</th>
+                                            <td style="text-align:right">121.00</td>
+                                            <td style="text-align:right">41,989.42</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">540.00</td>
+                                            <td style="text-align:right">187,390.80</td>
+                                            <td style="background: #afedb1;text-align:right">661.00</td>
+                                            <td style="text-align:right">229,380.22</td>
+                                                                                        <td style="text-align:right">347.02</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">189</th>
+                                            <th style="text-align:right">25</th>
+                                            <th>TEXTILE COATED FABRICS(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">23,500.00</td>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">23,500.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">190</th>
+                                            <th style="text-align:right">26</th>
+                                            <th>TEXTILE COATED FABRICS(BROWN)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">150.00</td>
+                                            <td style="text-align:right">35,250.00</td>
+                                            <td style="text-align:right">150.00</td>
+                                            <td style="text-align:right">35,250.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr style="background:thistle">
+                                            <th style="display: none;"></th>
+                                            <th colspan="2">Total</th>
+                                            <td style="text-align:right">3,013.50</td>
+                                            <td style="text-align:right">329,473.66</td>
+                                            <td style="text-align:right">15,955.12</td>
+                                            <td style="text-align:right">1,006,681.29</td>
+                                            <td style="text-align:right">16,473.22</td>
+                                            <td style="text-align:right">1,139,065.21</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">654.00</td>
+                                            <td style="text-align:right">205,472.48</td>
+                                            <td style="text-align:right">3,149.40</td>
+                                            <td style="text-align:right">402,562.23</td>
+                                            <td style="text-align:right">1,751.38</td>
+                                            <td></td>  
+                                        </tr>
+                                    </tbody>
+                                </table><table>
+                            <thead>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th rowspan="2" style="text-align:right">#</th>
+                                    <th rowspan="2" style="text-align:center">Item</th>
+                                    <th colspan="2" style="text-align:center">Opening Information</th>
+                                    <th colspan="2" style="text-align:center">Purchase Information</th>
+                                    <th colspan="2" style="text-align:center">Issue Information</th>
+                                    <th colspan="2" style="text-align:center">Plating Information</th>
+                                    <th colspan="2" style="text-align:center">Stock In Information</th>
+                                    <th colspan="2" style="text-align:center">Balance Information</th>
+                                    <th rowspan="2">Closing<br>Rate</th>
+                                    <th rowspan="2" style="text-align:center">Unit</th>
+                                </tr>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th style="text-align:center">Opn Qnty</th>
+                                    <th style="text-align:center">Opn Val</th>
+                                    
+                                    <th style="text-align:center">Pur Qnty</th>
+                                    <th style="text-align:center">Pur Val</th>
+                                    
+                                    <th style="text-align:center">Issue Qnty</th>
+                                    <th style="text-align:center">Issue Val</th>
+                                    
+                                    <th style="text-align:center">Plating Qnty</th>
+                                    <th style="text-align:center">Plating Val</th>
+                                    
+                                    <th style="text-align:center">Stock In Qnty</th>
+                                    <th style="text-align:center">Stock In Val</th>
+                                    
+                                    <th style="text-align:center">Bal Qnty</th>
+                                    <th style="text-align:center">Bal Val</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                <tr style="background:thistle">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Total</th>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background:#faeda6">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Grand Total</th>
+                                    <td style="text-align:right">3,013.50</td>
+                                    <td style="text-align:right">329,473.66</td>
+                                    <td style="text-align:right">15,955.12</td>
+                                    <td style="text-align:right">1,006,681.29</td>
+                                    <td style="text-align:right">16,473.22</td>
+                                    <td style="text-align:right">1,139,065.21</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">654.00</td>
+                                    <td style="text-align:right">205,472.48</td>
+                                    <td style="text-align:right">3,149.40</td>
+                                    <td style="text-align:right">402,562.23</td>
+                                    <td style="text-align:right">1,751.38</td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table></body></html>
