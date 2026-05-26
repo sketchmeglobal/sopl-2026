@@ -267,12 +267,12 @@ top: -48px;
 
 <div class="container">
 <div class="row">
-    <div class="col-12" style="border: 1px solid red;padding: 10px;margin-bottom: 30px;">
-        <h5 style="font-weight: bolder">Changes For Next Finanacial Year:</h5>
-        <p><b>1. Purchase Receive Details</b> - Should be 3 decimal part (item rate) - changes in database</p>
-        <p><b>2. Proforma</b> - Please remove the decimal part in quantity column in proforma invoice</p>
-        <p><b>3. Removal:</b> - Please mention one point in dashboard for 2026-27 fin year portal.. Remove all article and costing of H. J. DE ROOY</p>
-    </div>
+    <!--<div class="col-12" style="border: 1px solid red;padding: 10px;margin-bottom: 30px;">-->
+    <!--    <h5 style="font-weight: bolder">Changes For Next Finanacial Year:</h5>-->
+    <!--    <p><b>1. Purchase Receive Details</b> - Should be 3 decimal part (item rate) - changes in database</p>-->
+    <!--    <p><b>2. Proforma</b> - Please remove the decimal part in quantity column in proforma invoice</p>-->
+    <!--    <p><b>3. Removal:</b> - Please mention one point in dashboard for 2026-27 fin year portal.. Remove all article and costing of H. J. DE ROOY</p>-->
+    <!--</div>-->
 <div class="col-md-12">
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 <div class="panel panel-default">
@@ -991,8 +991,6 @@ User Log
 <script src="<?= base_url() ?>assets/admin_panel/js/jquery.validate.min.js"></script>
 <!--ajax form submit-->
 <script src="<?= base_url() ?>assets/admin_panel/js/jquery.form.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
 <script>
 

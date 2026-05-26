@@ -453,689 +453,676 @@ class Material_issue_m extends CI_Model {
         return $item_details_as_purch_rcv;
     }
 
+    
     public function fetch_remainng_stock_for_material_issue() {
         $issue_date_add = $this->input->post('issue_date_add');
-        $item_dtl_id = $this->input->post('item_dtl_id');
-        $purc_rcv_id = $this->input->post('purc_rcv_id');
-        $sum_stock_in = 0;
-        $data = array();
+        $item_dtl_id    = $this->input->post('item_dtl_id');
 
-        $result1 = $this->db->select('purchase_order_receive_detail.*, item_master.im_id, item_master.item, colors.c_id, colors.color, item_dtl.opening_stock')
-                        ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
-                        ->join('item_dtl', 'item_dtl.id_id = purchase_order_receive_detail.id_id', 'left')
-                        ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
-                        ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
-                        ->where('purchase_order_receive.purchase_order_receive_date <=', $issue_date_add)
-                        ->order_by('purchase_order_receive_detail.purchase_order_receive_detail_id')
-                        ->get_where('purchase_order_receive_detail', array('purchase_order_receive_detail.id_id' => $item_dtl_id))->result();
-
+        // Opening stock
         $item_detail_row = $this->db->get_where('item_dtl', array('id_id' => $item_dtl_id))->row();
-        $im_id = $item_detail_row->im_id;
-        $c_id = $item_detail_row->c_id;
+        if ($item_detail_row === null) return 0;
+        $opening_stock = (float)$item_detail_row->opening_stock;
+        $im_id         = $item_detail_row->im_id;
+        $c_id          = $item_detail_row->c_id;
 
-        $platting_issue_row = $this->db->select_sum('platting_issue_detail.issue_quantity')
-                            ->join('platting_issue', 'platting_issue.platting_issue_id = platting_issue_detail.platting_issue_id', 'left')
-                            ->where('platting_issue.platting_issue_date <=', $issue_date_add)
-                            ->get_where('platting_issue_detail', array('platting_issue_detail.im_id' => $im_id, 'platting_issue_detail.item_colour' => $c_id))->row();
+        // Purchase received (purchase_order_receive_detail)
+        $pur_row = $this->db->select_sum('purchase_order_receive_detail.item_quantity')
+            ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
+            ->where('purchase_order_receive.purchase_order_receive_date <=', $issue_date_add)
+            ->get_where('purchase_order_receive_detail', array('purchase_order_receive_detail.id_id' => $item_dtl_id, 'purchase_order_receive_detail.status' => 1))->row();
+        $sum_purchase = ($pur_row !== null && $pur_row->item_quantity !== null) ? (float)$pur_row->item_quantity : 0;
 
-        if (count($platting_issue_row) > 0) {
-            $platting_issue = $platting_issue_row->issue_quantity;
-        } else {
-            $platting_issue = 0;
-        }
 
-        if(count($result1) > 0) {
+        // Challan received — always fetch; use challan when available, fall back to formal receipt when challan = 0
+        $this->db->reset_query();
+        $challan_row = $this->db
+            ->select_sum('purchase_challan_order_receive_detail.item_quantity')
+            ->from('purchase_challan_order_receive_detail')
+            ->join('purchase_challan_order_receive',
+                'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
+            ->where('purchase_challan_order_receive.purchase_order_receive_date <=', $issue_date_add)
+            ->where('purchase_challan_order_receive_detail.id_id', $item_dtl_id)
+            ->where('purchase_challan_order_receive_detail.status', 1)
+            ->where('purchase_challan_order_receive.status', 1)
+            ->get()->row();
+        $sum_challan = (!empty($challan_row) && $challan_row->item_quantity !== null) ? (float)$challan_row->item_quantity : 0;
+        $effective_receipt = ($sum_challan > 0) ? $sum_challan : $sum_purchase;
 
-            $result_mat_issue = $this->db->select('material_issue_detail.*')
-                        ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
-                        ->where('material_issue.material_issue_date <=', $issue_date_add)
-                        ->get_where('material_issue_detail', array('material_issue_detail.id_id' => $item_dtl_id))->result();
-            
-            // print_r($result_mat_issue); die;
-               
-            if (count($result_mat_issue) == 0) {
-    
-                $opening_stock_row = $this->db->select_sum('item_dtl.opening_stock')
-                                ->get_where('item_dtl', array('item_dtl.id_id' => $item_dtl_id, 'item_dtl.status' => 1))->row();
-    
-                if (count($opening_stock_row) > 0) {
-                    $opening_stock = $opening_stock_row->opening_stock;
-                } else {
-                    $opening_stock = 0;
-                }
-    
-                $sum_purchase_order_row = $this->db->select_sum('purchase_order_receive_detail.item_quantity')
-                                ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
-                                ->where('purchase_order_receive.purchase_order_receive_date <=', $issue_date_add)
-                                ->get_where('purchase_order_receive_detail', array('purchase_order_receive_detail.id_id' => $item_dtl_id, 'purchase_order_receive_detail.status' => 1))->row();
-    
-                if (count($sum_purchase_order_row) > 0) {
-                    $sum_purchase_order = $sum_purchase_order_row->item_quantity;
-                } else {
-                    $sum_purchase_order = 0;
-                }
-    
-                $sum_material_issue_row = $this->db->select_sum('material_issue_detail.issue_quantity')
-                                ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
-                                ->where('material_issue.material_issue_date <=', $issue_date_add)
-                                ->get_where('material_issue_detail', array('material_issue_detail.id_id' => $item_dtl_id, 'material_issue_detail.status' => 1))->row();
-    
-                if (count($sum_material_issue_row) > 0) {
-                    $sum_material_issue = $sum_material_issue_row->issue_quantity;
-                } else {
-                    $sum_material_issue = 0;
-                }
-                
-                $sum_stock_in_row = $this->db->select_sum('stock_in_detail.item_quantity')
-                                ->join('stock_in', 'stock_in.purchase_order_receive_id = stock_in_detail.purchase_order_receive_id', 'left')
-                                ->where('stock_in.purchase_order_receive_date <=', $issue_date_add)
-                                ->get_where('stock_in_detail', array('stock_in_detail.id_id' => $item_dtl_id, 'stock_in_detail.status' => 1))->row();
-    
-                if (count($sum_stock_in_row) > 0) {
-                    $sum_stock_in = $sum_stock_in_row->item_quantity;
-                } else {
-                    $sum_stock_in = 0;
-                }
-    
-                $quantity = $opening_stock + $sum_purchase_order - ($sum_material_issue + $platting_issue) + $sum_stock_in;
-            } else {
-                
-                $result_mat_issue__tot = $this->db->select_sum('issue_quantity')
-                                    ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
-                                    ->where('material_issue.material_issue_date <=', $issue_date_add)
-                                    ->where('material_issue.material_issue_date >=', YEAR_START_DATE)
-                                    ->order_by('material_issue.material_issue_date')
-                                    ->get_where('material_issue_detail', array('material_issue_detail.id_id' => $item_dtl_id))->result()[0]->issue_quantity;
-                // echo $this->db->last_query(); die;
-                
-                $sum_purchase_order_row_tot = $this->db->select_sum('purchase_order_receive_detail.item_quantity')
-                                ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
-                                ->where('purchase_order_receive.purchase_order_receive_date <=', $issue_date_add)
-                                ->get_where('purchase_order_receive_detail', array('purchase_order_receive_detail.id_id' => $item_dtl_id, 'purchase_order_receive_detail.status' => 1))->row()->item_quantity;
-           
-                $result_opening_stock = $this->db->select('item_master.im_id, item_master.item, colors.c_id, colors.color, item_dtl.opening_stock, item_dtl.opening_rate, item_dtl.id_id')
-                                ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
-                                ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
-                                ->get_where('item_dtl', array('item_dtl.id_id' => $item_dtl_id))->result()[0]->opening_stock;
-                                
-                                $sum_stock_in_row = $this->db->select_sum('stock_in_detail.item_quantity')
-                                ->join('stock_in', 'stock_in.purchase_order_receive_id = stock_in_detail.purchase_order_receive_id', 'left')
-                                ->where('stock_in.purchase_order_receive_date <=', $issue_date_add)
-                                ->get_where('stock_in_detail', array('stock_in_detail.id_id' => $item_dtl_id, 'stock_in_detail.status' => 1))->row();
-    
-                if (count($sum_stock_in_row) > 0) {
-                    $sum_stock_in = $sum_stock_in_row->item_quantity;
-                } else {
-                    $sum_stock_in = 0;
-                }
-    
-                $quantity = $sum_purchase_order_row_tot + $result_opening_stock - ($result_mat_issue__tot + $platting_issue) + $sum_stock_in;
-    
-            }
-        } else {
-            
-            $result_opening_stock = $this->db->select('item_master.im_id, item_master.item, colors.c_id, colors.color, item_dtl.opening_stock, item_dtl.opening_rate, item_dtl.id_id')
-                            ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
-                            ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
-                            ->get_where('item_dtl', array('item_dtl.id_id' => $item_dtl_id))->result();
+        // Stock in
+        $stock_in_row = $this->db->select_sum('stock_in_detail.item_quantity')
+            ->join('stock_in', 'stock_in.purchase_order_receive_id = stock_in_detail.purchase_order_receive_id', 'left')
+            ->where('stock_in.purchase_order_receive_date <=', $issue_date_add)
+            ->get_where('stock_in_detail', array('stock_in_detail.id_id' => $item_dtl_id, 'stock_in_detail.status' => 1))->row();
+        $sum_stock_in = ($stock_in_row !== null && $stock_in_row->item_quantity !== null) ? (float)$stock_in_row->item_quantity : 0;
 
-            $result_mat_issue_row = $this->db->select('material_issue_detail.*')
-                            ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
-                            ->where('material_issue.material_issue_date <=', $issue_date_add)
-                            ->order_by('material_issue.material_issue_date')
-                            ->get_where('material_issue_detail', array('material_issue_detail.id_id' => $item_dtl_id))->result();
+        // Material issued
+        $mat_row = $this->db->select_sum('material_issue_detail.issue_quantity')
+            ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
+            ->where('material_issue.material_issue_date <=', $issue_date_add)
+            ->where('material_issue.material_issue_date >=', YEAR_START_DATE)
+            ->get_where('material_issue_detail', array('material_issue_detail.id_id' => $item_dtl_id))->row();
+        $sum_material_issue = ($mat_row !== null && $mat_row->issue_quantity !== null) ? (float)$mat_row->issue_quantity : 0;
 
-        if($result_mat_issue_row > 0) {
-            $result_mat_issue = $this->db->select_sum('issue_quantity')
-                                ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
-                                ->where('material_issue.material_issue_date <=', $issue_date_add)
-                                ->order_by('material_issue.material_issue_date')
-                                ->get_where('material_issue_detail', array('material_issue_detail.id_id' => $item_dtl_id))->result();
-                                
-                                $sum_stock_in_row = $this->db->select_sum('stock_in_detail.item_quantity')
-                            ->join('stock_in', 'stock_in.purchase_order_receive_id = stock_in_detail.purchase_order_receive_id', 'left')
-                            ->where('stock_in.purchase_order_receive_date <=', $issue_date_add)
-                            ->get_where('stock_in_detail', array('stock_in_detail.id_id' => $item_dtl_id, 'stock_in_detail.status' => 1))->row();
+        // Platting issued
+        $platting_row = $this->db->select_sum('platting_issue_detail.issue_quantity')
+            ->join('platting_issue', 'platting_issue.platting_issue_id = platting_issue_detail.platting_issue_id', 'left')
+            ->where('platting_issue.platting_issue_date <=', $issue_date_add)
+            ->get_where('platting_issue_detail', array('platting_issue_detail.im_id' => $im_id, 'platting_issue_detail.item_colour' => $c_id))->row();
+        $sum_platting = ($platting_row !== null && $platting_row->issue_quantity !== null) ? (float)$platting_row->issue_quantity : 0;
 
-            if (count($sum_stock_in_row) > 0) {
-                $sum_stock_in = $sum_stock_in_row->item_quantity;
-            } else {
-                $sum_stock_in = 0;
-            }
-
-            $quantity = ($result_opening_stock[0]->opening_stock - ($result_mat_issue[0]->issue_quantity + $platting_issue) + $sum_stock_in);
-        } else {
-          $quantity = $result_opening_stock[0]->opening_stock + $sum_stock_in - $platting_issue;  
-        }
+        return round($opening_stock + $effective_receipt + $sum_stock_in - $sum_material_issue - $sum_platting, 2);
     }
-
-
-        // echo $quantity; die();
-        return $quantity;
-    }
-
     public function ajax_get_consume_list_purchase_order_receive_detail() {
-        $data = array();
-        $preview_data = array();
-        $data_array = array();
-        $id_id = $this->input->post('id_id');
-        $im_id = $this->input->post('im_id');
-        $issue_quantity_preview = $this->input->post('issue_quantity_preview'); //10
-        $issue_date_add = date('Y-m-d', strtotime($this->input->post('issue_date_add')));
-        $purc_rcv_id = $this->input->post('purc_rcv_id');
-        $sum_stock_in = 0;
-        $sum_plating = 0;
-        $mat_issue = 0;
-        $opening_stock_quantity1 = 0;
-        $item_quantity = 0;
-
-        $result1 = $this->db->select('purchase_order_receive_detail.*, item_master.im_id, item_master.item, colors.c_id, colors.color, item_dtl.opening_stock')
-                        ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
-                        ->join('item_dtl', 'item_dtl.id_id = purchase_order_receive_detail.id_id', 'left')
-                        ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
-                        ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
-                        ->where('purchase_order_receive.purchase_order_receive_date <=', $issue_date_add)
-                        ->order_by('purchase_order_receive_detail.purchase_order_receive_detail_id')
-                        ->get_where('purchase_order_receive_detail', array('purchase_order_receive_detail.id_id' => $id_id))->result();
-
-        $sum_stock_in_row = $this->db->select('SUM(stock_in_detail.item_quantity) as item_quantity, stock_in_detail.item_rate')
-                            ->join('stock_in', 'stock_in.purchase_order_receive_id = stock_in_detail.purchase_order_receive_id', 'left')
-                            ->where('stock_in.purchase_order_receive_date <=', $issue_date_add)
-                            ->get_where('stock_in_detail', array('stock_in_detail.id_id' => $id_id, 'stock_in_detail.status' => 1))->row(); #SAYAK -> ROW TO RESULT
-            
-        // echo $this->db->last_query();     
-        
-        // echo '<pre>', print_r($sum_stock_in_row), '</pre>';
-
-            if (count($sum_stock_in_row) > 0) {
-                    $sum_stock_in = $sum_stock_in_row->item_quantity; 
-                
-            }
-
-        $item_detail_row = $this->db->get_where('item_dtl', array('id_id' => $id_id))->row();
-        $im_id = $item_detail_row->im_id;
-        $c_id = $item_detail_row->c_id;
-
-        $sum_plating_row = $this->db->select_sum('platting_issue_detail.issue_quantity')
-                            ->join('platting_issue', 'platting_issue.platting_issue_id = platting_issue_detail.platting_issue_id', 'left')
-                            ->where('platting_issue.platting_issue_date <=', $issue_date_add)
-                            ->get_where('platting_issue_detail', array('platting_issue_detail.im_id' => $im_id, 'platting_issue_detail.item_colour' => $c_id))->row();
-
-            if (count($sum_plating_row) > 0) {
-                $sum_plating = $sum_plating_row->issue_quantity;
-            }
-
-            $result_mat_issue = $this->db->select_sum('issue_quantity')
-                                ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
-                                ->where('material_issue.material_issue_date <=', $issue_date_add)
-                                ->order_by('material_issue.material_issue_date')
-                                ->get_where('material_issue_detail', array('material_issue_detail.id_id' => $id_id))->result();
-                                
-            if(count($result_mat_issue) > 0) {
-               $mat_issue = $result_mat_issue[0]->issue_quantity; 
-            }
-
-            $total_issue_quantity = $mat_issue + $sum_plating;
-            
-            $result_opening_stock_row1 = $this->db->select('item_master.im_id, item_master.item, colors.c_id, colors.color, item_dtl.opening_stock, item_dtl.opening_rate, item_dtl.id_id')
-                            ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
-                            ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
-                            ->where('item_dtl.opening_stock >', 0)
-                            ->get_where('item_dtl', array('item_dtl.id_id' => $id_id))->result();
-            if(count($result_opening_stock_row1) > 0) {
-               $opening_stock_quantity1 = $result_opening_stock_row1[0]->opening_stock; 
-            }
-            
-        if (count($result1) == 0) {
-            $result_opening_stock = $this->db->select('item_master.im_id, item_master.item, colors.c_id, colors.color, item_dtl.opening_stock, item_dtl.opening_rate, item_dtl.id_id')
-                            ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
-                            ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
-                            ->where('item_dtl.opening_stock >', 0)
-                            ->get_where('item_dtl', array('item_dtl.id_id' => $id_id))->result();
-
-            if(count($result_opening_stock) > 0) {
-            $preview1 = new stdClass();
-                $item_rate = $result_opening_stock[0]->opening_rate;
-                // $preview1->item_rate = $item_rate;
-                $total_rate = 0;
-               
-               if($total_issue_quantity > 0) {
-
-                  $qnty = ($result_opening_stock[0]->opening_stock - $total_issue_quantity);
-                  if($qnty > 0) {
-                   $arr = array(
-                        'im_id' => $result_opening_stock[0]->im_id,
-                        'id_id' => $result_opening_stock[0]->id_id,
-                        'item_name' => $result_opening_stock[0]->item,
-                        'c_id' => $result_opening_stock[0]->c_id,
-                        'color' =>$result_opening_stock[0]->color,
-                        'purchase_order_receive_id' => 0,
-                        'purchase_order_receive_detail_id' => 0,
-                        'item_quantity' => $result_opening_stock[0]->opening_stock,
-                        'item_rate' => $item_rate,
-                    );
-                    array_push($data_array, $arr);
-                    if (count($sum_stock_in_row) > 0) {
-                    $arr = array(
-                        'im_id' => $result_opening_stock[0]->im_id,
-                        'id_id' => $result_opening_stock[0]->id_id,
-                        'item_name' => $result_opening_stock[0]->item,
-                        'c_id' => $result_opening_stock[0]->c_id,
-                        'color' => $result_opening_stock[0]->color,
-                        'purchase_order_receive_id' => 0,
-                        'purchase_order_receive_detail_id' => 0,
-                        'item_quantity' => $sum_stock_in,
-                        'item_rate' => $sum_stock_in_row->item_rate,
-                    );
-                    array_push($data_array, $arr);
-                }
-                }  else {
-                   if (count($sum_stock_in_row) > 0) {
-                    $without_purchase_stock_quantity = (($result_opening_stock[0]->opening_stock + $sum_stock_in) - $total_issue_quantity);
-                    $arr = array(
-                        'im_id' => $result_opening_stock[0]->im_id,
-                        'id_id' => $result_opening_stock[0]->id_id,
-                        'item_name' => $result_opening_stock[0]->item,
-                        'c_id' => $result_opening_stock[0]->c_id,
-                        'color' => $result_opening_stock[0]->color,
-                        'purchase_order_receive_id' => 0,
-                        'purchase_order_receive_detail_id' => 0,
-                        'item_quantity' => $sum_stock_in,
-                        'item_rate' => $sum_stock_in_row->item_rate,
-                    );
-                    array_push($data_array, $arr);
-                } 
-                }
-
-               } else {
-                                
-                $arr = array(
-                        'im_id' => $result_opening_stock[0]->im_id,
-                        'id_id' => $result_opening_stock[0]->id_id,
-                        'item_name' => $result_opening_stock[0]->item,
-                        'c_id' => $result_opening_stock[0]->c_id,
-                        'color' =>$result_opening_stock[0]->color,
-                        'purchase_order_receive_id' => 0,
-                        'purchase_order_receive_detail_id' => 0,
-                        'item_quantity' => $result_opening_stock[0]->opening_stock,
-                        'item_rate' => $item_rate,
-                    );
-                    array_push($data_array, $arr);
-
-                // array_push($preview_data, $preview1);
-                
-                if (count($sum_stock_in_row) > 0) {
-                    $arr = array(
-                        'im_id' => $result_opening_stock[0]->im_id,
-                        'id_id' => $result_opening_stock[0]->id_id,
-                        'item_name' => $result_opening_stock[0]->item,
-                        'c_id' => $result_opening_stock[0]->c_id,
-                        'color' => $result_opening_stock[0]->color,
-                        'purchase_order_receive_id' => 0,
-                        'purchase_order_receive_detail_id' => 0,
-                        'item_quantity' => $sum_stock_in,
-                        'item_rate' => $sum_stock_in_row->item_rate,
-                    );
-                    array_push($data_array, $arr);
-                }
-            }
-                
-            } else {
-                if($total_issue_quantity > 0) {
-                if (count($sum_stock_in_row) > 0) {
-                    $result_opening_stock1 = $this->db->select('item_master.im_id, item_master.item, colors.c_id, colors.color, item_dtl.opening_stock, item_dtl.opening_rate, item_dtl.id_id')
-                            ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
-                            ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
-                            ->get_where('item_dtl', array('item_dtl.id_id' => $id_id))->result();
-
-                        $qnty = $sum_stock_in - $total_issue_quantity;
-                    
-                    if($qnty > 0) {
-                    $arr = array(
-                        'im_id' => $result_opening_stock1[0]->im_id,
-                        'id_id' => $result_opening_stock1[0]->id_id,
-                        'item_name' => $result_opening_stock1[0]->item,
-                        'c_id' => $result_opening_stock1[0]->c_id,
-                        'color' => $result_opening_stock1[0]->color,
-                        'purchase_order_receive_id' => 0,
-                        'purchase_order_receive_detail_id' => 0,
-                        'item_quantity' => $qnty,
-                        'item_rate' => $sum_stock_in_row->item_rate,
-                    );
-                    array_push($data_array, $arr);
-                }
-                }
-            } else {
-               if (count($sum_stock_in_row) > 0) {
-                    $result_opening_stock1 = $this->db->select('item_master.im_id, item_master.item, colors.c_id, colors.color, item_dtl.opening_stock, item_dtl.opening_rate, item_dtl.id_id')
-                            ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
-                            ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
-                            ->get_where('item_dtl', array('item_dtl.id_id' => $id_id))->result();
-                    $arr = array(
-                        'im_id' => $result_opening_stock1[0]->im_id,
-                        'id_id' => $result_opening_stock1[0]->id_id,
-                        'item_name' => $result_opening_stock1[0]->item,
-                        'c_id' => $result_opening_stock1[0]->c_id,
-                        'color' => $result_opening_stock1[0]->color,
-                        'purchase_order_receive_id' => 0,
-                        'purchase_order_receive_detail_id' => 0,
-                        'item_quantity' => $sum_stock_in,
-                        'item_rate' => $sum_stock_in_row->item_rate,
-                    );
-                    array_push($data_array, $arr);
-                } 
-            }
-            }
-        } else {
-
-
-
-            $result = $this->db->select('purchase_order_receive_detail.*, item_master.im_id, item_master.item, colors.c_id, colors.color, item_dtl.opening_stock, item_dtl.opening_rate')
-                            ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
-                            ->join('item_dtl', 'item_dtl.id_id = purchase_order_receive_detail.id_id', 'left')
-                            ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
-                            ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
-                            ->where('purchase_order_receive.purchase_order_receive_date <=', $issue_date_add)
-                            ->order_by('purchase_order_receive_detail.purchase_order_receive_detail_id')
-                            ->get_where('purchase_order_receive_detail', array('purchase_order_receive_detail.id_id' => $id_id))->result();
-                            
-                            $result_sum_quantity = $this->db->select('SUM(purchase_order_receive_detail.item_quantity) as total_quantity')
-                            ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
-                            ->join('item_dtl', 'item_dtl.id_id = purchase_order_receive_detail.id_id', 'left')
-                            ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
-                            ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
-                            ->where('purchase_order_receive.purchase_order_receive_date <=', $issue_date_add)
-                            ->order_by('purchase_order_receive_detail.purchase_order_receive_detail_id')
-                            ->get_where('purchase_order_receive_detail', array('purchase_order_receive_detail.id_id' => $id_id))->row()->total_quantity;
-
-            $result_mat_issue_row = $this->db->select('material_issue_detail.*')
-                            ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
-                            ->where('material_issue.material_issue_date <=', $issue_date_add)
-                            ->order_by('material_issue.material_issue_date')
-                            ->get_where('material_issue_detail', array('material_issue_detail.id_id' => $id_id))->result();
-        // echo '<pre>', print_r($result_mat_issue_row), '</pre>';
-
-        $result_opening_stock = $this->db->select('item_master.im_id, item_master.item, colors.c_id, colors.color, item_dtl.opening_stock, item_dtl.opening_rate, item_dtl.id_id')
-                            ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
-                            ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
-                            ->where('item_dtl.opening_stock >', 0)
-                            ->get_where('item_dtl', array('item_dtl.id_id' => $id_id))->result();
-                            
-        $result_opening_stock1 = $this->db->select('item_master.im_id, item_master.item, colors.c_id, colors.color, item_dtl.opening_stock, item_dtl.opening_rate, item_dtl.id_id')
-                            ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
-                            ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
-                            ->get_where('item_dtl', array('item_dtl.id_id' => $id_id))->result();
-
-        if(count($result_opening_stock) > 0) {
-            if (count($result_mat_issue_row) > 0) {
-                $result_mat_issue = $this->db->select_sum('issue_quantity')
-                                ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
-                                ->where('material_issue.material_issue_date <=', $issue_date_add)
-                                ->order_by('material_issue.material_issue_date')
-                                ->get_where('material_issue_detail', array('material_issue_detail.id_id' => $id_id))->result();
-                $result_mat_issue_without_purchase_row = $this->db->select_sum('issue_quantity')
-                                ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
-                                ->where('material_issue.material_issue_date <=', $issue_date_add)
-                                ->where('material_issue_detail.purchase_order_receive_detail_id', 0)
-                                ->order_by('material_issue.material_issue_date')
-                                ->get_where('material_issue_detail', array('material_issue_detail.id_id' => $id_id))->result();
-                                if(count($result_mat_issue_without_purchase_row) > 0) {
-                                    $result_mat_issue_without_purchase = ($result_mat_issue_without_purchase_row[0]->issue_quantity + $sum_plating);
-                                } else {
-                                   $result_mat_issue_without_purchase = $sum_plating; 
-                                }
-                if ($result[0]->opening_stock > $total_issue_quantity) {
-                    // echo 'a'; die();
-                    $qnty = ($result[0]->opening_stock - $result_mat_issue_without_purchase);
-                    $arr = array(
-                        'im_id' => $result[0]->id_id,
-                        'id_id' => $result[0]->id_id,
-                        'item_name' => $result[0]->item,
-                        'c_id' => $result[0]->c_id,
-                        'color' => $result[0]->color,
-                        'purchase_order_receive_id' => 0,
-                        'purchase_order_receive_detail_id' => 0,
-                        'item_quantity' => $qnty,
-                        'item_rate' => $result[0]->opening_rate,
-                    );
-                    array_push($data_array, $arr);
-                    if (count($sum_stock_in_row) > 0) {
-                        $without_purchase_stock_quantity = (($result[0]->opening_stock + $sum_stock_in) - $result_mat_issue_without_purchase);
-                        $qnty1 = ($without_purchase_stock_quantity - $qnty);
-                        if($qnty1 > 0) {
-                    $arr = array( 
-                        'im_id' => $result_opening_stock1[0]->im_id,
-                        'id_id' => $result_opening_stock1[0]->id_id,
-                        'item_name' => $result_opening_stock1[0]->item,
-                        'c_id' => $result_opening_stock1[0]->c_id,
-                        'color' => $result_opening_stock1[0]->color,
-                        'purchase_order_receive_id' => 0,
-                        'purchase_order_receive_detail_id' => 0,
-                        'item_quantity' => $qnty1,
-                        'item_rate' => $sum_stock_in_row->item_rate,
-                    );
-                    array_push($data_array, $arr);
-                        }
-                }
-                } else {
-                    // echo 'b'; die();
-                    // echo $sum_stock_in; die(); 
-                    if (count($sum_stock_in_row) > 0) {
-                        $without_purchase_stock_quantity = (($result[0]->opening_stock + $sum_stock_in) - $result_mat_issue_without_purchase);
-                        if($without_purchase_stock_quantity > 0) {
-                    $arr = array(
-                        'im_id' => $result_opening_stock1[0]->im_id,
-                        'id_id' => $result_opening_stock1[0]->id_id,
-                        'item_name' => $result_opening_stock1[0]->item,
-                        'c_id' => $result_opening_stock1[0]->c_id,
-                        'color' => $result_opening_stock1[0]->color,
-                        'purchase_order_receive_id' => 0,
-                        'purchase_order_receive_detail_id' => 0,
-                        'item_quantity' => $without_purchase_stock_quantity,
-                        'item_rate' => $sum_stock_in_row->item_rate,
-                    );
-                    array_push($data_array, $arr);
-                        }
-                }
-                }
-            } else {
-                
-
-
-
-
-                  $qnty = ($result[0]->opening_stock - $total_issue_quantity);
-                  if($qnty > 0) {
-                   $arr = array(
-                        'im_id' => $result[0]->im_id,
-                        'id_id' => $result[0]->id_id,
-                        'item_name' => $result[0]->item,
-                        'c_id' => $result[0]->c_id,
-                        'color' =>$result[0]->color,
-                        'purchase_order_receive_id' => 0,
-                        'purchase_order_receive_detail_id' => 0,
-                        'item_quantity' => $qnty,
-                        'item_rate' => $result[0]->opening_rate
-                    );
-                    array_push($data_array, $arr);
-                    if (count($sum_stock_in_row) > 0) {
-                    $arr = array(
-                        'im_id' => $result[0]->im_id,
-                        'id_id' => $result[0]->id_id,
-                        'item_name' => $result[0]->item,
-                        'c_id' => $result[0]->c_id,
-                        'color' => $result[0]->color,
-                        'purchase_order_receive_id' => 0,
-                        'purchase_order_receive_detail_id' => 0,
-                        'item_quantity' => $sum_stock_in,
-                        'item_rate' => $sum_stock_in_row->item_rate,
-                    );
-                    array_push($data_array, $arr);
-                }
-                }  else {
-                   if (count($sum_stock_in_row) > 0) {
-                    $without_purchase_stock_quantity = (($result[0]->opening_stock + $sum_stock_in) - $total_issue_quantity);
-                    if($without_purchase_stock_quantity > 0) {
-                    $arr = array(
-                        'im_id' => $result[0]->im_id,
-                        'id_id' => $result[0]->id_id,
-                        'item_name' => $result[0]->item,
-                        'c_id' => $result[0]->c_id,
-                        'color' => $result[0]->color,
-                        'purchase_order_receive_id' => 0,
-                        'purchase_order_receive_detail_id' => 0,
-                        'item_quantity' => $without_purchase_stock_quantity,
-                        'item_rate' => $sum_stock_in_row->item_rate,
-                    );
-                    array_push($data_array, $arr);
-                }
-                } 
-                }
-
-            }
-        }
-        else {
-            if (count($sum_stock_in_row) > 0) {
-                        $qnty = $sum_stock_in - $total_issue_quantity;
-                        if($qnty > 0) {
-                    $arr = array(
-                        'im_id' => $result_opening_stock1[0]->im_id,
-                        'id_id' => $result_opening_stock1[0]->id_id,
-                        'item_name' => $result_opening_stock1[0]->item,
-                        'c_id' => $result_opening_stock1[0]->c_id,
-                        'color' => $result_opening_stock1[0]->color,
-                        'purchase_order_receive_id' => 0,
-                        'purchase_order_receive_detail_id' => 0,
-                        'item_quantity' => $qnty,
-                        'item_rate' => $sum_stock_in_row->item_rate,
-                    );
-                    array_push($data_array, $arr);
-                }
-            }
-        }
-
-        $newly_added_quantity = 0;
-        $actual_quantity = 0;
-        $newly_added_quantity_purchase_order = 0;
-        
-        
-
-            foreach ($result as $r) {
-                
-                $newly_added_quantity_purchase_order += $r->item_quantity;
-                
-                if(($newly_added_quantity_purchase_order + $sum_stock_in + $opening_stock_quantity1) <= $total_issue_quantity) {
-                    continue;
-                }
-                
-            $newly_added_quantity = 0;    
-            for ($i = 0; $i < count($data_array); $i++) { 
-                $newly_added_quantity += ($data_array[$i]['item_quantity']);
-        }
+    $data                   = array();
+    $preview_data           = array();
+    $data_array             = array();
  
-        $new_quantity = $newly_added_quantity - ($opening_stock_quantity1 + $sum_stock_in - $total_issue_quantity);
-        $item_quantity += $r->item_quantity;
-
-        if($new_quantity < 0) {
-            $actual_quantity = $new_quantity + $item_quantity;
-            if($actual_quantity > 0) {
-            $arr = array(
-                    'im_id' => $r->id_id,
-                    'id_id' => $r->id_id,
-                    'item_name' => $r->item,
-                    'c_id' => $r->c_id,
-                    'color' => $r->color,
-                    'purchase_order_receive_id' => $r->purchase_order_receive_id,
-                    'purchase_order_receive_detail_id' => $r->purchase_order_receive_detail_id,
-                    'item_quantity' => $r->item_quantity,
-                    'item_rate' => $r->item_rate,
-                );
-                array_push($data_array, $arr);
-            }
-        } else {
-            $item_quantity = (($newly_added_quantity_purchase_order + $opening_stock_quantity1 + $sum_stock_in) - $total_issue_quantity);
-                $arr = array(
-                    'im_id' => $r->id_id,
-                    'id_id' => $r->id_id,
-                    'item_name' => $r->item,
-                    'c_id' => $r->c_id,
-                    'color' => $r->color,
-                    'purchase_order_receive_id' => $r->purchase_order_receive_id,
-                    'purchase_order_receive_detail_id' => $r->purchase_order_receive_detail_id,
-                    'item_quantity' => $item_quantity,
-                    'item_rate' => $r->item_rate,
-                );
-                array_push($data_array, $arr);
-            }
-            }
-
-    // echo '<pre>', print_r($data_array), '</pre>'; die;
-
-        }
-        
-        $a = $issue_quantity_preview;
-        
-        if(count($data_array) > 0) {
-
-            for ($i = 0; $i < count($data_array); $i++) {
-                $preview = new stdClass();
-
-                if ($a > 0) {
-
-                    $b = ($data_array[$i]['item_quantity']); //100
-                    $item_rate = $data_array[$i]['item_rate'];
-                    $preview->item_rate = $item_rate;
-                    $total_rate = 0;
-
-                    if ($b <= $a) {
-                        $r = $a - $b;
-                        $preview->consumed = $b;
-                        $total_rate = ($item_rate * $b);
-                        $preview->total_rate = $total_rate;
-                    } else {
-                        if ($i == 0) {
-                            $preview->consumed = $a;
-                            $total_rate = ($item_rate * $a);
-                            $preview->total_rate = $total_rate;
-                        } else {
-                            $preview->consumed = $r;
-                            $total_rate = ($item_rate * $r);
-                            $preview->total_rate = $total_rate;
-                        }
-                        $r = 0;
-                    }
-                } else {
-                    break;
-                }
-
-                $preview->im_id = $data_array[$i]['im_id'];
-                $preview->id_id = $data_array[$i]['id_id'];
-                $preview->item_name = $data_array[$i]['item_name'];
-                $preview->c_id = $data_array[$i]['c_id'];
-                $preview->color = $data_array[$i]['color'];
-                $preview->purchase_order_receive_id = $data_array[$i]['purchase_order_receive_id'];
-                $preview->purchase_order_receive_detail_id = $data_array[$i]['purchase_order_receive_detail_id'];
-                $preview->purchase_order_receive_detail_id = $data_array[$i]['purchase_order_receive_detail_id'];
-
-                array_push($preview_data, $preview);
-
-                //echo ' Required = '.$a.' Consumed = '.$b.' Remaining = '.$r;
-                //echo "<br/>";
-                $a = $r;
-            }
-            
-        }
-        
-        $data["preview_data"] = $preview_data;
-
-        if (sizeof($preview_data) > 0) {
-            $data["status"] = true;
-        } else {
-            $data["status"] = false;
-        }
-
+    $id_id                  = $this->input->post('id_id');
+    $im_id                  = $this->input->post('im_id');
+    $issue_quantity_preview = $this->input->post('issue_quantity_preview');
+    $issue_date_add         = date('Y-m-d', strtotime($this->input->post('issue_date_add')));
+    $purc_rcv_id            = $this->input->post('purc_rcv_id');
+ 
+    $sum_stock_in            = 0;
+    $sum_challan             = 0;
+    $sum_plating             = 0;
+    $mat_issue               = 0;
+    $opening_stock_quantity1 = 0;
+    $item_quantity           = 0;
+ 
+    // ── Guard ─────────────────────────────────────────────────────────────────
+    if (empty($id_id) || empty($issue_quantity_preview)) {
+        $data['status']       = false;
+        $data['preview_data'] = array();
         return $data;
     }
+ 
+    // ── Purchase receipts up to issue date ───────────────────────────────────
+    $result1 = $this->db
+        ->select('purchase_order_receive_detail.*, item_master.im_id, item_master.item,
+                  colors.c_id, colors.color, item_dtl.opening_stock')
+        ->join('purchase_order_receive',
+            'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
+        ->join('item_dtl', 'item_dtl.id_id = purchase_order_receive_detail.id_id', 'left')
+        ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
+        ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
+        ->where('purchase_order_receive.purchase_order_receive_date <=', $issue_date_add)
+        ->order_by('purchase_order_receive_detail.purchase_order_receive_detail_id')
+        ->get_where('purchase_order_receive_detail', array('purchase_order_receive_detail.id_id' => $id_id))
+        ->result();
+ 
+    // ── Stock In sum ──────────────────────────────────────────────────────────
+    $sum_stock_in_row = $this->db
+        ->select('SUM(stock_in_detail.item_quantity) as item_quantity, stock_in_detail.item_rate')
+        ->join('stock_in', 'stock_in.purchase_order_receive_id = stock_in_detail.purchase_order_receive_id', 'left')
+        ->where('stock_in.purchase_order_receive_date <=', $issue_date_add)
+        ->get_where('stock_in_detail', array(
+            'stock_in_detail.id_id'  => $id_id,
+            'stock_in_detail.status' => 1
+        ))->row();
+ 
+    if (!empty($sum_stock_in_row) && $sum_stock_in_row->item_quantity !== null && (float)$sum_stock_in_row->item_quantity > 0) {
+        $sum_stock_in = (float)$sum_stock_in_row->item_quantity;
+    }
+ 
+    // ── Item detail ───────────────────────────────────────────────────────────
+    $item_detail_row = $this->db->get_where('item_dtl', array('id_id' => $id_id))->row();
+    if (empty($item_detail_row)) {
+        $data['status']       = false;
+        $data['preview_data'] = array();
+        return $data;
+    }
+    $im_id = $item_detail_row->im_id;
+    $c_id  = $item_detail_row->c_id;
+ 
+    // ── Challan received sum ──────────────────────────────────────────────────
+    $this->db->reset_query();
+    $sum_challan_row = $this->db
+        ->select_sum('purchase_challan_order_receive_detail.item_quantity')
+        ->from('purchase_challan_order_receive_detail')
+        ->join('purchase_challan_order_receive',
+            'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
+        ->where('purchase_challan_order_receive.purchase_order_receive_date <=', $issue_date_add)
+        ->where('purchase_challan_order_receive_detail.id_id', $id_id)
+        ->where('purchase_challan_order_receive_detail.status', 1)
+        ->where('purchase_challan_order_receive.status', 1)
+        ->get()->row();
+ 
+    if (!empty($sum_challan_row) && $sum_challan_row->item_quantity !== null) {
+        $sum_challan = (float)$sum_challan_row->item_quantity;
+    }
+ 
+    // ── FIX: Get ACTUAL challan rate from purchase_challan_order_receive_detail
+    // Show real rate (even if 0.00) — do NOT fallback to opening_rate
+    $this->db->reset_query();
+    $actual_challan_rate_row = $this->db
+        ->select('purchase_challan_order_receive_detail.item_rate')
+        ->from('purchase_challan_order_receive_detail')
+        ->join('purchase_challan_order_receive',
+            'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
+        ->where('purchase_challan_order_receive_detail.id_id', $id_id)
+        ->where('purchase_challan_order_receive_detail.status', 1)
+        ->where('purchase_challan_order_receive.status', 1)
+        ->order_by('purchase_challan_order_receive_detail.purchase_order_receive_detail_id', 'DESC')
+        ->limit(1)
+        ->get()->row();
+ 
+    // Use actual challan rate (0.00 if not set) — never override with opening_rate
+    $challan_item_rate = (!empty($actual_challan_rate_row))
+        ? (float)$actual_challan_rate_row->item_rate
+        : 0;
+ 
+    // ── Plating sum ───────────────────────────────────────────────────────────
+    $sum_plating_row = $this->db
+        ->select_sum('platting_issue_detail.issue_quantity')
+        ->join('platting_issue', 'platting_issue.platting_issue_id = platting_issue_detail.platting_issue_id', 'left')
+        ->where('platting_issue.platting_issue_date <=', $issue_date_add)
+        ->get_where('platting_issue_detail', array(
+            'platting_issue_detail.im_id'       => $im_id,
+            'platting_issue_detail.item_colour' => $c_id
+        ))->row();
+ 
+    if (!empty($sum_plating_row) && $sum_plating_row->issue_quantity !== null) {
+        $sum_plating = (float)$sum_plating_row->issue_quantity;
+    }
+ 
+    // ── Material issue sum ────────────────────────────────────────────────────
+    $result_mat_issue = $this->db
+        ->select_sum('issue_quantity')
+        ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
+        ->where('material_issue.material_issue_date <=', $issue_date_add)
+        ->order_by('material_issue.material_issue_date')
+        ->get_where('material_issue_detail', array('material_issue_detail.id_id' => $id_id))
+        ->result();
+ 
+    if (!empty($result_mat_issue) && $result_mat_issue[0]->issue_quantity !== null) {
+        $mat_issue = (float)$result_mat_issue[0]->issue_quantity;
+    }
+ 
+    $total_issue_quantity = $mat_issue + $sum_plating;
+ 
+    // ── Opening stock ─────────────────────────────────────────────────────────
+    $result_opening_stock_row1 = $this->db
+        ->select('item_master.im_id, item_master.item, colors.c_id, colors.color,
+                  item_dtl.opening_stock, item_dtl.opening_rate, item_dtl.id_id')
+        ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
+        ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
+        ->where('item_dtl.opening_stock >', 0)
+        ->get_where('item_dtl', array('item_dtl.id_id' => $id_id))
+        ->result();
+ 
+    if (!empty($result_opening_stock_row1)) {
+        $opening_stock_quantity1 = (float)$result_opening_stock_row1[0]->opening_stock;
+    }
+ 
+    // ══════════════════════════════════════════════════════════════════════════
+    // BUILD $data_array
+    // ══════════════════════════════════════════════════════════════════════════
+ 
+    if (count($result1) == 0) {
+ 
+        // ── No purchase receipts ──────────────────────────────────────────────
+        $result_opening_stock = $this->db
+            ->select('item_master.im_id, item_master.item, colors.c_id, colors.color,
+                      item_dtl.opening_stock, item_dtl.opening_rate, item_dtl.id_id')
+            ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
+            ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
+            ->where('item_dtl.opening_stock >', 0)
+            ->get_where('item_dtl', array('item_dtl.id_id' => $id_id))
+            ->result();
+ 
+        if (!empty($result_opening_stock)) {
+            $opn       = $result_opening_stock[0];
+            $item_rate = (float)$opn->opening_rate;
+ 
+            if ($total_issue_quantity > 0) {
+                $qnty = (float)$opn->opening_stock - $total_issue_quantity;
+                if ($qnty > 0) {
+                    $data_array[] = array(
+                        'im_id'                            => $opn->im_id,
+                        'id_id'                            => $opn->id_id,
+                        'item_name'                        => $opn->item,
+                        'c_id'                             => $opn->c_id,
+                        'color'                            => $opn->color,
+                        'purchase_order_receive_id'        => 0,
+                        'purchase_order_receive_detail_id' => 0,
+                        'item_quantity'                    => $qnty,
+                        'item_rate'                        => $item_rate,
+                    );
+                }
+            } else {
+                $data_array[] = array(
+                    'im_id'                            => $opn->im_id,
+                    'id_id'                            => $opn->id_id,
+                    'item_name'                        => $opn->item,
+                    'c_id'                             => $opn->c_id,
+                    'color'                            => $opn->color,
+                    'purchase_order_receive_id'        => 0,
+                    'purchase_order_receive_detail_id' => 0,
+                    'item_quantity'                    => (float)$opn->opening_stock,
+                    'item_rate'                        => $item_rate,
+                );
+            }
+ 
+            // ── Challan row — actual rate (0.00 if not set) ───────────────────
+            if ($sum_challan > 0) {
+                $data_array[] = array(
+                    'im_id'                            => $opn->im_id,
+                    'id_id'                            => $opn->id_id,
+                    'item_name'                        => $opn->item,
+                    'c_id'                             => $opn->c_id,
+                    'color'                            => $opn->color,
+                    'purchase_order_receive_id'        => 0,
+                    'purchase_order_receive_detail_id' => 0,
+                    'item_quantity'                    => $sum_challan,
+                    'item_rate'                        => $challan_item_rate, // actual challan rate
+                );
+            }
+ 
+            // ── Stock In row ──────────────────────────────────────────────────
+            if (!empty($sum_stock_in_row) && $sum_stock_in > 0) {
+                $data_array[] = array(
+                    'im_id'                            => $opn->im_id,
+                    'id_id'                            => $opn->id_id,
+                    'item_name'                        => $opn->item,
+                    'c_id'                             => $opn->c_id,
+                    'color'                            => $opn->color,
+                    'purchase_order_receive_id'        => 0,
+                    'purchase_order_receive_detail_id' => 0,
+                    'item_quantity'                    => $sum_stock_in,
+                    'item_rate'                        => (float)$sum_stock_in_row->item_rate,
+                );
+            }
+ 
+        } else {
+ 
+            // No opening stock
+            $result_opening_stock1 = $this->db
+                ->select('item_master.im_id, item_master.item, colors.c_id, colors.color,
+                          item_dtl.opening_stock, item_dtl.opening_rate, item_dtl.id_id')
+                ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
+                ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
+                ->get_where('item_dtl', array('item_dtl.id_id' => $id_id))
+                ->result();
+ 
+            if (!empty($result_opening_stock1)) {
+                $opn1 = $result_opening_stock1[0];
+ 
+                // ── Challan row ───────────────────────────────────────────────
+                if ($sum_challan > 0) {
+                    $challan_remaining = $sum_challan - $total_issue_quantity;
+                    if ($challan_remaining > 0) {
+                        $data_array[] = array(
+                            'im_id'                            => $opn1->im_id,
+                            'id_id'                            => $opn1->id_id,
+                            'item_name'                        => $opn1->item,
+                            'c_id'                             => $opn1->c_id,
+                            'color'                            => $opn1->color,
+                            'purchase_order_receive_id'        => 0,
+                            'purchase_order_receive_detail_id' => 0,
+                            'item_quantity'                    => $challan_remaining,
+                            'item_rate'                        => $challan_item_rate, // actual challan rate
+                        );
+                    }
+                }
+ 
+                // ── Stock In row ──────────────────────────────────────────────
+                if (!empty($sum_stock_in_row) && $sum_stock_in > 0) {
+                    $qnty = $sum_stock_in - $total_issue_quantity;
+                    if ($qnty > 0) {
+                        $data_array[] = array(
+                            'im_id'                            => $opn1->im_id,
+                            'id_id'                            => $opn1->id_id,
+                            'item_name'                        => $opn1->item,
+                            'c_id'                             => $opn1->c_id,
+                            'color'                            => $opn1->color,
+                            'purchase_order_receive_id'        => 0,
+                            'purchase_order_receive_detail_id' => 0,
+                            'item_quantity'                    => $qnty,
+                            'item_rate'                        => (float)$sum_stock_in_row->item_rate,
+                        );
+                    }
+                }
+            }
+        }
+ 
+    } else {
+ 
+        // ── Has purchase receipts ─────────────────────────────────────────────
+        $result = $this->db
+            ->select('purchase_order_receive_detail.*, item_master.im_id, item_master.item,
+                      colors.c_id, colors.color, item_dtl.opening_stock, item_dtl.opening_rate')
+            ->join('purchase_order_receive',
+                'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
+            ->join('item_dtl', 'item_dtl.id_id = purchase_order_receive_detail.id_id', 'left')
+            ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
+            ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
+            ->where('purchase_order_receive.purchase_order_receive_date <=', $issue_date_add)
+            ->order_by('purchase_order_receive_detail.purchase_order_receive_detail_id')
+            ->get_where('purchase_order_receive_detail', array('purchase_order_receive_detail.id_id' => $id_id))
+            ->result();
+ 
+        $result_mat_issue_row = $this->db
+            ->select('material_issue_detail.*')
+            ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
+            ->where('material_issue.material_issue_date <=', $issue_date_add)
+            ->order_by('material_issue.material_issue_date')
+            ->get_where('material_issue_detail', array('material_issue_detail.id_id' => $id_id))
+            ->result();
+ 
+        $result_opening_stock = $this->db
+            ->select('item_master.im_id, item_master.item, colors.c_id, colors.color,
+                      item_dtl.opening_stock, item_dtl.opening_rate, item_dtl.id_id')
+            ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
+            ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
+            ->where('item_dtl.opening_stock >', 0)
+            ->get_where('item_dtl', array('item_dtl.id_id' => $id_id))
+            ->result();
+ 
+        $result_opening_stock1 = $this->db
+            ->select('item_master.im_id, item_master.item, colors.c_id, colors.color,
+                      item_dtl.opening_stock, item_dtl.opening_rate, item_dtl.id_id')
+            ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
+            ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
+            ->get_where('item_dtl', array('item_dtl.id_id' => $id_id))
+            ->result();
+ 
+        if (!empty($result_opening_stock)) {
+            $opn = $result_opening_stock[0];
+ 
+            if (!empty($result_mat_issue_row)) {
+ 
+                $result_mat_issue_sum = $this->db
+                    ->select_sum('issue_quantity')
+                    ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
+                    ->where('material_issue.material_issue_date <=', $issue_date_add)
+                    ->order_by('material_issue.material_issue_date')
+                    ->get_where('material_issue_detail', array('material_issue_detail.id_id' => $id_id))
+                    ->result();
+ 
+                $result_mat_issue_without_purchase_row = $this->db
+                    ->select_sum('issue_quantity')
+                    ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
+                    ->where('material_issue.material_issue_date <=', $issue_date_add)
+                    ->where('material_issue_detail.purchase_order_receive_detail_id', 0)
+                    ->order_by('material_issue.material_issue_date')
+                    ->get_where('material_issue_detail', array('material_issue_detail.id_id' => $id_id))
+                    ->result();
+ 
+                $result_mat_issue_without_purchase = (!empty($result_mat_issue_without_purchase_row) && $result_mat_issue_without_purchase_row[0]->issue_quantity !== null)
+                    ? ((float)$result_mat_issue_without_purchase_row[0]->issue_quantity + $sum_plating)
+                    : $sum_plating;
+ 
+                if ((float)$opn->opening_stock > $total_issue_quantity) {
+                    $qnty = (float)$opn->opening_stock - $result_mat_issue_without_purchase;
+                    if ($qnty > 0) {
+                        $data_array[] = array(
+                            'im_id'                            => $opn->im_id,
+                            'id_id'                            => $opn->id_id,
+                            'item_name'                        => $opn->item,
+                            'c_id'                             => $opn->c_id,
+                            'color'                            => $opn->color,
+                            'purchase_order_receive_id'        => 0,
+                            'purchase_order_receive_detail_id' => 0,
+                            'item_quantity'                    => $qnty,
+                            'item_rate'                        => (float)$opn->opening_rate,
+                        );
+                    }
+ 
+                    // ── Challan row ───────────────────────────────────────────
+                    if ($sum_challan > 0) {
+                        $data_array[] = array(
+                            'im_id'                            => $opn->im_id,
+                            'id_id'                            => $opn->id_id,
+                            'item_name'                        => $opn->item,
+                            'c_id'                             => $opn->c_id,
+                            'color'                            => $opn->color,
+                            'purchase_order_receive_id'        => 0,
+                            'purchase_order_receive_detail_id' => 0,
+                            'item_quantity'                    => $sum_challan,
+                            'item_rate'                        => $challan_item_rate, // actual challan rate
+                        );
+                    }
+ 
+                    // ── Stock In row ──────────────────────────────────────────
+                    if (!empty($sum_stock_in_row) && $sum_stock_in > 0) {
+                        $without_purchase_stock_quantity = ((float)$opn->opening_stock + $sum_stock_in) - $result_mat_issue_without_purchase;
+                        $qnty1 = $without_purchase_stock_quantity - $qnty;
+                        if ($qnty1 > 0) {
+                            $data_array[] = array(
+                                'im_id'                            => $result_opening_stock1[0]->im_id,
+                                'id_id'                            => $result_opening_stock1[0]->id_id,
+                                'item_name'                        => $result_opening_stock1[0]->item,
+                                'c_id'                             => $result_opening_stock1[0]->c_id,
+                                'color'                            => $result_opening_stock1[0]->color,
+                                'purchase_order_receive_id'        => 0,
+                                'purchase_order_receive_detail_id' => 0,
+                                'item_quantity'                    => $qnty1,
+                                'item_rate'                        => (float)$sum_stock_in_row->item_rate,
+                            );
+                        }
+                    }
+ 
+                } else {
+ 
+                    // ── Challan row ───────────────────────────────────────────
+                    if ($sum_challan > 0) {
+                        $data_array[] = array(
+                            'im_id'                            => $opn->im_id,
+                            'id_id'                            => $opn->id_id,
+                            'item_name'                        => $opn->item,
+                            'c_id'                             => $opn->c_id,
+                            'color'                            => $opn->color,
+                            'purchase_order_receive_id'        => 0,
+                            'purchase_order_receive_detail_id' => 0,
+                            'item_quantity'                    => $sum_challan,
+                            'item_rate'                        => $challan_item_rate, // actual challan rate
+                        );
+                    }
+ 
+                    if (!empty($sum_stock_in_row) && $sum_stock_in > 0) {
+                        $without_purchase_stock_quantity = ((float)$opn->opening_stock + $sum_stock_in) - $result_mat_issue_without_purchase;
+                        if ($without_purchase_stock_quantity > 0) {
+                            $data_array[] = array(
+                                'im_id'                            => $result_opening_stock1[0]->im_id,
+                                'id_id'                            => $result_opening_stock1[0]->id_id,
+                                'item_name'                        => $result_opening_stock1[0]->item,
+                                'c_id'                             => $result_opening_stock1[0]->c_id,
+                                'color'                            => $result_opening_stock1[0]->color,
+                                'purchase_order_receive_id'        => 0,
+                                'purchase_order_receive_detail_id' => 0,
+                                'item_quantity'                    => $without_purchase_stock_quantity,
+                                'item_rate'                        => (float)$sum_stock_in_row->item_rate,
+                            );
+                        }
+                    }
+                }
+ 
+            } else {
+ 
+                // No material issues
+                $qnty = (float)$opn->opening_stock - $total_issue_quantity;
+                if ($qnty > 0) {
+                    $data_array[] = array(
+                        'im_id'                            => $opn->im_id,
+                        'id_id'                            => $opn->id_id,
+                        'item_name'                        => $opn->item,
+                        'c_id'                             => $opn->c_id,
+                        'color'                            => $opn->color,
+                        'purchase_order_receive_id'        => 0,
+                        'purchase_order_receive_detail_id' => 0,
+                        'item_quantity'                    => $qnty,
+                        'item_rate'                        => (float)$opn->opening_rate,
+                    );
+                }
+ 
+                // ── Challan row ───────────────────────────────────────────────
+                if ($sum_challan > 0) {
+                    $data_array[] = array(
+                        'im_id'                            => $opn->im_id,
+                        'id_id'                            => $opn->id_id,
+                        'item_name'                        => $opn->item,
+                        'c_id'                             => $opn->c_id,
+                        'color'                            => $opn->color,
+                        'purchase_order_receive_id'        => 0,
+                        'purchase_order_receive_detail_id' => 0,
+                        'item_quantity'                    => $sum_challan,
+                        'item_rate'                        => $challan_item_rate, // actual challan rate
+                    );
+                }
+ 
+                // ── Stock In row ──────────────────────────────────────────────
+                if (!empty($sum_stock_in_row) && $sum_stock_in > 0) {
+                    $data_array[] = array(
+                        'im_id'                            => $opn->im_id,
+                        'id_id'                            => $opn->id_id,
+                        'item_name'                        => $opn->item,
+                        'c_id'                             => $opn->c_id,
+                        'color'                            => $opn->color,
+                        'purchase_order_receive_id'        => 0,
+                        'purchase_order_receive_detail_id' => 0,
+                        'item_quantity'                    => $sum_stock_in,
+                        'item_rate'                        => (float)$sum_stock_in_row->item_rate,
+                    );
+                }
+            }
+ 
+        } else {
+ 
+            // No opening stock
+            // ── Challan row ───────────────────────────────────────────────────
+            if ($sum_challan > 0) {
+                $challan_remaining = $sum_challan - $total_issue_quantity;
+                if ($challan_remaining > 0 && !empty($result_opening_stock1)) {
+                    $data_array[] = array(
+                        'im_id'                            => $result_opening_stock1[0]->im_id,
+                        'id_id'                            => $result_opening_stock1[0]->id_id,
+                        'item_name'                        => $result_opening_stock1[0]->item,
+                        'c_id'                             => $result_opening_stock1[0]->c_id,
+                        'color'                            => $result_opening_stock1[0]->color,
+                        'purchase_order_receive_id'        => 0,
+                        'purchase_order_receive_detail_id' => 0,
+                        'item_quantity'                    => $challan_remaining,
+                        'item_rate'                        => $challan_item_rate, // actual challan rate
+                    );
+                }
+            }
+ 
+            // ── Stock In row ──────────────────────────────────────────────────
+            if (!empty($sum_stock_in_row) && $sum_stock_in > 0) {
+                $qnty = $sum_stock_in - $total_issue_quantity;
+                if ($qnty > 0 && !empty($result_opening_stock1)) {
+                    $data_array[] = array(
+                        'im_id'                            => $result_opening_stock1[0]->im_id,
+                        'id_id'                            => $result_opening_stock1[0]->id_id,
+                        'item_name'                        => $result_opening_stock1[0]->item,
+                        'c_id'                             => $result_opening_stock1[0]->c_id,
+                        'color'                            => $result_opening_stock1[0]->color,
+                        'purchase_order_receive_id'        => 0,
+                        'purchase_order_receive_detail_id' => 0,
+                        'item_quantity'                    => $qnty,
+                        'item_rate'                        => (float)$sum_stock_in_row->item_rate,
+                    );
+                }
+            }
+        }
+ 
+        // ── Purchase receipt rows ─────────────────────────────────────────────
+        $newly_added_quantity_purchase_order = 0;
+        $item_quantity                       = 0;
+ 
+        foreach ($result as $r) {
+            $newly_added_quantity_purchase_order += (float)$r->item_quantity;
+ 
+            if (($newly_added_quantity_purchase_order + $sum_stock_in + $sum_challan + $opening_stock_quantity1) <= $total_issue_quantity) {
+                continue;
+            }
+ 
+            $newly_added_quantity = 0;
+            foreach ($data_array as $da) {
+                $newly_added_quantity += (float)$da['item_quantity'];
+            }
+ 
+            $new_quantity  = $newly_added_quantity - ($opening_stock_quantity1 + $sum_stock_in + $sum_challan - $total_issue_quantity);
+            $item_quantity += (float)$r->item_quantity;
+ 
+            if ($new_quantity < 0) {
+                $actual_quantity = $new_quantity + $item_quantity;
+                if ($actual_quantity > 0) {
+                    $data_array[] = array(
+                        'im_id'                            => $r->im_id,
+                        'id_id'                            => $r->id_id,
+                        'item_name'                        => $r->item,
+                        'c_id'                             => $r->c_id,
+                        'color'                            => $r->color,
+                        'purchase_order_receive_id'        => $r->purchase_order_receive_id,
+                        'purchase_order_receive_detail_id' => $r->purchase_order_receive_detail_id,
+                        'item_quantity'                    => (float)$r->item_quantity,
+                        'item_rate'                        => (float)$r->item_rate,
+                    );
+                }
+            } else {
+                $item_quantity = ($newly_added_quantity_purchase_order + $opening_stock_quantity1 + $sum_stock_in + $sum_challan) - $total_issue_quantity;
+                $data_array[] = array(
+                    'im_id'                            => $r->im_id,
+                    'id_id'                            => $r->id_id,
+                    'item_name'                        => $r->item,
+                    'c_id'                             => $r->c_id,
+                    'color'                            => $r->color,
+                    'purchase_order_receive_id'        => $r->purchase_order_receive_id,
+                    'purchase_order_receive_detail_id' => $r->purchase_order_receive_detail_id,
+                    'item_quantity'                    => $item_quantity,
+                    'item_rate'                        => (float)$r->item_rate,
+                );
+            }
+        }
+ 
+    } // end else (has purchase receipts)
+ 
+    // ══════════════════════════════════════════════════════════════════════════
+    // BUILD $preview_data from $data_array
+    // ══════════════════════════════════════════════════════════════════════════
+    $a = (float)$issue_quantity_preview;
+ 
+    if (!empty($data_array)) {
+        for ($i = 0; $i < count($data_array); $i++) {
+            if ($a <= 0) break;
+ 
+            $b         = (float)($data_array[$i]['item_quantity'] ?? 0);
+            $item_rate = (float)($data_array[$i]['item_rate']     ?? 0);
+ 
+            if ($b <= 0) continue; // skip zero rows
+ 
+            $preview             = new stdClass();
+            $preview->item_rate  = $item_rate;
+ 
+            if ($b <= $a) {
+                $preview->consumed   = $b;
+                $preview->total_rate = $item_rate * $b;
+                $a                   = $a - $b;
+            } else {
+                $preview->consumed   = $a;
+                $preview->total_rate = $item_rate * $a;
+                $a                   = 0;
+            }
+ 
+            $preview->im_id                            = $data_array[$i]['im_id'];
+            $preview->id_id                            = $data_array[$i]['id_id'];
+            $preview->item_name                        = $data_array[$i]['item_name'];
+            $preview->c_id                             = $data_array[$i]['c_id'];
+            $preview->color                            = $data_array[$i]['color'];
+            $preview->purchase_order_receive_id        = $data_array[$i]['purchase_order_receive_id'];
+            $preview->purchase_order_receive_detail_id = $data_array[$i]['purchase_order_receive_detail_id'];
+ 
+            $preview_data[] = $preview;
+        }
+    }
+ 
+    $data['preview_data'] = $preview_data;
+    $data['status']       = !empty($preview_data);
+ 
+    return $data;
+}
 
     public function all_items_on_supp_purchase_order() {
         $sup_id = $this->input->post('sup_id');

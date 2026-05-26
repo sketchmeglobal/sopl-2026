@@ -114,7 +114,8 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
-                                    <input type="submit" name="check_stock_summary" value="Print" class="btn btn-sm btn-success col-lg-12" /> <br>
+                                    <input type="submit" name="check_stock_summary" value="Print-BILL WISE" class="btn btn-sm btn-success col-lg-12" /> <br>
+                                    <input type="submit" name="check_stock_summary_challan" value="Print-CHALLAN WISE" class="btn btn-sm btn-success col-lg-12" /> <br>
                                     <input type="submit" name="check_stock_summary_v" value="Print (V)" class="btn btn-sm btn-success col-lg-12" />
                                 </div>
                                 

@@ -36,9 +36,19 @@ else if ($segment == 'checking_stock_summary_status')
     <title>STOCK SUMMARY STATUS</title>
     <?php
 }
+else if ($segment == 'checking_stock_summary_challan_status')
+{ ?>
+    <title>STOCK SUMMARY CHALLAN STATUS</title>
+    <?php
+}
 else if ($segment == 'checking_stock_detail_ledger')
 { ?>
     <title>STOCK DETAIL LEDGER</title>
+    <?php
+}
+else if ($segment == 'checking_stock_challan_detail_ledger')
+{ ?>
+    <title>STOCK CHALLAN DETAIL LEDGER</title>
     <?php
 }
 else if ($segment == 'outstanding_report')
@@ -94,6 +104,11 @@ else if ($segment == 'supplier_purchase_ledger')
 else if ($segment == 'supplier_wise_purchase_position')
 { ?>
     <title>SUPPLIER WISE PURCHASE POSITION</title>
+    <?php
+}
+else if ($segment == 'supplier_wise_challan_purchase_position')
+{ ?>
+    <title>SUPPLIER WISE CHALLAN PURCHASE POSITION</title>
     <?php
 }
 else if ($segment == 'supplier_purchase_ledger_wo_zero')
@@ -2239,8 +2254,15 @@ echo   round($res->total_quantity); $total_qntys += $res->total_quantity;
         $sum_purchase_order = $r->final_pur_rcv_qnty;
         $sum_material_issue = $r->final_mat_issue_qnty;
         $sum_stock_in = $r->final_stock_in_qnty;
-        
-        $current_stock = ($opening_stock + $sum_purchase_order - $sum_material_issue + $sum_stock_in);
+        $challan_row = $this->db->select_sum('purchase_challan_order_receive_detail.item_quantity')
+            ->from('purchase_challan_order_receive_detail')
+            ->join('purchase_challan_order_receive', 'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
+            ->where('purchase_challan_order_receive_detail.id_id', $r->id_id)
+            ->where('purchase_challan_order_receive_detail.status', 1)
+            ->where('purchase_challan_order_receive.status', 1)
+            ->get()->row();
+        $sum_challan = (!empty($challan_row) && $challan_row->item_quantity !== null) ? (float)$challan_row->item_quantity : 0;
+        $current_stock = ($opening_stock + $sum_purchase_order + $sum_challan - $sum_material_issue + $sum_stock_in);
         
         echo number_format($current_stock, 2) . "<br/>";
         $tot_current_stock += $current_stock;
@@ -3587,8 +3609,15 @@ ALTERED/REJECTED</th>
         $sum_purchase_order = $r->final_pur_rcv_qnty;
         $sum_material_issue = $r->final_mat_issue_qnty;
         $sum_stock_in = $r->final_stock_in_qnty;
-
-        $current_stock = ($opening_stock + $sum_purchase_order - $sum_material_issue + $sum_stock_in);
+        $challan_row = $this->db->select_sum('purchase_challan_order_receive_detail.item_quantity')
+            ->from('purchase_challan_order_receive_detail')
+            ->join('purchase_challan_order_receive', 'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
+            ->where('purchase_challan_order_receive_detail.id_id', $r->id_id)
+            ->where('purchase_challan_order_receive_detail.status', 1)
+            ->where('purchase_challan_order_receive.status', 1)
+            ->get()->row();
+        $sum_challan = (!empty($challan_row) && $challan_row->item_quantity !== null) ? (float)$challan_row->item_quantity : 0;
+        $current_stock = ($opening_stock + $sum_purchase_order + $sum_challan - $sum_material_issue + $sum_stock_in);
 
         echo number_format($current_stock, 2) . "<br/>";
         $tot_current_stock += $current_stock;
@@ -4041,8 +4070,15 @@ GROUP BY
         $sum_purchase_order = $r->final_pur_rcv_qnty;
         $sum_material_issue = $r->final_mat_issue_qnty;
         $sum_stock_in = $r->final_stock_in_qnty;
-
-        $current_stock = ($opening_stock + $sum_purchase_order - $sum_material_issue + $sum_stock_in);
+        $challan_row = $this->db->select_sum('purchase_challan_order_receive_detail.item_quantity')
+            ->from('purchase_challan_order_receive_detail')
+            ->join('purchase_challan_order_receive', 'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
+            ->where('purchase_challan_order_receive_detail.id_id', $r->id_id)
+            ->where('purchase_challan_order_receive_detail.status', 1)
+            ->where('purchase_challan_order_receive.status', 1)
+            ->get()->row();
+        $sum_challan = (!empty($challan_row) && $challan_row->item_quantity !== null) ? (float)$challan_row->item_quantity : 0;
+        $current_stock = ($opening_stock + $sum_purchase_order + $sum_challan - $sum_material_issue + $sum_stock_in);
 
         echo number_format($current_stock, 2) . "<br/>";
         $tot_current_stock += $current_stock;
@@ -4119,466 +4155,384 @@ GROUP BY
 		<?php
 } ?>
 	
-	<?php if ($segment == 'leather_status_po')
-{
-?>
-		<section class="sheet padding-5mm" style="height: auto">
-		<div>
-			<div class="clearfix"></div>
-			<div class="container">
-				<div class="row border_all text-center text-uppercase mar_bot_3">
-		<?php if ($segment1 == 'leather_status_po')
-    { ?>
-	    <h3 class="mar_0 head_font">Leather Status Details</h3>
-	    <?php
+<?php if ($segment == 'leather_status_po') { ?>
+<style>
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+        padding: 5px;
+        text-align: left;
+        font-size: 12px;
+        white-space: nowrap;
     }
-    else
-    { ?>
-	    <h3 class="mar_0 head_font">Item Status Details</h3> 
-	    <?php
-    } ?>
-				</div>
-				<div class="row mar_bot_3">
-					<div class="col-sm-6 border_all header_left">
-						<h4 class=""><strong>SHILPA OVERSEAS PVT. LTD. </strong></h4>
-						<p class="mar_0">KAIKHALI, CHIRIAMORE,P.O. : R.GOPALPUR, KOLKATA - 700 136</p>
-					</div>
-					<div class="col-sm-6 border_all header_right">
-						<br />
-					</div>
-				</div>
-				<!--table data-->
-				<div class="row">
-					<div class="container">
-						<div class="row">
-							<div class="table-responsive">
-								<!--<h5>Retrieve Table</h5>-->
-								<table id="all_det" class="table table-bordered">
-									<thead>
-										<tr>
-											<th>PUR. #</th>
-											<th>Supplier Name</th>
-											<th>PUR. DT.</th>
-											<th class="text-center">PUR. QNTY.</th>
-											<th class="text-center">SUPP. #</th>
-											<th class="text-center">SUPP. DT.</th>
-											<th class="text-center">SUPP. QNTY.</th>
-											<th class="text-center">RCPT. #</th>
-											<th class="text-center">RCPT. DT.</th>
-											<th class="text-center">RCPT. QNTY.</th>
-											<th class="text-center">RCPT. RATE</th>
-											<th class="text-center">BAL. QNTY.</th>
-										</tr>
-									</thead>
-									<tbody>
-										<?php
-    if (count($result) > 0)
-    {
-        foreach ($result as $r)
-        {
-            // foreach($item_id as $l) {
-            // 	if($l == $r->item_dtl) {
-            // 		continue 2;
-            // 	}
-            // }
-            $pod_quantity = 0;
-            $sup_quantity = 0;
-            $rcv_quantity = 0;
-            $bal_quantity = 0;
-            $tot_pod_quantity = 0;
-            $tot_sup_quantity = 0;
-            $tot_rcv_quantity = 0;
-            $tot_bal_quantity = 0;
-?>
-											<tr><th colspan="12" style="text-align: center;"><?=$r->item
-?> (<?=$r->color
-?>)</th>
-											</tr>
+</style>
+<section class="sheet padding-5mm" style="height: auto">
+<div>
+    <div class="clearfix"></div>
+    <div class="container">
+        <div class="row border_all text-center text-uppercase mar_bot_3">
+            <?php if ($segment1 == 'leather_status_po') { ?>
+                <h3 class="mar_0 head_font">Leather Status Details</h3>
+            <?php } else { ?>
+                <h3 class="mar_0 head_font">Item Status Details</h3>
+            <?php } ?>
+        </div>
+        <div class="row mar_bot_3">
+            <div class="col-sm-6 border_all header_left">
+                <h4><strong>SHILPA OVERSEAS PVT. LTD.</strong></h4>
+                <p class="mar_0">KAIKHALI, CHIRIAMORE, P.O. : R.GOPALPUR, KOLKATA - 700 136</p>
+            </div>
+            <div class="col-sm-6 border_all header_right"><br /></div>
+        </div>
 
-   <?php
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="table-responsive">
+                        <table id="all_det" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>PUR. #</th>
+                                    <th>Supplier Name</th>
+                                    <th>PUR. DT.</th>
+                                    <th class="text-center">PUR. QNTY.</th>
+                                    <th class="text-center">SUPP. #</th>
+                                    <th class="text-center">SUPP. DT.</th>
+                                    <th class="text-center">SUPP. QNTY.</th>
+                                    <th class="text-center">CHALLAN. #</th>
+                                    <th class="text-center">CHALLAN. DT.</th>
+                                    <th class="text-center">CHALLAN. QNTY.</th>
+                                    <th class="text-center">RCPT. #</th>
+                                    <th class="text-center">RCPT. DT.</th>
+                                    <th class="text-center">RCPT. QNTY.</th>
+                                    <th class="text-center">RCPT. RATE</th>
+                                    <th class="text-center">BAL. QNTY.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                            if (count($result) > 0) {
+                                foreach ($result as $r) {
+                                    $tot_pod_quantity     = 0;
+                                    $tot_sup_quantity     = 0;
+                                    $tot_challan_quantity = 0;
+                                    $tot_rcv_quantity     = 0;
+                                    $tot_bal_quantity     = 0;
+                            ?>
 
-            $result_purc = $this
-                ->db
-                ->select('purchase_order.*, item_master.item, colors.color, item_dtl.id_id, acc_master.name')
-                ->join('purchase_order_details', 'purchase_order_details.po_id = purchase_order.po_id', 'left')
-                ->join('item_dtl', 'item_dtl.id_id = purchase_order_details.id_id', 'left')
-                ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
-                ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
-                ->join('acc_master', 'acc_master.am_id = purchase_order.am_id', 'left')
-                ->where('purchase_order_details.id_id', $r->id_id)
-                ->where('purchase_order.status', '1')
-                ->order_by('purchase_order.po_number')
-                ->get_where('purchase_order')
-                ->result(); ?>
-             <?php
-            if (count($result_purc) > 0)
-            {
-                foreach ($result_purc as $rc)
-                { ?>
-                <tr>                                                                        
-             	<td>
-             <?php
-                    echo $rc->po_number . "<br />";
-?>
-             </td>
-             <td>
-             <?php
-                    echo $rc->name . "<br />";
-?>
-             </td>
-             <td>
-             <?php
-                    echo date("d-m-Y", strtotime($rc->po_date)) . "<br />";
-?>
-             </td>
-             <td style="text-align: right;">
-             <?php
-                    $result_pu = $this
-                        ->db
-                        ->select_sum('purchase_order_details.pod_quantity')
-                        ->join('purchase_order', 'purchase_order.po_id = purchase_order_details.po_id', 'left')
-                        ->where('purchase_order_details.id_id', $rc->id_id)
-                        ->where('purchase_order_details.po_id', $rc->po_id)
-                        ->where('purchase_order.status', '1')
-                        ->group_by('purchase_order_details.po_id')
-                        ->get_where('purchase_order_details')
-                        ->row(); ?>
-            <?php
-                    if (count($result_pu) > 0)
-                    {
-                        $pod_quantity += $result_pu->pod_quantity;
-                        $tot_pod_quantity += $result_pu->pod_quantity;
-                        echo $result_pu->pod_quantity . "<br />";
-                    }
-                    else
-                    {
-                        echo "<br />";
-                    }
-?>
-             </td>
-             <td>
-             <?php
-                    $result_sup = $this
-                        ->db
-                        ->select('supp_purchase_order.*, supp_purchase_order_detail.id_id')
-                        ->join('supp_purchase_order', 'supp_purchase_order.sup_id = supp_purchase_order_detail.sup_id', 'left')
-                        ->where('supp_purchase_order_detail.id_id', $rc->id_id)
-                        ->where('supp_purchase_order.po_id', $rc->po_id)
-                        ->where('supp_purchase_order.supp_status', '1')
-                        ->get_where('supp_purchase_order_detail')
-                        ->result(); ?>
-            <?php
-                    if (count($result_sup) > 0)
-                    {
-                        foreach ($result_sup as $r_s)
-                        {
-                            echo $r_s->supp_po_number . "<br />";
-                        }
-                    }
-                    else
-                    {
-                        echo "<br />";
-                    }
-?>
-             </td>
-             <td>
-             <?php
-                    $result_sup = $this
-                        ->db
-                        ->select('supp_purchase_order.*, supp_purchase_order_detail.id_id')
-                        ->join('supp_purchase_order', 'supp_purchase_order.sup_id = supp_purchase_order_detail.sup_id', 'left')
-                        ->where('supp_purchase_order_detail.id_id', $rc->id_id)
-                        ->where('supp_purchase_order.po_id', $rc->po_id)
-                        ->where('supp_purchase_order.supp_status', '1')
-                        ->get_where('supp_purchase_order_detail')
-                        ->result(); ?>
-            <?php
-                    if (count($result_sup) > 0)
-                    {
-                        foreach ($result_sup as $r_s)
-                        {
-                            echo date("d-m-Y", strtotime($r_s->pur_order_date)) . "<br />";
-                        }
-                    }
-                    else
-                    {
-                        echo "<br />";
-                    }
-?>
-             </td>
-             <td style="text-align: right;">
-             <?php
-                    $result_sup = $this
-                        ->db
-                        ->select('supp_purchase_order.*, supp_purchase_order_detail.id_id')
-                        ->join('supp_purchase_order_detail', 'supp_purchase_order_detail.sup_id = supp_purchase_order.sup_id', 'left')
-                        ->where('supp_purchase_order_detail.id_id', $rc->id_id)
-                        ->where('supp_purchase_order.po_id', $rc->po_id)
-                        ->where('supp_purchase_order.supp_status', '1')
-                        ->get_where('supp_purchase_order')
-                        ->row();
-                    if (count($result_sup) > 0)
-                    {
-                        $result_su = $this
-                            ->db
-                            ->select('supp_purchase_order_detail.item_qty')
-                            ->join('supp_purchase_order', 'supp_purchase_order.sup_id = supp_purchase_order_detail.sup_id', 'left')
-                            ->where('supp_purchase_order_detail.id_id', $rc->id_id)
-                            ->where('supp_purchase_order.sup_id', $result_sup->sup_id)
-                            ->where('supp_purchase_order_detail.status', '1')
-                        // ->group_by('supp_purchase_order_detail.sup_id')
-                        
-                            ->get_where('supp_purchase_order_detail')
-                            ->result();
-                        if (count($result_su) > 0)
-                        {
-                            foreach ($result_su as $r_s)
-                            {
-?>
-            <?php
-                                $sup_quantity += $r_s->item_qty;
-                                $tot_sup_quantity += $r_s->item_qty;
-                                echo $r_s->item_qty . "<br />";
-                            }
-                        }
-                    }
-                    else
-                    {
-                        echo "<br />";
-                    } ?>
-             </td>
+                            <!-- ITEM HEADER ROW -->
+                            <tr>
+                                <th colspan="15" style="text-align:center">
+                                    <?= $r->item ?> (<?= $r->color ?>)
+                                </th>
+                            </tr>
 
+                            <?php
+                            $result_purc = $this->db
+                                ->select('purchase_order.po_id, purchase_order.po_number,
+                                          purchase_order.po_date, purchase_order.am_id,
+                                          item_dtl.id_id, acc_master.name')
+                                ->join('purchase_order_details', 'purchase_order_details.po_id = purchase_order.po_id', 'left')
+                                ->join('item_dtl', 'item_dtl.id_id = purchase_order_details.id_id', 'left')
+                                ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
+                                ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
+                                ->join('acc_master', 'acc_master.am_id = purchase_order.am_id', 'left')
+                                ->where('purchase_order_details.id_id', $r->id_id)
+                                ->where('purchase_order.status', '1')
+                                ->group_by('purchase_order.po_id')
+                                ->order_by('purchase_order.po_number')
+                                ->get_where('purchase_order')->result();
 
+                            if (!empty($result_purc)) {
+                                foreach ($result_purc as $rc) {
 
-             <td>
-             <?php
-                    $result_rcv = $this
-                        ->db
-                        ->select('purchase_order_receive.*, purchase_order_receive_detail.id_id')
-                        ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
-                        ->where('purchase_order_receive_detail.id_id', $rc->id_id)
-                        ->where('purchase_order_receive_detail.po_id', $rc->po_id)
-                        ->where('purchase_order_receive.status', '1')
-                    // ->group_by('purchase_order_receive_detail.purchase_order_receive_id')
-                    
-                        ->get_where('purchase_order_receive_detail')
-                        ->result(); ?>
-            <?php if (count($result_rcv) > 0)
-                    {
-                        foreach ($result_rcv as $r_r)
-                        {
-                            echo $r_r->purchase_order_receive_bill_no . "<br />";
-                        }
-                    }
-                    else
-                    {
-                        echo "<br />";
-                    }
+                                    // ── per row variables ─────────────────
+                                    $row_pod_qty     = 0;
+                                    $row_sup_qty     = 0;
+                                    $row_challan_qty = 0;
+                                    $row_rcv_qty     = 0;
+                            ?>
+                            <tr>
+                                <!-- PUR. # -->
+                                <td><?= $rc->po_number ?></td>
 
-?>
-             </td>
-             <td>
-             <?php
-                    $result_rcv = $this
-                        ->db
-                        ->select('purchase_order_receive.*, purchase_order_receive_detail.id_id')
-                        ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
-                        ->where('purchase_order_receive_detail.id_id', $rc->id_id)
-                        ->where('purchase_order_receive_detail.po_id', $rc->po_id)
-                        ->where('purchase_order_receive.status', '1')
-                    // ->group_by('purchase_order_receive_detail.purchase_order_receive_id')
-                    
-                        ->get_where('purchase_order_receive_detail')
-                        ->result(); ?>
-            <?php if (count($result_rcv) > 0)
-                    {
-                        foreach ($result_rcv as $r_r)
-                        {
-                            echo date("d-m-Y", strtotime($r_r->purchase_order_receive_date)) . "<br />";
-                        }
-                    }
-                    else
-                    {
-                        echo "<br />";
-                    }
-?>
-             </td>
-             <td style="text-align: right;">
-             <?php
-                    $result_rc = $this
-                        ->db
-                        ->select('purchase_order_receive_detail.item_quantity')
-                        ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
-                        ->where('purchase_order_receive_detail.id_id', $rc->id_id)
-                        ->where('purchase_order_receive_detail.po_id', $rc->po_id)
-                        ->where('purchase_order_receive_detail.status', '1')
-                    // ->group_by('purchase_order_receive_detail.purchase_order_receive_id')
-                    
-                        ->get('purchase_order_receive_detail')
-                        ->result();
+                                <!-- Supplier Name -->
+                                <td><?= $rc->name ?></td>
 
-                    if (count($result_rc) > 0)
-                    {
-                        foreach ($result_rc as $r_r)
-                        {
-                            $rcv_quantity += $r_r->item_quantity;
-                            $tot_rcv_quantity += $r_r->item_quantity;
-                            echo $r_r->item_quantity . "<br />";
-                        }
-                    }
-                    else
-                    {
-                        echo "<br />";
-                    }
-?>
-             </td>
-             <td style="text-align: right;">
-                 <?php 
-                    $result_rci = $this
-                        ->db
-                        ->select('purchase_order_receive_detail.item_rate')
-                        ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
-                        ->where('purchase_order_receive_detail.id_id', $rc->id_id)
-                        ->where('purchase_order_receive_detail.po_id', $rc->po_id)
-                        ->where('purchase_order_receive_detail.status', '1')
-                        ->get('purchase_order_receive_detail')
-                        ->result();
+                                <!-- PUR. DT. -->
+                                <td><?= date("d-m-Y", strtotime($rc->po_date)) ?></td>
 
-                    if (count($result_rci) > 0) {
-                        foreach ($result_rci as $r_ri){
-                            echo $r_ri->item_rate . "<br />";
-                        }
-                    }
-                 ?>
-             </td>
-             <td style="text-align: right;">
-             	<?php
-                    $result_pu = $this
-                        ->db
-                        ->select_sum('purchase_order_details.pod_quantity')
-                        ->join('purchase_order', 'purchase_order.po_id = purchase_order_details.po_id', 'left')
-                        ->where('purchase_order_details.id_id', $rc->id_id)
-                        ->where('purchase_order_details.po_id', $rc->po_id)
-                        ->where('purchase_order.status', '1')
-                        ->group_by('purchase_order_details.po_id')
-                        ->get_where('purchase_order_details')
-                        ->row(); ?>
-            <?php
-                    if (count($result_pu) > 0)
-                    {
-                        $pod_quantity = $result_pu->pod_quantity;
-                    }
-                    else
-                    {
-                        $pod_quantity = 0;
-                    }
+                                <!-- PUR. QNTY. -->
+                                <td style="text-align:right">
+                                    <?php
+                                    $this->db->reset_query();
+                                    $result_pu = $this->db
+                                        ->select_sum('purchase_order_details.pod_quantity')
+                                        ->from('purchase_order_details')
+                                        ->join('purchase_order', 'purchase_order.po_id = purchase_order_details.po_id', 'left')
+                                        ->where('purchase_order_details.id_id', $rc->id_id)
+                                        ->where('purchase_order_details.po_id', $rc->po_id)
+                                        ->where('purchase_order.status', '1')
+                                        ->get()->row();
+                                    if (!empty($result_pu) && $result_pu->pod_quantity !== null) {
+                                        $row_pod_qty       = (float)$result_pu->pod_quantity;
+                                        $tot_pod_quantity += $row_pod_qty;
+                                        echo $row_pod_qty;
+                                    } else { echo '0'; }
+                                    ?>
+                                </td>
 
-                    $result_sup = $this
-                        ->db
-                        ->select('supp_purchase_order.*, supp_purchase_order_detail.id_id')
-                        ->join('supp_purchase_order_detail', 'supp_purchase_order_detail.sup_id = supp_purchase_order.sup_id', 'left')
-                        ->where('supp_purchase_order_detail.id_id', $rc->id_id)
-                        ->where('supp_purchase_order.po_id', $rc->po_id)
-                        ->where('supp_purchase_order.supp_status', '1')
-                        ->get_where('supp_purchase_order')
-                        ->row();
-                    if (count($result_sup) > 0)
-                    {
-                        $result_su = $this
-                            ->db
-                            ->select_sum('supp_purchase_order_detail.item_qty')
-                            ->join('supp_purchase_order', 'supp_purchase_order.sup_id = supp_purchase_order_detail.sup_id', 'left')
-                            ->where('supp_purchase_order_detail.id_id', $rc->id_id)
-                            ->where('supp_purchase_order.sup_id', $result_sup->sup_id)
-                            ->where('supp_purchase_order_detail.status', '1')
-                            ->group_by('supp_purchase_order.po_id')
-                            ->get_where('supp_purchase_order_detail')
-                            ->row();
-                        if (count($result_su) > 0)
-                        {
-?>
-            <?php
-                            $sup_quantity = $result_su->item_qty;
-                        }
-                    }
-                    else
-                    {
-                        $sup_quantity = 0;
-                    }
+                                <!-- SUPP. # -->
+                                <td>
+                                    <?php
+                                    $this->db->reset_query();
+                                    $result_sup = $this->db
+                                        ->select('supp_purchase_order.supp_po_number')
+                                        ->from('supp_purchase_order_detail')
+                                        ->join('supp_purchase_order', 'supp_purchase_order.sup_id = supp_purchase_order_detail.sup_id', 'left')
+                                        ->where('supp_purchase_order_detail.id_id', $rc->id_id)
+                                        ->where('supp_purchase_order.po_id', $rc->po_id)
+                                        ->where('supp_purchase_order.supp_status', '1')
+                                        ->get()->result();
+                                    if (!empty($result_sup)) {
+                                        foreach ($result_sup as $r_s) {
+                                            echo $r_s->supp_po_number . "<br />";
+                                        }
+                                    } else { echo '-'; }
+                                    ?>
+                                </td>
 
-                    $result_rc = $this
-                        ->db
-                        ->select_sum('purchase_order_receive_detail.item_quantity')
-                        ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
-                        ->where('purchase_order_receive_detail.id_id', $rc->id_id)
-                        ->where('purchase_order_receive_detail.po_id', $rc->po_id)
-                        ->where('purchase_order_receive_detail.status', '1')
-                        ->group_by('purchase_order_receive_detail.po_id')
-                        ->get('purchase_order_receive_detail')
-                        ->row();
-?>
-            <?php
-                    if (count($result_rc) > 0)
-                    {
-                        $rcv_quantity = $result_rc->item_quantity;
-                    }
-                    else
-                    {
-                        $rcv_quantity = 0;
-                    }
-?>
-            <?php
-                    $bal_quantity = (($pod_quantity + $sup_quantity) - $rcv_quantity);
-                    $tot_bal_quantity += $bal_quantity;
-                    echo $bal_quantity . "<br />";
-?>
-             </td>
-             </tr>
-             <?php
-                }
-            } ?>
-             <tr>
-             <tr>
-             	<th colspan="3">
-                 Total             	
-             </th>
-             <td style="text-align: right;">
-             	<?php echo $tot_pod_quantity;
-            $tot_pod_quantity = 0;
-?>
-             </td>
-             <td colspan="3" style="text-align: right;">
-             	<?php echo $tot_sup_quantity;
-            $tot_sup_quantity = 0;
-?>
-             </td>
-             <td colspan="3" style="text-align: right;">
-             	<?php echo $tot_rcv_quantity;
-            $tot_rcv_quantity = 0;
-?>
-             </td>
-             <td style="text-align: right;"></td>
-             <td colspan="3" style="text-align: right;">
-             	<?php echo $tot_bal_quantity;
-            $tot_bal_quantity = 0;
-?>
-             </td>
-             </tr>											
+                                <!-- SUPP. DT. -->
+                                <td>
+                                    <?php
+                                    $this->db->reset_query();
+                                    $result_sup = $this->db
+                                        ->select('supp_purchase_order.pur_order_date')
+                                        ->from('supp_purchase_order_detail')
+                                        ->join('supp_purchase_order', 'supp_purchase_order.sup_id = supp_purchase_order_detail.sup_id', 'left')
+                                        ->where('supp_purchase_order_detail.id_id', $rc->id_id)
+                                        ->where('supp_purchase_order.po_id', $rc->po_id)
+                                        ->where('supp_purchase_order.supp_status', '1')
+                                        ->get()->result();
+                                    if (!empty($result_sup)) {
+                                        foreach ($result_sup as $r_s) {
+                                            echo date("d-m-Y", strtotime($r_s->pur_order_date)) . "<br />";
+                                        }
+                                    } else { echo '-'; }
+                                    ?>
+                                </td>
 
-											<?php
-        }
-    } ?>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-		<?php
-} ?>
+                                <!-- SUPP. QNTY. -->
+                                <td style="text-align:right">
+                                    <?php
+                                    $this->db->reset_query();
+                                    $result_sup_ids = $this->db
+                                        ->select('supp_purchase_order.sup_id')
+                                        ->from('supp_purchase_order')
+                                        ->join('supp_purchase_order_detail', 'supp_purchase_order_detail.sup_id = supp_purchase_order.sup_id', 'left')
+                                        ->where('supp_purchase_order_detail.id_id', $rc->id_id)
+                                        ->where('supp_purchase_order.po_id', $rc->po_id)
+                                        ->where('supp_purchase_order.supp_status', '1')
+                                        ->get()->result();
+                                    if (!empty($result_sup_ids)) {
+                                        foreach ($result_sup_ids as $r_sup) {
+                                            $this->db->reset_query();
+                                            $result_su = $this->db
+                                                ->select('supp_purchase_order_detail.item_qty')
+                                                ->from('supp_purchase_order_detail')
+                                                ->join('supp_purchase_order', 'supp_purchase_order.sup_id = supp_purchase_order_detail.sup_id', 'left')
+                                                ->where('supp_purchase_order_detail.id_id', $rc->id_id)
+                                                ->where('supp_purchase_order.sup_id', $r_sup->sup_id)
+                                                ->where('supp_purchase_order_detail.status', '1')
+                                                ->get()->result();
+                                            if (!empty($result_su)) {
+                                                foreach ($result_su as $r_s) {
+                                                    $row_sup_qty      += (float)$r_s->item_qty;
+                                                    $tot_sup_quantity += (float)$r_s->item_qty;
+                                                    echo $r_s->item_qty . "<br />";
+                                                }
+                                            }
+                                        }
+                                    } else { echo '-'; }
+                                    ?>
+                                </td>
+
+                                <!-- CHALLAN. # -->
+                                <td>
+                                    <?php
+                                    $this->db->reset_query();
+                                    $result_challan = $this->db
+                                        ->select('purchase_challan_order_receive.purchase_order_receive_bill_no')
+                                        ->from('purchase_challan_order_receive_detail')
+                                        ->join('purchase_challan_order_receive',
+                                            'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id',
+                                            'left')
+                                        ->where('purchase_challan_order_receive_detail.po_id', $rc->po_id)
+                                        ->where('purchase_challan_order_receive_detail.id_id', $rc->id_id)
+                                        ->where('purchase_challan_order_receive_detail.status', '1')
+                                        ->where('purchase_challan_order_receive.status', '1')
+                                        ->get()->result();
+                                    if (!empty($result_challan)) {
+                                        foreach ($result_challan as $r_c) {
+                                            echo $r_c->purchase_order_receive_bill_no . "<br />";
+                                        }
+                                    } else { echo '-'; }
+                                    ?>
+                                </td>
+
+                                <!-- CHALLAN. DT. -->
+                                <td>
+                                    <?php
+                                    $this->db->reset_query();
+                                    $result_challan = $this->db
+                                        ->select('purchase_challan_order_receive.purchase_order_receive_date')
+                                        ->from('purchase_challan_order_receive_detail')
+                                        ->join('purchase_challan_order_receive',
+                                            'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id',
+                                            'left')
+                                        ->where('purchase_challan_order_receive_detail.po_id', $rc->po_id)
+                                        ->where('purchase_challan_order_receive_detail.id_id', $rc->id_id)
+                                        ->where('purchase_challan_order_receive_detail.status', '1')
+                                        ->where('purchase_challan_order_receive.status', '1')
+                                        ->get()->result();
+                                    if (!empty($result_challan)) {
+                                        foreach ($result_challan as $r_c) {
+                                            echo date("d-m-Y", strtotime($r_c->purchase_order_receive_date)) . "<br />";
+                                        }
+                                    } else { echo '-'; }
+                                    ?>
+                                </td>
+
+                                <!-- CHALLAN. QNTY. -->
+                                <td style="text-align:right">
+                                    <?php
+                                    $this->db->reset_query();
+                                    $result_challan_qty = $this->db
+                                        ->select('purchase_challan_order_receive_detail.item_quantity')
+                                        ->from('purchase_challan_order_receive_detail')
+                                        ->join('purchase_challan_order_receive',
+                                            'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id',
+                                            'left')
+                                        ->where('purchase_challan_order_receive_detail.po_id', $rc->po_id)
+                                        ->where('purchase_challan_order_receive_detail.id_id', $rc->id_id)
+                                        ->where('purchase_challan_order_receive_detail.status', '1')
+                                        ->where('purchase_challan_order_receive.status', '1')
+                                        ->get()->result();
+                                    if (!empty($result_challan_qty)) {
+                                        foreach ($result_challan_qty as $r_c) {
+                                            $row_challan_qty          += (float)$r_c->item_quantity;
+                                            $tot_challan_quantity     += (float)$r_c->item_quantity;
+                                            echo $r_c->item_quantity . "<br />";
+                                        }
+                                    } else { echo '-'; }
+                                    ?>
+                                </td>
+
+                                <?php
+                                /* One row per detail line — bill # and date joined to each
+                                   qty row so all RCPT columns have the same row count. */
+                                $sql_rcpt = "SELECT
+                                        por.purchase_order_receive_bill_no,
+                                        por.purchase_order_receive_date,
+                                        pord.item_quantity AS rcpt_qty,
+                                        pord.item_rate     AS rcpt_rate
+                                    FROM purchase_order_receive_detail pord
+                                    INNER JOIN purchase_order_receive por
+                                        ON por.purchase_order_receive_id = pord.purchase_order_receive_id
+                                    WHERE pord.id_id = {$rc->id_id}
+                                    AND pord.po_id  = {$rc->po_id}
+                                    AND por.status  = 1
+                                    ORDER BY por.purchase_order_receive_date,
+                                             por.purchase_order_receive_id";
+                                $result_rcpt_data = $this->db->query($sql_rcpt)->result();
+                                ?>
+
+                                <!-- RCPT. # -->
+                                <td>
+                                    <?php
+                                    if (!empty($result_rcpt_data)) {
+                                        foreach ($result_rcpt_data as $r_rcpt) {
+                                            echo htmlspecialchars($r_rcpt->purchase_order_receive_bill_no) . "<br />";
+                                        }
+                                    } else { echo '-'; }
+                                    ?>
+                                </td>
+
+                                <!-- RCPT. DT. -->
+                                <td>
+                                    <?php
+                                    if (!empty($result_rcpt_data)) {
+                                        foreach ($result_rcpt_data as $r_rcpt) {
+                                            echo date("d-m-Y", strtotime($r_rcpt->purchase_order_receive_date)) . "<br />";
+                                        }
+                                    } else { echo '-'; }
+                                    ?>
+                                </td>
+
+                                <!-- RCPT. QNTY. -->
+                                <td style="text-align:right">
+                                    <?php
+                                    if (!empty($result_rcpt_data)) {
+                                        foreach ($result_rcpt_data as $r_rcpt) {
+                                            $row_rcv_qty      += (float)$r_rcpt->rcpt_qty;
+                                            $tot_rcv_quantity += (float)$r_rcpt->rcpt_qty;
+                                            echo $r_rcpt->rcpt_qty . "<br />";
+                                        }
+                                    } else { echo '-'; }
+                                    ?>
+                                </td>
+
+                                <!-- RCPT. RATE -->
+                                <td style="text-align:right">
+                                    <?php
+                                    if (!empty($result_rcpt_data)) {
+                                        foreach ($result_rcpt_data as $r_rcpt) {
+                                            echo $r_rcpt->rcpt_rate . "<br />";
+                                        }
+                                    } else { echo '-'; }
+                                    ?>
+                                </td>
+
+                                <!-- BAL. QNTY. = (PUR + SUPP) - CHALLAN -->
+                                <td style="text-align:right">
+                                    <?php
+                                    $bal_quantity     = ($row_pod_qty + $row_sup_qty) - $row_challan_qty;
+                                    $tot_bal_quantity += $bal_quantity;
+                                    echo number_format($bal_quantity, 2);
+                                    ?>
+                                </td>
+                            </tr>
+                            <?php
+                                } // end foreach result_purc
+                            } // end if result_purc
+                            ?>
+
+                            <!-- TOTAL ROW per item -->
+                            <tr style="background:#f5f5f5">
+                                <th colspan="3">Total</th>
+                                <td style="text-align:right"><strong><?= number_format($tot_pod_quantity, 2) ?></strong></td>
+                                <td colspan="2"></td>
+                                <td style="text-align:right"><strong><?= number_format($tot_sup_quantity, 2) ?></strong></td>
+                                <td colspan="2"></td>
+                                <td style="text-align:right"><strong><?= number_format($tot_challan_quantity, 2) ?></strong></td>
+                                <td colspan="2"></td>
+                                <td style="text-align:right"><strong><?= number_format($tot_rcv_quantity, 2) ?></strong></td>
+                                <td></td>
+                                <td style="text-align:right"><strong><?= number_format($tot_bal_quantity, 2) ?></strong></td>
+                            </tr>
+
+                            <?php
+                            } // end foreach result
+                            } // end if count result
+                            ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<?php } ?>
 
 	<?php if ($segment == 'checking_summary_status')
 {
@@ -5020,117 +4974,229 @@ GROUP BY
 } ?>
 
 	<?php if ($segment == 'checking_stock_detail_ledger')
-{
-    // echo '<pre>',print_r($result),'</pre>';
+    {
+        // echo '<pre>',print_r($result),'</pre>';
+        
+    ?>
+    		<section class="sheet padding-5mm" style="height: auto">
+    		<div>
+    			<!--<header class="pull-right">-->
+    			<!--    <small>Page No. </small>-->
+    			<!--</header>-->
+    			<div class="clearfix"></div>
+    			<div class="container">
+    				<div class="row border_all text-center text-uppercase mar_bot_3">
+                    <h3 class="mar_0 head_font">Stock Summary Ledger <?= ($virtual == 'false') ? '' : '<label style="color:blue"> - Supplementary</label>' ?></h3>
+    				</div>
+    				<div class="row mar_bot_3">
+    					<div class="col-sm-6 border_all header_left">
+    						<h4 class=""><strong>SHILPA OVERSEAS PVT. LTD. </strong></h4>
+    						<p class="mar_0">KAIKHALI, CHIRIAMORE,P.O. : R.GOPALPUR, KOLKATA - 700 136</p>
+    					</div>
+    					<div class="col-sm-6 border_all header_right">
+    						<br />
+    					</div>
+    				</div>
+    				<!--table data-->
+    				<div class="row">
+    					<div class="container">
+    						<div class="row">
+    							<div class="table-responsive">
+    								<!--<h5>Retrieve Table</h5>-->
+    								<table id="all_det" class="table table-bordered">
+    									<thead>
+                            <tr>
+                                <th style="text-align:center">Item Name</th>
+                                <th style="text-align:center">Remark</th>
+                                <th style="text-align:center">Supplier Name</th>
+                                <th style="text-align:center">Ref. No.</th>
+                                <th style="text-align:center">Date</th>
+                                <th style="text-align:center">Quantity</th>
+                                <th style="text-align:center">Rate</th>
+                                <th style="text-align:center">Value</th>
+                                <th style="text-align:center">Bal. Qnty.</th>
+                                <th style="text-align:center">Bal. Val.</th>
+                            </tr>
+                            </thead>
+    									<tbody>
+    									    <!--< ?php echo"<pre>"; print_r($result); echo"</pre>"; ?>-->
+    										<?php
+                                                $prev_item = '';
+                                                foreach ($result as $f)
+                                                {
+                                                    $crnt_item = $f['item'] . ' (' . $f['color'] . ')';
+                                                    if ($crnt_item != $prev_item)
+                                                    {
+                                                        $bal_qnty = 0;
+                                                        $bal_val = 0;
+                                                        $prev_item = $crnt_item;
+                                                    }
     
-?>
-		<section class="sheet padding-5mm" style="height: auto">
-		<div>
-			<!--<header class="pull-right">-->
-			<!--    <small>Page No. </small>-->
-			<!--</header>-->
-			<div class="clearfix"></div>
-			<div class="container">
-				<div class="row border_all text-center text-uppercase mar_bot_3">
-                <h3 class="mar_0 head_font">Stock Summary Ledger <?= ($virtual == 'false') ? '' : '<label style="color:blue"> - Supplementary</label>' ?></h3>
-				</div>
-				<div class="row mar_bot_3">
-					<div class="col-sm-6 border_all header_left">
-						<h4 class=""><strong>SHILPA OVERSEAS PVT. LTD. </strong></h4>
-						<p class="mar_0">KAIKHALI, CHIRIAMORE,P.O. : R.GOPALPUR, KOLKATA - 700 136</p>
-					</div>
-					<div class="col-sm-6 border_all header_right">
-						<br />
-					</div>
-				</div>
-				<!--table data-->
-				<div class="row">
-					<div class="container">
-						<div class="row">
-							<div class="table-responsive">
-								<!--<h5>Retrieve Table</h5>-->
-								<table id="all_det" class="table table-bordered">
-									<thead>
-                        <tr>
-                            <th style="text-align:center">Item Name</th>
-                            <th style="text-align:center">Remark</th>
-                            <th style="text-align:center">Supplier Name</th>
-                            <th style="text-align:center">Ref. No.</th>
-                            <th style="text-align:center">Date</th>
-                            <th style="text-align:center">Quantity</th>
-                            <th style="text-align:center">Rate</th>
-                            <th style="text-align:center">Value</th>
-                            <th style="text-align:center">Bal. Qnty.</th>
-                            <th style="text-align:center">Bal. Val.</th>
-                        </tr>
-                        </thead>
-									<tbody>
-									    <!--< ?php echo"<pre>"; print_r($result); echo"</pre>"; ?>-->
-										<?php
-                                            $prev_item = '';
-                                            foreach ($result as $f)
-                                            {
-                                                $crnt_item = $f['item'] . ' (' . $f['color'] . ')';
-                                                if ($crnt_item != $prev_item)
-                                                {
-                                                    $bal_qnty = 0;
-                                                    $bal_val = 0;
-                                                    $prev_item = $crnt_item;
+                                                    if ($f['remark'] == 'Opening')
+                                                    {
+                                                        $bal_qnty += $f['qnty'];
+                                                        $bal_val += $f['val'];
+                                                    }
+                                                    elseif ($f['remark'] == 'Purchase')
+                                                    {
+                                                        $bal_qnty += $f['qnty'];
+                                                        $bal_val += $f['val'];
+                                                    }
+                                                    elseif ($f['remark'] == 'Stock In')
+                                                    {
+                                                        $bal_qnty += $f['qnty'];
+                                                        $bal_val += $f['val'];
+                                                    }
+                                                    elseif ($f['remark'] == 'Issue')
+                                                    {
+                                                        $bal_qnty -= $f['qnty'];
+                                                        $bal_val -= $f['val'];
+                                                    }
+                                                    elseif ($f['remark'] == 'Plating')
+                                                    {
+                                                        $bal_qnty -= $f['qnty'];
+                                                        $bal_val -= $f['val'];
+                                                    }
+                                            ?>
+                                                    <tr>
+                                                        <td><?=$f['item'] . ' (' . $f['color'] . ')' ?></td>
+                                                        <!--< ?= $f['supplier_name'] ?>-->
+                                                        <td><?= $f['supplier_name'] ?></td>
+                                                        <td><?=$f['sl_no'] ?></td>
+                                                        <td style="text-align:center"><?=date('d-m-Y', strtotime($f['date'])) ?></td>
+                                                        <td style="text-align:right"><?=number_format($f['qnty'], 2) ?></td>
+                                                        <td style="text-align:right"><?=number_format($f['rate'], 2) ?></td>
+                                                        <td style="text-align:right"><?=number_format($f['val'], 2) ?></td>
+                                                        <td style="text-align:right"><?=number_format($bal_qnty, 2) ?></td>
+                                                        <td style="text-align:right"><?=number_format($bal_val, 2) ?></td>
+                                                    </tr>
+                                            <?php
                                                 }
+                                            ?>
+    									</tbody>
+    								</table>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    		<?php
+    } ?>
+    <?php if ($segment == 'checking_stock_challan_detail_ledger')
+    {
+        // echo '<pre>',print_r($result),'</pre>';
+        
+    ?>
+    		<section class="sheet padding-5mm" style="height: auto">
+    		<div>
+    			<!--<header class="pull-right">-->
+    			<!--    <small>Page No. </small>-->
+    			<!--</header>-->
+    			<div class="clearfix"></div>
+    			<div class="container">
+    				<div class="row border_all text-center text-uppercase mar_bot_3">
+                    <h3 class="mar_0 head_font">Stock Summary Ledger <?= ($virtual == 'false') ? '' : '<label style="color:blue"> - Supplementary</label>' ?></h3>
+    				</div>
+    				<div class="row mar_bot_3">
+    					<div class="col-sm-6 border_all header_left">
+    						<h4 class=""><strong>SHILPA OVERSEAS PVT. LTD. </strong></h4>
+    						<p class="mar_0">KAIKHALI, CHIRIAMORE,P.O. : R.GOPALPUR, KOLKATA - 700 136</p>
+    					</div>
+    					<div class="col-sm-6 border_all header_right">
+    						<br />
+    					</div>
+    				</div>
+    				<!--table data-->
+    				<div class="row">
+    					<div class="container">
+    						<div class="row">
+    							<div class="table-responsive">
+    								<!--<h5>Retrieve Table</h5>-->
+    								<table id="all_det" class="table table-bordered">
+    									<thead>
+                            <tr>
+                                <th style="text-align:center">Item Name</th>
+                                <th style="text-align:center">Remark</th>
+                                <th style="text-align:center">Supplier Name</th>
+                                <th style="text-align:center">Ref. No.</th>
+                                <th style="text-align:center">Date</th>
+                                <th style="text-align:center">Quantity</th>
+                                <th style="text-align:center">Rate</th>
+                                <th style="text-align:center">Value</th>
+                                <th style="text-align:center">Bal. Qnty.</th>
+                                <th style="text-align:center">Bal. Val.</th>
+                            </tr>
+                            </thead>
+    									<tbody>
+    									    <!--< ?php echo"<pre>"; print_r($result); echo"</pre>"; ?>-->
+    										<?php
+                                                $prev_item = '';
+                                                foreach ($result as $f)
+                                                {
+                                                    $crnt_item = $f['item'] . ' (' . $f['color'] . ')';
+                                                    if ($crnt_item != $prev_item)
+                                                    {
+                                                        $bal_qnty = 0;
+                                                        $bal_val = 0;
+                                                        $prev_item = $crnt_item;
+                                                    }
+    
+                                                    if ($f['remark'] == 'Opening')
+                                                    {
+                                                        $bal_qnty += $f['qnty'];
+                                                        $bal_val += $f['val'];
+                                                    }
+                                                    elseif ($f['remark'] == 'Purchase')
+                                                    {
+                                                        $bal_val += $f['val']; // Invoice provides monetary value; row not rendered
+                                                        continue;
+                                                    }
 
-                                                if ($f['remark'] == 'Opening')
-                                                {
-                                                    $bal_qnty += $f['qnty'];
-                                                    $bal_val += $f['val'];
+                                                    elseif ($f['remark'] == 'Challan')
+                                                    {
+                                                        $bal_qnty += $f['qnty'];
+                                                        $bal_val += $f['val'];
+                                                    }
+                                                    elseif ($f['remark'] == 'Issue')
+                                                    {
+                                                        $bal_qnty -= $f['qnty'];
+                                                        $bal_val -= $f['val'];
+                                                    }
+                                                    elseif ($f['remark'] == 'Plating')
+                                                    {
+                                                        $bal_qnty -= $f['qnty'];
+                                                        $bal_val -= $f['val'];
+                                                    }
+                                            ?>
+                                                    <tr>
+                                                        <td><?=$f['item'] . ' (' . $f['color'] . ')' ?></td>
+                                                        <td><?=$f['remark'] ?></td>
+                                                        <!--< ?= $f['supplier_name'] ?>-->
+                                                        <td><?= $f['supplier_name'] ?></td>
+                                                        <td><?=$f['sl_no'] ?></td>
+                                                        <td style="text-align:center"><?=date('d-m-Y', strtotime($f['date'])) ?></td>
+                                                        <td style="text-align:right"><?=number_format($f['qnty'], 2) ?></td>
+                                                        <td style="text-align:right"><?=number_format($f['rate'], 2) ?></td>
+                                                        <td style="text-align:right"><?=number_format($f['val'], 2) ?></td>
+                                                        <td style="text-align:right"><?=number_format($bal_qnty, 2) ?></td>
+                                                        <td style="text-align:right"><?=number_format($bal_val, 2) ?></td>
+                                                    </tr>
+                                            <?php
                                                 }
-                                                elseif ($f['remark'] == 'Purchase')
-                                                {
-                                                    $bal_qnty += $f['qnty'];
-                                                    $bal_val += $f['val'];
-                                                }
-                                                elseif ($f['remark'] == 'Stock In')
-                                                {
-                                                    $bal_qnty += $f['qnty'];
-                                                    $bal_val += $f['val'];
-                                                }
-                                                elseif ($f['remark'] == 'Issue')
-                                                {
-                                                    $bal_qnty -= $f['qnty'];
-                                                    $bal_val -= $f['val'];
-                                                }
-                                                elseif ($f['remark'] == 'Plating')
-                                                {
-                                                    $bal_qnty -= $f['qnty'];
-                                                    $bal_val -= $f['val'];
-                                                }
-                                        ?>
-                                                <tr>
-                                                    <td><?=$f['item'] . ' (' . $f['color'] . ')' ?></td>
-                                                    <td><?=$f['remark'] ?></td>
-                                                    <!--< ?= $f['supplier_name'] ?>-->
-                                                    <td><?= $f['supplier_name'] ?></td>
-                                                    <td><?=$f['sl_no'] ?></td>
-                                                    <td style="text-align:center"><?=date('d-m-Y', strtotime($f['date'])) ?></td>
-                                                    <td style="text-align:right"><?=number_format($f['qnty'], 2) ?></td>
-                                                    <td style="text-align:right"><?=number_format($f['rate'], 2) ?></td>
-                                                    <td style="text-align:right"><?=number_format($f['val'], 2) ?></td>
-                                                    <td style="text-align:right"><?=number_format($bal_qnty, 2) ?></td>
-                                                    <td style="text-align:right"><?=number_format($bal_val, 2) ?></td>
-                                                </tr>
-                                        <?php
-                                            }
-                                        ?>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-		<?php
-} ?>
+                                            ?>
+    									</tbody>
+    								</table>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    		<?php
+    } ?>
 
 	<?php if ($segment == 'supplier_purchase_ledger')
 {
@@ -9283,416 +9349,624 @@ hr {
 	
 </body>
 
-<?php if ($segment == 'supplier_wise_purchase_position')
-{
-    // echo '<pre>',print_r($result),'</pre>';
-    
-?>
-		<style>
-			/*@media print{@page {size: landscape}}*/
-			.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
-    padding: 5px;
-    text-align: left;
-    font-size: 12px;
-}
-		</style>
-		<body class="A3 landscape" style="overflow-x: auto; padding-top: 20px">
-        <div id="page-content">
-		<section class="sheet padding-5mm" style="height: auto">
-		<div>
-			<!--<header class="pull-right">-->
-			<!--    <small>Page No. </small>-->
-			<!--</header>-->
-			<div class="clearfix"></div>
-			<div class="container">
-				<div class="row mar_bot_3">
-					<div class="col-sm-6 border_all header_left">
-						<h4 class=""><strong>SHILPA OVERSEAS PVT. LTD. </strong></h4>
-						<p class="mar_0">KAIKHALI, CHIRIAMORE,P.O. : R.GOPALPUR, KOLKATA - 700 136</p>
-					</div>
-					<div class="col-sm-6 border_all header_right">
-						<br />
-					</div>
-				</div>
-				<!--table data-->
-				<div class="row">
-					<div class="container">
-						<div class="row">
-							<div class="table-responsive">
-								<!--<h5>Retrieve Table</h5>-->
-								<table id="all_det" class="table table-bordered">
-									<thead>
-                <tr>
-                    <th style="text-align:center">SUPPLIER NAME</th>
-                    <th style="text-align:center">P.O. #</th>
-                    <th style="text-align:center">PUR. DT.</th>
-                    <th style="text-align:center">ITEM NAME</th>
-                    <th style="text-align:center">PUR. QNTY.</th>
-                    <th style="text-align:center">SUPP. #</th>
-                    <th style="text-align:center">SUPP. DT.</th>
-                    <th style="text-align:center">SUPP. QNTY.</th>
-                    <th style="text-align:center">RCPT. #</th>
-                    <th style="text-align:center">RCPT. DT.</th>
-                    <th style="text-align:center">RCPT. QNTY.</th>
-                    <th style="text-align:center">BAL. QNTY.</th>
-                </tr>
-                                    </thead>
-									<tbody>
-				<?php
-    $pod_quantity = 0;
-    $sup_quantity = 0;
-    $rcv_quantity = 0;
-    $bal_quantity = 0;
-    $tot_pod_quantity = 0;
-    $tot_sup_quantity = 0;
-    $tot_rcv_quantity = 0;
-    $tot_bal_quantity = 0;
-    
-    $st_iter = 1;
-    $st_pur_qnty = $st_sub_pur_qnty = $st_grand_pur_qnty = $st_supp_qnty = $st_sub_supp_qnty = $st_grand_supp_qnty = $st_rcpt = $st_sub_rcpt = $st_grand_rcpt = $st_bal = $st_sub_bal = $st_grand_bal = 0;
-    $st_name = array();
-    
-    foreach ($result as $res)
-        foreach($res as $rc){
-            { 
-        ?>	
-        
-    <?php 
-    // sub total area
-    if(!in_array($rc->name, $st_name)){
-        array_push($st_name, $rc->name);
-        if($st_iter == 1){
-            // do nothing
-        } else {
-        ?>
-        <tr style="background: #b7e1e1">
-            <th colspan="4">Sub Total</th>
-            <th style="text-align: right;"><?=$st_sub_pur_qnty?></th>
-            <th colspan="2"></th>
-            <th style="text-align: right;"><?=$st_supp_qnty?></th>
-            <th colspan="2"></th>
-            <th style="text-align: right;"><?=$st_sub_rcpt?></th>
-            <th style="text-align: right;"><?=$st_sub_bal?></th>
-        </tr>
-        <?php
-        }
-        $st_sub_pur_qnty = $st_supp_qnty = $st_sub_rcpt = $st_sub_bal = 0;
-        $st_iter++;
+<?php if ($segment == 'supplier_wise_challan_purchase_position') { ?>
+<style>
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+        padding: 5px;
+        text-align: left;
+        font-size: 12px;
     }
-    ?>
-    
-			<tr>
-         <td style="text-align:center"><?=$rc->name ?></td>
-         <td><?=$rc->po_number ?></td>
-         <td><?=date("d-m-Y", strtotime($rc->po_date)) ?></td>
-         <td><?=$rc->item ?> [<?=$rc->color ?>] </td>
-         <td style="text-align: right;">
-            <?php 
-                echo $rc->pod_quantity;
-                // $st_pur_qnty = $rc->pod_quantity;
-                $st_sub_pur_qnty += $rc->pod_quantity;
-                $tot_pod_quantity += $rc->pod_quantity; 
-            ?>
-        </td>
-     <td>
-             <?php
-        $result_sup = $this
-            ->db
-            ->select('supp_purchase_order.*, supp_purchase_order_detail.id_id')
-            ->join('supp_purchase_order', 'supp_purchase_order.sup_id = supp_purchase_order_detail.sup_id', 'left')
-            ->where('supp_purchase_order_detail.id_id', $rc->id_id)
-            ->where('supp_purchase_order.po_id', $rc->po_id)
-            ->where('supp_purchase_order.supp_status', '1')
-            ->get_where('supp_purchase_order_detail')
-            ->result(); ?>
-            <?php
-        if (count($result_sup) > 0)
-        {
-            foreach ($result_sup as $r_s)
-            {
-                echo $r_s->supp_po_number . "<br />";
-            }
-        }
-        else
-        {
-            echo "<br />";
-        }
-?>
-             </td>
-             <td>
-             <?php
-        $result_sup = $this
-            ->db
-            ->select('supp_purchase_order.*, supp_purchase_order_detail.id_id')
-            ->join('supp_purchase_order', 'supp_purchase_order.sup_id = supp_purchase_order_detail.sup_id', 'left')
-            ->where('supp_purchase_order_detail.id_id', $rc->id_id)
-            ->where('supp_purchase_order.po_id', $rc->po_id)
-            ->where('supp_purchase_order.supp_status', '1')
-            ->get_where('supp_purchase_order_detail')
-            ->result(); ?>
-            <?php
-        if (count($result_sup) > 0)
-        {
-            foreach ($result_sup as $r_s)
-            {
-                echo date("d-m-Y", strtotime($r_s->pur_order_date)) . "<br />";
-            }
-        }
-        else
-        {
-            echo "<br />";
-        }
-?>
-             </td>
-             <td style="text-align: right;">
-             <?php
-        $result_sup = $this
-            ->db
-            ->select('supp_purchase_order.*, supp_purchase_order_detail.id_id')
-            ->join('supp_purchase_order_detail', 'supp_purchase_order_detail.sup_id = supp_purchase_order.sup_id', 'left')
-            ->where('supp_purchase_order_detail.id_id', $rc->id_id)
-            ->where('supp_purchase_order.po_id', $rc->po_id)
-            ->where('supp_purchase_order.supp_status', '1')
-            ->get_where('supp_purchase_order')
-            ->row();
-        if (count($result_sup) > 0)
-        {
-            $result_su = $this
-                ->db
-                ->select('supp_purchase_order_detail.item_qty')
-                ->join('supp_purchase_order', 'supp_purchase_order.sup_id = supp_purchase_order_detail.sup_id', 'left')
-                ->where('supp_purchase_order_detail.id_id', $rc->id_id)
-                ->where('supp_purchase_order.sup_id', $result_sup->sup_id)
-                ->where('supp_purchase_order_detail.status', '1')
-            // ->group_by('supp_purchase_order_detail.sup_id')
-            
-                ->get_where('supp_purchase_order_detail')
-                ->result();
-            if (count($result_su) > 0)
-            {
-                foreach ($result_su as $r_s)
-                {
-?>
-            <?php
-                    $tot_sup_quantity += $r_s->item_qty;
-                    $st_supp_qnty += $r_s->item_qty;
-                    echo $r_s->item_qty . "<br />";
-                }
-            }
-        }
-        else
-        {
-            echo "<br />";
-        } ?>
-             </td>
+</style>
+<body class="A3 landscape" style="overflow-x: auto; padding-top: 20px">
+<div id="page-content">
+<section class="sheet padding-5mm" style="height: auto">
+<div>
+    <div class="clearfix"></div>
+    <div class="container">
+        <div class="row mar_bot_3">
+            <div class="col-sm-6 border_all header_left">
+                <h4><strong>SHILPA OVERSEAS PVT. LTD.</strong></h4>
+                <p class="mar_0">KAIKHALI, CHIRIAMORE, P.O. : R.GOPALPUR, KOLKATA - 700 136</p>
+            </div>
+            <div class="col-sm-6 border_all header_right"><br /></div>
+        </div>
 
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="table-responsive">
+                        <table id="all_det" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:center">SUPPLIER NAME</th>
+                                    <th style="text-align:center">ITEM NAME</th>
+                                    <th style="text-align:center">P.O. #</th>
+                                    <th style="text-align:center">P.O. DT.</th>
+                                    <th style="text-align:center">P.O. QNTY.</th>
+                                    <th style="text-align:center">CHALLAN. #</th>
+                                    <th style="text-align:center">CHALLAN. DT.</th>
+                                    <th style="text-align:center">CHALLAN. QNTY.</th>
+                                    <th style="text-align:center">BAL. QNTY.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                                $bal_quantity     = 0;
+                                $tot_sup_quantity = 0;
+                                $tot_rcv_quantity = 0;
+                                $tot_bal_quantity = 0;
 
+                                $st_iter         = 1;
+                                $st_supp_qnty    = 0;
+                                $st_sub_rcpt     = 0;
+                                $st_sub_bal      = 0;
+                                $st_name         = array();
 
-             <td>
-             <?php
-        $result_rcv = $this
-            ->db
-            ->select('purchase_order_receive.*, purchase_order_receive_detail.id_id')
-            ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
-            ->where('purchase_order_receive_detail.id_id', $rc->id_id)
-            ->where('purchase_order_receive_detail.po_id', $rc->po_id)
-            ->where('purchase_order_receive.status', '1')
-        // ->group_by('purchase_order_receive_detail.purchase_order_receive_id')
-        
-            ->get_where('purchase_order_receive_detail')
-            ->result(); ?>
-            <?php if (count($result_rcv) > 0)
-        {
-            foreach ($result_rcv as $r_r)
-            {
-                echo $r_r->purchase_order_receive_bill_no . "<br />";
-            }
-        }
-        else
-        {
-            echo "<br />";
-        }
+                                foreach ($result as $res) {
+                                    foreach ($res as $rc) {
 
-?>
-             </td>
-             <td>
-             <?php
-        $result_rcv = $this
-            ->db
-            ->select('purchase_order_receive.*, purchase_order_receive_detail.id_id')
-            ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
-            ->where('purchase_order_receive_detail.id_id', $rc->id_id)
-            ->where('purchase_order_receive_detail.po_id', $rc->po_id)
-            ->where('purchase_order_receive.status', '1')
-        // ->group_by('purchase_order_receive_detail.purchase_order_receive_id')
-        
-            ->get_where('purchase_order_receive_detail')
-            ->result(); ?>
-            <?php if (count($result_rcv) > 0)
-        {
-            foreach ($result_rcv as $r_r)
-            {
-                echo date("d-m-Y", strtotime($r_r->purchase_order_receive_date)) . "<br />";
-            }
-        }
-        else
-        {
-            echo "<br />";
-        }
-?>
-             </td>
-             <td style="text-align: right;">
-             <?php
-        $result_rc = $this
-            ->db
-            ->select('purchase_order_receive_detail.item_quantity')
-            ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
-            ->where('purchase_order_receive_detail.id_id', $rc->id_id)
-            ->where('purchase_order_receive_detail.po_id', $rc->po_id)
-            ->where('purchase_order_receive_detail.status', '1')
-        // ->group_by('purchase_order_receive_detail.purchase_order_receive_id')
-        
-            ->get('purchase_order_receive_detail')
-            ->result();
-?>
-            <?php
-        if (count($result_rc) > 0)
-        {
-            foreach ($result_rc as $r_r)
-            {
-                $tot_rcv_quantity += $r_r->item_quantity;
-                $st_sub_rcpt += $r_r->item_quantity;
-                echo $r_r->item_quantity . "<br />";
-            }
-        }
-        else
-        {
-            echo "<br />";
-        }
-?>
-             </td>
-             <td style="text-align: right;">
-             	<?php
-        $result_pu = $this
-            ->db
-            ->select_sum('purchase_order_details.pod_quantity')
-            ->join('purchase_order', 'purchase_order.po_id = purchase_order_details.po_id', 'left')
-            ->where('purchase_order_details.id_id', $rc->id_id)
-            ->where('purchase_order_details.po_id', $rc->po_id)
-            ->where('purchase_order.status', '1')
-            ->group_by('purchase_order_details.po_id, purchase_order_details.id_id')
-            ->get_where('purchase_order_details')
-            ->row(); ?>
-            <?php
-        if (count($result_pu) > 0)
-        {
-            $pod_quantity = $result_pu->pod_quantity;
-        }
-        else
-        {
-            $pod_quantity = 0;
-        }
+                                        // ---- SUB TOTAL when supplier changes ----
+                                        if (!in_array($rc->name, $st_name)) {
+                                            array_push($st_name, $rc->name);
+                                            if ($st_iter != 1) { ?>
+                                                <tr style="background: #b7e1e1">
+                                                    <th colspan="2">Sub Total</th>
+                                                    <th colspan="2"></th>
+                                                    <th style="text-align:right"><?= $st_supp_qnty ?></th>
+                                                    <th colspan="2"></th>
+                                                    <th style="text-align:right"><?= $st_sub_rcpt ?></th>
+                                                    <th style="text-align:right"><?= $st_sub_bal ?></th>
+                                                </tr>
+                                            <?php }
+                                            $st_supp_qnty = $st_sub_rcpt = $st_sub_bal = 0;
+                                            $st_iter++;
+                                        }
+                                    ?>
+                                        <tr>
+                                            <!-- SUPPLIER NAME -->
+                                            <td><?= $rc->name ?></td>
 
-        $result_sup = $this
-            ->db
-            ->select('supp_purchase_order.*, supp_purchase_order_detail.id_id')
-            ->join('supp_purchase_order_detail', 'supp_purchase_order_detail.sup_id = supp_purchase_order.sup_id', 'left')
-            ->where('supp_purchase_order_detail.id_id', $rc->id_id)
-            ->where('supp_purchase_order.po_id', $rc->po_id)
-            ->where('supp_purchase_order.supp_status', '1')
-            ->get_where('supp_purchase_order')
-            ->row();
-        if (count($result_sup) > 0)
-        {
-            $result_su = $this
-                ->db
-                ->select_sum('supp_purchase_order_detail.item_qty')
-                ->join('supp_purchase_order', 'supp_purchase_order.sup_id = supp_purchase_order_detail.sup_id', 'left')
-                ->where('supp_purchase_order_detail.id_id', $rc->id_id)
-                ->where('supp_purchase_order.sup_id', $result_sup->sup_id)
-                ->where('supp_purchase_order_detail.status', '1')
-                ->group_by('supp_purchase_order.po_id, supp_purchase_order_detail.id_id')
-                ->get_where('supp_purchase_order_detail')
-                ->row();
-            if (count($result_su) > 0)
-            {
-?>
-            <?php
-                $sup_quantity = $result_su->item_qty;
-            }
-        }
-        else
-        {
-            $sup_quantity = 0;
-        }
+                                            <!-- ITEM NAME -->
+                                            <td><?= $rc->item ?> [<?= $rc->color ?>]</td>
 
-        $result_rc = $this
-            ->db
-            ->select_sum('purchase_order_receive_detail.item_quantity')
-            ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
-            ->where('purchase_order_receive_detail.id_id', $rc->id_id)
-            ->where('purchase_order_receive_detail.po_id', $rc->po_id)
-            ->where('purchase_order_receive_detail.status', '1')
-            ->group_by('purchase_order_receive_detail.po_id, purchase_order_receive_detail.id_id')
-            ->get('purchase_order_receive_detail')
-            ->row();
-?>
-            <?php
-        if (count($result_rc) > 0)
-        {
-            $rcv_quantity = $result_rc->item_quantity;
-        }
-        else
-        {
-            $rcv_quantity = 0;
-        }
-?>
-            <?php
-        $bal_quantity = (($pod_quantity + $sup_quantity) - $rcv_quantity);
-        $tot_bal_quantity += $bal_quantity;
-        $st_sub_bal += $bal_quantity;;
-        echo $bal_quantity . "<br />";
-?>
-             </td>
-</tr>
+                                            <!-- P.O. # -->
+                                            <td>
+                                                <?php
+                                                $result_po = $this->db
+                                                    ->select('purchase_order.po_number')
+                                                    ->where('purchase_order.po_id', $rc->po_id)
+                                                    ->where('purchase_order.status', '1')
+                                                    ->get_where('purchase_order')->row();
+                                                echo (!empty($result_po)) ? $result_po->po_number : '<br />';
+                                                ?>
+                                            </td>
 
-        <?php
-            }
-        }
-        ?>
-        <tr style="background: #b7e1e1">
-            <th colspan="4">Sub Total</th>
-            <th style="text-align: right;"><?=$st_sub_pur_qnty?></th>
-            <th colspan="2"></th>
-            <th style="text-align: right;"><?=$st_supp_qnty?></th>
-            <th colspan="2"></th>
-            <th style="text-align: right;"><?=$st_sub_rcpt?></th>
-            <th style="text-align: right;"><?=$st_sub_bal;?></th>
-        </tr>
-        <tr style="background: #fff7e8">
-           <th colspan="4"> Grand Total</th>
-           <th style="text-align: right;"><?=$tot_pod_quantity?></th>
-           <th></th>
-           <th></th>
-           <th style="text-align: right;"><?=$tot_sup_quantity?></th>
-           <th></th>
-           <th></th>
-           <th style="text-align: right;"><?=$tot_rcv_quantity?></th>
-           <th style="text-align: right;"><?=$tot_bal_quantity?></th>
-       </tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+                                            <!-- P.O. DT. -->
+                                            <td>
+                                                <?php
+                                                $result_po = $this->db
+                                                    ->select('purchase_order.po_date')
+                                                    ->where('purchase_order.po_id', $rc->po_id)
+                                                    ->where('purchase_order.status', '1')
+                                                    ->get_where('purchase_order')->row();
+                                                echo (!empty($result_po)) ? date("d-m-Y", strtotime($result_po->po_date)) : '<br />';
+                                                ?>
+                                            </td>
+
+                                            <!-- P.O. QNTY. -->
+                                            <td style="text-align:right">
+                                                <?php
+                                                $result_po = $this->db
+                                                    ->select_sum('purchase_order_details.pod_quantity')
+                                                    ->where('purchase_order_details.po_id', $rc->po_id)
+                                                    ->where('purchase_order_details.id_id', $rc->id_id)
+                                                    ->where('purchase_order_details.status', '1')
+                                                    ->group_by('purchase_order_details.po_id, purchase_order_details.id_id')
+                                                    ->get_where('purchase_order_details')->row();
+                                                $po_qty = (!empty($result_po) && $result_po->pod_quantity !== null)
+                                                    ? $result_po->pod_quantity : 0;
+                                                $tot_sup_quantity += $po_qty;
+                                                $st_supp_qnty     += $po_qty;
+                                                echo $po_qty;
+                                                ?>
+                                            </td>
+
+                                            <!-- RCPT. # -->
+                                            <td>
+                                                <?php
+                                                $result_rcv = $this->db
+                                                    ->select('purchase_challan_order_receive.purchase_order_receive_bill_no')
+                                                    ->join('purchase_challan_order_receive', 'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
+                                                    ->where('purchase_challan_order_receive_detail.id_id', $rc->id_id)
+                                                    ->where('purchase_challan_order_receive_detail.purchase_order_receive_id', $rc->challan_receive_id)
+                                                    ->where('purchase_challan_order_receive.status', '1')
+                                                    ->get_where('purchase_challan_order_receive_detail')->result();
+                                                if (!empty($result_rcv)) {
+                                                    foreach ($result_rcv as $r_r) {
+                                                        echo $r_r->purchase_order_receive_bill_no . "<br />";
+                                                    }
+                                                } else { echo "<br />"; }
+                                                ?>
+                                            </td>
+
+                                            <!-- RCPT. DT. -->
+                                            <td>
+                                                <?php
+                                                $result_rcv = $this->db
+                                                    ->select('purchase_challan_order_receive.purchase_order_receive_date')
+                                                    ->join('purchase_challan_order_receive', 'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
+                                                    ->where('purchase_challan_order_receive_detail.id_id', $rc->id_id)
+                                                    ->where('purchase_challan_order_receive_detail.purchase_order_receive_id', $rc->challan_receive_id)
+                                                    ->where('purchase_challan_order_receive.status', '1')
+                                                    ->get_where('purchase_challan_order_receive_detail')->result();
+                                                if (!empty($result_rcv)) {
+                                                    foreach ($result_rcv as $r_r) {
+                                                        echo date("d-m-Y", strtotime($r_r->purchase_order_receive_date)) . "<br />";
+                                                    }
+                                                } else { echo "<br />"; }
+                                                ?>
+                                            </td>
+
+                                            <!-- RCPT. QNTY. -->
+                                            <td style="text-align:right">
+                                                <?php
+                                                $result_rc = $this->db
+                                                    ->select('purchase_challan_order_receive_detail.item_quantity')
+                                                    ->join('purchase_challan_order_receive', 'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
+                                                    ->where('purchase_challan_order_receive_detail.id_id', $rc->id_id)
+                                                    ->where('purchase_challan_order_receive_detail.purchase_order_receive_id', $rc->challan_receive_id)
+                                                    ->where('purchase_challan_order_receive_detail.status', '1')
+                                                    ->get('purchase_challan_order_receive_detail')->result();
+                                                if (!empty($result_rc)) {
+                                                    foreach ($result_rc as $r_r) {
+                                                        $tot_rcv_quantity += $r_r->item_quantity;
+                                                        $st_sub_rcpt      += $r_r->item_quantity;
+                                                        echo $r_r->item_quantity . "<br />";
+                                                    }
+                                                } else { echo "<br />"; }
+                                                ?>
+                                            </td>
+
+                                            <!-- BAL. QNTY. = P.O. QNTY. - RCPT. QNTY. -->
+                                            <td style="text-align:right">
+                                                <?php
+                                                $result_po_bal = $this->db
+                                                    ->select_sum('purchase_order_details.pod_quantity')
+                                                    ->where('purchase_order_details.po_id', $rc->po_id)
+                                                    ->where('purchase_order_details.id_id', $rc->id_id)
+                                                    ->where('purchase_order_details.status', '1')
+                                                    ->group_by('purchase_order_details.po_id, purchase_order_details.id_id')
+                                                    ->get_where('purchase_order_details')->row();
+                                                $po_bal_qty = (!empty($result_po_bal) && $result_po_bal->pod_quantity !== null)
+                                                    ? $result_po_bal->pod_quantity : 0;
+
+                                                $result_rc_bal = $this->db
+                                                    ->select_sum('purchase_challan_order_receive_detail.item_quantity')
+                                                    ->join('purchase_challan_order_receive', 'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
+                                                    ->where('purchase_challan_order_receive_detail.id_id', $rc->id_id)
+                                                    ->where('purchase_challan_order_receive_detail.po_id', $rc->po_id)
+                                                    ->where('purchase_challan_order_receive_detail.status', '1')
+                                                    ->group_by('purchase_challan_order_receive_detail.po_id, purchase_challan_order_receive_detail.id_id')
+                                                    ->get('purchase_challan_order_receive_detail')->row();
+                                                $rcv_bal_qty = (!empty($result_rc_bal) && $result_rc_bal->item_quantity !== null)
+                                                    ? $result_rc_bal->item_quantity : 0;
+
+                                                $bal_quantity     = $po_bal_qty - $rcv_bal_qty;
+                                                $tot_bal_quantity += $bal_quantity;
+                                                $st_sub_bal       += $bal_quantity;
+                                                echo $bal_quantity;
+                                                ?>
+                                            </td>
+                                        </tr>
+
+                                    <?php
+                                    } // end foreach $res
+                                } // end foreach $result
+                            ?>
+
+                            <!-- Last supplier Sub Total -->
+                            <tr style="background: #b7e1e1">
+                                <th colspan="2">Sub Total</th>
+                                <th colspan="2"></th>
+                                <th style="text-align:right"><?= $st_supp_qnty ?></th>
+                                <th colspan="2"></th>
+                                <th style="text-align:right"><?= $st_sub_rcpt ?></th>
+                                <th style="text-align:right"><?= $st_sub_bal ?></th>
+                            </tr>
+
+                            <!-- Grand Total -->
+                            <tr style="background: #fff7e8">
+                                <th colspan="2">Grand Total</th>
+                                <th colspan="2"></th>
+                                <th style="text-align:right"><?= $tot_sup_quantity ?></th>
+                                <th colspan="2"></th>
+                                <th style="text-align:right"><?= $tot_rcv_quantity ?></th>
+                                <th style="text-align:right"><?= $tot_bal_quantity ?></th>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
 </div>
 </body>
-		<?php
-} ?>
+<?php } ?>
+<?php if ($segment == 'supplier_wise_purchase_position') { ?>
+<style>
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+        padding: 5px;
+        text-align: left;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+</style>
+<body class="A3 landscape" style="overflow-x: auto; padding-top: 20px">
+<div id="page-content">
+<section class="sheet padding-5mm" style="height: auto">
+<div>
+    <div class="clearfix"></div>
+    <div class="container">
+        <div class="row mar_bot_3">
+            <div class="col-sm-6 border_all header_left">
+                <h4><strong>SHILPA OVERSEAS PVT. LTD.</strong></h4>
+                <p class="mar_0">KAIKHALI, CHIRIAMORE, P.O. : R.GOPALPUR, KOLKATA - 700 136</p>
+            </div>
+            <div class="col-sm-6 border_all header_right"><br /></div>
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="table-responsive">
+                        <table id="all_det" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:center">SUPPLIER NAME</th>
+                                    <th style="text-align:center">P.O. #</th>
+                                    <th style="text-align:center">PUR. DT.</th>
+                                    <th style="text-align:center">ITEM NAME</th>
+                                    <th style="text-align:center">PUR. QNTY.</th>
+                                    <th style="text-align:center">SUPP. #</th>
+                                    <th style="text-align:center">SUPP. DT.</th>
+                                    <th style="text-align:center">SUPP. QNTY.</th>
+                                    <th style="text-align:center">CHALLAN. #</th>
+                                    <th style="text-align:center">CHALLAN. DT.</th>
+                                    <th style="text-align:center">CHALLAN. QNTY.</th>
+                                    <th style="text-align:center">RCPT. #</th>
+                                    <th style="text-align:center">RCPT. DT.</th>
+                                    <th style="text-align:center">RCPT. QNTY.</th>
+                                    <th style="text-align:center">BAL. QNTY.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                                $tot_pod_quantity     = 0;
+                                $tot_sup_quantity     = 0;
+                                $tot_challan_quantity = 0;
+                                $tot_rcv_quantity     = 0;
+                                $tot_bal_quantity     = 0;
+
+                                $st_iter             = 1;
+                                $st_sub_pur_qnty     = 0;
+                                $st_supp_qnty        = 0;
+                                $st_sub_challan_qnty = 0;
+                                $st_sub_rcpt         = 0;
+                                $st_sub_bal          = 0;
+                                $st_name             = array();
+
+                                foreach ($result as $res) {
+                                    foreach ($res as $rc) {
+
+                                        // ── SUB TOTAL when supplier changes ──
+                                        if (!in_array($rc->name, $st_name)) {
+                                            array_push($st_name, $rc->name);
+                                            if ($st_iter != 1) { ?>
+                                                <tr style="background: #b7e1e1">
+                                                    <th colspan="4">Sub Total</th>
+                                                    <th style="text-align:right"><?= $st_sub_pur_qnty ?></th>
+                                                    <th colspan="2"></th>
+                                                    <th style="text-align:right"><?= $st_supp_qnty ?></th>
+                                                    <th colspan="2"></th>
+                                                    <th style="text-align:right"><?= $st_sub_challan_qnty ?></th>
+                                                    <th colspan="2"></th>
+                                                    <th style="text-align:right"><?= $st_sub_rcpt ?></th>
+                                                    <th style="text-align:right"><?= $st_sub_bal ?></th>
+                                                </tr>
+                                            <?php }
+                                            $st_sub_pur_qnty = $st_supp_qnty = $st_sub_challan_qnty = $st_sub_rcpt = $st_sub_bal = 0;
+                                            $st_iter++;
+                                        }
+
+                                        // ── per row variables ─────────────────
+                                        $row_pod_qty     = 0;
+                                        $row_sup_qty     = 0;
+                                        $row_challan_qty = 0;
+                                        $row_rcv_qty     = 0;
+                            ?>
+                                        <tr>
+                                            <!-- SUPPLIER NAME -->
+                                            <td style="text-align:center"><?= $rc->name ?></td>
+
+                                            <!-- P.O. # -->
+                                            <td><?= $rc->po_number ?></td>
+
+                                            <!-- PUR. DT. -->
+                                            <td><?= date("d-m-Y", strtotime($rc->po_date)) ?></td>
+
+                                            <!-- ITEM NAME -->
+                                            <td><?= $rc->item ?> [<?= $rc->color ?>]</td>
+
+                                            <!-- PUR. QNTY. -->
+                                            <td style="text-align:right">
+                                                <?php
+                                                $row_pod_qty          = (float)$rc->pod_quantity;
+                                                $st_sub_pur_qnty     += $row_pod_qty;
+                                                $tot_pod_quantity     += $row_pod_qty;
+                                                echo $row_pod_qty;
+                                                ?>
+                                            </td>
+
+                                            <!-- SUPP. # -->
+                                            <td>
+                                                <?php
+                                                $this->db->reset_query();
+                                                $result_sup = $this->db
+                                                    ->select('supp_purchase_order.supp_po_number')
+                                                    ->from('supp_purchase_order_detail')
+                                                    ->join('supp_purchase_order', 'supp_purchase_order.sup_id = supp_purchase_order_detail.sup_id', 'left')
+                                                    ->where('supp_purchase_order_detail.id_id', $rc->id_id)
+                                                    ->where('supp_purchase_order.po_id', $rc->po_id)
+                                                    ->where('supp_purchase_order.supp_status', '1')
+                                                    ->get()->result();
+                                                if (!empty($result_sup)) {
+                                                    foreach ($result_sup as $r_s) {
+                                                        echo $r_s->supp_po_number . "<br />";
+                                                    }
+                                                } else { echo '-'; }
+                                                ?>
+                                            </td>
+
+                                            <!-- SUPP. DT. -->
+                                            <td>
+                                                <?php
+                                                $this->db->reset_query();
+                                                $result_sup = $this->db
+                                                    ->select('supp_purchase_order.pur_order_date')
+                                                    ->from('supp_purchase_order_detail')
+                                                    ->join('supp_purchase_order', 'supp_purchase_order.sup_id = supp_purchase_order_detail.sup_id', 'left')
+                                                    ->where('supp_purchase_order_detail.id_id', $rc->id_id)
+                                                    ->where('supp_purchase_order.po_id', $rc->po_id)
+                                                    ->where('supp_purchase_order.supp_status', '1')
+                                                    ->get()->result();
+                                                if (!empty($result_sup)) {
+                                                    foreach ($result_sup as $r_s) {
+                                                        echo date("d-m-Y", strtotime($r_s->pur_order_date)) . "<br />";
+                                                    }
+                                                } else { echo '-'; }
+                                                ?>
+                                            </td>
+
+                                            <!-- SUPP. QNTY. -->
+                                            <td style="text-align:right">
+                                                <?php
+                                                $this->db->reset_query();
+                                                $result_sup_ids = $this->db
+                                                    ->select('supp_purchase_order.sup_id')
+                                                    ->from('supp_purchase_order')
+                                                    ->join('supp_purchase_order_detail', 'supp_purchase_order_detail.sup_id = supp_purchase_order.sup_id', 'left')
+                                                    ->where('supp_purchase_order_detail.id_id', $rc->id_id)
+                                                    ->where('supp_purchase_order.po_id', $rc->po_id)
+                                                    ->where('supp_purchase_order.supp_status', '1')
+                                                    ->get()->result();
+                                                if (!empty($result_sup_ids)) {
+                                                    foreach ($result_sup_ids as $r_sup) {
+                                                        $this->db->reset_query();
+                                                        $result_su = $this->db
+                                                            ->select('supp_purchase_order_detail.item_qty')
+                                                            ->from('supp_purchase_order_detail')
+                                                            ->join('supp_purchase_order', 'supp_purchase_order.sup_id = supp_purchase_order_detail.sup_id', 'left')
+                                                            ->where('supp_purchase_order_detail.id_id', $rc->id_id)
+                                                            ->where('supp_purchase_order.sup_id', $r_sup->sup_id)
+                                                            ->where('supp_purchase_order_detail.status', '1')
+                                                            ->get()->result();
+                                                        if (!empty($result_su)) {
+                                                            foreach ($result_su as $r_s) {
+                                                                $row_sup_qty      += (float)$r_s->item_qty;
+                                                                $tot_sup_quantity += (float)$r_s->item_qty;
+                                                                $st_supp_qnty     += (float)$r_s->item_qty;
+                                                                echo $r_s->item_qty . "<br />";
+                                                            }
+                                                        }
+                                                    }
+                                                } else { echo '-'; }
+                                                ?>
+                                            </td>
+
+                                            <!-- CHALLAN. # -->
+                                            <td>
+                                                <?php
+                                                $this->db->reset_query();
+                                                $result_challan = $this->db
+                                                    ->select('purchase_challan_order_receive.purchase_order_receive_bill_no')
+                                                    ->from('purchase_challan_order_receive_detail')
+                                                    ->join('purchase_challan_order_receive',
+                                                        'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
+                                                    ->where('purchase_challan_order_receive_detail.po_id', $rc->po_id)
+                                                    ->where('purchase_challan_order_receive_detail.id_id', $rc->id_id)
+                                                    ->where('purchase_challan_order_receive_detail.status', '1')
+                                                    ->where('purchase_challan_order_receive.status', '1')
+                                                    ->get()->result();
+                                                if (!empty($result_challan)) {
+                                                    foreach ($result_challan as $r_c) {
+                                                        echo $r_c->purchase_order_receive_bill_no . "<br />";
+                                                    }
+                                                } else { echo '-'; }
+                                                ?>
+                                            </td>
+
+                                            <!-- CHALLAN. DT. -->
+                                            <td>
+                                                <?php
+                                                $this->db->reset_query();
+                                                $result_challan = $this->db
+                                                    ->select('purchase_challan_order_receive.purchase_order_receive_date')
+                                                    ->from('purchase_challan_order_receive_detail')
+                                                    ->join('purchase_challan_order_receive',
+                                                        'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
+                                                    ->where('purchase_challan_order_receive_detail.po_id', $rc->po_id)
+                                                    ->where('purchase_challan_order_receive_detail.id_id', $rc->id_id)
+                                                    ->where('purchase_challan_order_receive_detail.status', '1')
+                                                    ->where('purchase_challan_order_receive.status', '1')
+                                                    ->get()->result();
+                                                if (!empty($result_challan)) {
+                                                    foreach ($result_challan as $r_c) {
+                                                        echo date("d-m-Y", strtotime($r_c->purchase_order_receive_date)) . "<br />";
+                                                    }
+                                                } else { echo '-'; }
+                                                ?>
+                                            </td>
+
+                                            <!-- CHALLAN. QNTY. -->
+                                            <td style="text-align:right">
+                                                <?php
+                                                $this->db->reset_query();
+                                                $result_challan_qty = $this->db
+                                                    ->select('purchase_challan_order_receive_detail.item_quantity')
+                                                    ->from('purchase_challan_order_receive_detail')
+                                                    ->join('purchase_challan_order_receive',
+                                                        'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
+                                                    ->where('purchase_challan_order_receive_detail.po_id', $rc->po_id)
+                                                    ->where('purchase_challan_order_receive_detail.id_id', $rc->id_id)
+                                                    ->where('purchase_challan_order_receive_detail.status', '1')
+                                                    ->where('purchase_challan_order_receive.status', '1')
+                                                    ->get()->result();
+                                                if (!empty($result_challan_qty)) {
+                                                    foreach ($result_challan_qty as $r_c) {
+                                                        $row_challan_qty      += (float)$r_c->item_quantity;
+                                                        $tot_challan_quantity += (float)$r_c->item_quantity;
+                                                        $st_sub_challan_qnty  += (float)$r_c->item_quantity;
+                                                        echo $r_c->item_quantity . "<br />";
+                                                    }
+                                                } else { echo '-'; }
+                                                ?>
+                                            </td>
+
+                                            <?php
+                                            /* One row per detail line — bill # and date joined to each
+                                               qty row so RCPT. #, RCPT. DT., RCPT. QNTY. are always aligned. */
+                                            $sql_rcpt = "SELECT
+                                                    por.purchase_order_receive_bill_no,
+                                                    por.purchase_order_receive_date,
+                                                    pord.item_quantity AS rcpt_qty
+                                                FROM purchase_order_receive_detail pord
+                                                INNER JOIN purchase_order_receive por
+                                                    ON por.purchase_order_receive_id = pord.purchase_order_receive_id
+                                                WHERE pord.id_id = {$rc->id_id}
+                                                AND pord.po_id  = {$rc->po_id}
+                                                AND por.status  = 1
+                                                ORDER BY por.purchase_order_receive_date,
+                                                         por.purchase_order_receive_id";
+                                            $result_rcpt_data = $this->db->query($sql_rcpt)->result();
+                                            ?>
+
+                                            <!-- RCPT. # -->
+                                            <td>
+                                                <?php
+                                                if (!empty($result_rcpt_data)) {
+                                                    foreach ($result_rcpt_data as $r_rcpt) {
+                                                        echo htmlspecialchars($r_rcpt->purchase_order_receive_bill_no) . "<br />";
+                                                    }
+                                                } else { echo '-'; }
+                                                ?>
+                                            </td>
+
+                                            <!-- RCPT. DT. -->
+                                            <td>
+                                                <?php
+                                                if (!empty($result_rcpt_data)) {
+                                                    foreach ($result_rcpt_data as $r_rcpt) {
+                                                        echo date("d-m-Y", strtotime($r_rcpt->purchase_order_receive_date)) . "<br />";
+                                                    }
+                                                } else { echo '-'; }
+                                                ?>
+                                            </td>
+
+                                            <!-- RCPT. QNTY. -->
+                                            <td style="text-align:right">
+                                                <?php
+                                                if (!empty($result_rcpt_data)) {
+                                                    foreach ($result_rcpt_data as $r_rcpt) {
+                                                        $row_rcv_qty      += (float)$r_rcpt->rcpt_qty;
+                                                        $tot_rcv_quantity += (float)$r_rcpt->rcpt_qty;
+                                                        $st_sub_rcpt      += (float)$r_rcpt->rcpt_qty;
+                                                        echo $r_rcpt->rcpt_qty . "<br />";
+                                                    }
+                                                } else { echo '-'; }
+                                                ?>
+                                            </td>
+
+                                            <!-- BAL. QNTY. = (PUR + SUPP) - CHALLAN -->
+                                            <td style="text-align:right">
+                                                <?php
+                                                $bal_quantity     = ($row_pod_qty + $row_sup_qty) - $row_challan_qty;
+                                                $tot_bal_quantity += $bal_quantity;
+                                                $st_sub_bal       += $bal_quantity;
+                                                echo number_format($bal_quantity, 2);
+                                                ?>
+                                            </td>
+                                        </tr>
+
+                                    <?php
+                                    } // end foreach $res
+                                } // end foreach $result
+                            ?>
+
+                            <!-- Last supplier Sub Total -->
+                            <tr style="background: #b7e1e1">
+                                <th colspan="4">Sub Total</th>
+                                <th style="text-align:right"><?= $st_sub_pur_qnty ?></th>
+                                <th colspan="2"></th>
+                                <th style="text-align:right"><?= $st_supp_qnty ?></th>
+                                <th colspan="2"></th>
+                                <th style="text-align:right"><?= $st_sub_challan_qnty ?></th>
+                                <th colspan="2"></th>
+                                <th style="text-align:right"><?= $st_sub_rcpt ?></th>
+                                <th style="text-align:right"><?= $st_sub_bal ?></th>
+                            </tr>
+
+                            <!-- Grand Total -->
+                            <tr style="background: #fff7e8">
+                                <th colspan="4">Grand Total</th>
+                                <th style="text-align:right"><?= $tot_pod_quantity ?></th>
+                                <th></th>
+                                <th></th>
+                                <th style="text-align:right"><?= $tot_sup_quantity ?></th>
+                                <th></th>
+                                <th></th>
+                                <th style="text-align:right"><?= $tot_challan_quantity ?></th>
+                                <th></th>
+                                <th></th>
+                                <th style="text-align:right"><?= $tot_rcv_quantity ?></th>
+                                <th style="text-align:right"><?= $tot_bal_quantity ?></th>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+</div>
+</body>
+<?php } ?>
 
 <?php if ($segment == 'supplier_wise_outstanding')
 {
@@ -18990,10 +19264,10 @@ if($check_consumption_list == 0) {
                                             <td style="text-align:right"><?=number_format($f['purchase_val'], 2) ?></td>
                                             <td style="text-align:right"><?=number_format($f['issue_qnty'], 2) ?></td>
                                             <td style="text-align:right"><?=number_format($f['issue_val'], 2) ?></td>
-                                            <td style="text-align:right"><?=number_format($f['plating_qnty'], 2) ?></td>
-                                            <td style="text-align:right"><?=number_format($f['plating_val'], 2) ?></td>
-                                            <td style="text-align:right"><?= number_format($f['stock_in_qnty'], 2) ?></td>
-                                            <td style="text-align:right"><?=number_format($f['stock_in_val'], 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($f['plating_qnty'] ?? 0, 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($f['plating_val'] ?? 0, 2) ?></td>
+                                            <td style="text-align:right"><?= number_format($f['stock_in_qnty'] ?? 0, 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($f['stock_in_val'] ?? 0, 2) ?></td>
                                             <td style="background: #afedb1;text-align:right"><?=number_format($bal_qty, 2, '.', '')?></td>
                                             <td style="text-align:right"><?=number_format($bal_rate, 2) ?></td>
                                             <?php 
@@ -19156,13 +19430,435 @@ if($check_consumption_list == 0) {
                                     <td style="text-align:right"><?=number_format($f['purchase_val'], 2) ?></td>
                                     <td style="text-align:right"><?=number_format($f['issue_qnty'], 2) ?></td>
                                     <td style="text-align:right"><?=number_format($f['issue_val'], 2) ?></td>
-                                    <td style="text-align:right"><?=number_format($f['plating_qnty'], 2) ?></td>
-                                    <td style="text-align:right"><?=number_format($f['plating_val'], 2) ?></td>
-                                    <td style="text-align:right"><?= number_format($f['stock_in_qnty'], 2) ?></td>
-                                    <td style="text-align:right"><?=number_format($f['stock_in_val'], 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($f['plating_qnty'] ?? 0, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($f['plating_val'] ?? 0, 2) ?></td>
+                                    <td style="text-align:right"><?= number_format($f['stock_in_qnty'] ?? 0, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($f['stock_in_val'] ?? 0, 2) ?></td>
                                     <td style="background: #afedb1;text-align:right"><?=number_format($bal_qty, 2, '.', '')?></td>
                                     <td style="text-align:right"><?=number_format($bal_rate, 2) ?></td>
                                     <?php 
+                                    if ($bal_qty != 0) {
+                                        $closing_rate += ($bal_rate / $bal_qty);
+                                    ?>
+                                    <td style="text-align:right"><?=number_format(($bal_rate / $bal_qty), 2, '.', '')?></td>
+                                    <?php
+                                    } else {
+                                        $closing_rate += 0;
+                                    ?>
+                                    <td style="text-align:right">0</td>
+                                    <?php } ?>
+                                    <td style="text-align:center"><?= $f['unit'] ?></td>
+                                </tr>
+                                <?php } ?>
+                                <tr style="background:thistle">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Total</th>
+                                    <td style="text-align:right"><?=number_format($all_opn_qty, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($all_opn_rate, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($all_pur_qty, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($all_pur_rate, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($all_issue_qty, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($all_issue_rate, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($all_plating_qty, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($all_plating_rate, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($all_stockin_qty, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($all_stockin_rate, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($all_bal_qty, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($all_bal_rate, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($closing_rate, 2) ?></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background:#faeda6">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Grand Total</th>
+                                    <td style="text-align:right"><?=number_format(($old_all_opn_qty + $all_opn_qty), 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($old_all_opn_rate+$all_opn_rate, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($old_all_pur_qty+$all_pur_qty, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($old_all_pur_rate+$all_pur_rate, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($old_all_issue_qty+$all_issue_qty, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($old_all_issue_rate+$all_issue_rate, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($old_all_plating_qty+$all_plating_qty, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($old_all_plating_rate+$all_plating_rate, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($old_all_stockin_qty+$all_stockin_qty, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($old_all_stockin_rate+$all_stockin_rate, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($old_all_bal_qty+$all_bal_qty, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($old_all_bal_rate+$all_bal_rate, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($old_closing_rate+$closing_rate, 2) ?></td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table>    
+                    </div>
+                </div>
+                <?php #} ?>
+            </div>
+        </section>
+    </div>
+    <script>
+        //table to excel (multiple table)
+    var array1 = new Array();
+    var n = <?php if(isset($table_no)){echo $table_no;}else{echo 0;} ?>; //Total table
+    for ( var x=1; x<=n; x++ ) {
+        array1[x-1] = 'export_table_to_excel' + x;
+    }
+    var tablesToExcel = (function () {
+        var uri = 'data:application/vnd.ms-excel;base64,'
+            , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets>'
+            , templateend = '</x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head>'
+            , body = '<body>'
+            , tablevar = '<table>{table'
+            , tablevarend = '}</table>'
+            , bodyend = '</body></html>'
+            , worksheet = '<x:ExcelWorksheet><x:Name>'
+            , worksheetend = '</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet>'
+            , worksheetvar = '{worksheet'
+            , worksheetvarend = '}'
+            , base64 = function (s) { return window.btoa(unescape(encodeURIComponent(s))) }
+            , format = function (s, c) { return s.replace(/{(\w+)}/g, function (m, p) { return c[p]; }) }
+            , wstemplate = ''
+            , tabletemplate = '';
+
+        return function (table, name, filename) {
+            var tables = table;
+            var wstemplate = '';
+            var tabletemplate = '';
+
+            wstemplate = worksheet + worksheetvar + '0' + worksheetvarend + worksheetend;
+            for (var i = 0; i < tables.length; ++i) {
+                tabletemplate += tablevar + i + tablevarend;
+            }
+
+            var allTemplate = template + wstemplate + templateend;
+            var allWorksheet = body + tabletemplate + bodyend;
+            var allOfIt = allTemplate + allWorksheet;
+
+            var ctx = {};
+            ctx['worksheet0'] = name;
+            for (var k = 0; k < tables.length; ++k) {
+                var exceltable;
+                if (!tables[k].nodeType) exceltable = document.getElementById(tables[k]);
+                ctx['table' + k] = exceltable.innerHTML;
+            }
+
+            // window.location.href = uri + base64(format(allOfIt, ctx));
+
+            document.getElementById("dlink").href = uri + base64(format(allOfIt, ctx));;
+            document.getElementById("dlink").download = filename;
+            document.getElementById("dlink").click();
+        }
+    })();
+    </script>
+</body>
+		
+		<?php
+} ?>
+
+<?php if ($segment == 'checking_stock_summary_challan_status')
+{
+    // echo '<pre>',print_r($result),'</pre>';
+    $temp_co_name_array1 = array();
+    foreach ($result as $co_name)
+    {
+        if (!in_array($co_name['group_name'], $temp_co_name_array1))
+        {
+            array_push($temp_co_name_array1, $co_name['group_name']);
+        }
+    }
+?>
+		
+		<style>
+			@media print{@page {size: landscape}}
+			.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th { padding: 5px;text-align: left;font-size: 13px;}
+            @media print {
+                .print-me { display: none; }
+            }
+		</style>
+		<body class="A3 landscape" style="overflow-x: auto; padding-top: 2px;">
+            <div class="text-center">
+                <a id="dlink" style="display:none;"></a>
+                <input type="button" onclick="tablesToExcel(array1, 'Sheet1', 'SOPL-<?=mt_rand()?>.xls')" value="Export to Excel" class="btn btn-success print-me" >
+            </div>
+    
+    
+    <div id="page-content">
+        <section class="sheet padding-5mm" style="height: auto">
+    
+            <?php $table_no=1; ?>
+            
+            <!--<header class="pull-right">-->
+            <!--    <small>Page No. </small>-->
+            <!--</header>-->
+
+            <div class="clearfix"></div>
+            <div class="container">
+                <div class="row border_all text-center text-uppercase mar_bot_3">
+                    <h3 class="mar_0 head_font">Stock Summary Challan Details  <?= ($virtual == 'false') ? '' : '<label style="color:blue"> - Supplementary</label>' ?></h3>
+                </div>
+                <div class="row mar_bot_3">
+                    <div class="col-sm-6 border_all header_left">
+                        <h4 class=""><strong>SHILPA OVERSEAS PVT. LTD. </strong></h4>
+                        <p class="mar_0">KAIKHALI, CHIRIAMORE,P.O. : R.GOPALPUR, KOLKATA - 700 136</p>
+                    </div>
+                    <div class="col-sm-6 border_all header_right">
+                      <b><?=implode(', ', $temp_co_name_array1) ?></b>
+                      <br/>
+                      From <b><?=date("d-m-Y", strtotime($from)) ?></b> To <b><?=date("d-m-Y", strtotime($to)) ?></b>
+                    </div>
+                </div>
+                <!--table data-->
+                <div class="row">
+                    <div class="container">
+                        <!-- Local area -->
+                        <div class="row">
+                            <h3 style="background: lavender;padding: 0.7%;margin-bottom:0" class="text-center">------------------------------------- Local Items -------------------------------------</h3>
+                            <div class="table-responsive">
+                                <table id="export_table_to_excel<?=$table_no?>" class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th rowspan="2" style="text-align:right">#</th>
+                                            <th rowspan="2" style="text-align:center">Item</th>
+                                            <th colspan="2" style="text-align:center">Opening Information</th>
+                                            <th colspan="2" style="text-align:center">Purchase Information</th>
+                                            <th colspan="2" style="text-align:center">Issue Information</th>
+                                            <th colspan="2" style="text-align:center">Plating Information</th>
+                                            <th colspan ="2" style="text-align:center">Stock In Information</th>
+                                            <th colspan ="2" style="text-align:center">Balance Information</th>
+                                            <th rowspan="2">Closing<br>Rate</th>
+                                            <th rowspan="2" style="text-align:center">Unit</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th style="text-align:center">Opn Qnty</th>
+                                            <th style="text-align:center">Opn Val</th>
+                                            <th style="text-align:center">Pur Qnty</th>
+                                            <th style="text-align:center">Pur Val</th>
+                                            <th style="text-align:center">Issue Qnty</th>
+                                            <th style="text-align:center">Issue Val</th>
+                                            <th style="text-align:center">Plating Qnty</th>
+                                            <th style="text-align:center">Plating Val</th>
+                                            <th style="text-align:center">Stock In Qnty</th>
+                                            <th style="text-align:center">Stock In Val</th>
+                                            <th style="text-align:center">Bal Qnty</th>
+                                            <th style="text-align:center">Bal Val</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $iter = $all_bal_qty = $all_opn_qty = $all_pur_qty = $all_issue_qty = $all_plating_qty = $all_stockin_qty = $all_bal_rate = $all_opn_rate = $all_pur_rate = $all_issue_rate = $all_plating_rate = $all_stockin_rate = $closing_rate = 0;
+                                        foreach ($result as $f){
+                                            if($f['type'] == 'Import'){
+                                                continue;
+                                            }
+                                            if ($f['opening_val'] == 0 && $f['opening_qnty'] == 0 && $f['purchase_qnty'] == 0 && $f['issue_qnty'] == 0 && $f['stock_in_qnty'] == 0) {
+                                                continue;
+                                            }
+
+                                            $bal_qty = $f['opening_qnty'] + $f['purchase_qnty'] - ($f['issue_qnty'] + $f['plating_qnty']) + $f['stock_in_qnty'];
+                                            if(($bal_qnty == 0) and ($bal_qty == 0)){
+//                                                continue;
+                                            }
+
+                                            $bal_rate = $f['opening_val'] + $f['purchase_val'] - ($f['issue_val'] + $f['plating_val']) + $f['stock_in_val'];
+
+                                            $all_opn_qty += $f['opening_qnty'];
+                                            $all_opn_rate += $f['opening_val'];
+                                            $all_pur_qty += $f['purchase_qnty'];
+                                            $all_pur_rate += $f['purchase_val'];
+                                            $all_issue_qty += $f['issue_qnty'];
+                                            $all_issue_rate += $f['issue_val'];
+                                            $all_plating_qty += $f['plating_qnty'];
+                                            $all_plating_rate += $f['plating_val'];
+                                            $all_stockin_qty += $f['stock_in_qnty'];
+                                            $all_stockin_rate += $f['stock_in_val'];
+                                            $all_bal_qty += $bal_qty;
+                                            $all_bal_rate += $bal_rate;
+                                        ?>
+                                        <tr>
+                                            <th style="display: none;"><?= $f['id_id'] ?></th>
+                                            <th style="text-align:right"><?=++$iter;?></th>
+                                            <th><?=$f['item'] . '(' . $f['color'] . ')' ?></th>
+                                            <td style="text-align:right"><?=number_format($f['opening_qnty'], 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($f['opening_val'], 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($f['purchase_qnty'], 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($f['purchase_val'], 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($f['issue_qnty'], 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($f['issue_val'], 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($f['plating_qnty'] ?? 0, 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($f['plating_val'] ?? 0, 2) ?></td>
+                                            <td style="text-align:right"><?= number_format($f['stock_in_qnty'] ?? 0, 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($f['stock_in_val'] ?? 0, 2) ?></td>
+                                            <td style="background: #afedb1;text-align:right"><?=number_format($bal_qty, 2, '.', '')?></td>
+                                            <td style="text-align:right"><?=number_format($bal_rate, 2) ?></td>
+                                            <?php
+                                            if ($bal_qty != 0) {
+                                                $closing_rate += ($bal_rate / $bal_qty);
+                                            ?>
+                                            <td style="text-align:right"><?=number_format(($bal_rate / $bal_qty), 2, '.', '')?></td>
+                                            <?php
+                                            } else {
+                                                $closing_rate += 0;
+                                            ?>
+                                            <td style="text-align:right">0</td>
+                                            <?php } ?>
+                                            <td style="text-align:center"><?= $f['unit'] ?></td>
+                                        </tr>
+                                        <?php } ?>
+                                        <tr style="background:thistle">
+                                            <th style="display: none;"></th>
+                                            <th colspan="2">Total</th>
+                                            <td style="text-align:right"><?=number_format($all_opn_qty, 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($all_opn_rate, 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($all_pur_qty, 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($all_pur_rate, 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($all_issue_qty, 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($all_issue_rate, 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($all_plating_qty, 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($all_plating_rate, 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($all_stockin_qty, 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($all_stockin_rate, 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($all_bal_qty, 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($all_bal_rate, 2) ?></td>
+                                            <td style="text-align:right"><?=number_format($closing_rate, 2) ?></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sheet padding-5mm" style="height: auto">
+
+            <?php $table_no=2; ?>
+
+            <!--<header class="pull-right">-->
+            <!--    <small>Page No. </small>-->
+            <!--</header>-->
+
+            <div class="clearfix"></div>
+            <div class="container">
+                <div class="row border_all text-center text-uppercase mar_bot_3">
+                    <h3 class="mar_0 head_font">Stock Summary Details <?= ($virtual == 'false') ? '' : '<label style="color:blue"> - Supplementary</label>' ?></h3>
+                </div>
+                <div class="row mar_bot_3">
+                    <div class="col-sm-6 border_all header_left">
+                        <h4 class=""><strong>SHILPA OVERSEAS PVT. LTD. </strong></h4>
+                        <p class="mar_0">KAIKHALI, CHIRIAMORE,P.O. : R.GOPALPUR, KOLKATA - 700 136</p>
+                    </div>
+                    <div class="col-sm-6 border_all header_right">
+                      <b><?=implode(', ', $temp_co_name_array1) ?></b>
+                      <br/>
+                      From <b><?=date("d-m-Y", strtotime($from)) ?></b> To <b><?=date("d-m-Y", strtotime($to)) ?></b>
+                    </div>
+                </div>
+                <div class="row">
+                    <h3 style="background: burlywood;padding: 0.7%;margin-bottom:0" class="text-center">------------------------------------- Import Items -------------------------------------</h3>
+                    <div class="table-responsive">
+                        <table id="export_table_to_excel<?=$table_no?>" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th rowspan="2" style="text-align:right">#</th>
+                                    <th rowspan="2" style="text-align:center">Item</th>
+                                    <th colspan="2" style="text-align:center">Opening Information</th>
+                                    <th colspan="2" style="text-align:center">Purchase Information</th>
+                                    <th colspan="2" style="text-align:center">Issue Information</th>
+                                    <th colspan="2" style="text-align:center">Plating Information</th>
+                                    <th colspan ="2" style="text-align:center">Stock In Information</th>
+                                    <th colspan ="2" style="text-align:center">Balance Information</th>
+                                    <th rowspan="2">Closing<br>Rate</th>
+                                    <th rowspan="2" style="text-align:center">Unit</th>
+                                </tr>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th style="text-align:center">Opn Qnty</th>
+                                    <th style="text-align:center">Opn Val</th>
+
+                                    <th style="text-align:center">Pur Qnty</th>
+                                    <th style="text-align:center">Pur Val</th>
+
+                                    <th style="text-align:center">Issue Qnty</th>
+                                    <th style="text-align:center">Issue Val</th>
+
+                                    <th style="text-align:center">Plating Qnty</th>
+                                    <th style="text-align:center">Plating Val</th>
+
+                                    <th style="text-align:center">Stock In Qnty</th>
+                                    <th style="text-align:center">Stock In Val</th>
+
+                                    <th style="text-align:center">Bal Qnty</th>
+                                    <th style="text-align:center">Bal Val</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                // keep old value for grand total - starts
+                                $old_all_bal_qty = $all_bal_qty;
+                                $old_all_opn_qty = $all_opn_qty;
+                                $old_all_pur_qty = $all_pur_qty;
+                                $old_all_issue_qty = $all_issue_qty;
+                                $old_all_plating_qty = $all_plating_qty;
+                                $old_all_stockin_qty = $all_stockin_qty;
+                                $old_all_bal_rate = $all_bal_rate;
+                                $old_all_opn_rate = $all_opn_rate;
+                                $old_all_pur_rate = $all_pur_rate;
+                                $old_all_issue_rate = $all_issue_rate;
+                                $old_all_plating_rate = $all_plating_rate;
+                                $old_all_stockin_rate = $all_stockin_rate;
+                                $old_closing_rate = $closing_rate;
+                                // keep old value for grand total - ends
+                                $iter = $all_bal_qty = $all_opn_qty = $all_pur_qty = $all_issue_qty = $all_plating_qty = $all_stockin_qty = $all_bal_rate = $all_opn_rate = $all_pur_rate = $all_issue_rate = $all_plating_rate = $all_stockin_rate = $closing_rate = 0;
+                                foreach ($result as $f){
+                                    if($f['type'] == 'Local'){
+                                        continue;
+                                    }
+                                    if ($f['opening_val'] == 0 && $f['opening_qnty'] == 0 && $f['purchase_qnty'] == 0 && $f['issue_qnty'] == 0) {
+                                        continue;
+                                    }
+
+                                    $bal_qty = $f['opening_qnty'] + $f['purchase_qnty'] - ($f['issue_qnty'] + $f['plating_qnty']) + $f['stock_in_qnty'];
+                                    if(($bal_qnty == 0) and ($bal_qty == 0)){
+//                                        continue;
+                                    }
+                                    $bal_rate = $f['opening_val'] + $f['purchase_val'] - ($f['issue_val'] + $f['plating_val']) + $f['stock_in_val'];
+
+                                    $all_opn_qty += $f['opening_qnty'];
+                                    $all_opn_rate += $f['opening_val'];
+                                    $all_pur_qty += $f['purchase_qnty'];
+                                    $all_pur_rate += $f['purchase_val'];
+                                    $all_issue_qty += $f['issue_qnty'];
+                                    $all_issue_rate += $f['issue_val'];
+                                    $all_plating_qty += $f['plating_qnty'];
+                                    $all_plating_rate += $f['plating_val'];
+                                    $all_stockin_qty += $f['stock_in_qnty'];
+                                    $all_stockin_rate += $f['stock_in_val'];
+                                    $all_bal_qty += $bal_qty;
+                                    $all_bal_rate += $bal_rate;
+                                ?>
+                                <tr>
+                                    <th style="display: none;"><?= $f['id_id'] ?></th>
+                                    <th style="text-align:right"><?=++$iter?></th>
+                                    <th><?=$f['item'] . '(' . $f['color'] . ')' ?></th>
+                                    <td style="text-align:right"><?=number_format($f['opening_qnty'], 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($f['opening_val'], 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($f['purchase_qnty'], 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($f['purchase_val'], 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($f['issue_qnty'], 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($f['issue_val'], 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($f['plating_qnty'] ?? 0, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($f['plating_val'] ?? 0, 2) ?></td>
+                                    <td style="text-align:right"><?= number_format($f['stock_in_qnty'] ?? 0, 2) ?></td>
+                                    <td style="text-align:right"><?=number_format($f['stock_in_val'] ?? 0, 2) ?></td>
+                                    <td style="background: #afedb1;text-align:right"><?=number_format($bal_qty, 2, '.', '')?></td>
+                                    <td style="text-align:right"><?=number_format($bal_rate, 2) ?></td>
+                                    <?php
                                     if ($bal_qty != 0) {
                                         $closing_rate += ($bal_rate / $bal_qty);
                                     ?>

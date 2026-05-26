@@ -28,7 +28,7 @@ $blank_row = 6;
         <!-- Load paper.css for happy printing -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
         <link href="https://fonts.googleapis.com/css?family=Chivo|Signika" rel="stylesheet">
-        <link href="http://localhost/sopl-new/assets/img/favicon.ico" rel="shortcut icon" type="image/png">
+        <link href="<?= base_url() ?>assets/img/favicon.ico" rel="shortcut icon" type="image/png">
         <!-- Set page size here: A5, A4 or A3 -->
         <!-- Set also "landscape" if you need -->
         <style>
@@ -127,7 +127,9 @@ $blank_row = 6;
                             <p class="mar_0">PHONE: +91 2573-3470/71/72/2405</p>
                             <p class="mar_0">Emails : info@shilpaoverseas.com</p>
                             <p class="mar_0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: bratin.ghosh@shilpaoverseas.com</p>
-                            <p class="mar_0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: subir.ghosh@shilpaoverseas.com</p>
+                            <p class="mar_0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: goutam.dey@shilpaoverseas.com</p>
+                            <p class="mar_0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: suraj.ghosh@shilpaoverseas.com</p>
+                            
                             <!--<p class="mar_0">CIN-U19116WB1992PTC055524</p>-->
                         </div>
                         <div class="col-sm-6 header_right">
@@ -256,7 +258,7 @@ $blank_row = 6;
                             <p class="mar_0">Emails : info@shilpaoverseas.com</p>
                             <!--<p class="mar_0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: debapriya.sen@shilpaoverseas.com</p>-->
                             <p class="mar_0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: bratin.ghosh@shilpaoverseas.com</p>
-                            <p class="mar_0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: subir.ghosh@shilpaoverseas.com</p>
+                            <p class="mar_0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: goutam.dey@shilpaoverseas.com</p>
                             <!--<p class="mar_0">CIN-U19116WB1992PTC055524</p>-->
                         </div>
                         <div class="col-sm-6 header_right">

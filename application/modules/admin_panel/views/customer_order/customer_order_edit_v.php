@@ -300,6 +300,7 @@
                             <ul id="customer_order_tabs" class="nav nav-tabs nav-justified">
                                 <li class="active"><a href="#co_list" data-toggle="tab">List</a></li>
                                 <li><a href="#co_add" data-toggle="tab">Add</a></li>
+                                <!--TANAY-->
                                 <li id="co_details_edit_tab" class="disabled"><a href="#co_details_edit" data-toggle="">Edit</a></li>
                             </ul>
                             <!--Tab Content-->

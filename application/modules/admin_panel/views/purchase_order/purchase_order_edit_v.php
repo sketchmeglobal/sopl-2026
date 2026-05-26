@@ -481,7 +481,7 @@
                                                 </div>
                                                 <div class="col-lg-3">
                                                     <label for="pod_rate" class="control-label text-danger">Rate *</label>
-                                                    <input type="number" step="any" id="pod_rate" name="pod_rate" required class="form-control" />
+                                                    <input type="number" step="0.001" id="pod_rate" name="pod_rate" required class="form-control" />
                                                 </div>
                                 
                                                 <div class="col-lg-1 border-black-bottom">

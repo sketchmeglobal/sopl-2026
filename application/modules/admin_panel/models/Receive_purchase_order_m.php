@@ -350,7 +350,6 @@ class Receive_purchase_order_m extends CI_Model {
     }
 
     public function edit_receive_purchase_order($purchase_order_receive_id) {
-
         $data['item_groups'] = $this->db->select('ig_id, ig_code, group_name')
             ->get_where('item_groups', array('item_groups.status' => 1))->result_array();
     
@@ -379,31 +378,18 @@ class Receive_purchase_order_m extends CI_Model {
     
         $am_id = $data['receive_purchase_order_details'][0]->am_id;
     
-        // -----------------------------------------------
-        // NEW: Challan bill list for Purchase Order dropdown
-        // -----------------------------------------------
+        // Challan bill list for dropdown
         $data['challan_orders'] = $this->db
             ->select('purchase_challan_order_receive.purchase_order_receive_id, 
                       purchase_challan_order_receive.purchase_order_receive_bill_no')
             ->get_where('purchase_challan_order_receive', array(
-                'purchase_challan_order_receive.am_id'    => $am_id,
-                'purchase_challan_order_receive.status'   => 1
+                'purchase_challan_order_receive.am_id'  => $am_id,
+                'purchase_challan_order_receive.status' => 1
             ))->result_array();
     
-        // existing supp purchase order
-        $sup_num_rows = $this->db->get_where('supp_purchase_order', array(
-            'am_id' => $am_id, 'supp_status' => 1
-        ))->num_rows();
-    
-        $data['supp_purchase_order'] = ($sup_num_rows > 0)
-            ? $this->db->select('sup_id, supp_po_number')
-                  ->get_where('supp_purchase_order', array(
-                      'am_id' => $am_id, 'supp_status' => 1
-                  ))->result_array()
-            : array();
-    
-        // keep purchase_order array empty or remove if no longer needed
-        $data['purchase_order'] = array();
+        // ── REMOVED: supp_purchase_order no longer needed ──
+        $data['supp_purchase_order'] = array();
+        $data['purchase_order']      = array();
     
         return array(
             'page' => 'receive_purchase_order/receive_purchase_order_edit_v',
@@ -690,9 +676,10 @@ class Receive_purchase_order_m extends CI_Model {
         $insertArray = array(
             'purchase_order_receive_id' => $this->input->post('purchase_order_receive_id'),
             'po_id' => $this->input->post('po_id'), // item_dtl_id as color
-            'sup_id' => $this->input->post('sup_id'),
-            'id_id' => $this->input->post('id_id_add'),
-			'item_quantity' => $this->input->post('pod_quantity_add'),
+            'sup_id'           => $this->input->post('sup_id'),
+            'challan_detail_id'=> (int)$this->input->post('challan_detail_id'), // ← ADD
+            'id_id'            => $this->input->post('id_id_add'),
+        	'item_quantity' => $this->input->post('pod_quantity_add'),
 			'item_rate' => $this->input->post('pod_rate_add'),
 			'delivery_charges' => $this->input->post('pod_delivery_charges'),
             'pod_cgst_percentage' => $this->input->post('pod_cgst_percentage'),
@@ -1021,156 +1008,166 @@ class Receive_purchase_order_m extends CI_Model {
     }
     
     public function ajax_receive_purchase_order_challan_table_data() {
+        
 
-        //actual db table column names
         $column_orderable = array(
-            0 => 'purchase_order_receive_bill_no',
-            1 => 'purchase_order_receive_date',
-            2 => 'po_numbers'
+            0 => 'purchase_challan_order_receive.purchase_order_receive_bill_no',
+            1 => 'purchase_challan_order_receive.purchase_order_receive_date',
+            2 => 'po_numbers',
+            3 => 'acc_master.name',
+            4 => 'purchase_challan_order_receive.status',
+            5 => 'purchase_challan_order_receive.purchase_order_receive_id',
         );
-        // Set searchable column fields
-        $column_search = array('purchase_order_receive_bill_no', 'acc_master.name', 'purchase_order_receive_date');
+    
+        $column_search = array(
+            'purchase_challan_order_receive.purchase_order_receive_bill_no',
+            'acc_master.name',
+            'purchase_challan_order_receive.purchase_order_receive_date'
+        );
     
         $limit  = $this->input->post('length');
         $start  = $this->input->post('start');
-        $order  = $column_orderable[$this->input->post('order')[0]['column']];
+        $order_col = $this->input->post('order')[0]['column'];
+        $order  = isset($column_orderable[$order_col]) ? $column_orderable[$order_col] : 'purchase_challan_order_receive.purchase_order_receive_id';
         $dir    = $this->input->post('order')[0]['dir'];
         $search = $this->input->post('search')['value'];
     
-        $rs            = $this->db->get('purchase_challan_order_receive')->result();
-        $totalData     = count($rs);
-        $totalFiltered = $totalData;
-    
-        $data          = array();
-    
-        // for top filter
         $pur_rcv_id_id = $this->input->post('pur_rcv_id_id');
     
-        if ($pur_rcv_id_id != '') {
-    
-            $this->db->order_by($order, $dir);
-            $this->db->select('GROUP_CONCAT(DISTINCT purchase_order.po_number SEPARATOR ", ") as po_numbers,
-            purchase_challan_order_receive.purchase_order_receive_id, purchase_challan_order_receive.purchase_order_receive_bill_no,
+        $select = 'GROUP_CONCAT(DISTINCT purchase_order.po_number SEPARATOR ", ") as po_numbers,
+            purchase_challan_order_receive.purchase_order_receive_id,
+            purchase_challan_order_receive.purchase_order_receive_bill_no,
             DATE_FORMAT(purchase_challan_order_receive.purchase_order_receive_date, "%d-%m-%Y") as purchase_order_receive_date,
-            purchase_challan_order_receive.am_id, purchase_challan_order_receive.status,
-            acc_master.name as acc_master_name, acc_master.short_name as acc_master_short_name,
+            purchase_challan_order_receive.am_id,
+            purchase_challan_order_receive.status,
+            acc_master.name as acc_master_name,
+            acc_master.short_name as acc_master_short_name,
             purchase_challan_order_receive.payment_status,
-            purchase_order_receive.purchase_order_receive_bill_no as por_bill_no,purchase_order_receive.purchase_order_receive_date as por_bill_date');
+            purchase_order_receive.purchase_order_receive_bill_no as por_bill_no,
+            purchase_order_receive.purchase_order_receive_date as por_bill_date';
+    
+        // ── Filter by item id if provided ────────────────────────────────────────
+        if (!empty($pur_rcv_id_id)) {
+    
+            // Total count
+            $this->db->select($select);
             $this->db->join('acc_master', 'acc_master.am_id = purchase_challan_order_receive.am_id', 'left');
             $this->db->join('purchase_challan_order_receive_detail', 'purchase_challan_order_receive_detail.purchase_order_receive_id = purchase_challan_order_receive.purchase_order_receive_id', 'left');
             $this->db->join('purchase_order', 'purchase_order.po_id = purchase_challan_order_receive_detail.po_id', 'left');
             $this->db->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_challan_order_receive.purchase_order_receive_id', 'left');
             $this->db->where('purchase_challan_order_receive_detail.id_id', $pur_rcv_id_id);
             $this->db->group_by('purchase_challan_order_receive.purchase_order_receive_id');
-            $rs = $this->db->get('purchase_challan_order_receive')->result();
+            $totalData = count($this->db->get('purchase_challan_order_receive')->result());
+            $totalFiltered = $totalData;
     
-            $totalData     = count($rs);
-            $totalFiltered = count($rs);
+            // Paginated result
+            $this->db->select($select);
+            $this->db->join('acc_master', 'acc_master.am_id = purchase_challan_order_receive.am_id', 'left');
+            $this->db->join('purchase_challan_order_receive_detail', 'purchase_challan_order_receive_detail.purchase_order_receive_id = purchase_challan_order_receive.purchase_order_receive_id', 'left');
+            $this->db->join('purchase_order', 'purchase_order.po_id = purchase_challan_order_receive_detail.po_id', 'left');
+            $this->db->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_challan_order_receive.purchase_order_receive_id', 'left');
+            $this->db->where('purchase_challan_order_receive_detail.id_id', $pur_rcv_id_id);
+            $this->db->group_by('purchase_challan_order_receive.purchase_order_receive_id');
+            $this->db->order_by($order, $dir);
+            $this->db->limit($limit, $start);
+            $rs = $this->db->get('purchase_challan_order_receive')->result();
     
         } else {
     
-            // ORIGINAL DATATABLE
-            // if not searching for anything
-            if (empty($search)) {
-                $this->db->limit($limit, $start);
-                $this->db->order_by($order, $dir);
-                $this->db->select('GROUP_CONCAT(DISTINCT purchase_order.po_number SEPARATOR ", ") as po_numbers,
-                purchase_challan_order_receive.purchase_order_receive_id, purchase_challan_order_receive.purchase_order_receive_bill_no,
-                DATE_FORMAT(purchase_challan_order_receive.purchase_order_receive_date, "%d-%m-%Y") as purchase_order_receive_date,
-                purchase_challan_order_receive.am_id, purchase_challan_order_receive.status,
-                acc_master.name as acc_master_name, acc_master.short_name as acc_master_short_name,
-                purchase_challan_order_receive.payment_status,
-                purchase_order_receive.purchase_order_receive_bill_no as por_bill_no,purchase_order_receive.purchase_order_receive_date as por_bill_date');
-                $this->db->join('acc_master', 'acc_master.am_id = purchase_challan_order_receive.am_id', 'left');
-                $this->db->join('purchase_challan_order_receive_detail', 'purchase_challan_order_receive_detail.purchase_order_receive_id = purchase_challan_order_receive.purchase_order_receive_id', 'left');
-                $this->db->join('purchase_order', 'purchase_order.po_id = purchase_challan_order_receive_detail.po_id', 'left');
-                $this->db->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_challan_order_receive.purchase_order_receive_id', 'left');
-                $this->db->where('purchase_challan_order_receive.status', 1);
-                $this->db->group_by('purchase_challan_order_receive.purchase_order_receive_id');
-                $rs = $this->db->get('purchase_challan_order_receive')->result();
-    
-            } else {
-                // if searching for something
-                $this->db->start_cache();
+            // ── Build search condition ────────────────────────────────────────────
+            if (!empty($search)) {
+                $this->db->group_start();
                 $i = 0;
                 foreach ($column_search as $item) {
                     if ($i === 0) {
-                        $this->db->group_start();
                         $this->db->like($item, $search);
                     } else {
                         $this->db->or_like($item, $search);
                     }
-                    if (count($column_search) - 1 == $i) {
-                        $this->db->group_end();
+                    $i++;
+                }
+                $this->db->group_end();
+            }
+    
+            // Total count with search
+            $this->db->select($select);
+            $this->db->join('acc_master', 'acc_master.am_id = purchase_challan_order_receive.am_id', 'left');
+            $this->db->join('purchase_challan_order_receive_detail', 'purchase_challan_order_receive_detail.purchase_order_receive_id = purchase_challan_order_receive.purchase_order_receive_id', 'left');
+            $this->db->join('purchase_order', 'purchase_order.po_id = purchase_challan_order_receive_detail.po_id', 'left');
+            $this->db->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_challan_order_receive.purchase_order_receive_id', 'left');
+            $this->db->where('purchase_challan_order_receive.status', 1);
+            $this->db->group_by('purchase_challan_order_receive.purchase_order_receive_id');
+            $count_result  = $this->db->get('purchase_challan_order_receive')->result();
+            $totalData     = count($count_result);
+            $totalFiltered = count($count_result);
+    
+            // Re-apply search for paginated result
+            if (!empty($search)) {
+                $this->db->group_start();
+                $i = 0;
+                foreach ($column_search as $item) {
+                    if ($i === 0) {
+                        $this->db->like($item, $search);
+                    } else {
+                        $this->db->or_like($item, $search);
                     }
                     $i++;
                 }
-                $this->db->stop_cache();
-    
-                $this->db->select('GROUP_CONCAT(DISTINCT purchase_order.po_number SEPARATOR ", ") as po_numbers,
-                purchase_challan_order_receive.purchase_order_receive_id, purchase_challan_order_receive.purchase_order_receive_bill_no,
-                DATE_FORMAT(purchase_challan_order_receive.purchase_order_receive_date, "%d-%m-%Y") as purchase_order_receive_date,
-                purchase_challan_order_receive.am_id, purchase_challan_order_receive.status,
-                acc_master.name as acc_master_name, acc_master.short_name as acc_master_short_name,
-                purchase_challan_order_receive.payment_status,
-                purchase_order_receive.purchase_order_receive_bill_no as por_bill_no,purchase_order_receive.purchase_order_receive_date as por_bill_date');
-                $this->db->join('acc_master', 'acc_master.am_id = purchase_challan_order_receive.am_id', 'left');
-                $this->db->join('purchase_challan_order_receive_detail', 'purchase_challan_order_receive_detail.purchase_order_receive_id = purchase_challan_order_receive.purchase_order_receive_id', 'left');
-                $this->db->join('purchase_order', 'purchase_order.po_id = purchase_challan_order_receive_detail.po_id', 'left');
-                $this->db->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_challan_order_receive.purchase_order_receive_id', 'left');
-                $this->db->where('purchase_challan_order_receive.status', 1);
-                $this->db->group_by('purchase_challan_order_receive.purchase_order_receive_id');
-                $rs = $this->db->get('purchase_challan_order_receive')->result();
-    
-                $totalFiltered = count($rs);
-    
-                $this->db->limit($limit, $start);
-                $this->db->order_by($order, $dir);
-                $this->db->select('GROUP_CONCAT(DISTINCT purchase_order.po_number SEPARATOR ", ") as po_numbers,
-                purchase_challan_order_receive.purchase_order_receive_id, purchase_challan_order_receive.purchase_order_receive_bill_no,
-                DATE_FORMAT(purchase_challan_order_receive.purchase_order_receive_date, "%d-%m-%Y") as purchase_order_receive_date,
-                purchase_challan_order_receive.am_id, purchase_challan_order_receive.status,
-                acc_master.name as acc_master_name, acc_master.short_name as acc_master_short_name,
-                purchase_challan_order_receive.payment_status,
-                purchase_order_receive.purchase_order_receive_bill_no as por_bill_no,purchase_order_receive.purchase_order_receive_date as por_bill_date');
-                $this->db->join('acc_master', 'acc_master.am_id = purchase_challan_order_receive.am_id', 'left');
-                $this->db->join('purchase_challan_order_receive_detail', 'purchase_challan_order_receive_detail.purchase_order_receive_id = purchase_challan_order_receive.purchase_order_receive_id', 'left');
-                $this->db->join('purchase_order', 'purchase_order.po_id = purchase_challan_order_receive_detail.po_id', 'left');
-                $this->db->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_challan_order_receive.purchase_order_receive_id', 'left');
-                $this->db->where('purchase_challan_order_receive.status', 1);
-                $this->db->group_by('purchase_challan_order_receive.purchase_order_receive_id');
-                $rs = $this->db->get('purchase_challan_order_receive')->result();
-                $this->db->flush_cache();
+                $this->db->group_end();
             }
+    
+            // Paginated result
+            $this->db->select($select);
+            $this->db->join('acc_master', 'acc_master.am_id = purchase_challan_order_receive.am_id', 'left');
+            $this->db->join('purchase_challan_order_receive_detail', 'purchase_challan_order_receive_detail.purchase_order_receive_id = purchase_challan_order_receive.purchase_order_receive_id', 'left');
+            $this->db->join('purchase_order', 'purchase_order.po_id = purchase_challan_order_receive_detail.po_id', 'left');
+            $this->db->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_challan_order_receive.purchase_order_receive_id', 'left');
+            $this->db->where('purchase_challan_order_receive.status', 1);
+            $this->db->group_by('purchase_challan_order_receive.purchase_order_receive_id');
+            $this->db->order_by($order, $dir);
+            $this->db->limit($limit, $start);
+            $rs = $this->db->get('purchase_challan_order_receive')->result();
         }
+    
+        $data = array();
     
         foreach ($rs as $val) {
     
-            if ($val->status == '1') { $status = 'Enable'; } else { $status = 'Disable'; }
+            $status = ($val->status == '1') ? 'Enable' : 'Disable';
     
-            $nestedData['purchase_order_receive_bill_no'] = $val->purchase_order_receive_bill_no;                        // from purchase_order_receive
+            $nestedData['purchase_order_receive_bill_no'] = $val->purchase_order_receive_bill_no;
             $nestedData['purchase_order_receive_date']    = $val->purchase_order_receive_date;
-            $nestedData['po_number']                      = $val->po_numbers;     // from purchase_challan_order_receive_detail
-            $nestedData['pur_order_supplier']             = $val->acc_master_name . '[' . $val->acc_master_short_name . ']';
+            $nestedData['po_number']                      = $val->po_numbers;
+            $nestedData['pur_order_supplier']             = $val->acc_master_name . ' [' . $val->acc_master_short_name . ']';
             $nestedData['status']                         = $status;
     
             $uvp = $this->_user_wise_view_permission(18, $this->session->user_id);
             if ($uvp == 'block') {
                 $nestedData['action'] = '-';
             } else {
-                $nestedData['action'] = '<a href="'. base_url('admin/edit-receive-purchase-order-challan/'.$val->purchase_order_receive_id) .'" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
-                <!--<a target="_blank" href="'. base_url('admin/purchase-challan-bill-rate-setup/'.$val->purchase_order_receive_id) .'" class="btn btn-primary"><i class="fa fa-print"></i> Rate History </a>-->
-                <a href="javascript:void(0)" pk-name="purchase_order_receive_id" pk-value="'.$val->purchase_order_receive_id.'" tab="purchase_challan_order_receive" ref-tab="purchase_challan_order_receive_detail" child="1" class="btn btn-danger delete1"><i class="fa fa-times"></i> Delete</a>';
+                $nestedData['action'] = '
+                    <a href="' . base_url('admin/edit-receive-purchase-order-challan/' . $val->purchase_order_receive_id) . '" class="btn btn-info">
+                        <i class="fa fa-pencil"></i> Edit
+                    </a>
+                    <a href="javascript:void(0)"
+                        pk-name="purchase_order_receive_id"
+                        pk-value="' . $val->purchase_order_receive_id . '"
+                        tab="purchase_challan_order_receive"
+                        ref-tab="purchase_challan_order_receive_detail"
+                        child="1"
+                        class="btn btn-danger delete1">
+                        <i class="fa fa-times"></i> Delete
+                    </a>';
             }
     
-            // block admin
             if ($this->session->usertype != 1) {
                 if ($val->payment_status == 0) {
-                    $nestedData['action'] .= '&nbsp;<!--<a title="Payment is done" href="javascript:void(0)" pk-value="'.$val->purchase_order_receive_id.'" class="btn btn-success payment"><i class="fa fa-check"></i> Paid</a>-->';
+                    $nestedData['action'] .= '&nbsp;';
                 } else {
-                    $nestedData['action'] .= '&nbsp;<!--<a title="Revoke Payment" href="javascript:void(0)" pk-value="'.$val->purchase_order_receive_id.'" class="btn btn-warning payment"><i class="fa fa-times"></i> Revoke</a>-->';
+                    $nestedData['action'] .= '&nbsp;';
                 }
             }
+    
             $data[] = $nestedData;
         }
     
@@ -1312,60 +1309,96 @@ class Receive_purchase_order_m extends CI_Model {
         return $data;
     }
     
+    
+
     public function all_items_on_purchase_challan_order() {
-    $data = array();
+    $po_id  = $this->input->post('po_id');
+    $am_id  = $this->input->post('am_id_hidden');
+ 
+    $items = $this->db
+        ->select('purchase_order_details.id_id, purchase_order_details.pod_quantity, item_master.item AS item_name, colors.color, units.unit')
+        ->from('purchase_order_details')
+        ->join('item_dtl', 'item_dtl.id_id = purchase_order_details.id_id', 'left')
+        ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
+        ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
+        ->join('units', 'units.u_id = item_master.u_id', 'left')
+        ->where('purchase_order_details.po_id', $po_id)
+        ->where('purchase_order_details.status', 1)
+        ->get()->result();
+ 
+    $sup_po_orders = $this->db
+        ->select('sup_id, supp_po_number')
+        ->where('po_id', $po_id)
+        ->where('am_id', $am_id)
+        ->where('supp_status', 1)
+        ->get_where('supp_purchase_order')->result();
+ 
+    $all_items = array();
+ 
+    foreach ($items as $item) {
+ 
+        // ── Already received qty ──────────────────────────────────────────────
+        $this->db->reset_query();
+        $received = $this->db
+            ->select_sum('item_quantity')
+            ->from('purchase_challan_order_receive_detail')
+            ->where('po_id', $po_id)
+            ->where('id_id', $item->id_id)
+            ->where('status', 1)
+            ->get()->row();
+ 
+        $received_qty  = (!empty($received) && $received->item_quantity !== null)
+            ? (float)$received->item_quantity : 0;
+        $remaining_qty = (float)$item->pod_quantity - $received_qty;
+ 
+        // ── Fetch last challan rate: same supplier + same item + color ─────────
+        // Priority 1: last saved challan rate (item_rate > 0) for this supplier
+        // Priority 2: fallback to opening_rate from item_dtl
+        
+        
+       // Priority 1: latest purchase_rate from item_rates master
+// same supplier (am_id) + same item (id_id), order by effective_date DESC
+$this->db->reset_query();
+$last_rate_row = $this->db
+    ->select('ir.purchase_rate AS item_rate')
+    ->from('item_rates ir')
+    ->where('ir.id_id', $item->id_id)
+    ->where('ir.am_id', $am_id)
+    ->where('ir.status', 1)
+    ->order_by('ir.effective_date', 'DESC')
+    ->limit(1)
+    ->get()->row();
 
-    $po_id = $this->input->post('po_id');
-    $am_id = $this->input->post('am_id_hidden');
-
-    $this->db->select('
-        purchase_order_details.id_id,
-        (purchase_order_details.pod_quantity - IFNULL(rcv.total_received, 0)) as pod_quantity,
-        purchase_order_details.pod_rate,
-        purchase_order_details.pod_total,
-        item_master.item as item_name,
-        item_master.im_code,
-        units.unit,
-        colors.color
-    ');
-
-    // Subquery: SUM all received qty per id_id → single row per item
-    $this->db->join(
-        '(SELECT id_id, SUM(item_quantity) as total_received 
-          FROM purchase_challan_order_receive_detail 
-          GROUP BY id_id) rcv',
-        'rcv.id_id = purchase_order_details.id_id',
-        'left'
-    );
-
-    $this->db->join('item_dtl',     'item_dtl.id_id = purchase_order_details.id_id',   'left');
-    $this->db->join('item_master',  'item_master.im_id = item_dtl.im_id',               'left');
-    $this->db->join('units',        'units.u_id = item_master.u_id',                    'left');
-    $this->db->join('colors',       'colors.c_id = item_dtl.c_id',                     'left');
-
-    $data['all_items'] = $this->db->get_where('purchase_order_details', array(
-        'purchase_order_details.status' => '1',
-        'purchase_order_details.po_id'  => $po_id
-    ))->result_array();
-
-    $sup_num_rows = $this->db->get_where('supp_purchase_order', array(
-        'am_id'       => $am_id,
-        'po_id'       => $po_id,
-        'supp_status' => 1
-    ))->num_rows();
-
-    if ($sup_num_rows > 0) {
-        $data['sup_po_orders'] = $this->db->select('sup_id, supp_po_number')
-            ->get_where('supp_purchase_order', array(
-                'am_id'       => $am_id,
-                'po_id'       => $po_id,
-                'supp_status' => 1
-            ))->result_array();
-    } else {
-        $data['sup_po_orders'] = array();
+if (!empty($last_rate_row) && (float)$last_rate_row->item_rate > 0) {
+    // ← use latest purchase_rate from item_rates
+    $last_item_rate = number_format((float)$last_rate_row->item_rate, 3, '.', '');
+} else {
+    // Priority 2: fallback to opening_rate from item_dtl
+    $this->db->reset_query();
+    $opening_rate_row = $this->db
+        ->select('opening_rate')
+        ->get_where('item_dtl', array('id_id' => $item->id_id))
+        ->row();
+    $last_item_rate = (!empty($opening_rate_row) && (float)$opening_rate_row->opening_rate > 0)
+        ? number_format((float)$opening_rate_row->opening_rate, 3, '.', '')
+        : '0';
+}
+ 
+        $all_items[] = array(
+            'id_id'        => $item->id_id,
+            'pod_quantity' => $remaining_qty,  // ← 2500 - 1021.5 = 1478.5
+            'item_name'    => $item->item_name,
+            'color'        => $item->color,
+            'unit'         => $item->unit,
+            'item_rate'    => $last_item_rate, // ← last challan rate OR opening_rate
+        );
     }
-
-    return $data;
+ 
+    echo json_encode(array(
+        'all_items'     => $all_items,
+        'sup_po_orders' => $sup_po_orders
+    ));
+    die();
 }
     
     public function ajax_receive_purchase_challan_order_details_table_data() {
@@ -1453,6 +1486,7 @@ class Receive_purchase_order_m extends CI_Model {
             $nestedData['item_name']     = $val->item;
             $nestedData['item_color']    = $val->color . ' [' . $val->c_code . ']';
             $nestedData['item_qty']      = $val->item_quantity;
+            $nestedData['item_rate']     = number_format((float)$val->item_rate, 3); // ← ADD THIS
             $nestedData['receive_date']  = $val->receive_date;
     
             $nestedData['action'] = '<a href="javascript:void(0)" purchase_order_receive_detail_id="' . $val->purchase_order_receive_detail_id . '" class="purchase_order_receive_detail_id btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
@@ -1472,27 +1506,34 @@ class Receive_purchase_order_m extends CI_Model {
     }
         
     public function form_edit_receive_purchase_challan_order_details() {
-
-        $purchase_order_receive_detail_id = $this->input->post('purchase_order_receive_detail_id');
-        $purchase_order_receive_id        = $this->input->post('purchase_order_receive_id');
-    
-        // Log old data
-        $old_array = $this->db->get_where('purchase_challan_order_receive_detail', array('purchase_order_receive_detail_id' => $purchase_order_receive_detail_id))->result();
-        $this->log_before_update($old_array, $purchase_order_receive_detail_id, 'purchase_challan_order_receive_detail');
-    
-        $updateArray = array(
-            'item_quantity' => $this->input->post('pod_quantity_edit'),
-            'receive_date'  => $this->input->post('rcv_date_detail_edit'),
-            'remarks'       => $this->input->post('sup_pod_remarks_edit'),
-            'user_id'       => $this->session->user_id
-        );
-        $this->db->update('purchase_challan_order_receive_detail', $updateArray, array('purchase_order_receive_detail_id' => $purchase_order_receive_detail_id));
-    
-        $data['type'] = 'success';
-        $data['msg']  = 'Receive purchase challan order details updated successfully.';
-    
-        return $data;
-    }
+    $purchase_order_receive_detail_id = $this->input->post('purchase_order_receive_detail_id');
+    $purchase_order_receive_id        = $this->input->post('purchase_order_receive_id');
+ 
+    // Log old data
+    $old_array = $this->db->get_where('purchase_challan_order_receive_detail', array(
+        'purchase_order_receive_detail_id' => $purchase_order_receive_detail_id
+    ))->result();
+    $this->log_before_update($old_array, $purchase_order_receive_detail_id, 'purchase_challan_order_receive_detail');
+ 
+    $updateArray = array(
+        'item_quantity' => $this->input->post('pod_quantity_edit'),
+        'item_rate'     => $this->input->post('item_rate'), // ← NEW
+        'receive_date'  => $this->input->post('rcv_date_detail_edit'),
+        'remarks'       => $this->input->post('sup_pod_remarks_edit'),
+        'user_id'       => $this->session->user_id
+    );
+ 
+    $this->db->update(
+        'purchase_challan_order_receive_detail',
+        $updateArray,
+        array('purchase_order_receive_detail_id' => $purchase_order_receive_detail_id)
+    );
+ 
+    $data['type'] = 'success';
+    $data['msg']  = 'Receive purchase challan order details updated successfully.';
+ 
+    return $data;
+}
         
     public function form_add_receive_purchase_challan_order_details() {
 
@@ -1503,6 +1544,7 @@ class Receive_purchase_order_m extends CI_Model {
                 'po_id'         => $this->input->post('po_id'),
                 'sup_id'        => $this->input->post('sup_id'),
                 'id_id'         => $this->input->post('id_id_add'),
+                'item_rate'     => $this->input->post('item_rate'),
                 'item_quantity' => $this->input->post('pod_quantity_add'),
                 'receive_date'  => $this->input->post('rcv_date_detail'),
                 'remarks'       => $this->input->post('sup_pod_remarks'),
@@ -1666,6 +1708,75 @@ class Receive_purchase_order_m extends CI_Model {
             'purchase_challan_order_receive_detail',
             array('purchase_challan_order_receive_detail.purchase_order_receive_id' => $purchase_order_receive_id)
         )->result_array();
+    
+        return $data;
+    }
+    
+    // public function all_items_from_by_receive_id() {
+    //     $purchase_order_receive_id = $this->input->post('purchase_order_receive_id');
+    
+    //     $this->db->select('
+    //         purchase_order_receive_detail.purchase_order_receive_detail_id,
+    //         purchase_order_receive_detail.id_id,
+    //         purchase_order_receive_detail.item_quantity as pod_quantity,
+    //         item_master.item as item_name,
+    //         units.unit,
+    //         colors.color
+    //     ');
+    //     $this->db->join('item_dtl',    'item_dtl.id_id = purchase_order_receive_detail.id_id', 'left');
+    //     $this->db->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left');
+    //     $this->db->join('units',       'units.u_id = item_master.u_id',      'left');
+    //     $this->db->join('colors',      'colors.c_id = item_dtl.c_id',        'left');
+    
+    //     $data = $this->db->get_where(
+    //         'purchase_challan_order_receive_detail',
+    //         array('purchase_order_receive_detail.purchase_order_receive_id' => $purchase_order_receive_id)
+    //     )->result_array();
+    
+    //     return $data;
+    // }
+    
+    public function all_items_from_by_receive_id() {
+        $purchase_order_receive_id = $this->input->post('purchase_order_receive_id');
+    
+        if (empty($purchase_order_receive_id)) {
+            return array();
+        }
+    
+        $sql = "
+            SELECT
+                pcord.purchase_order_receive_detail_id,
+                pcord.id_id,
+                pcord.po_id,
+                im.item     AS item_name,
+                u.unit,
+                c.color,
+                pcord.item_quantity AS challan_qty,
+                IFNULL((
+                    SELECT SUM(pord.item_quantity)
+                    FROM purchase_order_receive_detail pord
+                    WHERE pord.challan_detail_id = pcord.purchase_order_receive_detail_id
+                ), 0) AS already_received,
+                (pcord.item_quantity - IFNULL((
+                    SELECT SUM(pord.item_quantity)
+                    FROM purchase_order_receive_detail pord
+                    WHERE pord.challan_detail_id = pcord.purchase_order_receive_detail_id
+                ), 0)) AS pod_quantity
+            FROM purchase_challan_order_receive_detail pcord
+            LEFT JOIN item_dtl    id ON id.id_id = pcord.id_id
+            LEFT JOIN item_master im ON im.im_id = id.im_id
+            LEFT JOIN units       u  ON u.u_id   = im.u_id
+            LEFT JOIN colors      c  ON c.c_id   = id.c_id
+            WHERE pcord.purchase_order_receive_id = ?
+            AND   pcord.status = 1
+            HAVING pod_quantity > 0
+        ";
+    
+        $data = $this->db->query($sql, array($purchase_order_receive_id))->result_array();
+    
+        $data = array_values(array_filter($data, function($row) {
+            return (float)$row['pod_quantity'] > 0;
+        }));
     
         return $data;
     }

@@ -414,5 +414,14 @@ public function purchase_order_print_without_code($po_id) {
         }
     }
     
+    public function all_items_from_by_receive_id() {
+        if ($this->check_permission(array(1, 2)) == true) {
+            $this->load->model('Receive_purchase_order_m');
+            $data = $this->Receive_purchase_order_m->all_items_from_by_receive_id();
+            echo json_encode($data, JSON_HEX_QUOT | JSON_HEX_TAG);
+            exit();
+        }
+    }
+    
     
 }

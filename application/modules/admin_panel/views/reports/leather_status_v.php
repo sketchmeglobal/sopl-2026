@@ -95,6 +95,7 @@
                                         <input type="submit" name="print" value="Print(Pending Orders)" class="btn btn-sm btn-success" />
                                     </div>
                                     <div class="row">
+                                        <input type="submit" name="print_Challan" value="Print Challan" class="btn btn-sm btn-warning" />
                                         <input type="submit" name="print_all" value="Print All" class="btn btn-sm btn-warning" />
                                         <input type="submit" name="print_po" value="Print Pending Orders" class="btn btn-sm btn-warning" />
                                     </div>

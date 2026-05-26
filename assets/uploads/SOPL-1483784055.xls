@@ -1,0 +1,642 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Sheet1</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>
+                                    <thead>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th rowspan="2" style="text-align:right">#</th>
+                                            <th rowspan="2" style="text-align:center">Item</th>
+                                            <th colspan="2" style="text-align:center">Opening Information</th>
+                                            <th colspan="2" style="text-align:center">Purchase Information</th>
+                                            <th colspan="2" style="text-align:center">Issue Information</th>
+                                            <th colspan="2" style="text-align:center">Plating Information</th>
+                                            <th colspan="2" style="text-align:center">Stock In Information</th>
+                                            <th colspan="2" style="text-align:center">Balance Information</th>
+                                            <th rowspan="2">Closing<br>Rate</th>
+                                            <th rowspan="2" style="text-align:center">Unit</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th style="text-align:center">Opn Qnty</th>
+                                            <th style="text-align:center">Opn Val</th>
+                                            <th style="text-align:center">Pur Qnty</th>
+                                            <th style="text-align:center">Pur Val</th>
+                                            <th style="text-align:center">Issue Qnty</th>
+                                            <th style="text-align:center">Issue Val</th>
+                                            <th style="text-align:center">Plating Qnty</th>
+                                            <th style="text-align:center">Plating Val</th>
+                                            <th style="text-align:center">Stock In Qnty</th>
+                                            <th style="text-align:center">Stock In Val</th>
+                                            <th style="text-align:center">Bal Qnty</th>
+                                            <th style="text-align:center">Bal Val</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                                                <tr>
+                                            <th style="display: none;">525</th>
+                                            <th style="text-align:right">1</th>
+                                            <th>12mm-SELF ADHESIVE TAPE(WHITE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">576.00</td>
+                                            <td style="text-align:right">5,472.00</td>
+                                            <td style="text-align:right">288.00</td>
+                                            <td style="text-align:right">2,736.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">288.00</td>
+                                            <td style="text-align:right">2,736.00</td>
+                                                                                        <td style="text-align:right">9.50</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2918</th>
+                                            <th style="text-align:right">2</th>
+                                            <th>12MM-TESSORE SYNTHETIC TAPE(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">288.00</td>
+                                            <td style="text-align:right">9,745.92</td>
+                                            <td style="text-align:right">192.00</td>
+                                            <td style="text-align:right">6,497.28</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">96.00</td>
+                                            <td style="text-align:right">3,248.64</td>
+                                                                                        <td style="text-align:right">33.84</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2837</th>
+                                            <th style="text-align:right">3</th>
+                                            <th>12MM-TESSORE SYNTHETIC TAPE(WHITE)</th>
+                                            <td style="text-align:right">64.00</td>
+                                            <td style="text-align:right">2,165.76</td>
+                                            <td style="text-align:right">288.00</td>
+                                            <td style="text-align:right">9,745.92</td>
+                                            <td style="text-align:right">256.00</td>
+                                            <td style="text-align:right">8,663.04</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">96.00</td>
+                                            <td style="text-align:right">3,248.64</td>
+                                                                                        <td style="text-align:right">33.84</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">550</th>
+                                            <th style="text-align:right">4</th>
+                                            <th>15mm-DST TAPE(ASSORTED)</th>
+                                            <td style="text-align:right">52.00</td>
+                                            <td style="text-align:right">2,316.60</td>
+                                            <td style="text-align:right">221.00</td>
+                                            <td style="text-align:right">9,845.55</td>
+                                            <td style="text-align:right">195.00</td>
+                                            <td style="text-align:right">8,687.25</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">78.00</td>
+                                            <td style="text-align:right">3,474.90</td>
+                                                                                        <td style="text-align:right">44.55</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1285</th>
+                                            <th style="text-align:right">5</th>
+                                            <th>15mm-TESSORE SYNTHETIC-20 MTR(BLACK)</th>
+                                            <td style="text-align:right">39.00</td>
+                                            <td style="text-align:right">1,755.00</td>
+                                            <td style="text-align:right">364.00</td>
+                                            <td style="text-align:right">16,380.00</td>
+                                            <td style="text-align:right">325.00</td>
+                                            <td style="text-align:right">14,625.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">78.00</td>
+                                            <td style="text-align:right">3,510.00</td>
+                                                                                        <td style="text-align:right">45.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2813</th>
+                                            <th style="text-align:right">6</th>
+                                            <th>15mm-TESSORE SYNTHETIC-20 MTR(WHITE)</th>
+                                            <td style="text-align:right">26.00</td>
+                                            <td style="text-align:right">1,099.80</td>
+                                            <td style="text-align:right">78.00</td>
+                                            <td style="text-align:right">3,299.40</td>
+                                            <td style="text-align:right">26.00</td>
+                                            <td style="text-align:right">1,099.80</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">78.00</td>
+                                            <td style="text-align:right">3,299.40</td>
+                                                                                        <td style="text-align:right">42.30</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">558</th>
+                                            <th style="text-align:right">7</th>
+                                            <th>2 INCH-SELF ADHESIVE TAPE(ASSORTED)</th>
+                                            <td style="text-align:right">72.00</td>
+                                            <td style="text-align:right">2,376.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">72.00</td>
+                                            <td style="text-align:right">2,376.00</td>
+                                                                                        <td style="text-align:right">33.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">3003</th>
+                                            <th style="text-align:right">8</th>
+                                            <th>24mm-TESSORE SYNTHETIC-20 MTR-(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">48.00</td>
+                                            <td style="text-align:right">3,248.64</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">48.00</td>
+                                            <td style="text-align:right">3,248.64</td>
+                                                                                        <td style="text-align:right">67.68</td>
+                                                                                        <td style="text-align:center">ROLL</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">3004</th>
+                                            <th style="text-align:right">9</th>
+                                            <th>24mm-TESSORE SYNTHETIC-20 MTR-(WHITE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">48.00</td>
+                                            <td style="text-align:right">3,248.64</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">48.00</td>
+                                            <td style="text-align:right">3,248.64</td>
+                                                                                        <td style="text-align:right">67.68</td>
+                                                                                        <td style="text-align:center">ROLL</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1286</th>
+                                            <th style="text-align:right">10</th>
+                                            <th>28mm-TESSORE SYNTHETIC-20 MTR(BLACK)</th>
+                                            <td style="text-align:right">21.00</td>
+                                            <td style="text-align:right">1,764.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">21.00</td>
+                                            <td style="text-align:right">1,764.00</td>
+                                                                                        <td style="text-align:right">84.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2149</th>
+                                            <th style="text-align:right">11</th>
+                                            <th>2mm DOUBLE ADHESIVE (27 mtr) TAPE(ASSORTED)</th>
+                                            <td style="text-align:right">720.00</td>
+                                            <td style="text-align:right">4,276.80</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">720.00</td>
+                                            <td style="text-align:right">4,276.80</td>
+                                                                                        <td style="text-align:right">5.94</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2919</th>
+                                            <th style="text-align:right">12</th>
+                                            <th>30mm-TESSORE SYNTHETIC-20 MTR(BLACK)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">164.00</td>
+                                            <td style="text-align:right">13,874.40</td>
+                                            <td style="text-align:right">122.00</td>
+                                            <td style="text-align:right">10,321.20</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">42.00</td>
+                                            <td style="text-align:right">3,553.20</td>
+                                                                                        <td style="text-align:right">84.60</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2602</th>
+                                            <th style="text-align:right">13</th>
+                                            <th>30mm-TESSORE SYNTHETIC-20 MTR(WHITE)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">56.00</td>
+                                            <td style="text-align:right">5,040.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">56.00</td>
+                                            <td style="text-align:right">5,040.00</td>
+                                                                                        <td style="text-align:right">90.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">529</th>
+                                            <th style="text-align:right">14</th>
+                                            <th>48mm-SELF ADHESIVE TAPE(WHITE)</th>
+                                            <td style="text-align:right">144.00</td>
+                                            <td style="text-align:right">5,112.00</td>
+                                            <td style="text-align:right">216.00</td>
+                                            <td style="text-align:right">8,279.28</td>
+                                            <td style="text-align:right">288.00</td>
+                                            <td style="text-align:right">10,631.52</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">72.00</td>
+                                            <td style="text-align:right">2,759.76</td>
+                                                                                        <td style="text-align:right">38.33</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">551</th>
+                                            <th style="text-align:right">15</th>
+                                            <th>4mm-DST TAPE(ASSORTED)</th>
+                                            <td style="text-align:right">845.00</td>
+                                            <td style="text-align:right">15,243.80</td>
+                                            <td style="text-align:right">2,340.00</td>
+                                            <td style="text-align:right">42,213.60</td>
+                                            <td style="text-align:right">2,015.00</td>
+                                            <td style="text-align:right">36,350.60</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1170.00</td>
+                                            <td style="text-align:right">21,106.80</td>
+                                                                                        <td style="text-align:right">18.04</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2556</th>
+                                            <th style="text-align:right">16</th>
+                                            <th>4mm-TESSORE SYNTHETIC-20 MTR(ASSORTED)</th>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">2,400.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">45.00</td>
+                                            <td style="text-align:right">540.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">155.00</td>
+                                            <td style="text-align:right">1,860.00</td>
+                                                                                        <td style="text-align:right">12.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">552</th>
+                                            <th style="text-align:right">17</th>
+                                            <th>6mm-DST TAPE(ASSORTED)</th>
+                                            <td style="text-align:right">945.00</td>
+                                            <td style="text-align:right">25,571.70</td>
+                                            <td style="text-align:right">7,290.00</td>
+                                            <td style="text-align:right">197,267.40</td>
+                                            <td style="text-align:right">7,425.00</td>
+                                            <td style="text-align:right">200,920.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">810.00</td>
+                                            <td style="text-align:right">21,918.60</td>
+                                                                                        <td style="text-align:right">27.06</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1933</th>
+                                            <th style="text-align:right">18</th>
+                                            <th>6mm-TESSORE SYNTHETIC-20 MTR(BLACK)</th>
+                                            <td style="text-align:right">495.00</td>
+                                            <td style="text-align:right">8,910.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">495.00</td>
+                                            <td style="text-align:right">8,910.00</td>
+                                                                                        <td style="text-align:right">18.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">534</th>
+                                            <th style="text-align:right">19</th>
+                                            <th>72mm-SELF ADHESIVE TAPE(ASSORTED)</th>
+                                            <td style="text-align:right">15.00</td>
+                                            <td style="text-align:right">-683.70</td>
+                                            <td style="text-align:right">576.00</td>
+                                            <td style="text-align:right">42,624.00</td>
+                                            <td style="text-align:right">388.00</td>
+                                            <td style="text-align:right">26,918.30</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">203.00</td>
+                                            <td style="text-align:right">15,022.00</td>
+                                                                                        <td style="text-align:right">74.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">542</th>
+                                            <th style="text-align:right">20</th>
+                                            <th>ADH TAPE IDEAL (1152MM X 27 MTR.)(ASSORTED)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">26,403.84</td>
+                                            <td style="text-align:right">6.00</td>
+                                            <td style="text-align:right">26,403.84</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">ROLL</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2266</th>
+                                            <th style="text-align:right">21</th>
+                                            <th>NON WOVEN GLASS FIBRE EYELET-W-42 MM - 20 MTR(ASSORTED)</th>
+                                            <td style="text-align:right">65.00</td>
+                                            <td style="text-align:right">12,025.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">65.00</td>
+                                            <td style="text-align:right">12,025.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">ROLL</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2234</th>
+                                            <th style="text-align:right">22</th>
+                                            <th>NONWOVEN GLASS FIBRE EYELET-W-24 MM(ASSORTED)</th>
+                                            <td style="text-align:right">192.00</td>
+                                            <td style="text-align:right">18,570.24</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">64.00</td>
+                                            <td style="text-align:right">6,190.08</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">128.00</td>
+                                            <td style="text-align:right">12,380.16</td>
+                                                                                        <td style="text-align:right">96.72</td>
+                                                                                        <td style="text-align:center">ROLL</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2265</th>
+                                            <th style="text-align:right">23</th>
+                                            <th>NONWOVEN GLASS FIBRE EYELET-W-30 MM(ASSORTED)</th>
+                                            <td style="text-align:right">224.00</td>
+                                            <td style="text-align:right">28,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">120.00</td>
+                                            <td style="text-align:right">15,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">104.00</td>
+                                            <td style="text-align:right">13,000.00</td>
+                                                                                        <td style="text-align:right">125.00</td>
+                                                                                        <td style="text-align:center">ROLL</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2267</th>
+                                            <th style="text-align:right">24</th>
+                                            <th>NONWOVEN GLASS FIBRE EYELET-W-36 MM(ASSORTED)</th>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">34,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">62.00</td>
+                                            <td style="text-align:right">10,540.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">138.00</td>
+                                            <td style="text-align:right">23,460.00</td>
+                                                                                        <td style="text-align:right">170.00</td>
+                                                                                        <td style="text-align:center">ROLL</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">555</th>
+                                            <th style="text-align:right">25</th>
+                                            <th>SELF ADHESIVE TAPE (FOAM) 1.5mm(ASSORTED)</th>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">6,500.00</td>
+                                            <td style="text-align:right">900.00</td>
+                                            <td style="text-align:right">58,500.00</td>
+                                            <td style="text-align:right">800.00</td>
+                                            <td style="text-align:right">52,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">200.00</td>
+                                            <td style="text-align:right">13,000.00</td>
+                                                                                        <td style="text-align:right">65.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">556</th>
+                                            <th style="text-align:right">26</th>
+                                            <th>SELF ADHESIVE TAPE (FOAM) 3.0mm(ASSORTED)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">13,000.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">100.00</td>
+                                            <td style="text-align:right">13,000.00</td>
+                                                                                        <td style="text-align:right">130.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">572</th>
+                                            <th style="text-align:right">27</th>
+                                            <th>Synthetic Fabric tape 36m.m(ASSORTED)</th>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">5,076.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">50.00</td>
+                                            <td style="text-align:right">5,076.00</td>
+                                                                                        <td style="text-align:right">101.52</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr style="background:thistle">
+                                            <th style="display: none;"></th>
+                                            <th colspan="2">Total</th>
+                                            <td style="text-align:right">4,469.00</td>
+                                            <td style="text-align:right">176,479.00</td>
+                                            <td style="text-align:right">13,559.00</td>
+                                            <td style="text-align:right">468,188.59</td>
+                                            <td style="text-align:right">12,682.00</td>
+                                            <td style="text-align:right">450,149.41</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">5,346.00</td>
+                                            <td style="text-align:right">194,518.18</td>
+                                            <td style="text-align:right">1,517.60</td>
+                                            <td></td>  
+                                        </tr>
+                                    </tbody>
+                                </table><table>
+                            <thead>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th rowspan="2" style="text-align:right">#</th>
+                                    <th rowspan="2" style="text-align:center">Item</th>
+                                    <th colspan="2" style="text-align:center">Opening Information</th>
+                                    <th colspan="2" style="text-align:center">Purchase Information</th>
+                                    <th colspan="2" style="text-align:center">Issue Information</th>
+                                    <th colspan="2" style="text-align:center">Plating Information</th>
+                                    <th colspan="2" style="text-align:center">Stock In Information</th>
+                                    <th colspan="2" style="text-align:center">Balance Information</th>
+                                    <th rowspan="2">Closing<br>Rate</th>
+                                    <th rowspan="2" style="text-align:center">Unit</th>
+                                </tr>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th style="text-align:center">Opn Qnty</th>
+                                    <th style="text-align:center">Opn Val</th>
+                                    
+                                    <th style="text-align:center">Pur Qnty</th>
+                                    <th style="text-align:center">Pur Val</th>
+                                    
+                                    <th style="text-align:center">Issue Qnty</th>
+                                    <th style="text-align:center">Issue Val</th>
+                                    
+                                    <th style="text-align:center">Plating Qnty</th>
+                                    <th style="text-align:center">Plating Val</th>
+                                    
+                                    <th style="text-align:center">Stock In Qnty</th>
+                                    <th style="text-align:center">Stock In Val</th>
+                                    
+                                    <th style="text-align:center">Bal Qnty</th>
+                                    <th style="text-align:center">Bal Val</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                <tr style="background:thistle">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Total</th>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background:#faeda6">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Grand Total</th>
+                                    <td style="text-align:right">4,469.00</td>
+                                    <td style="text-align:right">176,479.00</td>
+                                    <td style="text-align:right">13,559.00</td>
+                                    <td style="text-align:right">468,188.59</td>
+                                    <td style="text-align:right">12,682.00</td>
+                                    <td style="text-align:right">450,149.41</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">5,346.00</td>
+                                    <td style="text-align:right">194,518.18</td>
+                                    <td style="text-align:right">1,517.60</td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table></body></html>

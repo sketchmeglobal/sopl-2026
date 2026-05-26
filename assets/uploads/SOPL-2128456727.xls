@@ -1,0 +1,756 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Sheet1</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>
+                                    <thead>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th rowspan="2" style="text-align:right">#</th>
+                                            <th rowspan="2" style="text-align:center">Item</th>
+                                            <th colspan="2" style="text-align:center">Opening Information</th>
+                                            <th colspan="2" style="text-align:center">Purchase Information</th>
+                                            <th colspan="2" style="text-align:center">Issue Information</th>
+                                            <th colspan="2" style="text-align:center">Plating Information</th>
+                                            <th colspan="2" style="text-align:center">Stock In Information</th>
+                                            <th colspan="2" style="text-align:center">Balance Information</th>
+                                            <th rowspan="2">Closing<br>Rate</th>
+                                            <th rowspan="2" style="text-align:center">Unit</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th style="text-align:center">Opn Qnty</th>
+                                            <th style="text-align:center">Opn Val</th>
+                                            <th style="text-align:center">Pur Qnty</th>
+                                            <th style="text-align:center">Pur Val</th>
+                                            <th style="text-align:center">Issue Qnty</th>
+                                            <th style="text-align:center">Issue Val</th>
+                                            <th style="text-align:center">Plating Qnty</th>
+                                            <th style="text-align:center">Plating Val</th>
+                                            <th style="text-align:center">Stock In Qnty</th>
+                                            <th style="text-align:center">Stock In Val</th>
+                                            <th style="text-align:center">Bal Qnty</th>
+                                            <th style="text-align:center">Bal Val</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                                                <tr>
+                                            <th style="display: none;">1295</th>
+                                            <th style="text-align:right">1</th>
+                                            <th>20mm-COTTON WEBBING(BLACK)</th>
+                                            <td style="text-align:right">325.00</td>
+                                            <td style="text-align:right">7,150.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">300.00</td>
+                                            <td style="text-align:right">6,600.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">25.00</td>
+                                            <td style="text-align:right">550.00</td>
+                                                                                        <td style="text-align:right">22.00</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2215</th>
+                                            <th style="text-align:right">2</th>
+                                            <th>20mm-COTTON WEBBING(BROWN)</th>
+                                            <td style="text-align:right">425.00</td>
+                                            <td style="text-align:right">10,136.25</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">375.00</td>
+                                            <td style="text-align:right">8,943.75</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">50.00</td>
+                                            <td style="text-align:right">1,192.50</td>
+                                                                                        <td style="text-align:right">23.85</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2014</th>
+                                            <th style="text-align:right">3</th>
+                                            <th>20mm-COTTON WEBBING(CHESTNUT)</th>
+                                            <td style="text-align:right">375.00</td>
+                                            <td style="text-align:right">8,943.75</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">300.00</td>
+                                            <td style="text-align:right">7,155.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">75.00</td>
+                                            <td style="text-align:right">1,788.75</td>
+                                                                                        <td style="text-align:right">23.85</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1365</th>
+                                            <th style="text-align:right">4</th>
+                                            <th>20mm-COTTON WEBBING(NAVY)</th>
+                                            <td style="text-align:right">800.00</td>
+                                            <td style="text-align:right">19,080.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">800.00</td>
+                                            <td style="text-align:right">19,080.00</td>
+                                                                                        <td style="text-align:right">23.85</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2015</th>
+                                            <th style="text-align:right">5</th>
+                                            <th>20mm-COTTON WEBBING(RED)</th>
+                                            <td style="text-align:right">800.00</td>
+                                            <td style="text-align:right">18,120.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">150.00</td>
+                                            <td style="text-align:right">3,397.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">650.00</td>
+                                            <td style="text-align:right">14,722.50</td>
+                                                                                        <td style="text-align:right">22.65</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2018</th>
+                                            <th style="text-align:right">6</th>
+                                            <th>20mm-COTTON WEBBING(TAUPE)</th>
+                                            <td style="text-align:right">500.00</td>
+                                            <td style="text-align:right">11,925.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">500.00</td>
+                                            <td style="text-align:right">11,925.00</td>
+                                                                                        <td style="text-align:right">23.85</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2189</th>
+                                            <th style="text-align:right">7</th>
+                                            <th>20mm-COTTON WEBBING(WHITE)</th>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">900.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">50.00</td>
+                                            <td style="text-align:right">900.00</td>
+                                                                                        <td style="text-align:right">18.00</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1212</th>
+                                            <th style="text-align:right">8</th>
+                                            <th>25mm-COTTON WEBBING(BLACK)</th>
+                                            <td style="text-align:right">1,515.00</td>
+                                            <td style="text-align:right">17,134.65</td>
+                                            <td style="text-align:right">2,109.00</td>
+                                            <td style="text-align:right">53,559.50</td>
+                                            <td style="text-align:right">2,415.00</td>
+                                            <td style="text-align:right">31,600.90</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">625.00</td>
+                                            <td style="text-align:right">7,068.75</td>
+                                            <td style="background: #afedb1;text-align:right">1834.00</td>
+                                            <td style="text-align:right">46,162.00</td>
+                                                                                        <td style="text-align:right">25.17</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1213</th>
+                                            <th style="text-align:right">9</th>
+                                            <th>25mm-COTTON WEBBING(CHESTNUT)</th>
+                                            <td style="text-align:right">622.00</td>
+                                            <td style="text-align:right">15,239.00</td>
+                                            <td style="text-align:right">3,199.00</td>
+                                            <td style="text-align:right">84,574.10</td>
+                                            <td style="text-align:right">3,243.00</td>
+                                            <td style="text-align:right">85,288.60</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">578.00</td>
+                                            <td style="text-align:right">14,524.50</td>
+                                                                                        <td style="text-align:right">25.13</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2389</th>
+                                            <th style="text-align:right">10</th>
+                                            <th>25mm-COTTON WEBBING(DARK BROWN)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,234.00</td>
+                                            <td style="text-align:right">32,614.60</td>
+                                            <td style="text-align:right">400.00</td>
+                                            <td style="text-align:right">10,180.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">834.00</td>
+                                            <td style="text-align:right">22,434.60</td>
+                                                                                        <td style="text-align:right">26.90</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2372</th>
+                                            <th style="text-align:right">11</th>
+                                            <th>25mm-COTTON WEBBING(GREEN)</th>
+                                            <td style="text-align:right">350.00</td>
+                                            <td style="text-align:right">9,152.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">350.00</td>
+                                            <td style="text-align:right">9,152.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1366</th>
+                                            <th style="text-align:right">12</th>
+                                            <th>25mm-COTTON WEBBING(NAVY)</th>
+                                            <td style="text-align:right">300.00</td>
+                                            <td style="text-align:right">7,200.00</td>
+                                            <td style="text-align:right">688.00</td>
+                                            <td style="text-align:right">18,507.20</td>
+                                            <td style="text-align:right">988.00</td>
+                                            <td style="text-align:right">25,707.20</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1304</th>
+                                            <th style="text-align:right">13</th>
+                                            <th>25mm-COTTON WEBBING(RED)</th>
+                                            <td style="text-align:right">650.00</td>
+                                            <td style="text-align:right">15,600.00</td>
+                                            <td style="text-align:right">343.00</td>
+                                            <td style="text-align:right">9,226.70</td>
+                                            <td style="text-align:right">725.00</td>
+                                            <td style="text-align:right">17,617.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">268.00</td>
+                                            <td style="text-align:right">7,209.20</td>
+                                                                                        <td style="text-align:right">26.90</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2496</th>
+                                            <th style="text-align:right">14</th>
+                                            <th>25mm-COTTON WEBBING(TAUPE)</th>
+                                            <td style="text-align:right">650.00</td>
+                                            <td style="text-align:right">15,600.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">650.00</td>
+                                            <td style="text-align:right">15,600.00</td>
+                                                                                        <td style="text-align:right">24.00</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2569</th>
+                                            <th style="text-align:right">15</th>
+                                            <th>25mm-NYLON WEBBING(BLACK)</th>
+                                            <td style="text-align:right">225.00</td>
+                                            <td style="text-align:right">4,099.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">225.00</td>
+                                            <td style="text-align:right">4,099.50</td>
+                                                                                        <td style="text-align:right">18.22</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1341</th>
+                                            <th style="text-align:right">16</th>
+                                            <th>3/4 (20mm)-BINDING TAPE(BLACK)</th>
+                                            <td style="text-align:right">9,700.00</td>
+                                            <td style="text-align:right">29,100.00</td>
+                                            <td style="text-align:right">35,000.00</td>
+                                            <td style="text-align:right">105,000.00</td>
+                                            <td style="text-align:right">40,100.00</td>
+                                            <td style="text-align:right">120,300.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">4600.00</td>
+                                            <td style="text-align:right">13,800.00</td>
+                                                                                        <td style="text-align:right">3.00</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1945</th>
+                                            <th style="text-align:right">17</th>
+                                            <th>3/4 (20mm)-BINDING TAPE(BROWN)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">5,000.00</td>
+                                            <td style="text-align:right">15,000.00</td>
+                                            <td style="text-align:right">1,500.00</td>
+                                            <td style="text-align:right">4,500.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">3500.00</td>
+                                            <td style="text-align:right">10,500.00</td>
+                                                                                        <td style="text-align:right">3.00</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1214</th>
+                                            <th style="text-align:right">18</th>
+                                            <th>30mm-COTTON WEBBING(BLACK)</th>
+                                            <td style="text-align:right">1,227.00</td>
+                                            <td style="text-align:right">28,454.13</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,328.00</td>
+                                            <td style="text-align:right">30,796.32</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">1,150.00</td>
+                                            <td style="text-align:right">29,292.50</td>
+                                            <td style="background: #afedb1;text-align:right">1049.00</td>
+                                            <td style="text-align:right">26,950.31</td>
+                                                                                        <td style="text-align:right">25.69</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1215</th>
+                                            <th style="text-align:right">19</th>
+                                            <th>30mm-COTTON WEBBING(CHESTNUT)</th>
+                                            <td style="text-align:right">1,025.00</td>
+                                            <td style="text-align:right">30,493.75</td>
+                                            <td style="text-align:right">571.00</td>
+                                            <td style="text-align:right">16,987.25</td>
+                                            <td style="text-align:right">1,100.00</td>
+                                            <td style="text-align:right">32,725.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">496.00</td>
+                                            <td style="text-align:right">14,756.00</td>
+                                                                                        <td style="text-align:right">29.75</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2946</th>
+                                            <th style="text-align:right">20</th>
+                                            <th>30mm-COTTON WEBBING(DARK BROWN)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">5,950.00</td>
+                                            <td style="text-align:right">200.00</td>
+                                            <td style="text-align:right">5,950.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2373</th>
+                                            <th style="text-align:right">21</th>
+                                            <th>30mm-COTTON WEBBING(GREEN)</th>
+                                            <td style="text-align:right">1,000.00</td>
+                                            <td style="text-align:right">29,750.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1000.00</td>
+                                            <td style="text-align:right">29,750.00</td>
+                                                                                        <td style="text-align:right">29.75</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2497</th>
+                                            <th style="text-align:right">22</th>
+                                            <th>30mm-COTTON WEBBING(MORO)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">530.00</td>
+                                            <td style="text-align:right">15,767.50</td>
+                                            <td style="text-align:right">475.00</td>
+                                            <td style="text-align:right">14,131.25</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">480.00</td>
+                                            <td style="text-align:right">14,280.00</td>
+                                            <td style="background: #afedb1;text-align:right">535.00</td>
+                                            <td style="text-align:right">15,916.25</td>
+                                                                                        <td style="text-align:right">29.75</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1367</th>
+                                            <th style="text-align:right">23</th>
+                                            <th>30mm-COTTON WEBBING(NAVY)</th>
+                                            <td style="text-align:right">1,000.00</td>
+                                            <td style="text-align:right">29,750.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">700.00</td>
+                                            <td style="text-align:right">20,825.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">300.00</td>
+                                            <td style="text-align:right">8,925.00</td>
+                                                                                        <td style="text-align:right">29.75</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1856</th>
+                                            <th style="text-align:right">24</th>
+                                            <th>30mm-COTTON WEBBING(RED)</th>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">2,975.00</td>
+                                            <td style="text-align:right">354.00</td>
+                                            <td style="text-align:right">10,531.50</td>
+                                            <td style="text-align:right">100.00</td>
+                                            <td style="text-align:right">2,975.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">354.00</td>
+                                            <td style="text-align:right">10,531.50</td>
+                                                                                        <td style="text-align:right">29.75</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2561</th>
+                                            <th style="text-align:right">25</th>
+                                            <th>30mm-NYLON WEBBING(BLACK)</th>
+                                            <td style="text-align:right">30.00</td>
+                                            <td style="text-align:right">900.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">30.00</td>
+                                            <td style="text-align:right">900.00</td>
+                                                                                        <td style="text-align:right">30.00</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2920</th>
+                                            <th style="text-align:right">26</th>
+                                            <th>38mm COTTON WEBBING(BROWN)</th>
+                                            <td style="text-align:right">1,155.00</td>
+                                            <td style="text-align:right">40,425.00</td>
+                                            <td style="text-align:right">257.00</td>
+                                            <td style="text-align:right">9,536.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1412.00</td>
+                                            <td style="text-align:right">49,961.50</td>
+                                                                                        <td style="text-align:right">35.38</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1216</th>
+                                            <th style="text-align:right">27</th>
+                                            <th>40mm-COTTON WEBBING(BLACK)</th>
+                                            <td style="text-align:right">250.00</td>
+                                            <td style="text-align:right">10,237.50</td>
+                                            <td style="text-align:right">1,008.00</td>
+                                            <td style="text-align:right">44,856.00</td>
+                                            <td style="text-align:right">801.00</td>
+                                            <td style="text-align:right">34,757.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">457.00</td>
+                                            <td style="text-align:right">20,336.50</td>
+                                                                                        <td style="text-align:right">44.50</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1217</th>
+                                            <th style="text-align:right">28</th>
+                                            <th>40mm-COTTON WEBBING(CHESTNUT)</th>
+                                            <td style="text-align:right">1,460.00</td>
+                                            <td style="text-align:right">64,970.00</td>
+                                            <td style="text-align:right">7,791.00</td>
+                                            <td style="text-align:right">342,589.50</td>
+                                            <td style="text-align:right">8,102.00</td>
+                                            <td style="text-align:right">355,694.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">1149.00</td>
+                                            <td style="text-align:right">51,865.50</td>
+                                                                                        <td style="text-align:right">45.14</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1754</th>
+                                            <th style="text-align:right">29</th>
+                                            <th>40mm-COTTON WEBBING(DARK BROWN)</th>
+                                            <td style="text-align:right">650.00</td>
+                                            <td style="text-align:right">24,173.50</td>
+                                            <td style="text-align:right">1,141.00</td>
+                                            <td style="text-align:right">51,354.50</td>
+                                            <td style="text-align:right">1,849.00</td>
+                                            <td style="text-align:right">75,701.50</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">250.00</td>
+                                            <td style="text-align:right">9,297.50</td>
+                                            <td style="background: #afedb1;text-align:right">192.00</td>
+                                            <td style="text-align:right">9,124.00</td>
+                                                                                        <td style="text-align:right">47.52</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2498</th>
+                                            <th style="text-align:right">30</th>
+                                            <th>40mm-COTTON WEBBING(GREEN)</th>
+                                            <td style="text-align:right">550.00</td>
+                                            <td style="text-align:right">24,475.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">550.00</td>
+                                            <td style="text-align:right">24,475.00</td>
+                                                                                        <td style="text-align:right">44.50</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1883</th>
+                                            <th style="text-align:right">31</th>
+                                            <th>40mm-COTTON WEBBING(NAVY)</th>
+                                            <td style="text-align:right">250.00</td>
+                                            <td style="text-align:right">11,125.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">250.00</td>
+                                            <td style="text-align:right">11,125.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2808</th>
+                                            <th style="text-align:right">32</th>
+                                            <th>50mm-COTTON WEBBING(OFF WHITE)</th>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">2,750.00</td>
+                                            <td style="text-align:right">716.00</td>
+                                            <td style="text-align:right">53,700.00</td>
+                                            <td style="text-align:right">766.00</td>
+                                            <td style="text-align:right">56,450.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2831</th>
+                                            <th style="text-align:right">33</th>
+                                            <th>50mm-Ringers Western Branded Webbing-RW(OFF WHITE)</th>
+                                            <td style="text-align:right">1,005.00</td>
+                                            <td style="text-align:right">75,375.00</td>
+                                            <td style="text-align:right">2,156.00</td>
+                                            <td style="text-align:right">161,700.00</td>
+                                            <td style="text-align:right">2,214.00</td>
+                                            <td style="text-align:right">166,050.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">947.00</td>
+                                            <td style="text-align:right">71,025.00</td>
+                                                                                        <td style="text-align:right">75.00</td>
+                                                                                        <td style="text-align:center">MTR.</td>
+                                        </tr>
+                                                                                <tr style="background:thistle">
+                                            <th style="display: none;"></th>
+                                            <th colspan="2">Total</th>
+                                            <td style="text-align:right">27,039.00</td>
+                                            <td style="text-align:right">565,234.53</td>
+                                            <td style="text-align:right">62,297.00</td>
+                                            <td style="text-align:right">1,031,454.85</td>
+                                            <td style="text-align:right">68,731.00</td>
+                                            <td style="text-align:right">1,137,623.02</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2,505.00</td>
+                                            <td style="text-align:right">59,938.75</td>
+                                            <td style="text-align:right">23,110.00</td>
+                                            <td style="text-align:right">519,005.11</td>
+                                            <td style="text-align:right">806.85</td>
+                                            <td></td>  
+                                        </tr>
+                                    </tbody>
+                                </table><table>
+                            <thead>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th rowspan="2" style="text-align:right">#</th>
+                                    <th rowspan="2" style="text-align:center">Item</th>
+                                    <th colspan="2" style="text-align:center">Opening Information</th>
+                                    <th colspan="2" style="text-align:center">Purchase Information</th>
+                                    <th colspan="2" style="text-align:center">Issue Information</th>
+                                    <th colspan="2" style="text-align:center">Plating Information</th>
+                                    <th colspan="2" style="text-align:center">Stock In Information</th>
+                                    <th colspan="2" style="text-align:center">Balance Information</th>
+                                    <th rowspan="2">Closing<br>Rate</th>
+                                    <th rowspan="2" style="text-align:center">Unit</th>
+                                </tr>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th style="text-align:center">Opn Qnty</th>
+                                    <th style="text-align:center">Opn Val</th>
+                                    
+                                    <th style="text-align:center">Pur Qnty</th>
+                                    <th style="text-align:center">Pur Val</th>
+                                    
+                                    <th style="text-align:center">Issue Qnty</th>
+                                    <th style="text-align:center">Issue Val</th>
+                                    
+                                    <th style="text-align:center">Plating Qnty</th>
+                                    <th style="text-align:center">Plating Val</th>
+                                    
+                                    <th style="text-align:center">Stock In Qnty</th>
+                                    <th style="text-align:center">Stock In Val</th>
+                                    
+                                    <th style="text-align:center">Bal Qnty</th>
+                                    <th style="text-align:center">Bal Val</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                <tr style="background:thistle">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Total</th>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background:#faeda6">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Grand Total</th>
+                                    <td style="text-align:right">27,039.00</td>
+                                    <td style="text-align:right">565,234.53</td>
+                                    <td style="text-align:right">62,297.00</td>
+                                    <td style="text-align:right">1,031,454.85</td>
+                                    <td style="text-align:right">68,731.00</td>
+                                    <td style="text-align:right">1,137,623.02</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">2,505.00</td>
+                                    <td style="text-align:right">59,938.75</td>
+                                    <td style="text-align:right">23,110.00</td>
+                                    <td style="text-align:right">519,005.11</td>
+                                    <td style="text-align:right">806.85</td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table></body></html>

@@ -50,10 +50,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 interface SessionHandlerInterface {
 
+	#[\ReturnTypeWillChange]
+
 	public function open($save_path, $name);
+	#[\ReturnTypeWillChange]
 	public function close();
+	#[\ReturnTypeWillChange]
 	public function read($session_id);
+	#[\ReturnTypeWillChange]
 	public function write($session_id, $session_data);
+	#[\ReturnTypeWillChange]
 	public function destroy($session_id);
+	#[\ReturnTypeWillChange]
 	public function gc($maxlifetime);
 }

@@ -113,6 +113,7 @@ $today = $year . '-' . $month . '-' . $day;
                 </div>
                 <div class="col-sm-12">
                 <input type="submit" name="supplier_wise_item_position" value="Print" class="btn btn-sm btn-success" />
+                <input type="submit" name="supplier_wise_challan_item_position" value="Print challan" class="btn btn-sm btn-success" />
                 <input type="submit" name="supplier_wise_item_position_wo_zero" value="Print(w/o zero)" class="btn btn-sm btn-success" />
                 </div>
                 </div>

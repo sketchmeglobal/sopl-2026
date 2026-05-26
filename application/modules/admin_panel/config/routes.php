@@ -1,5 +1,6 @@
 <?php
 
+$route['admin'] = 'login/Login/admin_login';
 $route['admin/dashboard'] = 'admin_panel/Dashboard/dashboard';
 $route['404'] = 'admin_panel/Dashboard/error_404';
 $route['js_disabled'] = 'admin_panel/Dashboard/js_disabled';
@@ -478,6 +479,8 @@ $route['admin/all-items-from-challan-by-po'] = 'admin_panel/Receive_purchase_ord
 
 $route['admin/all-items-from-challan-by-receive-id'] = 'admin_panel/Receive_purchase_order/all_items_from_challan_by_receive_id';
 
+
+$route['admin/all-items-from-by-receive-id'] = 'admin_panel/Receive_purchase_order/all_items_from_by_receive_id';
 
 // add 
 $route['admin/add-receive-purchase-order'] = 'admin_panel/Receive_purchase_order/add_receive_purchase_order';

@@ -65,11 +65,11 @@
                             <form id="form_add_receive_purchase_order" method="post" action="<?=base_url('admin/form_add_receive_purchase_challan_order')?>" class="cmxform form-horizontal tasi-form">
                             	<div class="form-group ">
                                 	<div class="col-lg-3">
-                                    <label for="purchase_order_receive_bill_no" class="control-label text-danger">Purchase Receive Number *</label>
-                                    <input id="purchase_order_receive_bill_no" name="purchase_order_receive_bill_no" type="text" placeholder="Purchase Receive Number" class="form-control round-input" />
+                                    <label for="purchase_order_receive_bill_no" class="control-label text-danger">Challan Number *</label>
+                                    <input id="purchase_order_receive_bill_no" name="purchase_order_receive_bill_no" type="text" placeholder="Challan Number" class="form-control round-input" />
                                     </div>
                                     <div class="col-lg-3">
-                                        <label for="purchase_order_receive_date" class="control-label text-danger">Purchase Receive Date *</label>
+                                        <label for="purchase_order_receive_date" class="control-label text-danger">Challan Date *</label>
                                         <?php 
 
 $month = date('m');
@@ -78,7 +78,7 @@ $year = date('Y');
 
 $today = $year . '-' . $month . '-' . $day;
 ?>
-                                        <input id="purchase_order_receive_date" name="purchase_order_receive_date" type="date" placeholder="Purchase Receive Date" class="form-control round-input" value="<?php echo $today; ?>"/>
+                                        <input id="purchase_order_receive_date" name="purchase_order_receive_date" type="date" placeholder="Challan Date" class="form-control round-input" value="<?php echo $today; ?>"/>
                                     </div>                                    
                                     <div class="col-lg-3">
                                         <label for="am_id_add" class="control-label text-danger">Select Supplier *</label>
@@ -229,7 +229,7 @@ $today = $year . '-' . $month . '-' . $day;
 				$('#form_add_receive_purchase_order :radio').iCheck('update'); //reset all iCheck fields
 				$("#form_add_receive_purchase_order").validate().resetForm(); //reset validation
 	
-				$('#edit_btn').attr('href', '<?=base_url()?>admin/edit-receive-purchase-order/'+obj.insert_id);
+				$('#edit_btn').attr('href', '<?=base_url()?>admin/edit-receive-purchase-order-challan/'+obj.insert_id);
 				$('#edit_btn').removeClass('hidden');
 			}
         }

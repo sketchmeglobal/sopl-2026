@@ -153,7 +153,7 @@ foreach($proforma_details as $fd){
                             <p style="font-size: 12px;" class="mar_0">FAX:+91-33-40012865</p>
                             <p style="font-size: 12px;" class="mar_0">Email : anurupa.sengupta@shilpaoverseas.com</p>
                             <p style="font-size: 12px;" class="mar_0">CIN-U19116WB1992PTC055524</p>
-                             <p style="font-size: 12px;" class="mar_0">IEC-029300L286</p>
+                             <p style="font-size: 12px;" class="mar_0">IEC-029300286</p>
                         </div>
                         <div class="col-sm-6 header_right">
                             <div class="row mar_bot_3">
@@ -378,6 +378,7 @@ foreach($proforma_details as $fd){
                             <tbody class="actual_table">
                                 <?php 
                                 $iter = 1; 
+                                
                                 // item initialisation
                                 $total_value = 0;
                                 $total_quantity = 0;
@@ -402,11 +403,15 @@ foreach($proforma_details as $fd){
                                     <div class="col-sm-6 border_all height_135">
                                         <h6 class="mar_0 text-justify" style="font-size: 14px;">
                                            <!--<span style="display: block; margin: 7px 0px;"> <b>Bank Details :</b> </span>-->
-                                           <!--< ?= BANK_DETAILS ?><br /><br /><br /><br /><br /><br />-->
-                                        
+                                           <!--< ?= firstLoop and ><br /><br /><br /><br /><br /><br />-->
+                                        <?php if ($firstLoop and ($proforma_details[0]->bank_name != '.')): ?>
                                         <span style="display: block; margin: 7px 0px;"> <b>Bank Details :</b> </span>
-                                        <?= $proforma_details[0]->bank_name . ' ' . $proforma_details[0]->bank_address . ' <b>Acc. No:</b> ' . $proforma_details[0]->account_number . '<br><b>Dealer Code:</b> ' . $proforma_details[0]->dealer_code . '<br><b>Swift Code:</b> ' . $proforma_details[0]->swift_code . '<br><b>IFSC:</b>' . $proforma_details[0]->ifsc ?>
+                                        <?= $proforma_details[0]->bank_name . ' ' . $proforma_details[0]->bank_address . ' <b>Acc. No:</b> ' . $proforma_details[0]->account_number . '<br><b>Swift Code:</b> ' . $proforma_details[0]->swift_code . '<br>' ?>
                                         
+                                         <?php $firstLoop = false; ?>
+                                    <?php endif; ?>
+                                        <!--<b>Dealer Code:</b> ' . $proforma_details[0]->dealer_code . '<br>-->
+                                        <!--<b>IFSC:</b>' . $proforma_details[0]->ifsc-->
                                         </h6>
                                     </div>
                                     <div class="col-sm-6 border_all height_135">
@@ -534,6 +539,7 @@ foreach($proforma_details as $fd){
                             </thead>
                             <tbody class="actual_table">
                             <?php }
+                            
                             $iter++ ?>
                                     <tr>
                                         <td><?= $cm->alt_art_no ?></td>
@@ -614,10 +620,14 @@ foreach($proforma_details as $fd){
                             <h6 class="mar_0 text-justify" style="font-size: 14px;">
                                 <!--<span style="display: block; margin: 7px 0px;"> <b>Bank Details :</b> </span>-->
                                 <!--< ?= BANK_DETAILS ?><br /><br /><br /><br /><br /><br />-->
-                                
+                                <?php if ($firstLoop and ($proforma_details[0]->bank_name != '.')): ?>
                                 <span style="display: block; margin: 7px 0px;"> <b>Bank Details :</b> </span>
-                                        <?= $proforma_details[0]->bank_name . ' ' . $proforma_details[0]->bank_address . ' <b>Acc. No:</b> ' . $proforma_details[0]->account_number . '<br><b>Dealer Code:</b> ' . $proforma_details[0]->dealer_code . '<br><b>Swift Code:</b> ' . $proforma_details[0]->swift_code . '<br><b>IFSC:</b>' . $proforma_details[0]->ifsc ?>
-                                        
+                                        <?= $proforma_details[0]->bank_name . ' ' . $proforma_details[0]->bank_address . ' <b>Acc. No:</b> ' . $proforma_details[0]->account_number . '<br><b>Swift Code:</b> ' . $proforma_details[0]->swift_code . '<br>' ?>
+                                        <!--<-->
+                                     <?php $firstLoop = false; ?>
+                                    <?php endif; ?>
+                                        <!--<b>Dealer Code:</b> ' . $proforma_details[0]->dealer_code . '<br>-->
+                                        <!--<b>IFSC:</b>' . $proforma_details[0]->ifsc-->
                             </h6>
                         </div>
                         <div class="col-sm-6 border_all height_135">

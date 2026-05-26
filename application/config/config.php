@@ -48,8 +48,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://shilpaoverseas.in/2026/';
-// $config['base_url'] = 'http://localhost/shilpa/';
+//$config['base_url'] = 'https://shilpaoverseas.in/2026/';
+ $config['base_url'] = 'https://localhost/SOPL-2026/';
 
 /*
 |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ $config['index_page'] = '';
 |
 | WARNING: If you set this to 'PATH_INFO', URIs will always be URL-decoded!
 */
-$config['uri_protocol']	= 'REQUEST_URI';
+$config['uri_protocol']	= 'QUERY_STRING';
 
 /*
 |--------------------------------------------------------------------------
@@ -239,7 +239,7 @@ $config['directory_trigger'] = 'd';
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+$config['log_threshold'] = 3;
 
 /*
 |--------------------------------------------------------------------------

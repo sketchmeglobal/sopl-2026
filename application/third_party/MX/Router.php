@@ -35,6 +35,7 @@ require dirname(__FILE__).'/Modules.php';
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  **/
+#[\AllowDynamicProperties]
 class MX_Router extends CI_Router
 {
 	public $module;
@@ -54,7 +55,7 @@ class MX_Router extends CI_Router
 				isset($segments[$v]) && $segments[$v] = str_replace('-', '_', $segments[$v]);
 			}
 		}
-		
+
 		$segments = $this->locate($segments);
 
 		if($this->located == -1)
@@ -135,7 +136,7 @@ class MX_Router extends CI_Router
 				{
 					/* module sub-directory exists? */
 					if(is_dir($source.$directory.'/'))
-					{	
+					{
 						$source .= $directory.'/';
 						$this->directory .= $directory.'/';
 
@@ -156,7 +157,9 @@ class MX_Router extends CI_Router
 						$this->located = 2;
 						return array_slice($segments, 1);
 					}
-					else $this->located = -1;
+					else {
+						$this->located = -1;
+					}
 				}
 
 				/* module controller exists? */

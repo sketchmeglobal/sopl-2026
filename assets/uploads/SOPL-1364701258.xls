@@ -1,0 +1,452 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Sheet1</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>
+                                    <thead>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th rowspan="2" style="text-align:right">#</th>
+                                            <th rowspan="2" style="text-align:center">Item</th>
+                                            <th colspan="2" style="text-align:center">Opening Information</th>
+                                            <th colspan="2" style="text-align:center">Purchase Information</th>
+                                            <th colspan="2" style="text-align:center">Issue Information</th>
+                                            <th colspan="2" style="text-align:center">Plating Information</th>
+                                            <th colspan="2" style="text-align:center">Stock In Information</th>
+                                            <th colspan="2" style="text-align:center">Balance Information</th>
+                                            <th rowspan="2">Closing<br>Rate</th>
+                                            <th rowspan="2" style="text-align:center">Unit</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="display: none;"></th>
+                                            <th style="text-align:center">Opn Qnty</th>
+                                            <th style="text-align:center">Opn Val</th>
+                                            <th style="text-align:center">Pur Qnty</th>
+                                            <th style="text-align:center">Pur Val</th>
+                                            <th style="text-align:center">Issue Qnty</th>
+                                            <th style="text-align:center">Issue Val</th>
+                                            <th style="text-align:center">Plating Qnty</th>
+                                            <th style="text-align:center">Plating Val</th>
+                                            <th style="text-align:center">Stock In Qnty</th>
+                                            <th style="text-align:center">Stock In Val</th>
+                                            <th style="text-align:center">Bal Qnty</th>
+                                            <th style="text-align:center">Bal Val</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                                                <tr>
+                                            <th style="display: none;">696</th>
+                                            <th style="text-align:right">1</th>
+                                            <th>EDGE INK AR 6450 / MW(ASSORTED)</th>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">6,950.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">5.00</td>
+                                            <td style="text-align:right">6,950.00</td>
+                                                                                        <td style="text-align:right">1390.00</td>
+                                                                                        <td style="text-align:center">KGS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">697</th>
+                                            <th style="text-align:right">2</th>
+                                            <th>EDGE INK AR 6499 / MW(ASSORTED)</th>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">6,950.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">5.00</td>
+                                            <td style="text-align:right">6,950.00</td>
+                                                                                        <td style="text-align:right">1390.00</td>
+                                                                                        <td style="text-align:center">KGS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2844</th>
+                                            <th style="text-align:right">3</th>
+                                            <th>EUROWAX 14555(ASSORTED)</th>
+                                            <td style="text-align:right">20.00</td>
+                                            <td style="text-align:right">14,960.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">20.00</td>
+                                            <td style="text-align:right">14,960.00</td>
+                                                                                        <td style="text-align:right">748.00</td>
+                                                                                        <td style="text-align:center">KGS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1375</th>
+                                            <th style="text-align:right">4</th>
+                                            <th>LUSTRE CHEMICAL(BROWN)</th>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">2,980.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">5.00</td>
+                                            <td style="text-align:right">2,980.00</td>
+                                                                                        <td style="text-align:right">596.00</td>
+                                                                                        <td style="text-align:center">LTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1457</th>
+                                            <th style="text-align:right">5</th>
+                                            <th>LUSTRE CHEMICAL(GREEN)</th>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">2,980.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">5.00</td>
+                                            <td style="text-align:right">2,980.00</td>
+                                                                                        <td style="text-align:right">596.00</td>
+                                                                                        <td style="text-align:center">LTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">705</th>
+                                            <th style="text-align:right">6</th>
+                                            <th>MISC CHEMICAL ITEMS(ASSORTED)</th>
+                                            <td style="text-align:right">194.00</td>
+                                            <td style="text-align:right">119,604.88</td>
+                                            <td style="text-align:right">606.00</td>
+                                            <td style="text-align:right">1,070,414.00</td>
+                                            <td style="text-align:right">686.00</td>
+                                            <td style="text-align:right">1,028,636.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">114.00</td>
+                                            <td style="text-align:right">161,382.88</td>
+                                                                                        <td style="text-align:right">1415.64</td>
+                                                                                        <td style="text-align:center">KGS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">709</th>
+                                            <th style="text-align:right">7</th>
+                                            <th>PIGMENT(ASSORTED)</th>
+                                            <td style="text-align:right">22.00</td>
+                                            <td style="text-align:right">31,139.90</td>
+                                            <td style="text-align:right">8.00</td>
+                                            <td style="text-align:right">2,800.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">30.00</td>
+                                            <td style="text-align:right">33,939.90</td>
+                                                                                        <td style="text-align:right">1131.33</td>
+                                                                                        <td style="text-align:center">KGS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">707</th>
+                                            <th style="text-align:right">8</th>
+                                            <th>PIGMENT(BROWN)</th>
+                                            <td style="text-align:right">3.00</td>
+                                            <td style="text-align:right">1,095.00</td>
+                                            <td style="text-align:right">17.00</td>
+                                            <td style="text-align:right">6,870.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">20.00</td>
+                                            <td style="text-align:right">7,965.00</td>
+                                                                                        <td style="text-align:right">398.25</td>
+                                                                                        <td style="text-align:center">KGS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">708</th>
+                                            <th style="text-align:right">9</th>
+                                            <th>PIGMENT(NAVY)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">2.00</td>
+                                            <td style="text-align:right">1,010.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">2.00</td>
+                                            <td style="text-align:right">1,010.00</td>
+                                                                                        <td style="text-align:right">505.00</td>
+                                                                                        <td style="text-align:center">KGS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">710</th>
+                                            <th style="text-align:right">10</th>
+                                            <th>RUBBER SOLUTION ADHESIVE(ASSORTED)</th>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">750.00</td>
+                                            <td style="text-align:right">79,500.00</td>
+                                            <td style="text-align:right">750.00</td>
+                                            <td style="text-align:right">79,500.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                                                                        <td style="text-align:right">0</td>
+                                                                                        <td style="text-align:center">KGS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1380</th>
+                                            <th style="text-align:right">11</th>
+                                            <th>SF TONER(DARK BROWN)</th>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">4,385.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">5.00</td>
+                                            <td style="text-align:right">4,385.00</td>
+                                                                                        <td style="text-align:right">877.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">1384</th>
+                                            <th style="text-align:right">12</th>
+                                            <th>SF TONER COUIO(ASSORTED)</th>
+                                            <td style="text-align:right">2.50</td>
+                                            <td style="text-align:right">2,230.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">2.50</td>
+                                            <td style="text-align:right">2,230.00</td>
+                                                                                        <td style="text-align:right">892.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">711</th>
+                                            <th style="text-align:right">13</th>
+                                            <th>SL 6700 / H(ASSORTED)</th>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">13,900.00</td>
+                                            <td style="text-align:right">5.00</td>
+                                            <td style="text-align:right">14,825.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">10.00</td>
+                                            <td style="text-align:right">28,725.00</td>
+                                                                                        <td style="text-align:right">2872.50</td>
+                                                                                        <td style="text-align:center">KGS.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">712</th>
+                                            <th style="text-align:right">14</th>
+                                            <th>SOLIMIX-( SOLUTION )(ASSORTED)</th>
+                                            <td style="text-align:right">50.00</td>
+                                            <td style="text-align:right">26,350.00</td>
+                                            <td style="text-align:right">795.00</td>
+                                            <td style="text-align:right">428,350.00</td>
+                                            <td style="text-align:right">780.00</td>
+                                            <td style="text-align:right">419,860.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">65.00</td>
+                                            <td style="text-align:right">34,840.00</td>
+                                                                                        <td style="text-align:right">536.00</td>
+                                                                                        <td style="text-align:center">TIN</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">713</th>
+                                            <th style="text-align:right">15</th>
+                                            <th>SOLISTIK-( DENDRITE )(ASSORTED)</th>
+                                            <td style="text-align:right">64.00</td>
+                                            <td style="text-align:right">13,797.76</td>
+                                            <td style="text-align:right">520.00</td>
+                                            <td style="text-align:right">364,000.00</td>
+                                            <td style="text-align:right">519.00</td>
+                                            <td style="text-align:right">332,297.76</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">65.00</td>
+                                            <td style="text-align:right">45,500.00</td>
+                                                                                        <td style="text-align:right">700.00</td>
+                                                                                        <td style="text-align:center">TIN</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">714</th>
+                                            <th style="text-align:right">16</th>
+                                            <th>SYNTHETIC ADHESIVE (WATER BASE)(ASSORTED)</th>
+                                            <td style="text-align:right">165.00</td>
+                                            <td style="text-align:right">69,300.00</td>
+                                            <td style="text-align:right">1,350.00</td>
+                                            <td style="text-align:right">567,000.00</td>
+                                            <td style="text-align:right">1,417.50</td>
+                                            <td style="text-align:right">595,350.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">97.50</td>
+                                            <td style="text-align:right">40,950.00</td>
+                                                                                        <td style="text-align:right">420.00</td>
+                                                                                        <td style="text-align:center">LTR.</td>
+                                        </tr>
+                                                                                <tr>
+                                            <th style="display: none;">2088</th>
+                                            <th style="text-align:right">17</th>
+                                            <th>THINNER(ASSORTED)</th>
+                                            <td style="text-align:right">28.00</td>
+                                            <td style="text-align:right">2,800.00</td>
+                                            <td style="text-align:right">40.00</td>
+                                            <td style="text-align:right">4,000.00</td>
+                                            <td style="text-align:right">58.00</td>
+                                            <td style="text-align:right">5,800.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="background: #afedb1;text-align:right">10.00</td>
+                                            <td style="text-align:right">1,000.00</td>
+                                                                                        <td style="text-align:right">100.00</td>
+                                                                                        <td style="text-align:center">PCS.</td>
+                                        </tr>
+                                                                                <tr style="background:thistle">
+                                            <th style="display: none;"></th>
+                                            <th colspan="2">Total</th>
+                                            <td style="text-align:right">578.50</td>
+                                            <td style="text-align:right">319,422.54</td>
+                                            <td style="text-align:right">4,093.00</td>
+                                            <td style="text-align:right">2,538,769.00</td>
+                                            <td style="text-align:right">4,210.50</td>
+                                            <td style="text-align:right">2,461,443.76</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">0.00</td>
+                                            <td style="text-align:right">461.00</td>
+                                            <td style="text-align:right">396,747.78</td>
+                                            <td style="text-align:right">14,567.72</td>
+                                            <td></td>  
+                                        </tr>
+                                    </tbody>
+                                </table><table>
+                            <thead>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th rowspan="2" style="text-align:right">#</th>
+                                    <th rowspan="2" style="text-align:center">Item</th>
+                                    <th colspan="2" style="text-align:center">Opening Information</th>
+                                    <th colspan="2" style="text-align:center">Purchase Information</th>
+                                    <th colspan="2" style="text-align:center">Issue Information</th>
+                                    <th colspan="2" style="text-align:center">Plating Information</th>
+                                    <th colspan="2" style="text-align:center">Stock In Information</th>
+                                    <th colspan="2" style="text-align:center">Balance Information</th>
+                                    <th rowspan="2">Closing<br>Rate</th>
+                                    <th rowspan="2" style="text-align:center">Unit</th>
+                                </tr>
+                                <tr>
+                                    <th style="display: none;"></th>
+                                    <th style="text-align:center">Opn Qnty</th>
+                                    <th style="text-align:center">Opn Val</th>
+                                    
+                                    <th style="text-align:center">Pur Qnty</th>
+                                    <th style="text-align:center">Pur Val</th>
+                                    
+                                    <th style="text-align:center">Issue Qnty</th>
+                                    <th style="text-align:center">Issue Val</th>
+                                    
+                                    <th style="text-align:center">Plating Qnty</th>
+                                    <th style="text-align:center">Plating Val</th>
+                                    
+                                    <th style="text-align:center">Stock In Qnty</th>
+                                    <th style="text-align:center">Stock In Val</th>
+                                    
+                                    <th style="text-align:center">Bal Qnty</th>
+                                    <th style="text-align:center">Bal Val</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                <tr style="background:thistle">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Total</th>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background:#faeda6">
+                                    <th style="display: none;"></th>
+                                    <th colspan="2">Grand Total</th>
+                                    <td style="text-align:right">578.50</td>
+                                    <td style="text-align:right">319,422.54</td>
+                                    <td style="text-align:right">4,093.00</td>
+                                    <td style="text-align:right">2,538,769.00</td>
+                                    <td style="text-align:right">4,210.50</td>
+                                    <td style="text-align:right">2,461,443.76</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">0.00</td>
+                                    <td style="text-align:right">461.00</td>
+                                    <td style="text-align:right">396,747.78</td>
+                                    <td style="text-align:right">14,567.72</td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table></body></html>

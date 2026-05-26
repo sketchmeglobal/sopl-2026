@@ -76,14 +76,14 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'sopl_user',
- 	'password' => ':~8"az-"pJ"CEsT',
-	'database' => 'sopl_db2026',
+	'username' => 'root',
+ 	'password' => '',
+	'database' => 'sopl_db',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
-// 	'db_debug' => (ENVIRONMENT !== 'development'),  // performance testing e lagbe
+	//'db_debug' => (ENVIRONMENT !== 'production'),
+	'db_debug' => (ENVIRONMENT !== 'development'),  // performance testing e lagbe
 	'cache_on' => FALSE,
 	'cachedir' => '',
 	'char_set' => 'utf8',

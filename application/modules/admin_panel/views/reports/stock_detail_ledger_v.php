@@ -114,7 +114,8 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
-                                    <input type="submit" name="check_stock_detail_ledger" value="Print" class="btn btn-sm btn-success col-sm-12" />    
+                                    <input type="submit" name="check_stock_detail_ledger" value="Print" class="btn btn-sm btn-success col-sm-12" /> 
+                                    <input type="submit" name="check_stock_challan_detail_ledger" value="Print challan" class="btn btn-sm btn-success col-sm-12" />
                                     <input type="submit" name="check_stock_detail_ledger_v" value="Print (V)" class="btn btn-sm btn-success col-sm-12" />    
                                 </div>
                             </form>

@@ -209,7 +209,7 @@ $arr = array_unique(array_column($print_packing_list, 'ORD'));
                             <!--<p class="mar_0">Fax: < ?=COMPANY_FAX?></p>-->
                             <p class="mar_0"><b>Email</b>: <?=HEADER_EMAIL?></p>
                             <p class="mar_0"><b>CIN</b>: <?=HEADER_CIN?></p>
-                            <p class="mar_0">IEC-029300L286</p>
+                            <p class="mar_0">IEC-029300286</p>
                             
                         </div>
                         <div class="col-sm-6 header_right" style="height: 165px;">
@@ -464,12 +464,13 @@ $arr = array_unique(array_column($print_packing_list, 'ORD'));
                                    <?php if ($firstLoop and ($print_packing_list[0]->bank_name != '.')): ?>
                                         
                                         <span style="display: block; margin: 7px 0px;"> <b>Bank Details :</b> </span>
-                                        <?= $print_packing_list[0]->bank_name . ' ' . $print_packing_list[0]->bank_address . ' <b>Acc. No:</b> ' . $print_packing_list[0]->account_number . '<br><b>Dealer Code:</b> ' . $print_packing_list[0]->dealer_code . '<br><b>Swift Code:</b> ' . $print_packing_list[0]->swift_code . '<br><b>IFSC:</b>' . $print_packing_list[0]->info ?>
+                                        <?= $print_packing_list[0]->bank_name . ' ' . $print_packing_list[0]->bank_address . ' <b>Acc. No:</b> ' . $print_packing_list[0]->account_number . '<br><b>Swift Code:</b> ' . $print_packing_list[0]->swift_code . '<br>' ?>
                                         <?php $firstLoop = false; ?>
                                     <?php endif; ?>
 
                                 </h6>
-                               
+                               <!--<b>Dealer Code:</b> ' . $print_packing_list[0]->dealer_code . '<br>-->
+                               <!--<b>IFSC:</b>' . $print_packing_list[0]->info-->
 
                                 <h6 class="mar_0 text-justify">
                                     <?php

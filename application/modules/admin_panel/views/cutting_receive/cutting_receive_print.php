@@ -18,7 +18,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Chivo|Signika" rel="stylesheet">
         
-        <link href="http://shilpaoverseas.com/new/assets/img/favicon.ico" rel="shortcut icon" type="image/png">
+        <link href="<?= base_url() ?>assets/img/favicon.ico" rel="shortcut icon" type="image/png">
         <!-- Set page size here: A5, A4 or A3 -->
         <!-- Set also "landscape" if you need -->
         <style>
