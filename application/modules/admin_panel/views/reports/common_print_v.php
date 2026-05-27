@@ -5169,6 +5169,11 @@ GROUP BY
                                                         $bal_qnty -= $f['qnty'];
                                                         $bal_val -= $f['val'];
                                                     }
+                                                    elseif ($f['remark'] == 'Stock In')
+                                                    {
+                                                        $bal_qnty += $f['qnty'];
+                                                        $bal_val += $f['val'];
+                                                    }
                                             ?>
                                                     <tr>
                                                         <td><?=$f['item'] . ' (' . $f['color'] . ')' ?></td>

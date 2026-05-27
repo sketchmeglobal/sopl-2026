@@ -911,3 +911,710 @@ DEBUG - 2026-05-26 11:00:47 --> File loaded: C:\xampp\htdocs\sopl-2026\applicati
 DEBUG - 2026-05-26 11:00:47 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/reports/common_print_v.php
 INFO - 2026-05-26 11:00:47 --> Final output sent to browser
 DEBUG - 2026-05-26 11:00:47 --> Total execution time: 0.1357
+INFO - 2026-05-26 15:29:37 --> Config Class Initialized
+INFO - 2026-05-26 15:29:37 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:29:37 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:29:37 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:29:37 --> URI Class Initialized
+DEBUG - 2026-05-26 15:29:37 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+INFO - 2026-05-26 15:29:37 --> Router Class Initialized
+INFO - 2026-05-26 15:29:37 --> Output Class Initialized
+INFO - 2026-05-26 15:29:37 --> Security Class Initialized
+DEBUG - 2026-05-26 15:29:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:29:37 --> Input Class Initialized
+INFO - 2026-05-26 15:29:37 --> Language Class Initialized
+INFO - 2026-05-26 15:29:37 --> Language Class Initialized
+INFO - 2026-05-26 15:29:37 --> Config Class Initialized
+INFO - 2026-05-26 15:29:37 --> Loader Class Initialized
+INFO - 2026-05-26 15:29:37 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:29:37 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:29:37 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:29:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:29:37 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:29:37 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:29:37 --> Report MX_Controller Initialized
+DEBUG - 2026-05-26 15:29:37 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/grocery_crud.php
+INFO - 2026-05-26 15:29:37 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:29:37 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:29:37 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/libraries/Grocery_CRUD.php
+INFO - 2026-05-26 15:29:37 --> Config Class Initialized
+INFO - 2026-05-26 15:29:37 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:29:37 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:29:37 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:29:37 --> URI Class Initialized
+DEBUG - 2026-05-26 15:29:37 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/login/config/routes.php
+INFO - 2026-05-26 15:29:37 --> Router Class Initialized
+INFO - 2026-05-26 15:29:37 --> Output Class Initialized
+INFO - 2026-05-26 15:29:37 --> Security Class Initialized
+DEBUG - 2026-05-26 15:29:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:29:37 --> Input Class Initialized
+INFO - 2026-05-26 15:29:37 --> Language Class Initialized
+INFO - 2026-05-26 15:29:37 --> Language Class Initialized
+INFO - 2026-05-26 15:29:37 --> Config Class Initialized
+INFO - 2026-05-26 15:29:37 --> Loader Class Initialized
+INFO - 2026-05-26 15:29:37 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:29:37 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:29:37 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:29:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:29:37 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:29:37 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:29:37 --> Login MX_Controller Initialized
+INFO - 2026-05-26 15:29:37 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:29:37 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:29:37 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/login/views/admin_login_v.php
+INFO - 2026-05-26 15:29:37 --> Final output sent to browser
+DEBUG - 2026-05-26 15:29:37 --> Total execution time: 0.0633
+INFO - 2026-05-26 15:31:02 --> Config Class Initialized
+INFO - 2026-05-26 15:31:02 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:31:02 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:31:02 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:31:02 --> URI Class Initialized
+DEBUG - 2026-05-26 15:31:02 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/login/config/routes.php
+DEBUG - 2026-05-26 15:31:02 --> No URI present. Default controller set.
+INFO - 2026-05-26 15:31:02 --> Router Class Initialized
+INFO - 2026-05-26 15:31:02 --> Output Class Initialized
+INFO - 2026-05-26 15:31:02 --> Security Class Initialized
+DEBUG - 2026-05-26 15:31:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:31:02 --> Input Class Initialized
+INFO - 2026-05-26 15:31:02 --> Language Class Initialized
+INFO - 2026-05-26 15:31:02 --> Language Class Initialized
+INFO - 2026-05-26 15:31:02 --> Config Class Initialized
+INFO - 2026-05-26 15:31:02 --> Loader Class Initialized
+INFO - 2026-05-26 15:31:02 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:31:02 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:31:02 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:31:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:31:02 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:31:02 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:31:02 --> Login MX_Controller Initialized
+INFO - 2026-05-26 15:31:02 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:31:02 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:31:02 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/login/views/admin_login_v.php
+INFO - 2026-05-26 15:31:02 --> Final output sent to browser
+DEBUG - 2026-05-26 15:31:02 --> Total execution time: 0.1172
+INFO - 2026-05-26 15:31:12 --> Config Class Initialized
+INFO - 2026-05-26 15:31:12 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:31:12 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:31:12 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:31:12 --> URI Class Initialized
+DEBUG - 2026-05-26 15:31:12 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/login/config/routes.php
+INFO - 2026-05-26 15:31:12 --> Router Class Initialized
+INFO - 2026-05-26 15:31:12 --> Output Class Initialized
+INFO - 2026-05-26 15:31:12 --> Security Class Initialized
+DEBUG - 2026-05-26 15:31:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:31:12 --> Input Class Initialized
+INFO - 2026-05-26 15:31:12 --> Language Class Initialized
+INFO - 2026-05-26 15:31:12 --> Language Class Initialized
+INFO - 2026-05-26 15:31:12 --> Config Class Initialized
+INFO - 2026-05-26 15:31:12 --> Loader Class Initialized
+INFO - 2026-05-26 15:31:12 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:31:12 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:31:12 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:31:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:31:13 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:31:13 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:31:13 --> Login MX_Controller Initialized
+INFO - 2026-05-26 15:31:13 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:31:13 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:31:13 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/login/models/Login_m.php
+INFO - 2026-05-26 15:31:13 --> Language file loaded: language/english/form_validation_lang.php
+INFO - 2026-05-26 15:31:13 --> Config Class Initialized
+INFO - 2026-05-26 15:31:13 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:31:13 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:31:13 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:31:13 --> URI Class Initialized
+DEBUG - 2026-05-26 15:31:13 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+INFO - 2026-05-26 15:31:13 --> Router Class Initialized
+INFO - 2026-05-26 15:31:13 --> Output Class Initialized
+INFO - 2026-05-26 15:31:13 --> Security Class Initialized
+DEBUG - 2026-05-26 15:31:13 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:31:13 --> Input Class Initialized
+INFO - 2026-05-26 15:31:13 --> Language Class Initialized
+INFO - 2026-05-26 15:31:13 --> Language Class Initialized
+INFO - 2026-05-26 15:31:13 --> Config Class Initialized
+INFO - 2026-05-26 15:31:13 --> Loader Class Initialized
+INFO - 2026-05-26 15:31:13 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:31:13 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:31:13 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:31:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:31:13 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:31:13 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:31:13 --> Dashboard MX_Controller Initialized
+INFO - 2026-05-26 15:31:13 --> Config Class Initialized
+INFO - 2026-05-26 15:31:13 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:31:13 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:31:13 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:31:13 --> URI Class Initialized
+DEBUG - 2026-05-26 15:31:13 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/login/config/routes.php
+INFO - 2026-05-26 15:31:13 --> Router Class Initialized
+INFO - 2026-05-26 15:31:13 --> Output Class Initialized
+INFO - 2026-05-26 15:31:13 --> Security Class Initialized
+DEBUG - 2026-05-26 15:31:13 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:31:13 --> Input Class Initialized
+INFO - 2026-05-26 15:31:13 --> Language Class Initialized
+INFO - 2026-05-26 15:31:13 --> Language Class Initialized
+INFO - 2026-05-26 15:31:13 --> Config Class Initialized
+INFO - 2026-05-26 15:31:13 --> Loader Class Initialized
+INFO - 2026-05-26 15:31:13 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:31:13 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:31:13 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:31:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:31:13 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:31:13 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:31:13 --> Login MX_Controller Initialized
+INFO - 2026-05-26 15:31:13 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:31:13 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:31:13 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/login/views/admin_login_v.php
+INFO - 2026-05-26 15:31:13 --> Final output sent to browser
+DEBUG - 2026-05-26 15:31:13 --> Total execution time: 0.0633
+INFO - 2026-05-26 15:31:47 --> Config Class Initialized
+INFO - 2026-05-26 15:31:47 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:31:47 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:31:47 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:31:47 --> URI Class Initialized
+DEBUG - 2026-05-26 15:31:47 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/login/config/routes.php
+INFO - 2026-05-26 15:31:47 --> Router Class Initialized
+INFO - 2026-05-26 15:31:47 --> Output Class Initialized
+INFO - 2026-05-26 15:31:47 --> Security Class Initialized
+DEBUG - 2026-05-26 15:31:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:31:47 --> Input Class Initialized
+INFO - 2026-05-26 15:31:47 --> Language Class Initialized
+INFO - 2026-05-26 15:31:47 --> Language Class Initialized
+INFO - 2026-05-26 15:31:47 --> Config Class Initialized
+INFO - 2026-05-26 15:31:47 --> Loader Class Initialized
+INFO - 2026-05-26 15:31:47 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:31:47 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:31:47 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:31:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:31:47 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:31:47 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:31:47 --> Login MX_Controller Initialized
+INFO - 2026-05-26 15:31:47 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:31:47 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:31:47 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/login/models/Login_m.php
+INFO - 2026-05-26 15:31:47 --> Language file loaded: language/english/form_validation_lang.php
+INFO - 2026-05-26 15:31:47 --> Config Class Initialized
+INFO - 2026-05-26 15:31:47 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:31:47 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:31:47 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:31:47 --> URI Class Initialized
+DEBUG - 2026-05-26 15:31:47 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+INFO - 2026-05-26 15:31:47 --> Router Class Initialized
+INFO - 2026-05-26 15:31:47 --> Output Class Initialized
+INFO - 2026-05-26 15:31:47 --> Security Class Initialized
+DEBUG - 2026-05-26 15:31:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:31:47 --> Input Class Initialized
+INFO - 2026-05-26 15:31:47 --> Language Class Initialized
+INFO - 2026-05-26 15:31:47 --> Language Class Initialized
+INFO - 2026-05-26 15:31:47 --> Config Class Initialized
+INFO - 2026-05-26 15:31:48 --> Loader Class Initialized
+INFO - 2026-05-26 15:31:48 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:31:48 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:31:48 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:31:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:31:48 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:31:48 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:31:48 --> Dashboard MX_Controller Initialized
+DEBUG - 2026-05-26 15:31:48 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/models/Dashboard_m.php
+DEBUG - 2026-05-26 15:31:48 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/_common_head.php
+DEBUG - 2026-05-26 15:31:48 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/left_sidebar.php
+DEBUG - 2026-05-26 15:31:48 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/top_menu.php
+DEBUG - 2026-05-26 15:31:48 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/_common_js.php
+DEBUG - 2026-05-26 15:31:48 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/dashboard_v.php
+INFO - 2026-05-26 15:31:48 --> Final output sent to browser
+DEBUG - 2026-05-26 15:31:48 --> Total execution time: 0.5723
+INFO - 2026-05-26 15:31:50 --> Config Class Initialized
+INFO - 2026-05-26 15:31:50 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:31:50 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:31:50 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:31:50 --> URI Class Initialized
+DEBUG - 2026-05-26 15:31:50 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+INFO - 2026-05-26 15:31:50 --> Router Class Initialized
+INFO - 2026-05-26 15:31:50 --> Output Class Initialized
+INFO - 2026-05-26 15:31:50 --> Security Class Initialized
+DEBUG - 2026-05-26 15:31:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:31:50 --> Input Class Initialized
+INFO - 2026-05-26 15:31:50 --> Language Class Initialized
+INFO - 2026-05-26 15:31:50 --> Language Class Initialized
+INFO - 2026-05-26 15:31:50 --> Config Class Initialized
+INFO - 2026-05-26 15:31:50 --> Loader Class Initialized
+INFO - 2026-05-26 15:31:50 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:31:50 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:31:50 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:31:50 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:31:50 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:31:50 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:31:50 --> Settings MX_Controller Initialized
+DEBUG - 2026-05-26 15:31:50 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/grocery_crud.php
+INFO - 2026-05-26 15:31:50 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:31:50 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:31:50 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/libraries/Grocery_CRUD.php
+DEBUG - 2026-05-26 15:31:50 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/models/Settings_m.php
+INFO - 2026-05-26 15:31:59 --> Config Class Initialized
+INFO - 2026-05-26 15:31:59 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:31:59 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:31:59 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:31:59 --> URI Class Initialized
+DEBUG - 2026-05-26 15:31:59 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+INFO - 2026-05-26 15:31:59 --> Router Class Initialized
+INFO - 2026-05-26 15:31:59 --> Output Class Initialized
+INFO - 2026-05-26 15:31:59 --> Security Class Initialized
+DEBUG - 2026-05-26 15:31:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:31:59 --> Input Class Initialized
+INFO - 2026-05-26 15:31:59 --> Language Class Initialized
+INFO - 2026-05-26 15:31:59 --> Language Class Initialized
+INFO - 2026-05-26 15:31:59 --> Config Class Initialized
+INFO - 2026-05-26 15:31:59 --> Loader Class Initialized
+INFO - 2026-05-26 15:31:59 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:31:59 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:31:59 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:31:59 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:31:59 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:31:59 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:31:59 --> Payroll MX_Controller Initialized
+DEBUG - 2026-05-26 15:31:59 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/grocery_crud.php
+INFO - 2026-05-26 15:31:59 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:31:59 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:31:59 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/libraries/Grocery_CRUD.php
+DEBUG - 2026-05-26 15:31:59 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/models/Payroll_m.php
+DEBUG - 2026-05-26 15:31:59 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/grocery_crud.php
+DEBUG - 2026-05-26 15:31:59 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/models/Grocery_crud_model.php
+DEBUG - 2026-05-26 15:32:00 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/_common_head.php
+DEBUG - 2026-05-26 15:32:00 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/left_sidebar.php
+DEBUG - 2026-05-26 15:32:00 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/top_menu.php
+ERROR - 2026-05-26 15:32:00 --> Severity: Warning --> Undefined variable $au C:\xampp\htdocs\sopl-2026\application\modules\admin_panel\views\payroll\salary_list.php 90
+ERROR - 2026-05-26 15:32:00 --> Severity: Warning --> Attempt to read property "user_id" on null C:\xampp\htdocs\sopl-2026\application\modules\admin_panel\views\payroll\salary_list.php 90
+ERROR - 2026-05-26 15:32:00 --> Severity: Warning --> Undefined variable $au C:\xampp\htdocs\sopl-2026\application\modules\admin_panel\views\payroll\salary_list.php 90
+ERROR - 2026-05-26 15:32:00 --> Severity: Warning --> Attempt to read property "username" on null C:\xampp\htdocs\sopl-2026\application\modules\admin_panel\views\payroll\salary_list.php 90
+DEBUG - 2026-05-26 15:32:00 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/footer.php
+DEBUG - 2026-05-26 15:32:00 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/_common_js.php
+DEBUG - 2026-05-26 15:32:00 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/payroll/salary_list.php
+INFO - 2026-05-26 15:32:00 --> Final output sent to browser
+DEBUG - 2026-05-26 15:32:00 --> Total execution time: 0.2146
+INFO - 2026-05-26 15:32:02 --> Config Class Initialized
+INFO - 2026-05-26 15:32:02 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:32:02 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:32:02 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:32:02 --> URI Class Initialized
+DEBUG - 2026-05-26 15:32:02 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+INFO - 2026-05-26 15:32:02 --> Router Class Initialized
+INFO - 2026-05-26 15:32:02 --> Output Class Initialized
+INFO - 2026-05-26 15:32:02 --> Security Class Initialized
+DEBUG - 2026-05-26 15:32:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:32:02 --> Input Class Initialized
+INFO - 2026-05-26 15:32:02 --> Language Class Initialized
+INFO - 2026-05-26 15:32:02 --> Language Class Initialized
+INFO - 2026-05-26 15:32:02 --> Config Class Initialized
+INFO - 2026-05-26 15:32:02 --> Loader Class Initialized
+INFO - 2026-05-26 15:32:02 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:32:02 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:32:02 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:32:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:32:02 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:32:02 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:32:02 --> Payroll MX_Controller Initialized
+DEBUG - 2026-05-26 15:32:02 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/grocery_crud.php
+INFO - 2026-05-26 15:32:02 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:32:02 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:32:02 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/libraries/Grocery_CRUD.php
+DEBUG - 2026-05-26 15:32:02 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/models/Payroll_m.php
+DEBUG - 2026-05-26 15:32:02 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/_common_head.php
+DEBUG - 2026-05-26 15:32:02 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/left_sidebar.php
+DEBUG - 2026-05-26 15:32:02 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/top_menu.php
+DEBUG - 2026-05-26 15:32:02 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/footer.php
+DEBUG - 2026-05-26 15:32:02 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/_common_js.php
+DEBUG - 2026-05-26 15:32:02 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/payroll/salary_add.php
+INFO - 2026-05-26 15:32:02 --> Final output sent to browser
+DEBUG - 2026-05-26 15:32:02 --> Total execution time: 0.1970
+INFO - 2026-05-26 15:32:07 --> Config Class Initialized
+INFO - 2026-05-26 15:32:07 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:32:07 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:32:07 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:32:07 --> URI Class Initialized
+INFO - 2026-05-26 15:32:07 --> Config Class Initialized
+INFO - 2026-05-26 15:32:07 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:32:07 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+DEBUG - 2026-05-26 15:32:07 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:32:07 --> Router Class Initialized
+INFO - 2026-05-26 15:32:07 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:32:07 --> URI Class Initialized
+INFO - 2026-05-26 15:32:07 --> Output Class Initialized
+INFO - 2026-05-26 15:32:07 --> Security Class Initialized
+DEBUG - 2026-05-26 15:32:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:32:07 --> Input Class Initialized
+INFO - 2026-05-26 15:32:07 --> Language Class Initialized
+INFO - 2026-05-26 15:32:07 --> Language Class Initialized
+INFO - 2026-05-26 15:32:07 --> Config Class Initialized
+DEBUG - 2026-05-26 15:32:07 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+INFO - 2026-05-26 15:32:07 --> Router Class Initialized
+INFO - 2026-05-26 15:32:07 --> Loader Class Initialized
+INFO - 2026-05-26 15:32:07 --> Output Class Initialized
+INFO - 2026-05-26 15:32:07 --> Security Class Initialized
+DEBUG - 2026-05-26 15:32:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:32:07 --> Input Class Initialized
+INFO - 2026-05-26 15:32:07 --> Language Class Initialized
+INFO - 2026-05-26 15:32:07 --> Language Class Initialized
+INFO - 2026-05-26 15:32:07 --> Config Class Initialized
+INFO - 2026-05-26 15:32:07 --> Loader Class Initialized
+INFO - 2026-05-26 15:32:07 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:32:07 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:32:07 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:32:07 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:32:07 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:32:07 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:32:07 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:32:07 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:32:07 --> Payroll MX_Controller Initialized
+DEBUG - 2026-05-26 15:32:07 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/grocery_crud.php
+INFO - 2026-05-26 15:32:07 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:32:07 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:32:07 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:32:07 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:32:07 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/libraries/Grocery_CRUD.php
+DEBUG - 2026-05-26 15:32:07 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/models/Payroll_m.php
+INFO - 2026-05-26 15:32:07 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:32:07 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:32:07 --> Payroll MX_Controller Initialized
+DEBUG - 2026-05-26 15:32:07 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/grocery_crud.php
+INFO - 2026-05-26 15:32:07 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:32:07 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:32:07 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/libraries/Grocery_CRUD.php
+DEBUG - 2026-05-26 15:32:07 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/models/Payroll_m.php
+INFO - 2026-05-26 15:32:07 --> Final output sent to browser
+DEBUG - 2026-05-26 15:32:07 --> Total execution time: 0.2981
+INFO - 2026-05-26 15:32:16 --> Config Class Initialized
+INFO - 2026-05-26 15:32:16 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:32:16 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:32:16 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:32:16 --> Config Class Initialized
+INFO - 2026-05-26 15:32:16 --> Hooks Class Initialized
+INFO - 2026-05-26 15:32:16 --> URI Class Initialized
+DEBUG - 2026-05-26 15:32:16 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:32:16 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:32:16 --> URI Class Initialized
+DEBUG - 2026-05-26 15:32:16 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+DEBUG - 2026-05-26 15:32:16 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+INFO - 2026-05-26 15:32:16 --> Router Class Initialized
+INFO - 2026-05-26 15:32:16 --> Router Class Initialized
+INFO - 2026-05-26 15:32:16 --> Output Class Initialized
+INFO - 2026-05-26 15:32:16 --> Output Class Initialized
+INFO - 2026-05-26 15:32:16 --> Security Class Initialized
+INFO - 2026-05-26 15:32:16 --> Security Class Initialized
+DEBUG - 2026-05-26 15:32:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2026-05-26 15:32:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:32:16 --> Input Class Initialized
+INFO - 2026-05-26 15:32:16 --> Input Class Initialized
+INFO - 2026-05-26 15:32:16 --> Language Class Initialized
+INFO - 2026-05-26 15:32:16 --> Language Class Initialized
+INFO - 2026-05-26 15:32:16 --> Language Class Initialized
+INFO - 2026-05-26 15:32:16 --> Language Class Initialized
+INFO - 2026-05-26 15:32:16 --> Config Class Initialized
+INFO - 2026-05-26 15:32:16 --> Config Class Initialized
+INFO - 2026-05-26 15:32:16 --> Loader Class Initialized
+INFO - 2026-05-26 15:32:16 --> Loader Class Initialized
+INFO - 2026-05-26 15:32:16 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:32:16 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:32:16 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:32:16 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:32:16 --> Database Driver Class Initialized
+INFO - 2026-05-26 15:32:16 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:32:16 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:32:16 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:32:16 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:32:16 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2026-05-26 15:32:16 --> Payroll MX_Controller Initialized
+DEBUG - 2026-05-26 15:32:16 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/grocery_crud.php
+INFO - 2026-05-26 15:32:16 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:32:16 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:32:16 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/libraries/Grocery_CRUD.php
+DEBUG - 2026-05-26 15:32:16 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/models/Payroll_m.php
+INFO - 2026-05-26 15:32:16 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:32:16 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:32:16 --> Payroll MX_Controller Initialized
+DEBUG - 2026-05-26 15:32:16 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/grocery_crud.php
+INFO - 2026-05-26 15:32:16 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:32:16 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:32:16 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/libraries/Grocery_CRUD.php
+DEBUG - 2026-05-26 15:32:16 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/models/Payroll_m.php
+INFO - 2026-05-26 15:32:16 --> Final output sent to browser
+DEBUG - 2026-05-26 15:32:16 --> Total execution time: 0.1424
+INFO - 2026-05-26 15:32:19 --> Config Class Initialized
+INFO - 2026-05-26 15:32:19 --> Hooks Class Initialized
+INFO - 2026-05-26 15:32:19 --> Config Class Initialized
+INFO - 2026-05-26 15:32:19 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:32:19 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:32:19 --> Utf8 Class Initialized
+DEBUG - 2026-05-26 15:32:19 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:32:19 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:32:19 --> URI Class Initialized
+INFO - 2026-05-26 15:32:19 --> URI Class Initialized
+DEBUG - 2026-05-26 15:32:19 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+DEBUG - 2026-05-26 15:32:19 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+INFO - 2026-05-26 15:32:19 --> Router Class Initialized
+INFO - 2026-05-26 15:32:19 --> Router Class Initialized
+INFO - 2026-05-26 15:32:19 --> Output Class Initialized
+INFO - 2026-05-26 15:32:19 --> Output Class Initialized
+INFO - 2026-05-26 15:32:19 --> Security Class Initialized
+DEBUG - 2026-05-26 15:32:19 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:32:19 --> Input Class Initialized
+INFO - 2026-05-26 15:32:19 --> Security Class Initialized
+INFO - 2026-05-26 15:32:19 --> Language Class Initialized
+DEBUG - 2026-05-26 15:32:19 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:32:19 --> Input Class Initialized
+INFO - 2026-05-26 15:32:19 --> Language Class Initialized
+INFO - 2026-05-26 15:32:19 --> Language Class Initialized
+INFO - 2026-05-26 15:32:19 --> Config Class Initialized
+INFO - 2026-05-26 15:32:19 --> Language Class Initialized
+INFO - 2026-05-26 15:32:19 --> Config Class Initialized
+INFO - 2026-05-26 15:32:19 --> Loader Class Initialized
+INFO - 2026-05-26 15:32:19 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:32:19 --> Loader Class Initialized
+INFO - 2026-05-26 15:32:19 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:32:19 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:32:19 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:32:19 --> Database Driver Class Initialized
+INFO - 2026-05-26 15:32:19 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:32:19 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:32:19 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:32:19 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:32:19 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2026-05-26 15:32:19 --> Payroll MX_Controller Initialized
+DEBUG - 2026-05-26 15:32:19 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/grocery_crud.php
+INFO - 2026-05-26 15:32:19 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:32:19 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:32:19 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/libraries/Grocery_CRUD.php
+DEBUG - 2026-05-26 15:32:19 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/models/Payroll_m.php
+INFO - 2026-05-26 15:32:19 --> Final output sent to browser
+DEBUG - 2026-05-26 15:32:19 --> Total execution time: 0.1171
+INFO - 2026-05-26 15:32:19 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:32:19 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:32:19 --> Payroll MX_Controller Initialized
+DEBUG - 2026-05-26 15:32:19 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/grocery_crud.php
+INFO - 2026-05-26 15:32:19 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:32:19 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:32:19 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/libraries/Grocery_CRUD.php
+DEBUG - 2026-05-26 15:32:19 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/models/Payroll_m.php
+INFO - 2026-05-26 15:42:57 --> Config Class Initialized
+INFO - 2026-05-26 15:42:57 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:42:57 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:42:57 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:42:57 --> URI Class Initialized
+DEBUG - 2026-05-26 15:42:57 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+INFO - 2026-05-26 15:42:57 --> Router Class Initialized
+INFO - 2026-05-26 15:42:57 --> Output Class Initialized
+INFO - 2026-05-26 15:42:57 --> Security Class Initialized
+DEBUG - 2026-05-26 15:42:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:42:57 --> Input Class Initialized
+INFO - 2026-05-26 15:42:57 --> Language Class Initialized
+INFO - 2026-05-26 15:42:57 --> Language Class Initialized
+INFO - 2026-05-26 15:42:57 --> Config Class Initialized
+INFO - 2026-05-26 15:42:57 --> Loader Class Initialized
+INFO - 2026-05-26 15:42:57 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:42:57 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:42:57 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:42:57 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:42:57 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:42:57 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:42:57 --> Payroll MX_Controller Initialized
+DEBUG - 2026-05-26 15:42:57 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/grocery_crud.php
+INFO - 2026-05-26 15:42:57 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:42:57 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:42:57 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/libraries/Grocery_CRUD.php
+DEBUG - 2026-05-26 15:42:57 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/models/Payroll_m.php
+DEBUG - 2026-05-26 15:42:57 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/_common_head.php
+DEBUG - 2026-05-26 15:42:57 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/left_sidebar.php
+DEBUG - 2026-05-26 15:42:57 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/top_menu.php
+DEBUG - 2026-05-26 15:42:57 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/footer.php
+DEBUG - 2026-05-26 15:42:57 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/components/_common_js.php
+DEBUG - 2026-05-26 15:42:57 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/views/payroll/salary_add.php
+INFO - 2026-05-26 15:42:57 --> Final output sent to browser
+DEBUG - 2026-05-26 15:42:57 --> Total execution time: 0.1298
+INFO - 2026-05-26 15:43:01 --> Config Class Initialized
+INFO - 2026-05-26 15:43:01 --> Hooks Class Initialized
+DEBUG - 2026-05-26 15:43:01 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:43:01 --> Config Class Initialized
+INFO - 2026-05-26 15:43:01 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:43:01 --> Hooks Class Initialized
+INFO - 2026-05-26 15:43:01 --> URI Class Initialized
+DEBUG - 2026-05-26 15:43:01 --> UTF-8 Support Enabled
+INFO - 2026-05-26 15:43:01 --> Utf8 Class Initialized
+INFO - 2026-05-26 15:43:01 --> URI Class Initialized
+DEBUG - 2026-05-26 15:43:01 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+INFO - 2026-05-26 15:43:01 --> Router Class Initialized
+INFO - 2026-05-26 15:43:01 --> Output Class Initialized
+DEBUG - 2026-05-26 15:43:01 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+INFO - 2026-05-26 15:43:01 --> Router Class Initialized
+INFO - 2026-05-26 15:43:01 --> Security Class Initialized
+DEBUG - 2026-05-26 15:43:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:43:01 --> Input Class Initialized
+INFO - 2026-05-26 15:43:01 --> Language Class Initialized
+INFO - 2026-05-26 15:43:01 --> Output Class Initialized
+INFO - 2026-05-26 15:43:01 --> Language Class Initialized
+INFO - 2026-05-26 15:43:01 --> Security Class Initialized
+INFO - 2026-05-26 15:43:01 --> Config Class Initialized
+DEBUG - 2026-05-26 15:43:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 15:43:01 --> Input Class Initialized
+INFO - 2026-05-26 15:43:01 --> Language Class Initialized
+INFO - 2026-05-26 15:43:01 --> Loader Class Initialized
+INFO - 2026-05-26 15:43:01 --> Language Class Initialized
+INFO - 2026-05-26 15:43:01 --> Config Class Initialized
+INFO - 2026-05-26 15:43:01 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:43:01 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:43:01 --> Loader Class Initialized
+INFO - 2026-05-26 15:43:01 --> Helper loaded: url_helper
+INFO - 2026-05-26 15:43:01 --> Helper loaded: html_helper
+INFO - 2026-05-26 15:43:01 --> Database Driver Class Initialized
+INFO - 2026-05-26 15:43:01 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 15:43:01 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:43:01 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:43:01 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:43:01 --> Payroll MX_Controller Initialized
+DEBUG - 2026-05-26 15:43:01 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/grocery_crud.php
+DEBUG - 2026-05-26 15:43:01 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 15:43:01 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:43:01 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:43:01 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/libraries/Grocery_CRUD.php
+DEBUG - 2026-05-26 15:43:01 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/models/Payroll_m.php
+INFO - 2026-05-26 15:43:01 --> Final output sent to browser
+DEBUG - 2026-05-26 15:43:01 --> Total execution time: 0.1308
+INFO - 2026-05-26 15:43:01 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 15:43:01 --> Controller Class Initialized
+DEBUG - 2026-05-26 15:43:01 --> Payroll MX_Controller Initialized
+DEBUG - 2026-05-26 15:43:01 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/grocery_crud.php
+INFO - 2026-05-26 15:43:01 --> Helper loaded: form_helper
+INFO - 2026-05-26 15:43:01 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 15:43:01 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/libraries/Grocery_CRUD.php
+DEBUG - 2026-05-26 15:43:01 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/models/Payroll_m.php
+INFO - 2026-05-26 18:44:09 --> Config Class Initialized
+INFO - 2026-05-26 18:44:09 --> Hooks Class Initialized
+DEBUG - 2026-05-26 18:44:09 --> UTF-8 Support Enabled
+INFO - 2026-05-26 18:44:09 --> Utf8 Class Initialized
+INFO - 2026-05-26 18:44:09 --> URI Class Initialized
+DEBUG - 2026-05-26 18:44:09 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/login/config/routes.php
+INFO - 2026-05-26 18:44:09 --> Router Class Initialized
+INFO - 2026-05-26 18:44:09 --> Output Class Initialized
+INFO - 2026-05-26 18:44:09 --> Security Class Initialized
+DEBUG - 2026-05-26 18:44:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 18:44:09 --> Input Class Initialized
+INFO - 2026-05-26 18:44:09 --> Language Class Initialized
+INFO - 2026-05-26 18:44:09 --> Language Class Initialized
+INFO - 2026-05-26 18:44:09 --> Config Class Initialized
+INFO - 2026-05-26 18:44:09 --> Loader Class Initialized
+INFO - 2026-05-26 18:44:09 --> Helper loaded: url_helper
+INFO - 2026-05-26 18:44:09 --> Helper loaded: html_helper
+INFO - 2026-05-26 18:44:09 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 18:44:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 18:44:09 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 18:44:09 --> Controller Class Initialized
+DEBUG - 2026-05-26 18:44:09 --> Login MX_Controller Initialized
+INFO - 2026-05-26 18:44:09 --> Helper loaded: form_helper
+INFO - 2026-05-26 18:44:09 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 18:44:09 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/login/views/admin_login_v.php
+INFO - 2026-05-26 18:44:09 --> Final output sent to browser
+DEBUG - 2026-05-26 18:44:09 --> Total execution time: 0.2120
+INFO - 2026-05-26 18:55:32 --> Config Class Initialized
+INFO - 2026-05-26 18:55:32 --> Hooks Class Initialized
+DEBUG - 2026-05-26 18:55:32 --> UTF-8 Support Enabled
+INFO - 2026-05-26 18:55:32 --> Utf8 Class Initialized
+INFO - 2026-05-26 18:55:32 --> URI Class Initialized
+DEBUG - 2026-05-26 18:55:32 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+INFO - 2026-05-26 18:55:32 --> Router Class Initialized
+INFO - 2026-05-26 18:55:32 --> Output Class Initialized
+INFO - 2026-05-26 18:55:32 --> Security Class Initialized
+DEBUG - 2026-05-26 18:55:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 18:55:32 --> Input Class Initialized
+INFO - 2026-05-26 18:55:32 --> Language Class Initialized
+INFO - 2026-05-26 18:55:32 --> Language Class Initialized
+INFO - 2026-05-26 18:55:32 --> Config Class Initialized
+INFO - 2026-05-26 18:55:32 --> Loader Class Initialized
+INFO - 2026-05-26 18:55:32 --> Helper loaded: url_helper
+INFO - 2026-05-26 18:55:32 --> Helper loaded: html_helper
+INFO - 2026-05-26 18:55:32 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 18:55:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 18:55:32 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 18:55:32 --> Controller Class Initialized
+DEBUG - 2026-05-26 18:55:32 --> Payroll MX_Controller Initialized
+DEBUG - 2026-05-26 18:55:32 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/grocery_crud.php
+INFO - 2026-05-26 18:55:33 --> Helper loaded: form_helper
+INFO - 2026-05-26 18:55:33 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 18:55:33 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/libraries/Grocery_CRUD.php
+INFO - 2026-05-26 18:55:33 --> Config Class Initialized
+INFO - 2026-05-26 18:55:33 --> Hooks Class Initialized
+DEBUG - 2026-05-26 18:55:33 --> UTF-8 Support Enabled
+INFO - 2026-05-26 18:55:33 --> Utf8 Class Initialized
+INFO - 2026-05-26 18:55:33 --> URI Class Initialized
+DEBUG - 2026-05-26 18:55:33 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/login/config/routes.php
+INFO - 2026-05-26 18:55:33 --> Router Class Initialized
+INFO - 2026-05-26 18:55:33 --> Output Class Initialized
+INFO - 2026-05-26 18:55:33 --> Security Class Initialized
+DEBUG - 2026-05-26 18:55:33 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 18:55:33 --> Input Class Initialized
+INFO - 2026-05-26 18:55:33 --> Language Class Initialized
+INFO - 2026-05-26 18:55:33 --> Language Class Initialized
+INFO - 2026-05-26 18:55:33 --> Config Class Initialized
+INFO - 2026-05-26 18:55:33 --> Loader Class Initialized
+INFO - 2026-05-26 18:55:33 --> Helper loaded: url_helper
+INFO - 2026-05-26 18:55:33 --> Helper loaded: html_helper
+INFO - 2026-05-26 18:55:33 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 18:55:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 18:55:33 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 18:55:33 --> Controller Class Initialized
+DEBUG - 2026-05-26 18:55:33 --> Login MX_Controller Initialized
+INFO - 2026-05-26 18:55:33 --> Helper loaded: form_helper
+INFO - 2026-05-26 18:55:33 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 18:55:33 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/login/views/admin_login_v.php
+INFO - 2026-05-26 18:55:33 --> Final output sent to browser
+DEBUG - 2026-05-26 18:55:33 --> Total execution time: 0.1355
+INFO - 2026-05-26 18:55:33 --> Config Class Initialized
+INFO - 2026-05-26 18:55:33 --> Hooks Class Initialized
+DEBUG - 2026-05-26 18:55:33 --> UTF-8 Support Enabled
+INFO - 2026-05-26 18:55:33 --> Utf8 Class Initialized
+INFO - 2026-05-26 18:55:33 --> URI Class Initialized
+DEBUG - 2026-05-26 18:55:34 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/routes.php
+INFO - 2026-05-26 18:55:34 --> Router Class Initialized
+INFO - 2026-05-26 18:55:34 --> Output Class Initialized
+INFO - 2026-05-26 18:55:34 --> Security Class Initialized
+DEBUG - 2026-05-26 18:55:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 18:55:34 --> Input Class Initialized
+INFO - 2026-05-26 18:55:34 --> Language Class Initialized
+INFO - 2026-05-26 18:55:34 --> Language Class Initialized
+INFO - 2026-05-26 18:55:34 --> Config Class Initialized
+INFO - 2026-05-26 18:55:34 --> Loader Class Initialized
+INFO - 2026-05-26 18:55:34 --> Helper loaded: url_helper
+INFO - 2026-05-26 18:55:34 --> Helper loaded: html_helper
+INFO - 2026-05-26 18:55:34 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 18:55:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 18:55:34 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 18:55:34 --> Controller Class Initialized
+DEBUG - 2026-05-26 18:55:34 --> Payroll MX_Controller Initialized
+DEBUG - 2026-05-26 18:55:34 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/config/grocery_crud.php
+INFO - 2026-05-26 18:55:34 --> Helper loaded: form_helper
+INFO - 2026-05-26 18:55:34 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 18:55:34 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/admin_panel/libraries/Grocery_CRUD.php
+INFO - 2026-05-26 18:55:34 --> Config Class Initialized
+INFO - 2026-05-26 18:55:34 --> Hooks Class Initialized
+DEBUG - 2026-05-26 18:55:34 --> UTF-8 Support Enabled
+INFO - 2026-05-26 18:55:34 --> Utf8 Class Initialized
+INFO - 2026-05-26 18:55:34 --> URI Class Initialized
+DEBUG - 2026-05-26 18:55:34 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/login/config/routes.php
+INFO - 2026-05-26 18:55:34 --> Router Class Initialized
+INFO - 2026-05-26 18:55:34 --> Output Class Initialized
+INFO - 2026-05-26 18:55:34 --> Security Class Initialized
+DEBUG - 2026-05-26 18:55:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-26 18:55:34 --> Input Class Initialized
+INFO - 2026-05-26 18:55:34 --> Language Class Initialized
+INFO - 2026-05-26 18:55:34 --> Language Class Initialized
+INFO - 2026-05-26 18:55:34 --> Config Class Initialized
+INFO - 2026-05-26 18:55:34 --> Loader Class Initialized
+INFO - 2026-05-26 18:55:34 --> Helper loaded: url_helper
+INFO - 2026-05-26 18:55:34 --> Helper loaded: html_helper
+INFO - 2026-05-26 18:55:34 --> Database Driver Class Initialized
+DEBUG - 2026-05-26 18:55:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-05-26 18:55:34 --> Session: Class initialized using 'files' driver.
+INFO - 2026-05-26 18:55:34 --> Controller Class Initialized
+DEBUG - 2026-05-26 18:55:34 --> Login MX_Controller Initialized
+INFO - 2026-05-26 18:55:34 --> Helper loaded: form_helper
+INFO - 2026-05-26 18:55:34 --> Form Validation Class Initialized
+DEBUG - 2026-05-26 18:55:34 --> File loaded: C:\xampp\htdocs\sopl-2026\application\modules/login/views/admin_login_v.php
+INFO - 2026-05-26 18:55:34 --> Final output sent to browser
+DEBUG - 2026-05-26 18:55:34 --> Total execution time: 0.1114
