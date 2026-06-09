@@ -187,12 +187,48 @@ class Office_invoice extends My_Controller {
     
 
     public function form_edit_office_invoice(){
-        if($this->check_permission(array(1,2)) == true) {
-            $this->load->model('Office_invoice_m');
-            $data = $this->Office_invoice_m->form_edit_office_invoice();
-            echo json_encode($data, JSON_HEX_QUOT | JSON_HEX_TAG);
-            exit();
+        // Force db_debug off so CI DB errors throw exceptions, not show_error() 500 pages
+        $this->load->model('Office_invoice_m');
+        $this->db->db_debug = FALSE;
+
+        @ini_set('display_errors', 0);
+        ob_start();
+
+        $data = [];
+        try {
+            if($this->check_permission(array(1,2)) == true) {
+                $data = $this->Office_invoice_m->form_edit_office_invoice();
+            }
+        } catch (Throwable $e) {
+            $data = [
+                'type'  => 'error',
+                'msg'   => $e->getMessage(),
+                'file'  => basename($e->getFile()),
+                'line'  => $e->getLine(),
+                'trace' => $e->getTraceAsString()
+            ];
+        } catch (Exception $e) {
+            $data = [
+                'type'  => 'error',
+                'msg'   => $e->getMessage(),
+                'file'  => basename($e->getFile()),
+                'line'  => $e->getLine(),
+                'trace' => $e->getTraceAsString()
+            ];
         }
+
+        $buffered = ob_get_clean();
+
+        if (empty($data)) {
+            $data = ['type' => 'error', 'msg' => 'Empty response', 'debug' => substr(strip_tags($buffered), 0, 500)];
+        }
+        if (!empty($buffered) && (!isset($data['type']) || $data['type'] !== 'error')) {
+            $data['debug_output'] = substr(strip_tags($buffered), 0, 300);
+        }
+
+        http_response_code(200);
+        echo json_encode($data, JSON_HEX_QUOT | JSON_HEX_TAG);
+        exit();
     }
 
     public function ajax_office_invoice_details_table_data(){

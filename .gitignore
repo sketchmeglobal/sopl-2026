@@ -2,3 +2,6 @@
 *.rar
 *.tar.gz
 application/logs/
+mx_router_debug.txt
+assets/admin_panel/img/customer_order/*.pdf
+assets/invoice_json/*.json

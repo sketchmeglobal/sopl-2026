@@ -984,7 +984,7 @@
             $this->db->where('effective_date <=', date('Y-m-d'));
             $this->db->order_by('effective_date', 'DESC');
             $rate_row = $this->db->get('item_rates')->row();
-            if(count($rate_row) > 0){$rate = $rate_row->cost_rate;} else{$rate = 0;}
+            $rate = ($rate_row && isset($rate_row->cost_rate)) ? $rate_row->cost_rate : 0;
             
             //insert article_costing_details only if id_id is different for this costing else update previous
             $rs = $this->db->get_where('article_costing_details', array('ac_id' => $this->input->post('article_costing_id'), 'id_id' => $this->input->post('id_id')))->num_rows();
@@ -1054,7 +1054,7 @@
             $this->db->where('effective_date <=', date('Y-m-d'));
             $this->db->order_by('effective_date', 'DESC');
             $rate_row = $this->db->get('item_rates')->row();
-            if(count($rate_row) > 0){$rate = $rate_row->cost_rate;} else{$rate = 0;}
+            $rate = ($rate_row && isset($rate_row->cost_rate)) ? $rate_row->cost_rate : 0;
 
              //insert article_costing_details only if id_id is different for this costing else update previous  
             $rs = $this->db->get_where('temp_article_costing_details', array('ac_id' => $this->input->post('article_costing_id'), 'id_id' => $this->input->post('id_id')))->num_rows();  
@@ -2629,7 +2629,7 @@
             $this->db->where('effective_date <=', date('Y-m-d'));
             $this->db->order_by('effective_date', 'DESC');
             $rate_row = $this->db->get('item_rates')->row();
-            if(count($rate_row) > 0){$rate = $rate_row->cost_rate;} else{$rate = 0;}
+            $rate = ($rate_row && isset($rate_row->cost_rate)) ? $rate_row->cost_rate : 0;
             $data['rate'] = $rate;
 
             $this->db->select('item_master.ig_id')
@@ -2727,7 +2727,7 @@
             $this->db->where('effective_date <=', date('Y-m-d'));
             $this->db->order_by('effective_date', 'DESC');
             $rate_row = $this->db->get('item_rates')->row();
-            if(count($rate_row) > 0){$rate = $rate_row->cost_rate;} else{$rate = 0;}
+            $rate = ($rate_row && isset($rate_row->cost_rate)) ? $rate_row->cost_rate : 0;
             $data['rate_neww'] = $rate;
 
 

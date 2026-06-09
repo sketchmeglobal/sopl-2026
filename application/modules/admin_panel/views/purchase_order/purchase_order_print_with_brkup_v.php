@@ -16,7 +16,7 @@
         <!-- Load paper.css for happy printing -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
         <link href="https://fonts.googleapis.com/css?family=Chivo|Signika" rel="stylesheet">
-        <link href="<?= base_url() ?>assets/img/favicon.ico" rel="shortcut icon" type="image/png">
+        <link href="http://localhost/sopl-new/assets/img/favicon.ico" rel="shortcut icon" type="image/png">
         <!-- Set page size here: A5, A4 or A3 -->
         <!-- Set also "landscape" if you need -->
         <style>

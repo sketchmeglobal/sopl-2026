@@ -991,6 +991,8 @@ User Log
 <script src="<?= base_url() ?>assets/admin_panel/js/jquery.validate.min.js"></script>
 <!--ajax form submit-->
 <script src="<?= base_url() ?>assets/admin_panel/js/jquery.form.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
 <script>
 

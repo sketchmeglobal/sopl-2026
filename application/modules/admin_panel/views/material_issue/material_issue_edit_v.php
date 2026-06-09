@@ -55,7 +55,8 @@
                                     </div>
                                     <div class="col-lg-3">
                                         <label for="material_issue_date" class="control-label text-danger">Issue Date*:</label><br/>
-                                        <input id="material_issue_date" name="material_issue_date" type="date" value="<?= $material_issue_data[0]->material_issue_date ?>" class="form-control round-input" />
+                                        <!--value="< ?= $material_issue_data[0]->material_issue_date ?>"-->
+                                        <input id="material_issue_date" name="material_issue_date" type="date" value="<?= ($material_issue_data[0]->material_issue_date && substr($material_issue_data[0]->material_issue_date,0,4) !== '0000') ? $material_issue_data[0]->material_issue_date : '' ?>" class="form-control round-input" />
                                     </div>
                                     <div class="col-lg-3">
                                         <label for="material_issue_to_form" class="control-label text-danger">Issue To / From*</label>
@@ -190,7 +191,8 @@
                                                 </select>
                                                 <input type="hidden" id="im_id" name="im_id" required class="form-control" />
                                                 <input type="hidden" id="id_id_hidden" name="id_id_hidden" required class="form-control" />
-                                                <input id="material_issue_date1" name="material_issue_date1" type="hidden" value="<?= $material_issue_data[0]->material_issue_date ?>" class="form-control round-input" />
+                                                <!--value="< ?= $material_issue_data[0]->material_issue_date ?>"-->
+                                                <input id="material_issue_date1" name="material_issue_date1" type="hidden"  value="<?= ($material_issue_data[0]->material_issue_date && substr($material_issue_data[0]->material_issue_date,0,4) !== '0000') ? $material_issue_data[0]->material_issue_date : '' ?>" class="form-control round-input" />
                                                 <input id="mat_is_id" name="mat_is_id" type="hidden" value="<?= $this->uri->segment(3) ?>" class="form-control round-input" />
                                             </div>
 

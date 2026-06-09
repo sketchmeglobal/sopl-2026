@@ -48,8 +48,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-//$config['base_url'] = 'https://shilpaoverseas.in/2026/';
- $config['base_url'] = 'https://localhost/SOPL-2026/';
+#$config['base_url'] = 'https://shilpaoverseas.in/2026/';
+$config['base_url'] = 'http://localhost/SOPL-2026/';
 
 /*
 |--------------------------------------------------------------------------
@@ -239,7 +239,7 @@ $config['directory_trigger'] = 'd';
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 3;
+$config['log_threshold'] = 0;
 
 /*
 |--------------------------------------------------------------------------

@@ -11,7 +11,14 @@ class Office_invoice_m extends CI_Model {
 
     public function __construct() {
         parent::__construct();
-        $this->db->query("SET sql_mode = ''");
+        // FIX: disable CI's db_debug so DB errors throw exceptions caught by try/catch
+        // instead of calling show_error() which bypasses error handling and causes 500
+        $this->db->db_debug = FALSE;
+        // FIX: force sql_mode off; if this fails on live server, add stricton=FALSE in database.php too
+        $this->db->query("SET SESSION sql_mode = ''");
+        // DEBUG: log all PHP errors to CI log file
+        @ini_set('log_errors', 1);
+        @error_reporting(E_ALL);
     }
     
     private function _user_wise_view_permission($menu_id,$user){
@@ -48,7 +55,7 @@ class Office_invoice_m extends CI_Model {
 
     public function check_and_log_before_delete($reference_array, $primary_key, $pk_field_name, $table_name){
         // echo $table_name . ' || ' . $pk_field_name . ' || ' . $primary_key;die;
-        // $item_exists = 0;
+        $item_exists = 0; // FIX: must be initialized before foreach to avoid undefined variable on strict PHP servers
         foreach($reference_array as $ra){
             $nr = $this->db->get_where($ra['tbl_name'], array($ra['tbl_pk_fld'] => $primary_key))->num_rows();
             if($nr > 0){
@@ -422,6 +429,19 @@ class Office_invoice_m extends CI_Model {
     		->join('acc_master', 'acc_master.am_id = office_invoice.am_id', 'left')
     		->join('transport_master', 'transport_master.tr_id = office_invoice.tr_id', 'left')
     		->get_where('office_invoice', array('office_invoice.office_invoice_id' => $office_invoice_id))->result();
+
+        // FIX: sanitize 0000-00-00 dates — browser <input type="date"> rejects them,
+        // submits blank string, then MySQL strict mode rejects that on save -> 500
+        if (!empty($data['office_invoice_data'])) {
+            foreach ($data['office_invoice_data'] as $row) {
+                if (isset($row->office_invoice_date) && (substr($row->office_invoice_date, 0, 4) === '0000' || $row->office_invoice_date === '')) {
+                    $row->office_invoice_date = '';
+                }
+                if (isset($row->realisation_date) && (substr($row->realisation_date, 0, 4) === '0000' || $row->realisation_date === '')) {
+                    $row->realisation_date = '';
+                }
+            }
+        }
         
         $data['self_banks'] = $this->db->get_where('bank_details', array('bank_details.customer_id' => 57))->result(); // 57 = SELF i.e. SOPL
             
@@ -640,9 +660,7 @@ $dir_to_save = "assets/invoice_json/INV-".rand().'.json';
 file_put_contents($dir_to_save, $response1);
 $name = "INV-".rand().".json"; // new name for your file
 $this->load->helper('download');
-// $data1 = file_get_contents($dir_to_save); // Read the file's contents
-$path    =   file_get_contents(base_url().$dir_to_save);
-force_download($name, $path);
+force_download($name, file_get_contents($dir_to_save));
 
     }
     
@@ -914,6 +932,28 @@ force_download($name, $path);
         $total_invoice_inr_val = 0;
         $total_invoice_vals = 0;
         $all_quantity_vals = 0;
+
+        // FIX: Normalize office_invoice_date from dd/mm/yyyy to yyyy-mm-dd for MySQL on live server
+        $raw_invoice_date = $this->input->post('office_invoice_date');
+        if (!empty($raw_invoice_date) && preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $raw_invoice_date)) {
+            $parts = explode('/', $raw_invoice_date);
+            $raw_invoice_date = $parts[2] . '-' . $parts[1] . '-' . $parts[0];
+        }
+
+        // FIX: Normalize realisation_date from dd/mm/yyyy to yyyy-mm-dd
+        // Also convert empty string or 0000-00-00 to NULL so MySQL strict mode doesn't reject it
+        $raw_realisation_date = $this->input->post('realisation_date');
+        if (empty($raw_realisation_date) || substr($raw_realisation_date, 0, 4) === '0000') {
+            $raw_realisation_date = NULL;
+        } elseif (preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $raw_realisation_date)) {
+            $parts = explode('/', $raw_realisation_date);
+            $raw_realisation_date = $parts[2] . '-' . $parts[1] . '-' . $parts[0];
+        }
+
+        // FIX: also ensure office_invoice_date is never empty — fallback to today
+        if (empty($raw_invoice_date) || substr($raw_invoice_date, 0, 4) === '0000') {
+            $raw_invoice_date = date('Y-m-d');
+        }
         
         $get_detail_invoice_ex_rate = $this->db->get_where('office_invoice_detail', array('office_invoice_id' => $invoice_id))->result();
         
@@ -930,13 +970,15 @@ force_download($name, $path);
            $this->db->update('office_invoice_detail', $update_arr, array('office_invoice_detail_id' => $g->office_invoice_detail_id)); 
         }
 
-            if(count($this->input->post('office_proforma_id')) > 0){
-                foreach ($this->input->post('office_proforma_id') as $value) {
+            $proforma_ids = $this->input->post('office_proforma_id');
+            if(is_array($proforma_ids) && count($proforma_ids) > 0){
+                foreach ($proforma_ids as $value) {
                     $temp .= $value . ',';
                 }
             }
-            if($this->input->post('acc_master_declar_id[]') != ''){
-                foreach ($this->input->post('acc_master_declar_id[]') as $dvalue) {
+            $declar_ids = $this->input->post('acc_master_declar_id[]');
+            if(is_array($declar_ids) && count($declar_ids) > 0){
+                foreach ($declar_ids as $dvalue) {
                     $dtemp .= $dvalue . ',';
                 }
             }
@@ -952,7 +994,7 @@ force_download($name, $path);
 
         $invoice_arr = array(
                'office_invoice_number' => $this->input->post('office_invoice_number'),
-                'office_invoice_date' => $this->input->post('office_invoice_date'),
+                'office_invoice_date' => $raw_invoice_date, // FIX: use normalized yyyy-mm-dd date
                 'rate_type' => $this->input->post('rate_type'),
                 'am_id' => $this->input->post('am_id'),
                 'final_destination' => $this->input->post('final_destination'),
@@ -978,7 +1020,7 @@ force_download($name, $path);
                 'volume_weight' => $this->input->post('volume_weight'),
                 'ex_rate' => $this->input->post('ex_rate'),
                 'conversion_rate' => $this->input->post('conversion_rate'),
-                'realisation_date' => $this->input->post('realisation_date'),
+                'realisation_date' => $raw_realisation_date, // FIX: use normalized yyyy-mm-dd date
                 'realisation_ex_rate' => $this->input->post('realisation_ex_rate'),
                 'acc_master_declar_id' => rtrim($dtemp, ","),
                 'net_quantity' => $all_quantity_vals,
@@ -1235,7 +1277,7 @@ force_download($name, $path);
            $rs_qnty_total = $this->db->select('sum(packing_shipment_detail.article_quantity) as article_quantity, update_after_invoice')
                 ->get_where('packing_shipment_detail', array('packing_shipment_detail.packing_shipment_id' => $val->packing_shipment_id, 'packing_shipment_detail.co_id' => $val->co_id, 'packing_shipment_detail.am_id' => $val->am_id, 'packing_shipment_detail.lc_id' => $val->leather_id, 'packing_shipment_detail.status' => 1))->row();
 
-        if(count($rs_qnty_total) > 0) {
+        if(!empty($rs_qnty_total)) {
             $qnty_total = $rs_qnty_total->article_quantity;
             $status = $rs_qnty_total->update_after_invoice;
         } else {
@@ -1393,7 +1435,7 @@ force_download($name, $path);
 		$result = $this->db
 		         ->order_by('effective_date', 'desc')
 		         ->get_where('currencies_rate', array('currencies_rate.cur_id' => $cur_id_val))->row();
-	    if(count($result) > 0) {
+	    if(!empty($result)) {
 	        $rate_inr = $result->rate;
 	    } else {
 	        $rate_inr = 0.00;
@@ -1982,20 +2024,29 @@ ORDER BY purchase_order_receive.purchase_order_receive_date')->result();
         $data = [];
         $temp = '';
         $dtemp = '';
-    	if(count($this->input->post('office_proforma_id')) > 0){
-                foreach ($this->input->post('office_proforma_id') as $value) {
+        $proforma_ids_add = $this->input->post('office_proforma_id');
+        if(is_array($proforma_ids_add) && count($proforma_ids_add) > 0){
+                foreach ($proforma_ids_add as $value) {
                     $temp .= $value . ',';
                 }
             }
-            if($this->input->post('acc_master_declar_id[]') != ''){
-                foreach ($this->input->post('acc_master_declar_id[]') as $dvalue) {
+            $declar_ids_add = $this->input->post('acc_master_declar_id[]');
+            if(is_array($declar_ids_add) && count($declar_ids_add) > 0){
+                foreach ($declar_ids_add as $dvalue) {
                     $dtemp .= $dvalue . ',';
                 }
             }
 
+        // FIX: Normalize office_invoice_date from dd/mm/yyyy to yyyy-mm-dd for MySQL on live server
+        $raw_invoice_date_add = $this->input->post('office_invoice_date');
+        if (!empty($raw_invoice_date_add) && preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $raw_invoice_date_add)) {
+            $parts = explode('/', $raw_invoice_date_add);
+            $raw_invoice_date_add = $parts[2] . '-' . $parts[1] . '-' . $parts[0];
+        }
+
         $insertArray = array(
 			'office_invoice_number' => $this->input->post('office_invoice_number'),
-			'office_invoice_date' => $this->input->post('office_invoice_date'),
+			'office_invoice_date' => $raw_invoice_date_add, // FIX: use normalized yyyy-mm-dd date
 			'rate_type' => $this->input->post('rate_type'),
 			'am_id' => $this->input->post('am_id'),
 			'final_destination' => $this->input->post('final_destination'),
@@ -2098,11 +2149,11 @@ ORDER BY purchase_order_receive.purchase_order_receive_date')->result();
 
         $value = $this->db->get_where('packing_shipment_detail', array('packing_shipment_detail.packing_shipment_detail_id' => $this->input->post('pack_detail_id')))->row();
         
-        if(count($value) > 0) {
+        if(!empty($value)) {
         $rs_qnty_total = $this->db->select('sum(packing_shipment_detail.article_quantity) as article_quantity, update_after_invoice')
         ->get_where('packing_shipment_detail', array('packing_shipment_detail.packing_shipment_id' => $value->packing_shipment_id, 'packing_shipment_detail.co_id' => $value->co_id, 'packing_shipment_detail.am_id' => $value->am_id, 'packing_shipment_detail.lc_id' => $value->lc_id, 'packing_shipment_detail.status' => 1))->row();
 
-        if(count($rs_qnty_total) > 0) {
+        if(!empty($rs_qnty_total)) {
             $qnty_total = $rs_qnty_total->article_quantity;
         } else {
             $qnty_total = 0;

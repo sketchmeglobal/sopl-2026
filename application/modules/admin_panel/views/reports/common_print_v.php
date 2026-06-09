@@ -2254,15 +2254,8 @@ echo   round($res->total_quantity); $total_qntys += $res->total_quantity;
         $sum_purchase_order = $r->final_pur_rcv_qnty;
         $sum_material_issue = $r->final_mat_issue_qnty;
         $sum_stock_in = $r->final_stock_in_qnty;
-        $challan_row = $this->db->select_sum('purchase_challan_order_receive_detail.item_quantity')
-            ->from('purchase_challan_order_receive_detail')
-            ->join('purchase_challan_order_receive', 'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
-            ->where('purchase_challan_order_receive_detail.id_id', $r->id_id)
-            ->where('purchase_challan_order_receive_detail.status', 1)
-            ->where('purchase_challan_order_receive.status', 1)
-            ->get()->row();
-        $sum_challan = (!empty($challan_row) && $challan_row->item_quantity !== null) ? (float)$challan_row->item_quantity : 0;
-        $current_stock = ($opening_stock + $sum_purchase_order + $sum_challan - $sum_material_issue + $sum_stock_in);
+        
+        $current_stock = ($opening_stock + $sum_purchase_order - $sum_material_issue + $sum_stock_in);
         
         echo number_format($current_stock, 2) . "<br/>";
         $tot_current_stock += $current_stock;
@@ -3609,15 +3602,8 @@ ALTERED/REJECTED</th>
         $sum_purchase_order = $r->final_pur_rcv_qnty;
         $sum_material_issue = $r->final_mat_issue_qnty;
         $sum_stock_in = $r->final_stock_in_qnty;
-        $challan_row = $this->db->select_sum('purchase_challan_order_receive_detail.item_quantity')
-            ->from('purchase_challan_order_receive_detail')
-            ->join('purchase_challan_order_receive', 'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
-            ->where('purchase_challan_order_receive_detail.id_id', $r->id_id)
-            ->where('purchase_challan_order_receive_detail.status', 1)
-            ->where('purchase_challan_order_receive.status', 1)
-            ->get()->row();
-        $sum_challan = (!empty($challan_row) && $challan_row->item_quantity !== null) ? (float)$challan_row->item_quantity : 0;
-        $current_stock = ($opening_stock + $sum_purchase_order + $sum_challan - $sum_material_issue + $sum_stock_in);
+
+        $current_stock = ($opening_stock + $sum_purchase_order - $sum_material_issue + $sum_stock_in);
 
         echo number_format($current_stock, 2) . "<br/>";
         $tot_current_stock += $current_stock;
@@ -4070,15 +4056,8 @@ GROUP BY
         $sum_purchase_order = $r->final_pur_rcv_qnty;
         $sum_material_issue = $r->final_mat_issue_qnty;
         $sum_stock_in = $r->final_stock_in_qnty;
-        $challan_row = $this->db->select_sum('purchase_challan_order_receive_detail.item_quantity')
-            ->from('purchase_challan_order_receive_detail')
-            ->join('purchase_challan_order_receive', 'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
-            ->where('purchase_challan_order_receive_detail.id_id', $r->id_id)
-            ->where('purchase_challan_order_receive_detail.status', 1)
-            ->where('purchase_challan_order_receive.status', 1)
-            ->get()->row();
-        $sum_challan = (!empty($challan_row) && $challan_row->item_quantity !== null) ? (float)$challan_row->item_quantity : 0;
-        $current_stock = ($opening_stock + $sum_purchase_order + $sum_challan - $sum_material_issue + $sum_stock_in);
+
+        $current_stock = ($opening_stock + $sum_purchase_order - $sum_material_issue + $sum_stock_in);
 
         echo number_format($current_stock, 2) . "<br/>";
         $tot_current_stock += $current_stock;
@@ -5060,6 +5039,7 @@ GROUP BY
                                             ?>
                                                     <tr>
                                                         <td><?=$f['item'] . ' (' . $f['color'] . ')' ?></td>
+                                                        <td><?=$f['remark'] ?></td>
                                                         <!--< ?= $f['supplier_name'] ?>-->
                                                         <td><?= $f['supplier_name'] ?></td>
                                                         <td><?=$f['sl_no'] ?></td>
@@ -5148,12 +5128,16 @@ GROUP BY
                                                         $bal_qnty += $f['qnty'];
                                                         $bal_val += $f['val'];
                                                     }
+                                                    // elseif ($f['remark'] == 'Purchase')
+                                                    // {
+                                                    //     $bal_qnty += $f['qnty'];
+                                                    //     $bal_val += $f['val'];
+                                                    // }
                                                     elseif ($f['remark'] == 'Purchase')
                                                     {
                                                         $bal_val += $f['val']; // Invoice provides monetary value; row not rendered
                                                         continue;
                                                     }
-
                                                     elseif ($f['remark'] == 'Challan')
                                                     {
                                                         $bal_qnty += $f['qnty'];
@@ -19697,7 +19681,7 @@ if($check_consumption_list == 0) {
                                             <td style="text-align:right"><?=number_format($f['stock_in_val'] ?? 0, 2) ?></td>
                                             <td style="background: #afedb1;text-align:right"><?=number_format($bal_qty, 2, '.', '')?></td>
                                             <td style="text-align:right"><?=number_format($bal_rate, 2) ?></td>
-                                            <?php
+                                            <?php 
                                             if ($bal_qty != 0) {
                                                 $closing_rate += ($bal_rate / $bal_qty);
                                             ?>
@@ -19727,27 +19711,27 @@ if($check_consumption_list == 0) {
                                             <td style="text-align:right"><?=number_format($all_bal_qty, 2) ?></td>
                                             <td style="text-align:right"><?=number_format($all_bal_rate, 2) ?></td>
                                             <td style="text-align:right"><?=number_format($closing_rate, 2) ?></td>
-                                            <td></td>
+                                            <td></td>  
                                         </tr>
                                     </tbody>
-                                </table>
+                                </table>    
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>        
             </div>
-        </section>
+        </section>       
 
         <section class="sheet padding-5mm" style="height: auto">
-
+    
             <?php $table_no=2; ?>
-
+            
             <!--<header class="pull-right">-->
             <!--    <small>Page No. </small>-->
             <!--</header>-->
 
             <div class="clearfix"></div>
-            <div class="container">
+            <div class="container"> 
                 <div class="row border_all text-center text-uppercase mar_bot_3">
                     <h3 class="mar_0 head_font">Stock Summary Details <?= ($virtual == 'false') ? '' : '<label style="color:blue"> - Supplementary</label>' ?></h3>
                 </div>
@@ -19784,36 +19768,36 @@ if($check_consumption_list == 0) {
                                     <th style="display: none;"></th>
                                     <th style="text-align:center">Opn Qnty</th>
                                     <th style="text-align:center">Opn Val</th>
-
+                                    
                                     <th style="text-align:center">Pur Qnty</th>
                                     <th style="text-align:center">Pur Val</th>
-
+                                    
                                     <th style="text-align:center">Issue Qnty</th>
                                     <th style="text-align:center">Issue Val</th>
-
+                                    
                                     <th style="text-align:center">Plating Qnty</th>
                                     <th style="text-align:center">Plating Val</th>
-
+                                    
                                     <th style="text-align:center">Stock In Qnty</th>
                                     <th style="text-align:center">Stock In Val</th>
-
+                                    
                                     <th style="text-align:center">Bal Qnty</th>
                                     <th style="text-align:center">Bal Val</th>
-
+                                    
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
                                 // keep old value for grand total - starts
-                                $old_all_bal_qty = $all_bal_qty;
+                                $old_all_bal_qty = $all_bal_qty; 
                                 $old_all_opn_qty = $all_opn_qty;
-                                $old_all_pur_qty = $all_pur_qty;
-                                $old_all_issue_qty = $all_issue_qty;
+                                $old_all_pur_qty = $all_pur_qty; 
+                                $old_all_issue_qty = $all_issue_qty; 
                                 $old_all_plating_qty = $all_plating_qty;
                                 $old_all_stockin_qty = $all_stockin_qty;
                                 $old_all_bal_rate = $all_bal_rate;
                                 $old_all_opn_rate = $all_opn_rate;
-                                $old_all_pur_rate = $all_pur_rate;
+                                $old_all_pur_rate = $all_pur_rate; 
                                 $old_all_issue_rate = $all_issue_rate;
                                 $old_all_plating_rate = $all_plating_rate;
                                 $old_all_stockin_rate = $all_stockin_rate;
@@ -19863,7 +19847,7 @@ if($check_consumption_list == 0) {
                                     <td style="text-align:right"><?=number_format($f['stock_in_val'] ?? 0, 2) ?></td>
                                     <td style="background: #afedb1;text-align:right"><?=number_format($bal_qty, 2, '.', '')?></td>
                                     <td style="text-align:right"><?=number_format($bal_rate, 2) ?></td>
-                                    <?php
+                                    <?php 
                                     if ($bal_qty != 0) {
                                         $closing_rate += ($bal_rate / $bal_qty);
                                     ?>

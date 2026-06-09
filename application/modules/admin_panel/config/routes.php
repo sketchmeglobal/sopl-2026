@@ -1,6 +1,5 @@
 <?php
 
-$route['admin'] = 'login/Login/admin_login';
 $route['admin/dashboard'] = 'admin_panel/Dashboard/dashboard';
 $route['404'] = 'admin_panel/Dashboard/error_404';
 $route['js_disabled'] = 'admin_panel/Dashboard/js_disabled';

@@ -47,14 +47,16 @@ function fetch_current_stock($id_id){
         ->get_where('item_dtl', array('id_id' => $id_id))
         ->row()->opening_stock;
 
-    $challan_rcv_row = $CI->db->select_sum('purchase_challan_order_receive_detail.item_quantity')
-        ->from('purchase_challan_order_receive_detail')
-        ->join('purchase_challan_order_receive', 'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
-        ->where('purchase_challan_order_receive_detail.id_id', $id_id)
-        ->where('purchase_challan_order_receive_detail.status', 1)
-        ->where('purchase_challan_order_receive.status', 1)
-        ->get()->row();
-    $pur_rcv = (!empty($challan_rcv_row) && $challan_rcv_row->item_quantity !== null) ? (float)$challan_rcv_row->item_quantity : 0;
+    $pur_rcv_row = $CI->db->select('SUM(item_quantity) AS item_quantity')
+        ->group_by('id_id')
+        ->get_where('purchase_order_receive_detail', array('id_id' => $id_id))
+        ->row();
+
+    if(count($pur_rcv_row) > 0){
+        $pur_rcv = $pur_rcv_row->item_quantity;
+    } else{
+        $pur_rcv = 0;
+    }
 
     $challan_row = $CI->db->select_sum('purchase_challan_order_receive_detail.item_quantity')
         ->from('purchase_challan_order_receive_detail')
@@ -115,14 +117,16 @@ function fetch_po_pending($id_id){
         $supp_pur_order = 0;
     }
 
-    $challan_rcv_row = $CI->db->select_sum('purchase_challan_order_receive_detail.item_quantity')
-        ->from('purchase_challan_order_receive_detail')
-        ->join('purchase_challan_order_receive', 'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
-        ->where('purchase_challan_order_receive_detail.id_id', $id_id)
-        ->where('purchase_challan_order_receive_detail.status', 1)
-        ->where('purchase_challan_order_receive.status', 1)
-        ->get()->row();
-    $pur_rcv = (!empty($challan_rcv_row) && $challan_rcv_row->item_quantity !== null) ? (float)$challan_rcv_row->item_quantity : 0;
+    $pur_rcv_row = $CI->db->select('SUM(item_quantity) AS item_quantity')
+        ->group_by('id_id')
+        ->get_where('purchase_order_receive_detail', array('id_id' => $id_id))
+        ->row();
+
+    if(count($pur_rcv_row) > 0){
+        $pur_rcv = $pur_rcv_row->item_quantity;
+    } else{
+        $pur_rcv = 0;
+    }
 
     return round(($supp_pur_order + $pur_order) - $pur_rcv, 2);
 

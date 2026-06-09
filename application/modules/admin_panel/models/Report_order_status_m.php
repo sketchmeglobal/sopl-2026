@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 class Report_order_status_m extends CI_Model {
 
@@ -4046,9 +4046,7 @@ if($check_consumption_list == 0) {
             $it_arr = $this->input->post('items[]');
             $from   = $this->input->post('fromdate');
             $to     = $this->input->post('todate');
-        
-            // â”€â”€ Guard against empty inputs â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-            if (empty($it_arr) || empty($from) || empty($to)) {
+        if (empty($it_arr) || empty($from) || empty($to)) {
                 $this->session->set_flashdata('error', 'Please select items and date range.');
                 redirect('admin/stock-detail-ledger');
                 return;
@@ -4510,39 +4508,39 @@ if($check_consumption_list == 0) {
         $from   = date('Y-m-d', strtotime($from));
         $to     = date('Y-m-d', strtotime($to));
         $df_new = date('Y-m-d', strtotime('01-04-2020'));
-
+    
         if (empty($it_arr)) return array();
-
+    
         $this->db->empty_table('temp_table');
-
+    
         foreach ($it_arr as $id_id) {
-
+    
             if ($from == YEAR_START_DATE) {
-
+    
                 // ============================================================
                 // BRANCH A: from = YEAR_START_DATE -> use raw opening from item_dtl
                 // ============================================================
-
+    
                 $this->db->where('item_dtl.id_id', $id_id);
                 $row_opn = $this->db->get('item_dtl')->row();
                 if ($row_opn === null) continue;
-
+    
                 $rs_opn = $this->db
                     ->select('item_dtl.id_id, item_dtl.opening_stock as opening_qty,
-                            item_master.item, colors.color, item_dtl.opening_rate')
+                              item_master.item, colors.color, item_dtl.opening_rate')
                     ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
                     ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
                     ->where('item_dtl.id_id', $id_id)
                     ->get('item_dtl')->result_array();
-
+    
                 // -- Purchases within date range
                 $rs_pur = $this->db
                     ->select('item_master.item, colors.color,
-                            purchase_order_receive.purchase_order_receive_bill_no,
-                            purchase_order_receive.purchase_order_receive_date,
-                            purchase_order_receive_detail.item_quantity,
-                            purchase_order_receive_detail.item_rate,
-                            purchase_order_receive_detail.pod_total')
+                              purchase_order_receive.purchase_order_receive_bill_no,
+                              purchase_order_receive.purchase_order_receive_date,
+                              purchase_order_receive_detail.item_quantity,
+                              purchase_order_receive_detail.item_rate,
+                              purchase_order_receive_detail.pod_total')
                     ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
                     ->join('item_dtl', 'item_dtl.id_id = purchase_order_receive_detail.id_id', 'left')
                     ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
@@ -4551,15 +4549,15 @@ if($check_consumption_list == 0) {
                     ->where('purchase_order_receive_detail.id_id', $id_id)
                     ->order_by("str_to_date(purchase_order_receive.purchase_order_receive_date, '%d-%m-%Y') ASC")
                     ->get('purchase_order_receive_detail')->result_array();
-
+    
                 // -- Challan within date range
                 $rs_challan = $this->db
                     ->select('item_master.item, colors.color,
-                            purchase_challan_order_receive.purchase_order_receive_bill_no,
-                            purchase_challan_order_receive.purchase_order_receive_date,
-                            purchase_challan_order_receive_detail.item_quantity,
-                            purchase_challan_order_receive_detail.item_rate,
-                            purchase_challan_order_receive_detail.pod_total')
+                              purchase_challan_order_receive.purchase_order_receive_bill_no,
+                              purchase_challan_order_receive.purchase_order_receive_date,
+                              purchase_challan_order_receive_detail.item_quantity,
+                              purchase_challan_order_receive_detail.item_rate,
+                              purchase_challan_order_receive_detail.pod_total')
                     ->join('purchase_challan_order_receive', 'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
                     ->join('item_dtl', 'item_dtl.id_id = purchase_challan_order_receive_detail.id_id', 'left')
                     ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
@@ -4570,15 +4568,15 @@ if($check_consumption_list == 0) {
                     ->where('purchase_challan_order_receive.status', 1)
                     ->order_by("str_to_date(purchase_challan_order_receive.purchase_order_receive_date, '%d-%m-%Y') ASC")
                     ->get('purchase_challan_order_receive_detail')->result_array();
-
+    
                 // -- Issues within date range (virtual_status = 0 only)
                 $rs_issue = $this->db
                     ->select('item_master.item, colors.color,
-                            material_issue.material_issue_slip_number,
-                            material_issue.material_issue_date,
-                            material_issue_detail.issue_quantity,
-                            material_issue_detail.issue_rate,
-                            material_issue_detail.total_amount')
+                              material_issue.material_issue_slip_number,
+                              material_issue.material_issue_date,
+                              material_issue_detail.issue_quantity,
+                              material_issue_detail.issue_rate,
+                              material_issue_detail.total_amount')
                     ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
                     ->join('item_dtl', 'item_dtl.id_id = material_issue_detail.id_id', 'left')
                     ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
@@ -4588,18 +4586,18 @@ if($check_consumption_list == 0) {
                     ->where('material_issue.virtual_status', 0)
                     ->order_by("str_to_date(material_issue.material_issue_date, '%d-%m-%Y') ASC")
                     ->get('material_issue_detail')->result_array();
-
+    
                 $item_detail_row = $this->db->get_where('item_dtl', array('id_id' => $id_id))->row();
                 $im_id = $item_detail_row->im_id;
                 $c_id  = $item_detail_row->c_id;
-
+    
                 // -- Plating within date range
                 $rs_plating = $this->db
                     ->select('item_master.item, colors.color,
-                            platting_issue.platting_issue_number,
-                            platting_issue.platting_issue_date,
-                            platting_issue_detail.issue_quantity,
-                            platting_issue_detail.plating_rate')
+                              platting_issue.platting_issue_number,
+                              platting_issue.platting_issue_date,
+                              platting_issue_detail.issue_quantity,
+                              platting_issue_detail.plating_rate')
                     ->join('platting_issue', 'platting_issue.platting_issue_id = platting_issue_detail.platting_issue_id', 'left')
                     ->join('item_master', 'item_master.im_id = platting_issue_detail.im_id', 'left')
                     ->join('colors', 'colors.c_id = platting_issue_detail.item_colour', 'left')
@@ -4607,15 +4605,15 @@ if($check_consumption_list == 0) {
                     ->where(array('platting_issue_detail.im_id' => $im_id, 'platting_issue_detail.item_colour' => $c_id))
                     ->order_by("str_to_date(platting_issue.platting_issue_date, '%d-%m-%Y') ASC")
                     ->get('platting_issue_detail')->result_array();
-
+    
                 // -- Stock In within date range
                 $rs_stock = $this->db
                     ->select('item_master.item, colors.color,
-                            stock_in.purchase_order_receive_bill_no,
-                            stock_in.purchase_order_receive_date,
-                            stock_in_detail.item_quantity,
-                            stock_in_detail.item_rate,
-                            stock_in_detail.pod_total')
+                              stock_in.purchase_order_receive_bill_no,
+                              stock_in.purchase_order_receive_date,
+                              stock_in_detail.item_quantity,
+                              stock_in_detail.item_rate,
+                              stock_in_detail.pod_total')
                     ->join('stock_in', 'stock_in.purchase_order_receive_id = stock_in_detail.purchase_order_receive_id', 'left')
                     ->join('item_dtl', 'item_dtl.id_id = stock_in_detail.id_id', 'left')
                     ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
@@ -4624,7 +4622,7 @@ if($check_consumption_list == 0) {
                     ->where('stock_in_detail.id_id', $id_id)
                     ->order_by("str_to_date(stock_in.purchase_order_receive_date, '%d-%m-%Y') ASC")
                     ->get('stock_in_detail')->result_array();
-
+    
                 // ---- Insert Opening rows (raw opening) ----
                 foreach ($rs_opn as $val) {
                     $data_insert['item']   = $val['item'];
@@ -4638,7 +4636,7 @@ if($check_consumption_list == 0) {
                     $data_insert['val']    = $val['opening_qty'] * $val['opening_rate'];
                     $this->db->insert('temp_table', $data_insert);
                 }
-
+    
                 // ---- Insert Purchase rows ----
                 foreach ($rs_pur as $val) {
                     $data_insert['item']   = $val['item'];
@@ -4652,7 +4650,7 @@ if($check_consumption_list == 0) {
                     $data_insert['val']    = $val['pod_total'];
                     $this->db->insert('temp_table', $data_insert);
                 }
-
+    
                 // ---- Insert Challan rows ----
                 foreach ($rs_challan as $val) {
                     $data_insert['item']   = $val['item'];
@@ -4666,7 +4664,7 @@ if($check_consumption_list == 0) {
                     $data_insert['val']    = $val['pod_total'];
                     $this->db->insert('temp_table', $data_insert);
                 }
-
+    
                 // ---- Insert Issue rows ----
                 foreach ($rs_issue as $val) {
                     $data_insert['item']   = $val['item'];
@@ -4680,7 +4678,7 @@ if($check_consumption_list == 0) {
                     $data_insert['val']    = $val['total_amount'];
                     $this->db->insert('temp_table', $data_insert);
                 }
-
+    
                 // ---- Insert Plating rows ----
                 foreach ($rs_plating as $val) {
                     $data_insert['item']   = $val['item'];
@@ -4694,7 +4692,7 @@ if($check_consumption_list == 0) {
                     $data_insert['val']    = ($val['issue_quantity'] * $val['plating_rate']);
                     $this->db->insert('temp_table', $data_insert);
                 }
-
+    
                 // ---- Insert Stock In rows ----
                 foreach ($rs_stock as $val) {
                     $data_insert['item']   = $val['item'];
@@ -4708,38 +4706,38 @@ if($check_consumption_list == 0) {
                     $data_insert['val']    = $val['pod_total'];
                     $this->db->insert('temp_table', $data_insert);
                 }
-
+    
             } else {
-
+    
                 // ============================================================
                 // BRANCH B: from != YEAR_START_DATE -> derived opening
                 // ============================================================
-
+    
                 $df_open           = date('Y-m-d', strtotime(YEAR_START_DATE));
                 $df_open_prev_date = date('Y-m-d', strtotime('-1 day', strtotime($from)));
-
+    
                 $this->db->where('item_dtl.id_id', $id_id);
                 $row_opn = $this->db->get('item_dtl')->row();
                 if ($row_opn === null) continue;
-
+    
                 $rs_opn = $this->db
                     ->select('item_dtl.id_id, item_dtl.opening_stock as opening_qty,
-                            item_master.item, colors.color, item_dtl.opening_rate')
+                              item_master.item, colors.color, item_dtl.opening_rate')
                     ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
                     ->join('colors', 'colors.c_id = item_dtl.c_id', 'left')
                     ->where('item_dtl.id_id', $id_id)
                     ->get('item_dtl')->result_array();
-
+    
                 // -- Previous Purchases (for opening calculation)
                 $row_pur = $this->db
                     ->select('SUM(item_quantity) as purch_qty,
-                            SUM(item_quantity * item_rate) as purch_total')
+                              SUM(item_quantity * item_rate) as purch_total')
                     ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
                     ->where('STR_TO_DATE(purchase_order_receive.purchase_order_receive_date, "%Y-%m-%d") BETWEEN "' . $df_open . '" and "' . $df_open_prev_date . '"')
                     ->where('purchase_order_receive_detail.id_id', $id_id)
                     ->group_by('purchase_order_receive_detail.id_id')
                     ->get('purchase_order_receive_detail')->row();
-
+    
                 if ($row_pur !== null) {
                     $pur_qty = $row_pur->purch_qty;
                     $pur_val = $row_pur->purch_total;
@@ -4747,11 +4745,11 @@ if($check_consumption_list == 0) {
                     $pur_qty = 0;
                     $pur_val = 0;
                 }
-
+    
                 // -- Previous Challan (for opening calculation)
                 $row_challan = $this->db
                     ->select('SUM(purchase_challan_order_receive_detail.item_quantity) as challan_qty,
-                            SUM(purchase_challan_order_receive_detail.item_quantity * purchase_challan_order_receive_detail.item_rate) as challan_total')
+                              SUM(purchase_challan_order_receive_detail.item_quantity * purchase_challan_order_receive_detail.item_rate) as challan_total')
                     ->join('purchase_challan_order_receive', 'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
                     ->where('STR_TO_DATE(purchase_challan_order_receive.purchase_order_receive_date, "%Y-%m-%d") BETWEEN "' . $df_open . '" and "' . $df_open_prev_date . '"')
                     ->where('purchase_challan_order_receive_detail.id_id', $id_id)
@@ -4759,7 +4757,7 @@ if($check_consumption_list == 0) {
                     ->where('purchase_challan_order_receive.status', 1)
                     ->group_by('purchase_challan_order_receive_detail.id_id')
                     ->get('purchase_challan_order_receive_detail')->row();
-
+    
                 if ($row_challan !== null) {
                     $challan_qty = $row_challan->challan_qty;
                     $challan_val = $row_challan->challan_total;
@@ -4767,18 +4765,18 @@ if($check_consumption_list == 0) {
                     $challan_qty = 0;
                     $challan_val = 0;
                 }
-
+    
                 // -- Previous Issues (for opening calculation)
                 $row_issue = $this->db
                     ->select('SUM(material_issue_detail.issue_quantity) as issue_qnty,
-                            SUM(material_issue_detail.issue_quantity * material_issue_detail.issue_rate) as issue_rate')
+                              SUM(material_issue_detail.issue_quantity * material_issue_detail.issue_rate) as issue_rate')
                     ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
                     ->where('STR_TO_DATE(material_issue.material_issue_date, "%Y-%m-%d") BETWEEN "' . $df_open . '" and "' . $df_open_prev_date . '"')
                     ->where('material_issue_detail.id_id', $id_id)
                     ->where('material_issue.virtual_status', 0)
                     ->group_by('material_issue_detail.id_id')
                     ->get('material_issue_detail')->row();
-
+    
                 if ($row_issue !== null) {
                     $issue_qty = $row_issue->issue_qnty;
                     $issue_val = $row_issue->issue_rate;
@@ -4786,20 +4784,20 @@ if($check_consumption_list == 0) {
                     $issue_qty = 0;
                     $issue_val = 0;
                 }
-
+    
                 $item_detail_row = $this->db->get_where('item_dtl', array('id_id' => $id_id))->row();
                 $im_id = $item_detail_row->im_id;
                 $c_id  = $item_detail_row->c_id;
-
+    
                 // -- Previous Plating (for opening calculation)
                 $row_plating = $this->db
                     ->select('SUM(platting_issue_detail.issue_quantity) as plat_qty,
-                            SUM(platting_issue_detail.issue_quantity * platting_issue_detail.plating_rate) as plat_val')
+                              SUM(platting_issue_detail.issue_quantity * platting_issue_detail.plating_rate) as plat_val')
                     ->join('platting_issue', 'platting_issue.platting_issue_id = platting_issue_detail.platting_issue_id', 'left')
                     ->where('STR_TO_DATE(platting_issue.platting_issue_date, "%Y-%m-%d") BETWEEN "' . $df_open . '" and "' . $df_open_prev_date . '"')
                     ->where(array('platting_issue_detail.im_id' => $im_id, 'platting_issue_detail.item_colour' => $c_id))
                     ->get('platting_issue_detail')->row();
-
+    
                 if ($row_plating !== null) {
                     $plat_qty = (float)$row_plating->plat_qty;
                     $plat_val = (float)$row_plating->plat_val;
@@ -4807,17 +4805,17 @@ if($check_consumption_list == 0) {
                     $plat_qty = 0;
                     $plat_val = 0;
                 }
-
+    
                 // -- Previous Stock In (for opening calculation)
                 $stockin_row = $this->db
                     ->select('SUM(stock_in_detail.item_quantity) as stock_qnty,
-                            SUM(stock_in_detail.item_quantity * stock_in_detail.item_rate) as stock_rate')
+                              SUM(stock_in_detail.item_quantity * stock_in_detail.item_rate) as stock_rate')
                     ->join('stock_in', 'stock_in.purchase_order_receive_id = stock_in_detail.purchase_order_receive_id', 'left')
                     ->where('STR_TO_DATE(stock_in.purchase_order_receive_date, "%Y-%m-%d") BETWEEN "' . $df_open . '" and "' . $df_open_prev_date . '"')
                     ->where('stock_in_detail.id_id', $id_id)
                     ->group_by('stock_in_detail.id_id')
                     ->get('stock_in_detail')->row();
-
+    
                 if ($stockin_row !== null) {
                     $stock_in_qnty = $stockin_row->stock_qnty;
                     $stock_in_val  = $stockin_row->stock_rate;
@@ -4825,19 +4823,19 @@ if($check_consumption_list == 0) {
                     $stock_in_qnty = 0;
                     $stock_in_val  = 0;
                 }
-
+    
                 // -- Derived opening
                 $opn_qnty = $rs_opn[0]['opening_qty'] + $pur_qty + $challan_qty - $issue_qty - $plat_qty + $stock_in_qnty;
                 $opn_val  = ($rs_opn[0]['opening_qty'] * $rs_opn[0]['opening_rate']) + $pur_val + $challan_val - $issue_val - $plat_val + $stock_in_val;
-
+    
                 // -- Purchases within date range
                 $rs_pur = $this->db
                     ->select('item_master.item, colors.color,
-                            purchase_order_receive.purchase_order_receive_bill_no,
-                            purchase_order_receive.purchase_order_receive_date,
-                            purchase_order_receive_detail.item_quantity,
-                            purchase_order_receive_detail.item_rate,
-                            purchase_order_receive_detail.pod_total')
+                              purchase_order_receive.purchase_order_receive_bill_no,
+                              purchase_order_receive.purchase_order_receive_date,
+                              purchase_order_receive_detail.item_quantity,
+                              purchase_order_receive_detail.item_rate,
+                              purchase_order_receive_detail.pod_total')
                     ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
                     ->join('item_dtl', 'item_dtl.id_id = purchase_order_receive_detail.id_id', 'left')
                     ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
@@ -4846,15 +4844,15 @@ if($check_consumption_list == 0) {
                     ->where('purchase_order_receive_detail.id_id', $id_id)
                     ->order_by("str_to_date(purchase_order_receive.purchase_order_receive_date, '%d-%m-%Y') ASC")
                     ->get('purchase_order_receive_detail')->result_array();
-
+    
                 // -- Challan within date range
                 $rs_challan = $this->db
                     ->select('item_master.item, colors.color,
-                            purchase_challan_order_receive.purchase_order_receive_bill_no,
-                            purchase_challan_order_receive.purchase_order_receive_date,
-                            purchase_challan_order_receive_detail.item_quantity,
-                            purchase_challan_order_receive_detail.item_rate,
-                            purchase_challan_order_receive_detail.pod_total')
+                              purchase_challan_order_receive.purchase_order_receive_bill_no,
+                              purchase_challan_order_receive.purchase_order_receive_date,
+                              purchase_challan_order_receive_detail.item_quantity,
+                              purchase_challan_order_receive_detail.item_rate,
+                              purchase_challan_order_receive_detail.pod_total')
                     ->join('purchase_challan_order_receive', 'purchase_challan_order_receive.purchase_order_receive_id = purchase_challan_order_receive_detail.purchase_order_receive_id', 'left')
                     ->join('item_dtl', 'item_dtl.id_id = purchase_challan_order_receive_detail.id_id', 'left')
                     ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
@@ -4865,15 +4863,15 @@ if($check_consumption_list == 0) {
                     ->where('purchase_challan_order_receive.status', 1)
                     ->order_by("str_to_date(purchase_challan_order_receive.purchase_order_receive_date, '%d-%m-%Y') ASC")
                     ->get('purchase_challan_order_receive_detail')->result_array();
-
+    
                 // -- Issues within date range
                 $rs_issue = $this->db
                     ->select('item_master.item, colors.color,
-                            material_issue.material_issue_slip_number,
-                            material_issue.material_issue_date,
-                            material_issue_detail.issue_quantity,
-                            material_issue_detail.issue_rate,
-                            material_issue_detail.total_amount')
+                              material_issue.material_issue_slip_number,
+                              material_issue.material_issue_date,
+                              material_issue_detail.issue_quantity,
+                              material_issue_detail.issue_rate,
+                              material_issue_detail.total_amount')
                     ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
                     ->join('item_dtl', 'item_dtl.id_id = material_issue_detail.id_id', 'left')
                     ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
@@ -4883,14 +4881,14 @@ if($check_consumption_list == 0) {
                     ->where('material_issue.virtual_status', 0)
                     ->order_by("str_to_date(material_issue.material_issue_date, '%d-%m-%Y') ASC")
                     ->get('material_issue_detail')->result_array();
-
+    
                 // -- Plating within date range
                 $rs_plating = $this->db
                     ->select('item_master.item, colors.color,
-                            platting_issue.platting_issue_number,
-                            platting_issue.platting_issue_date,
-                            platting_issue_detail.issue_quantity,
-                            platting_issue_detail.plating_rate')
+                              platting_issue.platting_issue_number,
+                              platting_issue.platting_issue_date,
+                              platting_issue_detail.issue_quantity,
+                              platting_issue_detail.plating_rate')
                     ->join('platting_issue', 'platting_issue.platting_issue_id = platting_issue_detail.platting_issue_id', 'left')
                     ->join('item_master', 'item_master.im_id = platting_issue_detail.im_id', 'left')
                     ->join('colors', 'colors.c_id = platting_issue_detail.item_colour', 'left')
@@ -4898,15 +4896,15 @@ if($check_consumption_list == 0) {
                     ->where(array('platting_issue_detail.im_id' => $im_id, 'platting_issue_detail.item_colour' => $c_id))
                     ->order_by("str_to_date(platting_issue.platting_issue_date, '%d-%m-%Y') ASC")
                     ->get('platting_issue_detail')->result_array();
-
+    
                 // -- Stock In within date range
                 $rs_stock = $this->db
                     ->select('item_master.item, colors.color,
-                            stock_in.purchase_order_receive_bill_no,
-                            stock_in.purchase_order_receive_date,
-                            stock_in_detail.item_quantity,
-                            stock_in_detail.item_rate,
-                            stock_in_detail.pod_total')
+                              stock_in.purchase_order_receive_bill_no,
+                              stock_in.purchase_order_receive_date,
+                              stock_in_detail.item_quantity,
+                              stock_in_detail.item_rate,
+                              stock_in_detail.pod_total')
                     ->join('stock_in', 'stock_in.purchase_order_receive_id = stock_in_detail.purchase_order_receive_id', 'left')
                     ->join('item_dtl', 'item_dtl.id_id = stock_in_detail.id_id', 'left')
                     ->join('item_master', 'item_master.im_id = item_dtl.im_id', 'left')
@@ -4915,7 +4913,7 @@ if($check_consumption_list == 0) {
                     ->where('stock_in_detail.id_id', $id_id)
                     ->order_by("str_to_date(stock_in.purchase_order_receive_date, '%d-%m-%Y') ASC")
                     ->get('stock_in_detail')->result_array();
-
+    
                 // ---- Insert Opening rows (derived) ----
                 foreach ($rs_opn as $val) {
                     if ($opn_qnty == 0) {
@@ -4923,7 +4921,7 @@ if($check_consumption_list == 0) {
                     } else {
                         $avg_rate = $opn_val / $opn_qnty;
                     }
-
+    
                     $data_insert['item']   = $val['item'];
                     $data_insert['color']  = $val['color'];
                     $data_insert['remark'] = 'Opening';
@@ -4935,7 +4933,7 @@ if($check_consumption_list == 0) {
                     $data_insert['val']    = $opn_val;
                     $this->db->insert('temp_table', $data_insert);
                 }
-
+    
                 // ---- Insert Purchase rows ----
                 foreach ($rs_pur as $val) {
                     $data_insert['item']   = $val['item'];
@@ -4949,7 +4947,7 @@ if($check_consumption_list == 0) {
                     $data_insert['val']    = $val['pod_total'];
                     $this->db->insert('temp_table', $data_insert);
                 }
-
+    
                 // ---- Insert Challan rows ----
                 foreach ($rs_challan as $val) {
                     $data_insert['item']   = $val['item'];
@@ -4963,7 +4961,7 @@ if($check_consumption_list == 0) {
                     $data_insert['val']    = $val['pod_total'];
                     $this->db->insert('temp_table', $data_insert);
                 }
-
+    
                 // ---- Insert Issue rows ----
                 foreach ($rs_issue as $val) {
                     $data_insert['item']   = $val['item'];
@@ -4977,7 +4975,7 @@ if($check_consumption_list == 0) {
                     $data_insert['val']    = $val['total_amount'];
                     $this->db->insert('temp_table', $data_insert);
                 }
-
+    
                 // ---- Insert Plating rows ----
                 foreach ($rs_plating as $val) {
                     $data_insert['item']   = $val['item'];
@@ -4991,7 +4989,7 @@ if($check_consumption_list == 0) {
                     $data_insert['val']    = ($val['issue_quantity'] * $val['plating_rate']);
                     $this->db->insert('temp_table', $data_insert);
                 }
-
+    
                 // ---- Insert Stock In rows ----
                 foreach ($rs_stock as $val) {
                     $data_insert['item']   = $val['item'];
@@ -5005,10 +5003,10 @@ if($check_consumption_list == 0) {
                     $data_insert['val']    = $val['pod_total'];
                     $this->db->insert('temp_table', $data_insert);
                 }
-
+    
             } // end if/else
         } // end foreach $it_arr
-
+    
         // ============================================================
         // Final select: attach supplier name from challan / purchase / stock_in bills
         // ============================================================
@@ -5031,7 +5029,7 @@ if($check_consumption_list == 0) {
         ) as bill_mapping', 'bill_mapping.purchase_order_receive_bill_no = temp_table.sl_no', 'left');
         $this->db->join('acc_master', 'acc_master.am_id = bill_mapping.am_id', 'left');
         $this->db->order_by('temp_table.item, temp_table.color, temp_table.date, temp_table.seq');
-
+    
         return $this->db->get()->result_array();
     }
 
