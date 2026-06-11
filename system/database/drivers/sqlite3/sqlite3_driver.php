@@ -50,7 +50,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author		Andrey Andreev
  * @link		https://codeigniter.com/user_guide/database/
  */
-#[\AllowDynamicProperties]
 class CI_DB_sqlite3_driver extends CI_DB {
 
 	/**

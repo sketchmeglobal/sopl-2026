@@ -245,9 +245,9 @@ class Login_m extends CI_Model {
         $this->db->or_where('email', $username);
         $this->db->where_in('usertype', array('4'));
         $rs_acc_chk = $this->db->get('users')->row();
-        
+
         //if username/email does not exists
-        if (count($rs_acc_chk) == 0) {
+        if ($rs_acc_chk === null) {
             $this->session->set_flashdata('title', 'Uh-oh!');
             $this->session->set_flashdata('msg', 'Account does not exists!');
             return array('type'=>'redirect', 'page'=>'salary_portal/login');
@@ -342,9 +342,9 @@ class Login_m extends CI_Model {
         $this->db->or_where('email', $username);
         $this->db->where_in('usertype', array('3'));
         $rs_acc_chk = $this->db->get('users')->row();
-        
+
         //if username/email does not exists
-        if (count($rs_acc_chk) == 0) {
+        if ($rs_acc_chk === null) {
             $this->session->set_flashdata('title', 'Uh-oh!');
             $this->session->set_flashdata('msg', 'Account does not exists!');
             return array('type'=>'redirect', 'page'=>'accounts/login');

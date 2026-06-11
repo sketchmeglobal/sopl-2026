@@ -240,7 +240,7 @@
                                                     <option value="">Select Challan Number</option>
                                                     <?php foreach($challan_orders as $val) { ?>
                                                     <option value="<?= $val['purchase_order_receive_id'] ?>">
-                                                        <?= $val['purchase_order_receive_bill_no'] ?>
+                                                        <?= $val['purchase_order_receive_bill_no'] ?> [Rem: <?= round($val['total_remain_qty'], 2) ?>]
                                                     </option>
                                                     <?php } ?>
                                                 </select>

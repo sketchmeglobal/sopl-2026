@@ -35,7 +35,6 @@ require dirname(__FILE__).'/Modules.php';
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  **/
-#[\AllowDynamicProperties]
 class MX_Router extends CI_Router
 {
 	public $module;
@@ -55,7 +54,7 @@ class MX_Router extends CI_Router
 				isset($segments[$v]) && $segments[$v] = str_replace('-', '_', $segments[$v]);
 			}
 		}
-
+		
 		$segments = $this->locate($segments);
 
 		if($this->located == -1)
@@ -112,19 +111,31 @@ class MX_Router extends CI_Router
 	{
 		$this->located = 0;
 		$ext = $this->config->item('controller_suffix').EXT;
+		$_dbg_uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : 'N/A';
+		$_dbg_seg_in = implode('/', $segments);
+		$_dbg_log = FCPATH.'mx_router_debug.txt';
+		file_put_contents($_dbg_log, date('H:i:s')." locate() CALLED | URI={$_dbg_uri} | segs={$_dbg_seg_in}\n", FILE_APPEND);
 
 		/* use module route if available */
 		if (isset($segments[0]) && $routes = Modules::parse_routes($segments[0], implode('/', $segments)))
 		{
+			file_put_contents($_dbg_log, "  parse_routes('{$segments[0]}') matched -> ".implode('/',$routes)."\n", FILE_APPEND);
 			$segments = $routes;
+		}
+		else
+		{
+			file_put_contents($_dbg_log, "  parse_routes('{$segments[0]}') -> no match\n", FILE_APPEND);
 		}
 
 		/* get the segments array elements */
 		list($module, $directory, $controller) = array_pad($segments, 3, NULL);
+		file_put_contents($_dbg_log, "  module={$module} dir={$directory} ctrl={$controller}\n", FILE_APPEND);
 
 		/* check modules */
 		foreach (Modules::$locations as $location => $offset)
 		{
+			$_dbg_src = $location.$module.'/controllers/';
+			file_put_contents($_dbg_log, "  checking is_dir: {$_dbg_src} -> ".(is_dir($_dbg_src)?'YES':'NO')."\n", FILE_APPEND);
 			/* module exists? */
 			if (is_dir($source = $location.$module.'/controllers/'))
 			{
@@ -134,6 +145,10 @@ class MX_Router extends CI_Router
 				/* module sub-controller exists? */
 				if($directory)
 				{
+					$_dbg_subdir = $source.$directory.'/';
+					$_dbg_subfile = $source.ucfirst($directory).$ext;
+					file_put_contents($_dbg_log, "  is_dir({$_dbg_subdir}): ".(is_dir($_dbg_subdir)?'YES':'NO')."\n", FILE_APPEND);
+					file_put_contents($_dbg_log, "  is_file({$_dbg_subfile}): ".(is_file($_dbg_subfile)?'YES':'NO')."\n", FILE_APPEND);
 					/* module sub-directory exists? */
 					if(is_dir($source.$directory.'/'))
 					{
@@ -146,6 +161,7 @@ class MX_Router extends CI_Router
 							if(is_file($source.ucfirst($controller).$ext))
 							{
 								$this->located = 3;
+								file_put_contents($_dbg_log, "  located=3, return ".implode('/',array_slice($segments,2))."\n", FILE_APPEND);
 								return array_slice($segments, 2);
 							}
 							else $this->located = -1;
@@ -155,10 +171,13 @@ class MX_Router extends CI_Router
 					if(is_file($source.ucfirst($directory).$ext))
 					{
 						$this->located = 2;
+						file_put_contents($_dbg_log, "  located=2, return ".implode('/',array_slice($segments,1))."\n", FILE_APPEND);
 						return array_slice($segments, 1);
 					}
-					else {
+					else
+					{
 						$this->located = -1;
+						file_put_contents($_dbg_log, "  located=-1 (file not found)\n", FILE_APPEND);
 					}
 				}
 
@@ -166,11 +185,13 @@ class MX_Router extends CI_Router
 				if(is_file($source.ucfirst($module).$ext))
 				{
 					$this->located = 1;
+					file_put_contents($_dbg_log, "  located=1, return ".implode('/',$segments)."\n", FILE_APPEND);
 					return $segments;
 				}
 			}
 		}
 
+		file_put_contents($_dbg_log, "  after module loop: directory={$this->directory}\n", FILE_APPEND);
 		if( ! empty($this->directory)) return;
 
 		/* application sub-directory controller exists? */
@@ -184,7 +205,7 @@ class MX_Router extends CI_Router
 
 			/* application sub-sub-directory controller exists? */
 			if($controller)
-			{ 
+			{
 				if(is_file(APPPATH.'controllers/'.$module.'/'.$directory.'/'.ucfirst($controller).$ext))
 				{
 					$this->directory = $module.'/'.$directory.'/';
@@ -205,8 +226,9 @@ class MX_Router extends CI_Router
 		{
 			return $segments;
 		}
-		
+
 		$this->located = -1;
+		file_put_contents($_dbg_log, "  located=-1 (fallthrough)\n", FILE_APPEND);
 	}
 
 	/* set module path */

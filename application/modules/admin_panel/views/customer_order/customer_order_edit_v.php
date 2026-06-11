@@ -425,9 +425,6 @@
                                                     <label for="am_id_edit" class="control-label text-danger">Article *</label>
                                                     <select id="am_id_edit" name="am_id" required class="select2 form-control round-input">
                                                         <option value="">Select Article</option>
-                                                        <?php foreach($article_masters as $val) { ?>
-                                                            <option value="<?=$val['am_id']?>"><?=$val['art_no']?></option>
-                                                        <?php } ?>
                                                     </select>
                                                 </div>
 
@@ -1042,7 +1039,7 @@
                 }
                 
                 min_order_qnty = parseFloat(data.co_quantity);
-                $("#am_id_edit").select2("val", data.am_id).change();
+                $("#am_id_edit").empty().append(new Option(data.art_no, data.am_id, true, true)).trigger('change');
                 $("#am_id_edit").select2("readonly", true);
                 $("#lc_id_edit").select2("val", data.leather_id).change();
                 $("#lc_id_edit").select2("readonly", true);

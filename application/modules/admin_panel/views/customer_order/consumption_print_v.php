@@ -6,11 +6,11 @@
         
         // Item Detail ID
         $item_dtl = $CI->db->select('id_id')->get_where('item_dtl', array('item_dtl.im_id' => $im_id, 'c_id' => $lc_id))->row();
-        if(count($item_dtl) > 0){
+        if($item_dtl !== null){
             $item_dtl_id = $item_dtl->id_id;
             // Opening Stock
             $opening_stock_row = $CI->db->select_sum('item_dtl.opening_stock')->get_where('item_dtl', array('item_dtl.id_id' => $item_dtl_id, 'item_dtl.status' => 1))->row();
-            if (count($opening_stock_row) > 0) {
+            if ($opening_stock_row !== null) {
                 if($opening_stock_row->opening_stock != '' or $opening_stock_row->opening_stock != NULL){
                     $opening_stock = $opening_stock_row->opening_stock;
                 } else{
@@ -22,7 +22,7 @@
             
             // Purchase order
             $sum_purchase_order_row = $CI->db->select_sum('purchase_order_receive_detail.item_quantity')->get_where('purchase_order_receive_detail', array('purchase_order_receive_detail.id_id' => $item_dtl_id, 'purchase_order_receive_detail.status' => 1))->row();
-            if (count($sum_purchase_order_row) > 0) {
+            if ($sum_purchase_order_row !== null) {
                 
                 if($sum_purchase_order_row->item_quantity != '' or $sum_purchase_order_row->item_quantity != NULL){
                     $sum_purchase_order = $sum_purchase_order_row->item_quantity;    
@@ -36,7 +36,7 @@
             
             // Material Issue
             $sum_material_issue_row = $CI->db->select_sum('material_issue_detail.issue_quantity')->get_where('material_issue_detail', array('material_issue_detail.id_id' => $item_dtl_id))->row();
-            if (count($sum_material_issue_row) > 0) {
+            if ($sum_material_issue_row !== null) {
                 if($sum_material_issue_row->issue_quantity != '' or $sum_material_issue_row->issue_quantity != NULL){
                     $sum_material_issue = $sum_material_issue_row->issue_quantity;   
                 }else{
@@ -49,7 +49,7 @@
             // Platting Issue    
             $platting_issue_row = $CI->db->select_sum('platting_issue_detail.issue_quantity')->get_where('platting_issue_detail', array('platting_issue_detail.im_id' => $im_id, 'platting_issue_detail.item_colour' => $lc_id))->row();
     
-            if (count($platting_issue_row) > 0) {
+            if ($platting_issue_row !== null) {
                 
                 if($platting_issue = $platting_issue_row->issue_quantity != '' or $platting_issue = $platting_issue_row->issue_quantity != NULL){
                     $platting_issue = $platting_issue_row->issue_quantity;
@@ -63,7 +63,7 @@
             // echo $CI->db->last_query();
             // Stock In    
             $sum_stock_in_row = $CI->db->select_sum('stock_in_detail.item_quantity')->get_where('stock_in_detail', array('stock_in_detail.id_id' => $item_dtl_id, 'stock_in_detail.status' => 1))->row();
-            if (count($sum_stock_in_row) > 0) {
+            if ($sum_stock_in_row !== null) {
                 
                 if($sum_stock_in_row->item_quantity != '' or $sum_stock_in_row->item_quantity != NULL){
                     $sum_stock_in = $sum_stock_in_row->item_quantity;    

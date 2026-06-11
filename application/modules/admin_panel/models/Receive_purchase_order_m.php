@@ -378,14 +378,24 @@ class Receive_purchase_order_m extends CI_Model {
     
         $am_id = $data['receive_purchase_order_details'][0]->am_id;
     
-        // Challan bill list for dropdown
-        $data['challan_orders'] = $this->db
-            ->select('purchase_challan_order_receive.purchase_order_receive_id, 
-                      purchase_challan_order_receive.purchase_order_receive_bill_no')
-            ->get_where('purchase_challan_order_receive', array(
-                'purchase_challan_order_receive.am_id'  => $am_id,
-                'purchase_challan_order_receive.status' => 1
-            ))->result_array();
+        // Challan bill list for dropdown — only show challans that still have items left to receive
+        $data['challan_orders'] = $this->db->query("
+            SELECT
+                pc.purchase_order_receive_id,
+                pc.purchase_order_receive_bill_no,
+                SUM(pcord.item_quantity - IFNULL((
+                    SELECT SUM(pord2.item_quantity)
+                    FROM purchase_order_receive_detail pord2
+                    WHERE pord2.challan_detail_id = pcord.purchase_order_receive_detail_id
+                ), 0)) AS total_remain_qty
+            FROM purchase_challan_order_receive pc
+            LEFT JOIN purchase_challan_order_receive_detail pcord
+                ON pcord.purchase_order_receive_id = pc.purchase_order_receive_id
+                AND pcord.status = 1
+            WHERE pc.am_id = ? AND pc.status = 1
+            GROUP BY pc.purchase_order_receive_id
+            HAVING total_remain_qty > 0
+        ", array($am_id))->result_array();
     
         // ── REMOVED: supp_purchase_order no longer needed ──
         $data['supp_purchase_order'] = array();

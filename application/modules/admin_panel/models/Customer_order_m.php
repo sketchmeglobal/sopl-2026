@@ -430,11 +430,6 @@ public function ajax_fetch_customer_order_details_total_value() {
         $session_user_id = $this->session->user_id;
         $module_permission = $this->_dept_wise_module_permission(16, $session_user_id); #16 = article master module_id
         
-        $data['article_masters'] = $this->db->select('am_id, art_no')
-            ->join('user_details','user_details.user_id = article_master.user_id','left')
-            ->get_where('article_master', array('article_master.status' => 1, 'user_details.user_dept' => $module_permission))
-            ->result_array();
-        
         $data['buyer_details'] = $this->db->select('am_id, name, short_name')->get_where('acc_master', array('ag_id' => 2, 'acc_master.status' => 1))->result();
         $data['colors_details'] = $this->db->select('*')->get_where('colors', array('status' => 1))->result_array();
         $data['customer_order_details'] = $this->db
@@ -784,7 +779,7 @@ public function ajax_fetch_customer_order_details_total_value() {
             $proforma_id_counts =  $this->db->get_where('office_proforma_detail', array('co_id' => $this->input->post('order_id')))->num_rows();
             // echo $this->Db->last_query();die;
             $data['msg'] = '';
-            if(count($proforma_id_counts) > 0) {
+            if($proforma_id_counts > 0) {
                 $insertArray1 = array(
                 'co_id' => $this->input->post('order_id'),
                 'comment' => 'Add',

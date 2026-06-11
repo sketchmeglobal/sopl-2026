@@ -504,9 +504,9 @@
         }
         
         public function print_multiple_article_costing() {
-        
-        
-            $data = '';
+
+
+            $data = array();
             $group_array = [];
             
             if($this->input->post('costing_on_ac_id')){
