@@ -612,6 +612,24 @@ class Master extends My_Controller {
         }
     }
 
+    public function ajax_fetch_item_master_for_quick_edit() {
+        if($this->check_permission(array(1,2)) == true) {
+            $this->load->model('Master_m');
+            $data = $this->Master_m->ajax_fetch_item_master_for_quick_edit();
+            echo json_encode($data);
+            exit();
+        }
+    }
+
+    public function ajax_search_item_codes_for_quick_edit() {
+        if($this->check_permission(array(1,2)) == true) {
+            $this->load->model('Master_m');
+            $data = $this->Master_m->ajax_search_item_codes_for_quick_edit();
+            echo json_encode($data);
+            exit();
+        }
+    }
+
     public function ajax_item_master_table_data() {
         if($this->check_permission(array(1,2)) == true) {
             $this->load->model('Master_m');

@@ -119,7 +119,7 @@ foreach ($res as $r) {
                         <div class="col-sm-6 border_all header_left">
                             <p class="mar_0"><strong>Sender</strong></p>
                             <h4  class="mar_0"><strong>SHILPA OVERSEAS PVT. LTD. </strong></h4>
-                            <p class="mar_0">KAIKHALI, CHIRIAMORE,P.O. : R.GOPALPUR, KOLKATA - 700 052</p>
+                            <p class="mar_0">KAIKHALI, CHIRIAMORE,P.O. : R.GOPALPUR, KOLKATA - 700 136</p>
                             <!--<p class="mar_0">51, MAHANIRBAN ROAD, KOLKATA - 700029</p>-->
                             <p class="mar_0">PHONE: +91 2573-3470/71/72/2405</p>
                             <!--<p class="mar_0">FAX:+91-33-40012865</p>-->
@@ -154,7 +154,7 @@ foreach ($res as $r) {
                             </div>
                             <div class="row border_all height_21">
                                 <div class="col-sm-12">
-                                    <p class="mar_0">Booking Number : <?= $res[0]->remarks ?></p>
+                                    <p class="mar_0">Booking Number : <?= $res[0]->shipment_remarks ?></p>
                                 </div>
                             </div>
                         </div>
@@ -339,7 +339,7 @@ foreach ($res as $r) {
                                         <div class="col-sm-12 border_all height_60">
                                             <div class="">
                                                 <p class="mar_0">Invoice No.  & Date</p>
-                                                <h5 class="mar_0"><strong><?= $res[0]->invoice_no . ',<br /> dated, '. date('d-m-Y', strtotime($fetch_all_courier_dtl[0]->invoice_date)) ?></strong></h5>
+                                                <h5 class="mar_0"><strong><?= $res[0]->invoice_no . ',<br /> dated, '. date('d-m-Y', strtotime($res[0]->invoice_date)) ?></strong></h5>
                                                 
                                             </div>
                                         </div>
@@ -436,8 +436,8 @@ foreach ($res as $r) {
                                     ?>
                                     <tr>
                                         <td><?= $iter ?></td>
-                                        <td><?=  $r->art_no . ' ('.$r->info.')'  ?></td>
-                                        <td><?= ($r->hs_code == '') ? $r->remark : $r->hs_code ?></td>
+                                        <td><?= $r->detail_info ?: $r->info ?></td>
+                                        <td><?= ($r->hs_code == '') ? $r->detail_remarks : $r->hs_code ?></td>
                                         <!--<td>< ?= $ppl->LEATHER_TYPE ?></td>-->
                                         <td style="text-align: center;"><?= $r->article_quantity ?></td>
                                         <td style="text-align: center;"><?= number_format($r->price_foreign, 2) ?></td>

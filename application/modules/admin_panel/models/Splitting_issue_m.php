@@ -1015,7 +1015,7 @@ class Splitting_issue_m extends CI_Model {
     }
     
     public function splitting_bill() {
-        $data = '';
+        $data = [];
         $data["view_permission"] = $this->_user_wise_view_permission(7, $this->session->user_id);
         return array('page'=>'splitting_bill/splitting_bill_list_v', 'data'=>$data);
     }

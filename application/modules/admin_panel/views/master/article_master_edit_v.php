@@ -387,6 +387,8 @@
                                         <tr>
                                             <th>Leather Color</th>
                                             <th>Fittings Color</th>
+                                            <th>Buyer Article No.</th>
+                                            <th>Buyer HSN Code</th>
                                             <th>Image</th>
                                             <th>Status</th>
                                             <th>Actions</th>
@@ -428,12 +430,24 @@
                                                 </div>
                                             </div>
 
+                                            <div class="form-group">
+                                                <label for="buyer_article_no" class="control-label col-lg-2">Buyer Article No.</label>
+                                                <div class="col-lg-4">
+                                                    <input type="text" id="buyer_article_no" name="buyer_article_no" class="form-control round-input" placeholder="Enter buyer article number">
+                                                </div>
+
+                                                <label for="buyer_hsn_code" class="control-label col-lg-2">Buyer HSN Code</label>
+                                                <div class="col-lg-4">
+                                                    <input type="text" id="buyer_hsn_code" name="buyer_hsn_code" class="form-control round-input" placeholder="Enter buyer HSN code">
+                                                </div>
+                                            </div>
+
                                             <div class="form-group ">
                                                 <label for="img_color" class="control-label col-lg-2">Image</label>
                                                 <div class="col-lg-4">
                                                     <input type="file" id="img_color" name="img_color" accept=".jpg,.jpeg,.png" class="file" >
                                                 </div>
-                                                
+
                                                 <label class="control-label col-lg-2 text-danger">Status *</label>
                                                 <div class="col-lg-4">
                                                     <input type="radio" name="status" id="enable2" value="1" checked required class="iCheck-square-green">
@@ -485,12 +499,24 @@
                                                 </div>
                                             </div>
 
+                                            <div class="form-group">
+                                                <label for="buyer_article_no2" class="control-label col-lg-2">Buyer Article No.</label>
+                                                <div class="col-lg-4">
+                                                    <input type="text" id="buyer_article_no2" name="buyer_article_no" class="form-control round-input" placeholder="Enter buyer article number">
+                                                </div>
+
+                                                <label for="buyer_hsn_code2" class="control-label col-lg-2">Buyer HSN Code</label>
+                                                <div class="col-lg-4">
+                                                    <input type="text" id="buyer_hsn_code2" name="buyer_hsn_code" class="form-control round-input" placeholder="Enter buyer HSN code">
+                                                </div>
+                                            </div>
+
                                             <div class="form-group ">
                                                 <label for="img_color" class="control-label col-lg-2">Image</label>
                                                 <div class="col-lg-4">
                                                     <input type="file" id="img_color" name="img_color" accept=".jpg,.jpeg,.png" class="file" >
                                                 </div>
-                                                
+
                                                 <label class="control-label col-lg-2 text-danger">Status *</label>
                                                 <div class="col-lg-4">
                                                     <input type="radio" name="status" id="enable3" value="1" required class="iCheck-square-green">
@@ -1290,13 +1316,15 @@
             "columns": [
                 { "data": "lth_color" },
                 { "data": "fit_color" },
+                { "data": "buyer_article_no" },
+                { "data": "buyer_hsn_code" },
                 { "data": "img" },
                 { "data": "status" },
                 { "data": "action" },
             ],
             //column initialisation properties
             "columnDefs": [{
-                "targets": [3], //disable 'Actions' column sorting
+                "targets": [5], //disable 'Actions' column sorting
                 "orderable": false,
             }]
         } );
@@ -1549,6 +1577,8 @@
                 $("#article_dtl_id").val(data.ad_id);
                 $("#lth_color_id2").select2("val", data.lth_color_id);
                 $("#fit_color_id2").select2("val", data.fit_color_id);
+                $("#buyer_article_no2").val(data.buyer_article_no);
+                $("#buyer_hsn_code2").val(data.buyer_hsn_code);
                 if(data.status == '1'){$("#enable3").iCheck('check');} else if(data.status == '0'){$("#disable3").iCheck('check');}
 
                 $('#color_edit_tab').removeClass('disabled');

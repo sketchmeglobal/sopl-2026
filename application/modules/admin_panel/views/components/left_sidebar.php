@@ -99,7 +99,7 @@ foreach($all_block_menu as $abm){
                 <a href="<?=base_url();?>admin/profile"><i class="fa fa-vcard-o"></i> <span>Profile</span></a>
             </li>
 
-            <li class="menu-list <?=($class_name == 'Master') ? 'active' : ''; ?>"><a href=""><i class="fa fa-wrench"></i> <span>Master Tables</span></a>
+            <li class="menu-list <?=($class_name == 'Master' || $class_name == 'Bulk_edit_master') ? 'active' : ''; ?>"><a href=""><i class="fa fa-wrench"></i> <span>Master Tables</span></a>
                 <ul class="child-list">
                     <?php if(!in_array(23, $final_array)){ ?>
                         <li class="<?=(($class_name == 'Master') && ($method_name == 'item_groups')) ? 'active' : ''; ?>">
@@ -204,6 +204,9 @@ foreach($all_block_menu as $abm){
                         </li>
                         <li class="<?=(($class_name == 'Master') && ($method_name == 'holiday_list')) ? 'active' : ''; ?>">
                             <a href="<?=base_url();?>admin/holiday-list"><i class="fa fa-caret-right"></i> Holiday List</a>
+                        </li>
+                        <li class="<?=($class_name == 'Bulk_edit_master') ? 'active' : ''; ?>">
+                            <a href="<?=base_url();?>admin/bulk-edit-master"><i class="fa fa-pencil-square-o"></i> Bulk Edit Master</a>
                         </li>
                 </ul>
             </li>

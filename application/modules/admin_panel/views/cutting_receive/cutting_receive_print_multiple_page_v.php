@@ -290,10 +290,6 @@ if(count($page_setup) > 0) {
                                     </tr>
                                 </thead>
                                 <tbody>
-</div>
-</div>
-</section>
-</body> 
                                    <?php }
                                     ?>
                                     <tr>

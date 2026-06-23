@@ -377,12 +377,34 @@ class Master_m extends CI_Model {
 
     public function item_master() {
         $data = [];
-        // permission setter 
+        // permission setter
         $user_id = $this->session->user_id;
-        $this->fetch_permission_matrix($user_id, $m_id = 24);    
+        $this->fetch_permission_matrix($user_id, $m_id = 24);
         $data["view_permission"] = $this->_user_wise_view_permission(24, $user_id);
 
+        // dropdowns for quick-edit modal
+        $data['item_groups'] = $this->db->get_where('item_groups', array('status'=>'1'))->result_array();
+        $data['sizes']       = $this->db->get_where('sizes',       array('status'=>'1'))->result_array();
+        $data['shapes']      = $this->db->get_where('shapes',      array('status'=>'1'))->result_array();
+        $data['units']       = $this->db->get_where('units',       array('status'=>'1'))->result_array();
+
         return array('page'=>'master/item_master_list_v', 'data'=>$data);
+    }
+
+    public function ajax_fetch_item_master_for_quick_edit() {
+        $im_id = $this->input->post('im_id');
+        return $this->db->get_where('item_master', array('im_id' => $im_id))->row();
+    }
+
+    public function ajax_search_item_codes_for_quick_edit() {
+        $q = $this->input->post('q');
+        $this->db->select('im_id as id, CONCAT(im_code, " - ", item) as text');
+        $this->db->group_start();
+        $this->db->like('im_code', $q, 'both');
+        $this->db->or_like('item', $q, 'both');
+        $this->db->group_end();
+        $this->db->limit(30);
+        return $this->db->get('item_master')->result();
     }
     
     public function overtime_m() {
@@ -778,8 +800,8 @@ public function get_all_emp_id_for_overtime_m() {
         // $data_update['sell_code'] = $this->input->post('sell_code');
         $data_update['status'] = $this->input->post('status');
         $data_update['user_id'] = $this->session->user_id;
-        
-        if (!empty($_FILES)) {
+
+        if (!empty($_FILES['img']['name'])) {
             $config['upload_path'] = 'assets/admin_panel/img/item_img/';
             $config['allowed_types'] = 'gif|jpg|jpeg|png|bmp';
             $config['max_size'] = 1024;
@@ -2713,6 +2735,8 @@ public function get_all_emp_id_for_overtime_m() {
         $data_insert['am_id'] = $this->input->post('article_id');
         $data_insert['lth_color_id'] = $this->input->post('lth_color_id');
         $data_insert['fit_color_id'] = $this->input->post('fit_color_id');
+        $data_insert['buyer_article_no'] = $this->input->post('buyer_article_no');
+        $data_insert['buyer_hsn_code'] = $this->input->post('buyer_hsn_code');
         $data_insert['status'] = $this->input->post('status');
         $data_insert['user_id'] = $this->session->user_id;
         
@@ -2775,6 +2799,8 @@ public function get_all_emp_id_for_overtime_m() {
         $article_dtl_id = $this->input->post('article_dtl_id');
         $data_update['lth_color_id'] = $this->input->post('lth_color_id');
         $data_update['fit_color_id'] = $this->input->post('fit_color_id');
+        $data_update['buyer_article_no'] = $this->input->post('buyer_article_no');
+        $data_update['buyer_hsn_code'] = $this->input->post('buyer_hsn_code');
         $data_update['status'] = $this->input->post('status');
         $data_update['user_id'] = $this->session->user_id;
         
@@ -3125,8 +3151,8 @@ public function get_all_emp_id_for_overtime_m() {
                 $nestedData['action'] = '-';    
             }else{
                 $nestedData['action'] = '
-                <a href="'. base_url('admin/edit_item/'.$val->im_id) .'" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
-                <a href="javascript:void(0)" pk-name="im_id" pk-value="'.$val->im_id.'" tab="item-master" child="1" ref-table="" ref-pk-name="item-master#multiple-check" class="btn btn-danger delete"><i class="fa fa-times"></i> Delete</a>
+                <a href="'. base_url('admin/edit_item/'.$val->im_id) .'" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Full Edit</a>
+                <a href="javascript:void(0)" pk-name="im_id" pk-value="'.$val->im_id.'" tab="item-master" child="1" ref-table="" ref-pk-name="item-master#multiple-check" class="btn btn-danger btn-sm delete"><i class="fa fa-times"></i> Delete</a>
             ';
             }
             $data[] = $nestedData;
@@ -4285,6 +4311,8 @@ public function get_all_emp_id_for_overtime_m() {
 
             $nestedData['lth_color'] = $val->lth_color;
             $nestedData['fit_color'] = $val->fit_color;
+            $nestedData['buyer_article_no'] = isset($val->buyer_article_no) ? $val->buyer_article_no : '';
+            $nestedData['buyer_hsn_code'] = isset($val->buyer_hsn_code) ? $val->buyer_hsn_code : '';
             $nestedData['img'] = ($val->img != null) ? '<img src="' . base_url() . 'assets/admin_panel/img/article_img/' . $val->img . '" />' : 'No image provided';
             $nestedData['status'] = $status;
             $nestedData['action'] = '

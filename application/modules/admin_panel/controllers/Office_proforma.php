@@ -247,6 +247,14 @@ class Office_proforma extends My_Controller {
             $this->load->view($data['page'], $data['data']);
         }
     }
+
+    public function print_office_proforma_buyer($pro_id) {
+        if($this->check_permission(array(1,2)) == true) {
+            $this->load->model('Office_proforma_m');
+            $data = $this->Office_proforma_m->print_office_proforma_buyer_m($pro_id);
+            $this->load->view($data['page'], $data['data']);
+        }
+    }
 	
 	public function form_edit_supp_purchase_order_details(){
         if($this->check_permission(array(1,2)) == true) {

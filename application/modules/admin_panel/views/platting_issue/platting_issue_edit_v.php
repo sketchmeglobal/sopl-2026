@@ -203,6 +203,9 @@
                                             <div class="col-lg-3">
                                                 <label for="issue_quantity_add" class="control-label text-danger">Issue Quantity *</label>
                                                 <input type="text" id="issue_quantity_add" name="issue_quantity_add" class="form-control" />
+                                                <span id="current_stock_label" style="display:none; font-size:12px; border-radius:3px; padding:2px 7px; margin-top:4px;">
+                                                    Current Stock: <strong id="current_stock_val">0</strong>
+                                                </span>
                                             </div>
                                             
                                              <div class="col-lg-3">
@@ -422,11 +425,13 @@
 	
 	//Fetch Item Colour combination
 	$("#im_id_add").change(function(){
-        
+
         $im_id_add = $(this).val();
-        
+
         $("#item_colour_add").html('');
 		$("#new_item_colour_add").html('');
+		$('#current_stock_label').hide();
+		$('#current_stock_val').text('0');
 		
 		$.ajax({
             url: "<?= base_url('admin/all-item-colour-platting-issue') ?>",
@@ -468,16 +473,29 @@
             dataType: 'json',
             data: {'new_item_colour_add': $new_item_colour_add, 'itm_id': $itm_id, 'platting_issue_date': $platting_issue_date, 'platting_id': $platting_id, platting_issue_supplier: $platting_issue_supplier},
             success: function(result){
-                //console.log(JSON.stringify(result));
+                if (!result || result.length === 0) {
+                    $('#current_stock_val').text('0');
+                    $('#current_stock_label')
+                        .css({'background':'#f2dede','border-color':'#ebccd1','color':'#a94442'})
+                        .show();
+                    return;
+                }
                 $.each(result, function(index, item) {
-                    
-                    $received_quantity = parseFloat(item.item_quantity);
-                    $received_rate = parseFloat(item.new_purchase_rate);
-					$("#rate_add").val($received_rate);
-					$("#issue_quantity_add").val($received_quantity);
-				    $received_rate_new = parseFloat($received_quantity * $received_rate).toFixed(2);
-		            $('#total_add').html($received_rate_new);
-		            
+
+                    $received_quantity = parseFloat(item.item_quantity) || 0;
+                    $received_rate     = parseFloat(item.new_purchase_rate) || 0;
+                    $("#rate_add").val($received_rate);
+                    $("#issue_quantity_add").val($received_quantity > 0 ? $received_quantity : '');
+                    $received_rate_new = parseFloat($received_quantity * $received_rate).toFixed(2);
+                    $('#total_add').html($received_rate_new);
+
+                    // Show current stock badge — green if available, red if not
+                    $('#current_stock_val').text($received_quantity);
+                    if ($received_quantity > 0) {
+                        $('#current_stock_label').css({'background':'#dff0d8','border-color':'#d6e9c6','color':'#3c763d'}).show();
+                    } else {
+                        $('#current_stock_label').css({'background':'#f2dede','border-color':'#ebccd1','color':'#a94442'}).show();
+                    }
                 });
             },
             error: function(e){console.log(e);}

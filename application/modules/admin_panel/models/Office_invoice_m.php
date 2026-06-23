@@ -20,7 +20,13 @@ class Office_invoice_m extends CI_Model {
         @ini_set('log_errors', 1);
         @error_reporting(E_ALL);
     }
-    
+    private function _round_floats(&$arr) {
+        array_walk_recursive($arr, function(&$val) {
+            if (is_float($val)) {
+                $val = round($val, 2);
+            }
+        });
+    }
     private function _user_wise_view_permission($menu_id,$user){
 
          $nr = $this->db
@@ -514,11 +520,11 @@ class Office_invoice_m extends CI_Model {
 			"Qty"=> (float)$i_d->quantity,
 			"FreeQty"=> 0,
 			"Unit"=> "PCS",
-			"UnitPrice"=> (float)number_format($u_price, 2, '.', ''),
-			"TotAmt"=> (float)number_format(($i_d->amount * $i_d->rate_inr), 2, '.', ''),
+			"UnitPrice"=> round($u_price, 2),
+			"TotAmt"=> round($i_d->amount * $i_d->rate_inr, 2),
 			"Discount"=> 0,
 			"PreTaxVal"=> 0,
-			"AssAmt"=> (float)number_format(($i_d->amount * $i_d->rate_inr), 2, '.', ''),
+			"AssAmt"=> round($i_d->amount * $i_d->rate_inr, 2),
 			"GstRt"=> 0,
 			"IgstAmt"=> 0,
 			"CgstAmt"=> 0,
@@ -530,7 +536,7 @@ class Office_invoice_m extends CI_Model {
 			"StateCesAmt"=> 0,
 			"StateCesNonAdvlAmt"=> 0,
 			"OthChrg"=> 0,
-			"TotItemVal"=> (float)number_format(($i_d->amount * $i_d->rate_inr), 2, '.', ''),
+			"TotItemVal"=> round($i_d->amount * $i_d->rate_inr, 2),
 			"OrdLineRef"=> null,
 			"OrgCntry"=> null,
 			"PrdSlNo"=> null,
@@ -641,8 +647,11 @@ $response = array([
 	"ItemList"=> $itemLists
 ]);
 
-
+$this->_round_floats($response);
+ini_set('serialize_precision', 14);
 $response1 = json_encode($response, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
+//$response1 = json_encode($response, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
 
 $data_inserts = array (
@@ -865,7 +874,11 @@ force_download($name, file_get_contents($dir_to_save));
         "ItemList" => $itemLists
     ];
 
-    $json = json_encode([$response], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+$out = [$response];
+$this->_round_floats($out);
+ini_set('serialize_precision', 14);
+$json = json_encode($out, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    //$json = json_encode([$response], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
     $this->db->insert('gst_data_upload', [
         "invoice_id" => $invoice_id,

@@ -997,7 +997,7 @@ $arr = array_unique(array_column($print_packing_list, 'ORD'));
                 var netTotal = (totalAmount - discountAmount + parseFloat(handCharge)).toFixed(2);
                 
                 invoiceData.push(['', '', totalQnty, 'Total ' + currency, totalAmount.toFixed(2)]);
-                invoiceData.push(['', '', '', '(-)Less: Discount @ ' + discount + '%', discountAmount]);
+                invoiceData.push(['', '', '', '(-)Less: Discount @ ' + discountPercent + '%', discountAmount]);
                 invoiceData.push(['', '', '', '(+)Handling Charges', parseFloat(handCharge).toFixed(2)]);
                 invoiceData.push(['', '', '', 'Net Total ' + currency, netTotal]);
                 invoiceData.push(['']); // Empty row

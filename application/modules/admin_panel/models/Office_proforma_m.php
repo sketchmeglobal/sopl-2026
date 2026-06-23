@@ -218,7 +218,7 @@ class Office_proforma_m extends CI_Model {
             }else{
                 $nestedData['action'] = '<a href="'. base_url('admin/edit-office-proforma/'.$val->office_proforma_id) .'" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
 
-            <a target="_blank" href="'. base_url('admin/print-office-proforma/'.$val->office_proforma_id) .'" class="btn btn-primary" style="padding:6px"><i class="fa fa-print"></i> Print </a>
+            <a href="javascript:void(0)" pro-id="'.$val->office_proforma_id.'" class="btn btn-primary pro-print-btn" style="padding:6px"><i class="fa fa-print"></i> Print</a>
             
             <a href="javascript:void(0)" pk-name="office_proforma_id" pk-value="'.$val->office_proforma_id.'" tab="office_proforma" child="1" ref-table="office_proforma_detail" ref-pk-name="office_proforma_id" class="btn btn-danger delete"><i class="fa fa-times"></i> Delete</a>';
             }
@@ -292,9 +292,35 @@ class Office_proforma_m extends CI_Model {
                             // echo '<pre>', print_r($data), '</pre>'; 
                             // echo $this->db->last_query(); die;
             return array('page'=>'office_proforma/office_proforma_print_v', 'data'=>$data);
-        } 
+        }
 
-	// ADD supp.purchase ORDER 
+    public function print_office_proforma_buyer_m($pro_id) {
+
+        $data['page_setup'] = $this->db->select('front_page,other_page,blank_row')->get_where('page_setup', array('module_id' => 6, 'user_id' => $this->session->user_id))->result();
+
+        $data['proforma'] = $this->db->select('office_proforma.office_proforma_id, office_proforma.proforma_number, DATE_FORMAT(office_proforma.proforma_date, "%d-%m-%Y") as proforma_date, office_proforma.rate_type, office_proforma.exworks_office, office_proforma.cf_office, office_proforma.fob_office, office_proforma.notify, office_proforma.terms_condition, office_proforma.desc_of_goods, office_proforma.total_quantity, office_proforma.total_value, ac1.name as acc_name, ac1.address as acc_address, ac2.name as acc_name2, ac2.address as acc_address2')
+            ->join('acc_master ac1', 'ac1.am_id = office_proforma.buyer_id', 'left')
+            ->join('acc_master ac2', 'ac2.am_id = office_proforma.am_id_other', 'left')
+            ->get_where('office_proforma', array('office_proforma.office_proforma_id' => $pro_id))->row();
+
+        $data['proforma_details'] = $this->db->select('office_proforma.final_destination, office_proforma.delivery_address, office_proforma.billing_address, bank_details.bank_name, bank_details.bank_address, bank_details.dealer_code, bank_details.account_number, bank_details.swift_code, bank_details.info as ifsc, office_proforma.discount, office_proforma.discount_amount, office_proforma.hand_charge, office_proforma.grand_total, office_proforma.grand_total_inr, office_proforma.office_proforma_id, office_proforma.proforma_number, DATE_FORMAT(office_proforma.proforma_date, "%d-%m-%Y") as proforma_date, office_proforma.rate_type, office_proforma.exworks_office, office_proforma.cf_office, office_proforma.fob_office, office_proforma.notify, office_proforma.terms_condition, office_proforma.desc_of_goods, office_proforma.total_quantity, office_proforma.total_value, acc_master.name as acc_name, acc_master.address as acc_address, countries.country as country_name, office_proforma_detail.office_proforma_detail_id, office_proforma_detail.office_proforma_id, office_proforma_detail.co_id, office_proforma_detail.cod_id, office_proforma_detail.am_id, office_proforma_detail.fc_id, office_proforma_detail.lc_id, office_proforma_detail.co_quantity as op_co_quantity, office_proforma_detail.rate_inr, office_proforma_detail.rate_foreign, office_proforma_detail.total_rate, customer_order.co_no, customer_order.co_date, customer_order.co_remarks, customer_order.buyer_reference_no, c1.color as fitting_color, c1.c_code as fitting_code, c2.color as leather_color, c2.c_code as leather_code, article_master.art_no, article_master.info, article_master.alt_art_no, article_master.remark as hsncode, currencies.currency, currencies.info as curr_info, article_dtl.buyer_article_no, article_dtl.buyer_hsn_code')
+            ->join('office_proforma',     'office_proforma.office_proforma_id = office_proforma_detail.office_proforma_id', 'left')
+            ->join('acc_master',          'acc_master.am_id = office_proforma.buyer_id', 'left')
+            ->join('countries',           'countries.c_id = acc_master.c_id', 'left')
+            ->join('currencies',          'currencies.cur_id = office_proforma.cur_id', 'left')
+            ->join('bank_details',        'bank_details.id = office_proforma.self_bank', 'left')
+            ->join('customer_order',      'customer_order.co_id = office_proforma_detail.co_id', 'left')
+            ->join('article_master',      'article_master.am_id = office_proforma_detail.am_id', 'left')
+            ->join('colors c1',           'c1.c_id = office_proforma_detail.fc_id', 'left')
+            ->join('colors c2',           'c2.c_id = office_proforma_detail.lc_id', 'left')
+            ->join('article_dtl',         'article_dtl.am_id = office_proforma_detail.am_id AND article_dtl.lth_color_id = office_proforma_detail.lc_id AND article_dtl.fit_color_id = office_proforma_detail.fc_id', 'left')
+            ->order_by('print_order, art_no, leather_color')
+            ->get_where('office_proforma_detail', array('office_proforma_detail.office_proforma_id' => $pro_id))->result();
+
+        return array('page' => 'office_proforma/office_proforma_buyer_print_v', 'data' => $data);
+    }
+
+	// ADD supp.purchase ORDER
 
     public function office_proforma_add() {
         //$data['buyer_details'] = $this->db->select('am_id, name, short_name, cur_id')->get_where('acc_master', array('ag_id' => 2, 'acc_master.status' => 1))->result();

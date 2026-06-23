@@ -51,9 +51,9 @@ class Courier_shipment_m extends CI_Model {
     
     public function print_courier_shipment_m($courier_shipment_print_id){
         $data['res'] =  $this->db
-                    ->select('*, courier_shipment.leather_type')
+                    ->select('*, courier_shipment.leather_type, courier_shipment.remarks as shipment_remarks, courier_shipment_detail.remarks as detail_remarks, courier_shipment_detail.info as detail_info', FALSE)
                     ->join('courier_shipment_detail', 'courier_shipment_detail.courier_shipment_id=courier_shipment.courier_shipment_id', 'left')
-                    ->join('courier_master', 'courier_master.cm_id=shipment_through', 'left')
+                    ->join('courier_master', 'courier_master.cm_id=courier_shipment.shipment_through', 'left')
                     ->join('acc_master', 'acc_master.am_id=courier_shipment.am_id', 'left')
                     ->join('currencies', 'currencies.cur_id=acc_master.cur_id', 'left')
                     ->join('countries', 'countries.c_id = acc_master.c_id', 'left')
@@ -109,10 +109,10 @@ class Courier_shipment_m extends CI_Model {
         $dir = $this->input->post('order')[0]['dir'];
         $search = $this->input->post('search')['value'];
 
-        $this->db->select('courier_shipment.courier_shipment_id, courier_shipment.invoice_no, DATE_FORMAT(courier_shipment.invoice_date, "%d-%m-%Y") as invoice_date, courier_shipment.shipment_through, courier_shipment.am_id, courier_shipment.awb_number, courier_shipment.pickup_time, courier_shipment.weight, courier_shipment.booking_no, courier_shipment.leather_type, courier_shipment.box_dimention, courier_shipment.remarks, courier_shipment.pieces, courier_shipment.total_quantity, courier_shipment.total_amount, courier_shipment.total_foreign_amount, acc_master.name,acc_master.name, acc_master.short_name, acc_master.am_code');
+        $this->db->select('courier_shipment.courier_shipment_id, courier_shipment.invoice_no, DATE_FORMAT(courier_shipment.invoice_date, "%d-%m-%Y") as invoice_date, courier_shipment.shipment_through, courier_shipment.am_id, courier_shipment.awb_number, courier_shipment.pickup_time, courier_shipment.weight, courier_shipment.booking_no, courier_shipment.leather_type, courier_shipment.box_dimention, courier_shipment.remarks, courier_shipment.pieces, courier_shipment.total_quantity, courier_shipment.total_amount, courier_shipment.total_foreign_amount, acc_master.name, acc_master.short_name, acc_master.am_code');
 		$this->db->join('acc_master', 'acc_master.am_id = courier_shipment.am_id', 'left');
-		$rs = $this->db->get_where('courier_shipment', array('courier_shipment.status => 1'))->result();
-		
+		$rs = $this->db->get_where('courier_shipment', array('courier_shipment.status' => 1))->result();
+
         $totalData = count($rs);
         $totalFiltered = $totalData;
 
@@ -120,9 +120,9 @@ class Courier_shipment_m extends CI_Model {
         if(empty($search)) {
             $this->db->limit($limit, $start);
             $this->db->order_by($order, $dir);
-            $this->db->select('courier_shipment.courier_shipment_id, courier_shipment.invoice_no, DATE_FORMAT(courier_shipment.invoice_date, "%d-%m-%Y") as invoice_date, courier_shipment.shipment_through, courier_shipment.am_id, courier_shipment.awb_number, courier_shipment.pickup_time, courier_shipment.weight, courier_shipment.booking_no, courier_shipment.leather_type, courier_shipment.box_dimention, courier_shipment.remarks, courier_shipment.pieces, courier_shipment.total_quantity, courier_shipment.total_amount, courier_shipment.total_foreign_amount, acc_master.name,acc_master.name, acc_master.short_name, acc_master.am_code');
+            $this->db->select('courier_shipment.courier_shipment_id, courier_shipment.invoice_no, DATE_FORMAT(courier_shipment.invoice_date, "%d-%m-%Y") as invoice_date, courier_shipment.shipment_through, courier_shipment.am_id, courier_shipment.awb_number, courier_shipment.pickup_time, courier_shipment.weight, courier_shipment.booking_no, courier_shipment.leather_type, courier_shipment.box_dimention, courier_shipment.remarks, courier_shipment.pieces, courier_shipment.total_quantity, courier_shipment.total_amount, courier_shipment.total_foreign_amount, acc_master.name, acc_master.short_name, acc_master.am_code');
 			$this->db->join('acc_master', 'acc_master.am_id = courier_shipment.am_id', 'left');
-			$rs = $this->db->get_where('courier_shipment', array('courier_shipment.status => 1'))->result();
+			$rs = $this->db->get_where('courier_shipment', array('courier_shipment.status' => 1))->result();
         }
         //if searching for something
         else {
@@ -145,17 +145,17 @@ class Courier_shipment_m extends CI_Model {
             }
             $this->db->stop_cache();
 
-            $this->db->select('courier_shipment.courier_shipment_id, courier_shipment.invoice_no, DATE_FORMAT(courier_shipment.invoice_date, "%d-%m-%Y") as invoice_date, courier_shipment.shipment_through, courier_shipment.am_id, courier_shipment.awb_number, courier_shipment.pickup_time, courier_shipment.weight, courier_shipment.booking_no, courier_shipment.leather_type, courier_shipment.box_dimention, courier_shipment.remarks, courier_shipment.pieces, courier_shipment.total_quantity, courier_shipment.total_amount, courier_shipment.total_foreign_amount, acc_master.name,acc_master.name, acc_master.short_name, acc_master.am_code');
+            $this->db->select('courier_shipment.courier_shipment_id, courier_shipment.invoice_no, DATE_FORMAT(courier_shipment.invoice_date, "%d-%m-%Y") as invoice_date, courier_shipment.shipment_through, courier_shipment.am_id, courier_shipment.awb_number, courier_shipment.pickup_time, courier_shipment.weight, courier_shipment.booking_no, courier_shipment.leather_type, courier_shipment.box_dimention, courier_shipment.remarks, courier_shipment.pieces, courier_shipment.total_quantity, courier_shipment.total_amount, courier_shipment.total_foreign_amount, acc_master.name, acc_master.short_name, acc_master.am_code');
 			$this->db->join('acc_master', 'acc_master.am_id = courier_shipment.am_id', 'left');
-			$rs = $this->db->get_where('courier_shipment', array('courier_shipment.status => 1'))->result();
+			$rs = $this->db->get_where('courier_shipment', array('courier_shipment.status' => 1))->result();
 
             $totalFiltered = count($rs);
 
             $this->db->limit($limit, $start);
             $this->db->order_by($order, $dir);
-          	$this->db->select('courier_shipment.courier_shipment_id, courier_shipment.invoice_no, DATE_FORMAT(courier_shipment.invoice_date, "%d-%m-%Y") as invoice_date, courier_shipment.shipment_through, courier_shipment.am_id, courier_shipment.awb_number, courier_shipment.pickup_time, courier_shipment.weight, courier_shipment.booking_no, courier_shipment.leather_type, courier_shipment.box_dimention, courier_shipment.remarks, courier_shipment.pieces, courier_shipment.total_quantity, courier_shipment.total_amount, courier_shipment.total_foreign_amount, acc_master.name,acc_master.name, acc_master.short_name, acc_master.am_code');
+          	$this->db->select('courier_shipment.courier_shipment_id, courier_shipment.invoice_no, DATE_FORMAT(courier_shipment.invoice_date, "%d-%m-%Y") as invoice_date, courier_shipment.shipment_through, courier_shipment.am_id, courier_shipment.awb_number, courier_shipment.pickup_time, courier_shipment.weight, courier_shipment.booking_no, courier_shipment.leather_type, courier_shipment.box_dimention, courier_shipment.remarks, courier_shipment.pieces, courier_shipment.total_quantity, courier_shipment.total_amount, courier_shipment.total_foreign_amount, acc_master.name, acc_master.short_name, acc_master.am_code');
 			$this->db->join('acc_master', 'acc_master.am_id = courier_shipment.am_id', 'left');
-			$rs = $this->db->get_where('courier_shipment', array('courier_shipment.status => 1'))->result();
+			$rs = $this->db->get_where('courier_shipment', array('courier_shipment.status' => 1))->result();
             $this->db->flush_cache();
         }
 
@@ -178,7 +178,7 @@ class Courier_shipment_m extends CI_Model {
                 $nestedData['action'] = '-';    
             }else{
                 $nestedData['action'] = '<a href="'. base_url('admin/edit-courier-shipment/'.$val->courier_shipment_id) .'" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
-                <a href="'. base_url('admin/courier-print/'.$val->courier_shipment_id) .'" class="btn-w-70 btn btn-primary"><i class="fa fa-print"></i> Print</a>
+                <a href="'. base_url('admin/courier-print/'.$val->courier_shipment_id) .'" target="_blank" class="btn-w-70 btn btn-primary"><i class="fa fa-print"></i> Print</a>
 			
             <a href="javascript:void(0)" pk-name="courier_shipment_id" pk-value="'.$val->courier_shipment_id.'" tab="courier_shipment" ref-table="courier_shipment_detail" ref-pk-name="courier_shipment_id" class="btn btn-danger delete"><i class="fa fa-times"></i> Delete</a>';
             }
@@ -256,12 +256,12 @@ class Courier_shipment_m extends CI_Model {
 
     public function edit_courier_shipment($courier_shipment_id) {
         
-		$data['courier_shipment_detail'] = $this->db->select('courier_shipment.courier_shipment_id, courier_shipment.invoice_no, DATE_FORMAT(courier_shipment.invoice_date, "%d-%m-%Y") as invoice_date, courier_shipment.shipment_through, courier_shipment.am_id, courier_shipment.awb_number, courier_shipment.pickup_time, courier_shipment.weight, courier_shipment.booking_no, courier_shipment.leather_type, courier_shipment.box_dimention, courier_shipment.remarks, courier_shipment.pieces, courier_shipment.total_quantity, courier_shipment.total_amount, courier_shipment.total_foreign_amount, acc_master.name,acc_master.name, acc_master.short_name, acc_master.am_code')
+		$data['courier_shipment_detail'] = $this->db->select('courier_shipment.courier_shipment_id, courier_shipment.invoice_no, DATE_FORMAT(courier_shipment.invoice_date, "%d-%m-%Y") as invoice_date, courier_shipment.shipment_through, courier_shipment.am_id, courier_shipment.awb_number, courier_shipment.pickup_time, courier_shipment.weight, courier_shipment.booking_no, courier_shipment.leather_type, courier_shipment.box_dimention, courier_shipment.remarks, courier_shipment.pieces, courier_shipment.total_quantity, courier_shipment.total_amount, courier_shipment.total_foreign_amount, acc_master.name, acc_master.short_name, acc_master.am_code')
 		->join('acc_master', 'acc_master.am_id = courier_shipment.am_id', 'left')
 		->get_where('courier_shipment', array('courier_shipment.courier_shipment_id' => $courier_shipment_id))->result();
 		
-		$data['account_master_details'] = $this->db->select('am_id, name, short_name, am_code')->get_where('acc_master', array('ag_id' => 1, 'acc_master.status' => 1))->result();
-		
+		$data['account_master_details'] = $this->db->select('am_id, name, short_name, am_code')->get_where('acc_master', array('ag_id' => 2, 'acc_master.status' => 1))->result(); // Sundry Debtors
+		$data['courier_master'] = $this->db->select('cm_id, courier_name')->get_where('courier_master', array('status' => 1))->result();
 		$data['customer_order'] = $this->db->select('co_id, co_no')->get_where('customer_order', array( 'customer_order.status' => 1, 'customer_order.office_proforma_status' => 1))->result();
 		
         return array('page'=>'courier_shipment/courier_shipment_edit_v', 'data'=>$data);

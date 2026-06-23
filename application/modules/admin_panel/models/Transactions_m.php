@@ -398,7 +398,7 @@
 
             $this->db->where('am_id', $data['article_costing']->am_id);
             $row = $this->db->get('article_master')->row();
-            if(count($row) > 0 && $row->img){$img = $row->img;} else{$img='default.png';}
+            if($row !== null && $row->img){$img = $row->img;} else{$img='default.png';}
             $data['img'] = $img;
 
             $this->db->select('article_dtl.*, colors1.color as lth_color, colors2.color as fit_color');
@@ -1431,7 +1431,7 @@
 
             $this->db->where('am_id', $am_id);
             $row = $this->db->get('article_master')->row();
-            if(count($row) > 0 && $row->img){$img = $row->img;} else{$img='default.png';}
+            if($row !== null && $row->img){$img = $row->img;} else{$img='default.png';}
             $data['img'] = $img;
 
             return $data;
@@ -2990,12 +2990,13 @@
             $am_id = $this->input->post('am_id');
             $data = [];
             
-            // CHECK IF EXISTS IN CO OR PROFORMA
+            // CHECK IF EXISTS IN CO OR PROFORMA — only block if this is the ONLY costing for the article
             $nr1 = $this->db->get_where('customer_order_dtl', array('am_id' => $am_id))->num_rows();
             $nr2 = $this->db->get_where('office_proforma_detail', array('am_id' => $am_id))->num_rows();
-            
-            if($nr1 > 0 or $nr2 > 0){
-                
+            $costing_count = $this->db->get_where('article_costing', array('am_id' => $am_id))->num_rows();
+
+            if(($nr1 > 0 or $nr2 > 0) and $costing_count <= 1){
+
                 $data['title'] = 'NOT DELETED';
                 $data['type'] = 'warning';
                 $data['msg'] = 'Article Exists in Customer Order';

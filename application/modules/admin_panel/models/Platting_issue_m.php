@@ -567,8 +567,8 @@ class Platting_issue_m extends CI_Model {
                         ->where('platting_issue.platting_issue_date <=', $issue_date_add)
                         ->get_where('platting_issue_detail', array('platting_issue_detail.im_id' => $im_id, 'platting_issue_detail.item_colour' => $c_id, 'platting_issue_detail.status' => 1))->row();
 
-        if (count($platting_issue_row) > 0) {
-            $platting_issue = $platting_issue_row->issue_quantity;
+        if (!empty($platting_issue_row)) {
+            $platting_issue = $platting_issue_row->issue_quantity ?? 0;
         } else {
             $platting_issue = 0;
         }
@@ -578,30 +578,30 @@ class Platting_issue_m extends CI_Model {
                         ->where('purchase_order_receive.purchase_order_receive_date <=', $issue_date_add)
                         ->get_where('purchase_order_receive_detail', array('purchase_order_receive_detail.id_id' => $item_dtl_id, 'purchase_order_receive_detail.status' => 1))->row();
 
-        if (count($sum_purchase_order_row) > 0) {
-            $sum_purchase_order = $sum_purchase_order_row->item_quantity;
+        if (!empty($sum_purchase_order_row)) {
+            $sum_purchase_order = $sum_purchase_order_row->item_quantity ?? 0;
         } else {
             $sum_purchase_order = 0;
         }
-        
+
         $sum_material_issue_row = $this->db->select('SUM(material_issue_detail.issue_quantity) as issue_quantity')
                         ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
                         ->where('material_issue.material_issue_date <=', $issue_date_add)
                         ->get_where('material_issue_detail', array('material_issue_detail.id_id' => $item_dtl_id))->row();
 
-        if (count($sum_material_issue_row) > 0) {
-            $sum_material_issue = $sum_material_issue_row->issue_quantity;
+        if (!empty($sum_material_issue_row)) {
+            $sum_material_issue = $sum_material_issue_row->issue_quantity ?? 0;
         } else {
             $sum_material_issue = 0;
         }
-        
+
         $sum_stock_in_row = $this->db->select('SUM(stock_in_detail.item_quantity) as item_quantity')
                         ->join('stock_in', 'stock_in.purchase_order_receive_id = stock_in_detail.purchase_order_receive_id', 'left')
                         ->where('stock_in.purchase_order_receive_date <=', $issue_date_add)
                         ->get_where('stock_in_detail', array('stock_in_detail.id_id' => $item_dtl_id, 'stock_in_detail.status' => 1))->row();
 
-        if (count($sum_stock_in_row) > 0) {
-            $sum_stock_in = $sum_stock_in_row->item_quantity;
+        if (!empty($sum_stock_in_row)) {
+            $sum_stock_in = $sum_stock_in_row->item_quantity ?? 0;
         } else {
             $sum_stock_in = 0;
         }
@@ -624,11 +624,20 @@ class Platting_issue_m extends CI_Model {
         //     $new_purchase_rate = 0;
         // }
         
-        // NEW LOGIC
-		$purchase_rate_row = $this->db->order_by('ir_id',"desc")->limit(1)->get_where('item_rates', array('am_id' => $platting_issue_supplier, 'id_id' => $item_dtl_id))->row();
+        // Try supplier + item first, fallback to any rate for this item
+        $purchase_rate_row = $this->db->order_by('ir_id', 'desc')->limit(1)
+            ->get_where('item_rates', array('am_id' => $platting_issue_supplier, 'id_id' => $item_dtl_id))->row();
 
-		if(count($purchase_rate_row) > 0) {
-            $new_purchase_rate = $purchase_rate_row->purchase_rate;
+        if (empty($purchase_rate_row)) {
+            $purchase_rate_row = $this->db->order_by('ir_id', 'desc')->limit(1)
+                ->get_where('item_rates', array('id_id' => $item_dtl_id))->row();
+        }
+
+        if (!empty($purchase_rate_row)) {
+            // Use plating_rate if set, otherwise fall back to purchase_rate
+            $plating_rate    = isset($purchase_rate_row->plating_rate)   ? (float)$purchase_rate_row->plating_rate   : 0;
+            $purchase_rate   = isset($purchase_rate_row->purchase_rate)  ? (float)$purchase_rate_row->purchase_rate  : 0;
+            $new_purchase_rate = ($plating_rate > 0) ? $plating_rate : $purchase_rate;
         } else {
             $new_purchase_rate = 0;
         }

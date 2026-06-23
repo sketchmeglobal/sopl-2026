@@ -180,10 +180,36 @@
             }
         });
     });
-	
-	
-	
-	// delete area 
+
+    // Proforma print chooser popup
+    $(document).on('click', '.pro-print-btn', function () {
+        var pro_id = $(this).attr('pro-id');
+        $.confirm({
+            title: 'Choose!',
+            content: 'Choose printing methods from the below options',
+            buttons: {
+                print: {
+                    text: 'Print',
+                    btnClass: 'btn-blue',
+                    action: function () {
+                        window.open("<?= base_url() ?>admin/print-office-proforma/" + pro_id, "_blank");
+                    }
+                },
+                buyerArticlePrint: {
+                    text: 'Buyer Article Print',
+                    btnClass: 'btn-green',
+                    action: function () {
+                        window.open("<?= base_url() ?>admin/print-office-proforma-buyer/" + pro_id, "_blank");
+                    }
+                },
+                cancel: function () {}
+            }
+        });
+    });
+
+
+
+    // delete area
     $(document).on('click', '.delete', function(){
         if(confirm('Are you sure?')){
             $tab = $(this).attr('tab');			

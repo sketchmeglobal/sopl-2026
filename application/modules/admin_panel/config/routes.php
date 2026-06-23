@@ -15,7 +15,15 @@ $route['admin/form_change_username'] = 'admin_panel/Profile/form_change_username
 $route['admin/ajax-fetch-customer-details-brkup-report/(:num)'] = 'admin_panel/Dashboard/ajax_fetch_customer_details_brkup_report/$1';
 
 
-// MASTER AREA STARS 
+// BULK EDIT MASTER
+$route['admin/bulk-edit-master']              = 'admin_panel/Bulk_edit_master/index';
+$route['admin/ajax-bulk-edit-get-orders']     = 'admin_panel/Bulk_edit_master/ajax_get_customer_orders';
+$route['admin/ajax-bulk-edit-get-packing']    = 'admin_panel/Bulk_edit_master/ajax_get_packing_lists';
+$route['admin/ajax-bulk-edit-get-items']      = 'admin_panel/Bulk_edit_master/ajax_get_filtered_items';
+$route['admin/ajax-bulk-edit-update-item']    = 'admin_panel/Bulk_edit_master/ajax_update_item';
+$route['admin/ajax-bulk-edit-update-article'] = 'admin_panel/Bulk_edit_master/ajax_update_article';
+
+// MASTER AREA STARS
 $route['admin/units'] = 'admin_panel/Master/units';
 $route['admin/sizes'] = 'admin_panel/Master/sizes';
 $route['admin/shapes'] = 'admin_panel/Master/shapes';
@@ -49,6 +57,8 @@ $route['ajax_fetch_item_color'] = 'admin_panel/Master/ajax_fetch_item_color';
 $route['ajax_unique_supp_item_color_rate_eff_date'] = 'admin_panel/Master/ajax_unique_supp_item_color_rate_eff_date';
 
 $route['ajax_fetch_item_rate'] = 'admin_panel/Master/ajax_fetch_item_rate';
+$route['ajax_fetch_item_master_for_quick_edit'] = 'admin_panel/Master/ajax_fetch_item_master_for_quick_edit';
+$route['ajax_search_item_codes_for_quick_edit'] = 'admin_panel/Master/ajax_search_item_codes_for_quick_edit';
 $route['ajax-articles-on-item_dtl'] = 'admin_panel/Master/ajax_articles_on_item_dtl';
 
 $route['admin/countries'] = 'admin_panel/Master/countries';
@@ -877,7 +887,8 @@ $route['admin/del-skiving-receive-challan-details-list'] = 'admin_panel/Skiving_
 	$route['admin/ajax-fetch-proforma-details-on-pk'] = 'admin_panel/Office_proforma/ajax_fetch_proforma_details_on_pk';
 	$route['admin/form-edit-proforma-details'] = 'admin_panel/Office_proforma/form_edit_proforma_details';
 	$route['admin/ajax_customer_order_details_table_data_order_changes'] = 'admin_panel/Office_proforma/ajax_customer_order_details_table_data_order_changes';
-	$route['admin/print-office-proforma/(:num)'] = 'admin_panel/Office_proforma/print_office_proforma/$1';
+	$route['admin/print-office-proforma/(:num)']        = 'admin_panel/Office_proforma/print_office_proforma/$1';
+$route['admin/print-office-proforma-buyer/(:num)']  = 'admin_panel/Office_proforma/print_office_proforma_buyer/$1';
 	$route['admin/update-proforma-details-wrt-proforma-id'] = 'admin_panel/Office_proforma/update_proforma_details_wrt_proforma_id';
 
 	//Delete

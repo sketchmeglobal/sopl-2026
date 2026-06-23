@@ -104,12 +104,10 @@
                                 <div class="col-lg-3">
                                     <label for="shipment_through" class="control-label">Through:</label>
                                     <select id="shipment_through" name="shipment_through" class="form-control select2">
-                                        <option value="">Select Curier</option>
-                                        <option value="1" <?php if($courier_shipment_detail[0]->shipment_through == 1){ ?> selected <?php } ?>>DTDC</option>
-                                        <option value="2" <?php if($courier_shipment_detail[0]->shipment_through == 2){ ?> selected <?php } ?>>DHL</option>
-                                        <option value="3" <?php if($courier_shipment_detail[0]->shipment_through == 3){ ?> selected <?php } ?>>TNT</option>
-                                        <option value="4" <?php if($courier_shipment_detail[0]->shipment_through == 4){ ?> selected <?php } ?>>UPS</option>
-                                        <option value="5" <?php if($courier_shipment_detail[0]->shipment_through == 5){ ?> selected <?php } ?>>Blue dart</option>
+                                        <option value="">Select Courier</option>
+                                        <?php foreach($courier_master as $cm): ?>
+                                        <option value="<?= $cm->cm_id ?>" <?= ($courier_shipment_detail[0]->shipment_through == $cm->cm_id) ? 'selected' : '' ?>><?= $cm->courier_name ?></option>
+                                        <?php endforeach; ?>
                                     </select>
                                 </div>
                                 

@@ -434,7 +434,7 @@ class Stock_in_m extends CI_Model {
         $res = $this->db->get_where('item_dtl', array('item_dtl.im_id'=>$a_p_i_d->im_id,'item_dtl.c_id'=>$a_p_i_d->new_item_colour,'item_dtl.status'=>'1'))->row();
         
 
-       if(count($res) > 0) {
+       if($res !== null) {
            $stockin_row = $this->db
         ->join('stock_in', 'stock_in.purchase_order_receive_id = stock_in_detail.purchase_order_receive_id', 'left')
         ->get_where('stock_in_detail', array('stock_in.plating_id' => $plating_id, 'stock_in_detail.id_id' => $res->id_id))->num_rows();
@@ -513,44 +513,28 @@ class Stock_in_m extends CI_Model {
                             ->where('platting_issue.platting_issue_date <=', $issue_date_add)
                             ->get_where('platting_issue_detail', array('platting_issue_detail.im_id' => $im_id, 'platting_issue_detail.item_colour' => $c_id, 'platting_issue_detail.status' => 1))->row();
 
-            if (count($platting_issue_row) > 0) {
-                $platting_issue = $platting_issue_row->issue_quantity;
-            } else {
-                $platting_issue = 0;
-            }
+            $platting_issue = ($platting_issue_row !== null && $platting_issue_row->issue_quantity !== null) ? $platting_issue_row->issue_quantity : 0;
 
             $sum_purchase_order_row = $this->db->select('SUM(purchase_order_receive_detail.item_quantity) as item_quantity')
                             ->join('purchase_order_receive', 'purchase_order_receive.purchase_order_receive_id = purchase_order_receive_detail.purchase_order_receive_id', 'left')
                             ->where('purchase_order_receive.purchase_order_receive_date <=', $issue_date_add)
                             ->get_where('purchase_order_receive_detail', array('purchase_order_receive_detail.id_id' => $item_dtl_id, 'purchase_order_receive_detail.status' => 1))->row();
 
-            if (count($sum_purchase_order_row) > 0) {
-                $sum_purchase_order = $sum_purchase_order_row->item_quantity;
-            } else {
-                $sum_purchase_order = 0;
-            }
-            
+            $sum_purchase_order = ($sum_purchase_order_row !== null && $sum_purchase_order_row->item_quantity !== null) ? $sum_purchase_order_row->item_quantity : 0;
+
              $sum_material_issue_row = $this->db->select('SUM(material_issue_detail.issue_quantity) as issue_quantity')
                             ->join('material_issue', 'material_issue.material_issue_id = material_issue_detail.material_issue_id', 'left')
                             ->where('material_issue.material_issue_date <=', $issue_date_add)
                             ->get_where('material_issue_detail', array('material_issue_detail.id_id' => $item_dtl_id))->row();
 
-            if (count($sum_material_issue_row) > 0) {
-                $sum_material_issue = $sum_material_issue_row->issue_quantity;
-            } else {
-                $sum_material_issue = 0;
-            }
-            
+            $sum_material_issue = ($sum_material_issue_row !== null && $sum_material_issue_row->issue_quantity !== null) ? $sum_material_issue_row->issue_quantity : 0;
+
             $sum_stock_in_row = $this->db->select('SUM(stock_in_detail.item_quantity) as item_quantity')
                             ->join('stock_in', 'stock_in.purchase_order_receive_id = stock_in_detail.purchase_order_receive_id', 'left')
                             ->where('stock_in.purchase_order_receive_date <=', $issue_date_add)
                             ->get_where('stock_in_detail', array('stock_in_detail.id_id' => $item_dtl_id, 'stock_in_detail.status' => 1))->row();
 
-            if (count($sum_stock_in_row) > 0) {
-                $sum_stock_in = $sum_stock_in_row->item_quantity;
-            } else {
-                $sum_stock_in = 0;
-            }
+            $sum_stock_in = ($sum_stock_in_row !== null && $sum_stock_in_row->item_quantity !== null) ? $sum_stock_in_row->item_quantity : 0;
             
             $item_quantity = $opening_stock_quantity1 + $sum_purchase_order - ($sum_material_issue + $platting_issue) + $sum_stock_in;
     
@@ -576,31 +560,29 @@ class Stock_in_m extends CI_Model {
                         
             // ID_ID BASED ON BEFORE PLATING COLOR -----------------------
             
-            $og_color = $this->db
+            $og_platting_row = $this->db
                 ->join('platting_issue','platting_issue.platting_issue_id=platting_issue_detail.platting_issue_id','left')
-                ->get_where('platting_issue_detail', 
+                ->get_where('platting_issue_detail',
                     array(
-                        'platting_issue.platting_issue_id' => $plating_id_edit, 
+                        'platting_issue.platting_issue_id' => $plating_id_edit,
                         'platting_issue.platting_issue_supplier' => $am_id_value,
                         'platting_issue_detail.im_id' => $im_id,
                         'platting_issue_detail.new_item_colour' => $c_id
                         )
                     )
-                ->row()->item_colour;
-                
-            $og_id_id = $this->db->get_where('item_dtl', array('im_id' => $im_id, 'c_id' => $og_color))->row()->id_id;
-            
-            $new_purchase_rate = $this->db->select('*')
+                ->row();
+            $og_color = ($og_platting_row !== null) ? $og_platting_row->item_colour : null;
+
+            $og_id_id_row = ($og_color !== null) ? $this->db->get_where('item_dtl', array('im_id' => $im_id, 'c_id' => $og_color))->row() : null;
+            $og_id_id = ($og_id_id_row !== null) ? $og_id_id_row->id_id : null;
+
+            $new_purchase_rate_row = ($og_id_id !== null) ? $this->db->select('*')
                 ->order_by('item_rates.effective_date', 'desc')
                 ->where('item_rates.effective_date <=', $issue_date_add)
                 ->limit(1)
-                ->get_where('item_rates', array('item_rates.id_id' => $og_id_id, 'item_rates.am_id' => $am_id_value))->row();
-            
-            if(count($new_purchase_rate) > 0){
-                $new_purchase_rate = $new_purchase_rate->purchase_rate;
-            } else {
-                $new_purchase_rate = 0;
-            }
+                ->get_where('item_rates', array('item_rates.id_id' => $og_id_id, 'item_rates.am_id' => $am_id_value))->row() : null;
+
+            $new_purchase_rate = ($new_purchase_rate_row !== null) ? $new_purchase_rate_row->purchase_rate : 0;
             // $purchase_rate_row1 = $this->db
             //     ->join('platting_issue','platting_issue.platting_issue_id=platting_issue_detail.platting_issue_id','left')
             //     ->get_where('platting_issue_detail', 
@@ -645,11 +627,7 @@ class Stock_in_m extends CI_Model {
             
             // echo $this->db->last_query(); die;
             
-                if(count($rs_plating) > 0) {
-                     $item_quantity = $rs_plating->issue_quantity;
-                } else {
-                     $item_quantity = 0;
-                }
+                $item_quantity = ($rs_plating !== null && $rs_plating->issue_quantity !== null) ? $rs_plating->issue_quantity : 0;
             
         }
                     
